@@ -52,11 +52,12 @@ proc buildSearchIndex() =
   echo "🔍 Indexing CuriousWiki pages dynamically..."
   var docs = newJArray()
   
-  # Scan index.html and all pages/ files
+  # Scan index.html and all pages/ files recursively
   var files: seq[string] = @["index.html"]
   if dirExists("pages"):
-    for file in walkFiles("pages/*.html"):
-      files.add(file)
+    for file in walkDirRec("pages"):
+      if file.endsWith(".html"):
+        files.add(file)
       
   for f in files:
     if fileExists(f):

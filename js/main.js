@@ -1,16 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- PATH RESOLUTION FOR STATIC WIKI ---
-    const isSubpage = window.location.pathname.includes('/pages/');
+    function getRootPrefix() {
+        const path = window.location.pathname;
+        const pagesIndex = path.indexOf('/pages/');
+        if (pagesIndex === -1) {
+            return '';
+        }
+        const subPath = path.substring(pagesIndex + 7);
+        const slashCount = (subPath.match(/\//g) || []).length;
+        let prefix = '../';
+        for (let i = 0; i < slashCount; i++) {
+            prefix += '../';
+        }
+        return prefix;
+    }
+
+    const rootPrefix = getRootPrefix();
+    const isSubpage = rootPrefix !== '';
     
     function getRelativeUrl(targetPath) {
-        if (isSubpage) {
-            if (targetPath === 'index.html') {
-                return '../index.html';
-            }
-            return targetPath.replace('pages/', '');
-        } else {
-            return targetPath;
+        if (targetPath === 'index.html') {
+            return rootPrefix + 'index.html';
         }
+        if (targetPath.startsWith('pages/')) {
+            return rootPrefix + targetPath;
+        }
+        return rootPrefix + 'pages/' + targetPath;
     }
 
     // --- INITIALIZE LUCIDE ICONS ---
@@ -79,37 +94,40 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentFilename = window.location.pathname.split('/').pop() || 'index.html';
 
     navLinks.forEach(link => {
-        const linkFilename = link.getAttribute('href').split('/').pop();
+        const originalHref = link.getAttribute('href');
+        let resolvedHref = '';
+        if (originalHref === 'index.html') {
+            resolvedHref = rootPrefix + 'index.html';
+        } else if (originalHref.startsWith('pages/')) {
+            resolvedHref = rootPrefix + originalHref;
+        } else {
+            resolvedHref = rootPrefix + 'pages/' + originalHref;
+        }
+        link.setAttribute('href', resolvedHref);
+        
+        // Active tab detection
+        const linkFilename = originalHref.split('/').pop();
         if (currentFilename === linkFilename) {
             link.classList.add('active');
         } else {
             link.classList.remove('active');
-        }
-        
-        // Also fix the hrefs depending on current directory level
-        const originalHref = link.getAttribute('href');
-        // If href starts with pages/ and we are in pages/
-        if (isSubpage && originalHref.startsWith('pages/')) {
-            link.setAttribute('href', originalHref.replace('pages/', ''));
-        } else if (isSubpage && originalHref === 'index.html') {
-            link.setAttribute('href', '../index.html');
-        } else if (!isSubpage && !originalHref.startsWith('pages/') && originalHref !== 'index.html') {
-            link.setAttribute('href', 'pages/' + originalHref);
         }
     });
 
     // --- EDIT ON GITHUB BUTTON DYNAMIC URL ---
     const editBtn = document.getElementById('edit-btn');
     if (editBtn) {
-        const githubUsername = 'your-github-username';
+        const githubUsername = 'ayushhacksethically-code';
         const githubRepo = 'CuriousWiki';
         const githubBranch = 'main';
         
         let filepath = '';
-        if (currentFilename === 'index.html') {
-            filepath = 'index.html';
+        const path = window.location.pathname;
+        const pagesIndex = path.indexOf('/pages/');
+        if (pagesIndex !== -1) {
+            filepath = path.substring(pagesIndex + 1);
         } else {
-            filepath = `pages/${currentFilename}`;
+            filepath = 'index.html';
         }
         
         const githubEditUrl = `https://github.com/${githubUsername}/${githubRepo}/edit/${githubBranch}/${filepath}`;
@@ -186,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch the generated search index
     async function loadSearchIndex() {
         try {
-            const indexUrl = isSubpage ? '../search-index.json' : 'search-index.json';
+            const indexUrl = rootPrefix + 'search-index.json';
             const response = await fetch(indexUrl);
             rawIndexData = await response.json();
             searchIndexLoaded = true;
