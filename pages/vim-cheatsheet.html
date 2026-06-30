@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="vim, vi, editor, shortcuts, keyboard, commands">
+    <title>Vim Cheatsheet | CuriousWiki Reference</title>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/markdown-guide.html" class="nav-link">
+                                <i data-lucide="code"></i>
+                                <span>Markdown Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Workflows</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/productivity.html" class="nav-link">
+                                <i data-lucide="clock"></i>
+                                <span>Productivity Hacks</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.0.0</span>
+                <span>Static Wiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">></span>
+                    <a href="vim-cheatsheet.html">Reference</a>
+                    <span class="separator">></span>
+                    <span>Vim Cheatsheet</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">⌨️ Vim Text Editor Cheatsheet</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> June 30, 2026</span>
+                            <span><i data-lucide="clock"></i> 2 min read</span>
+                            <span><i data-lucide="tag"></i> vim, editor</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p>Vim modes के अंदर files को efficiently edit करने के लिए essential keyboard shortcuts, cursor movements, deletion macros, text search commands, और registers.</p>
+
+                        <h2>1. Cursor Movement (Normal Mode)</h2>
+                        <p>Arrow keys या mouse का उपयोग किए बिना text को जल्दी navigate करना:</p>
+                        <ul>
+                            <li><kbd>h</kbd>: cursor को एक character left ले जाएं</li>
+                            <li><kbd>j</kbd>: cursor को एक line down ले जाएं</li>
+                            <li><kbd>k</kbd>: cursor को एक line up ले जाएं</li>
+                            <li><kbd>l</kbd>: cursor को एक character right ले जाएं</li>
+                            <li><kbd>w</kbd>: अगले word के start पर jump करें</li>
+                            <li><kbd>b</kbd>: पिछले word के start पर jump करें</li>
+                            <li><kbd>0</kbd>: current line के start पर जाएं</li>
+                            <li><kbd>$</kbd>: current line के end पर जाएं</li>
+                            <li><kbd>G</kbd>: document की last line पर jump करें</li>
+                            <li><kbd>gg</kbd>: document की first line पर jump करें</li>
+                        </ul>
+
+                        <h2>2. Mode Switching</h2>
+                        <p>Insert, Visual, और Command-Line modes के बीच transition करना:</p>
+                        <ul>
+                            <li><kbd>i</kbd>: cursor से पहले Insert mode में enter करें</li>
+                            <li><kbd>a</kbd>: cursor के बाद Insert mode में enter करें</li>
+                            <li><kbd>o</kbd>: नीचे एक new line open करें और Insert mode में enter करें</li>
+                            <li><kbd>v</kbd>: character-by-character text select करने के लिए Visual mode में enter करें</li>
+                            <li><kbd>V</kbd>: entire lines select करने के लिए Visual line mode में enter करें</li>
+                            <li><kbd>Esc</kbd>: Normal mode में वापस लौटें</li>
+                        </ul>
+
+                        <h2>3. Editing, Yanking & Deleting</h2>
+                        <p>Text blocks को yank (copy), delete (cut), और paste करना:</p>
+                        <pre><code class="language-text">x   - cursor पर single character delete करें
+dw  - अगले word तक delete करें
+dd  - current line delete करें (cut)
+d$  - line के end तक delete करें
+yy  - current line yank (copy) करें
+yw  - next word तक yank करें
+p   - copy/cut text को cursor के बाद paste करें
+u   - last action undo करें
+Ctrl+r - last undone action redo करें</code></pre>
+
+                        <h2>4. Search and Save Commands</h2>
+                        <p>Patterns ढूंढना, strings substitute करना, और Vim editor से exit करना:</p>
+                        <pre><code class="language-text">/pattern    - forward search "pattern" के लिए
+?pattern    - backward search "pattern" के लिए
+n           - matches को forward direction में navigate करें
+N           - matches को backward direction में navigate करें
+:w          - file save करें (write)
+:q          - editor exit करें (quit)
+:wq         - save और exit करें
+:q!         - bina save kiye exit करें</code></pre>
+                    </section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
+                            <span>GitHub Pages पर host किया गया है</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

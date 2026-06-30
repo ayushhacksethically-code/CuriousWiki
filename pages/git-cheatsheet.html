@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="git, branch, merge, commit, repository, setup">
+    <title>Git Cheatsheet | CuriousWiki Reference</title>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/markdown-guide.html" class="nav-link">
+                                <i data-lucide="code"></i>
+                                <span>Markdown Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Workflows</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/productivity.html" class="nav-link">
+                                <i data-lucide="clock"></i>
+                                <span>Productivity Hacks</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.0.0</span>
+                <span>Static Wiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">></span>
+                    <a href="git-cheatsheet.html">Reference</a>
+                    <span class="separator">></span>
+                    <span>Git Cheatsheet</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">🔧 Git Version Control Cheatsheet</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> June 30, 2026</span>
+                            <span><i data-lucide="clock"></i> 3 min read</span>
+                            <span><i data-lucide="tag"></i> git, workflow</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p>Developer repositories में commits, stash management, branch operations, merging, और sync operations के लिए आवश्यक Git commands और workflows.</p>
+
+                        <h2>1. Core Config & Committing</h2>
+                        <p>User properties setup करना और local project snapshots save करना:</p>
+                        <pre><code class="language-bash"># Global Identity settings
+git config --global user.name "Aapka Naam"
+git config --global user.email "aapka.email@example.com"
+
+# Repository state check करें
+git status
+
+# descriptive messages के साथ changes save करें
+git add .
+git commit -m "feat: responsive sidebar navigation implement kiya"</code></pre>
+
+                        <h2>2. Branch Management</h2>
+                        <p>Local git branches को create, list, merge, और clean करना:</p>
+                        <pre><code class="language-bash"># सभी local branches list करें
+git branch
+
+# switch करके new branch create करें
+git checkout -b feature/search-engine
+
+# feature branch को current branch (जैसे main) में merge करें
+git checkout main
+git merge feature/search-engine
+
+# काम खत्म होने पर local branch delete करें
+git branch -d feature/search-engine</code></pre>
+
+                        <h2>3. Stashing Changes</h2>
+                        <p>स्थायी (permanent) commit किए बिना progress में चल रहे काम को temporary रूप से save करना:</p>
+                        <pre><code class="language-bash"># Active changes stash करें (working copy clean हो जाती है)
+git stash -u
+
+# सभी stashed changes list करें
+git stash list
+
+# सबसे recent stash list से हटाकर re-apply करें
+git stash pop
+
+# stashed changes को discard करें
+git stash clear</code></pre>
+
+                        <h2>4. Sync & Remote Pushing</h2>
+                        <p>Local changes को push करना और remote source repositories से updates को pull करना:</p>
+                        <pre><code class="language-bash"># Remote metadata retrieve करके updates merge करें
+git pull origin main
+
+# commits को remote origin repository पर send करें
+git push origin main</code></pre>
+                    </section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
+                            <span>GitHub Pages पर host किया गया है</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
