@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="javascript, programming, js, cheatsheet">
-    <title>JavaScript Cheat Sheet | CuriousWiki Reference</title>
+    <meta name="keywords" content="linux, bash, cat, commands, files, directories">
+    <title>cat Command Guide | CuriousWiki</title>
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../../../css/style.css">
 </head>
 <body>
     <div id="app">
@@ -148,11 +148,13 @@
                     <i data-lucide="menu"></i>
                 </button>
                 <div class="breadcrumbs">
-                    <a href="../index.html">Home</a>
+                    <a href="../../../../index.html">Home</a>
                     <span class="separator">></span>
-                    <a href="javascript-cheatsheet.html">Reference</a>
+                    <a href="../index.html">BASH Guide</a>
                     <span class="separator">></span>
-                    <span>JS Cheat Sheet</span>
+                    <a href="index.html">Files & Directories</a>
+                    <span class="separator">></span>
+                    <span>cat Command</span>
                 </div>
                 <a id="edit-btn" href="#" target="_blank" class="edit-btn">
                     <i data-lucide="github"></i>
@@ -163,116 +165,57 @@
             <div class="content-container">
                 <article>
                     <header class="article-header">
-                        <h1 class="article-title">⚡ JavaScript Cheat Sheet</h1>
+                        <h1 class="article-title">🐱 cat (concatenate and display) Command</h1>
                         <div class="article-meta">
-                            <span><i data-lucide="calendar"></i> June 30, 2026</span>
+                            <span><i data-lucide="calendar"></i> July 01, 2026</span>
                             <span><i data-lucide="clock"></i> 4 min read</span>
-                            <span><i data-lucide="tag"></i> javascript, programming</span>
+                            <span><i data-lucide="tag"></i> cat, concatenate, read-files, redirect</span>
                         </div>
                     </header>
 
                     <section class="article-body">
-                        <p>Developer workspaces में quick reference के लिए आवश्यक modern JavaScript code structures, helpers, और syntax formulas का एक collection.</p>
+                        <p><strong><code>cat</code> (Concatenate)</strong> command Linux utility का एक core tool है। इसका प्राथमिक काम files के contents को terminal screen (standard output) पर print करना है, लेकिन इसका उपयोग multiple files को merge करने और quick files creation के लिए भी किया जाता है।</p>
 
-                        <h2>1. Array Methods का उपयोग</h2>
-                        <p>List values को filter, transform, या aggregate करने के लिए common functions:</p>
-                        <pre><code class="language-javascript">const upabhokta = [
-    { pehchanId: 1, naam: 'Alice', pad: 'admin', ank: 120 },
-    { pehchanId: 2, naam: 'Bob', pad: 'user', ank: 90 },
-    { pehchanId: 3, naam: 'Charlie', pad: 'user', ank: 200 }
-];
+                        <h2>1. Syntax</h2>
+                        <pre><code class="language-bash">cat [options] [file_name(s)]</code></pre>
 
-// 1. Filter: admin users (prashashak) को extract करें
-const prashashak = upabhokta.filter(ekUpabhokta => ekUpabhokta.pad === 'admin');
+                        <h2>2. Key Formatting Flags</h2>
+                        <ul>
+                            <li><code>-n</code>, <code>--number</code>: Output की सभी lines के आगे line numbers print करता है (खाली lines को भी count करता है)।</li>
+                            <li><code>-b</code>, <code>--number-nonblank</code>: केवल occupied/non-empty lines के आगे ही numbers print करता है।</li>
+                            <li><code>-s</code>, <code>--squeeze-blank</code>: लगातार आने वाली multiple blank lines को merge करके single empty line block compile कर देता है।</li>
+                            <li><code>-T</code>, <code>--show-tabs</code>: File में tabs configurations (indentation spaces) को <code>^I</code> format में print करता है.</li>
+                            <li><code>-E</code>, <code>--show-ends</code>: lines के end boundary boundary limits validations details trace करने के लिए dollar parameters (<code>$</code>) prints करता है.</li>
+                        </ul>
 
-// 2. Map: names की list (naamKiList) इकट्ठा करें
-const naamKiList = upabhokta.map(ekUpabhokta => ekUpabhokta.naam); // ['Alice', 'Bob', 'Charlie']
+                        <h2>3. Terminal Examples</h2>
+                        
+                        <h3>Example 1: Read file contents in terminal</h3>
+                        <pre><code class="language-bash">cat package.json</code></pre>
 
-// 3. Reduce: total points (kulAnk) calculate करें
-const kulAnk = upabhokta.reduce((jod, ekUpabhokta) => jod + ekUpabhokta.ank, 0); // 410
+                        <h3>Example 2: Display occupied lines indexes only</h3>
+                        <pre><code class="language-bash">cat -b server.js</code></pre>
 
-// 4. Find: id = 2 वाले user (bablu) को select करें
-const bablu = upabhokta.find(ekUpabhokta => ekUpabhokta.pehchanId === 2);</code></pre>
+                        <h3>Example 3: Merging files together (Concatenation)</h3>
+                        <p>multiple text segments को merge करके new file save mapping redirection:</p>
+                        <pre><code class="language-bash">cat header.html body.html footer.html > index.html</code></pre>
 
-                        <h2>2. Promises & Async/Await</h2>
-                        <p>Asynchronous network requests या delay states को clean और readable तरीके से handle करना:</p>
-                        <pre><code class="language-javascript">// Standard Promise-based delay helper
-const delay = (miliSecond) => new Promise(pooraKarein => setTimeout(pooraKarein, miliSecond));
-
-// Async function dummy network fetch perform करने के लिए
-async function fetchUserData(sadasyaId) {
-    try {
-        console.log('Loading database records...');
-        await delay(1000); // 1 second database latency simulating
-        
-        const uttar = await fetch(`https://api.example.com/users/${sadasyaId}`);
-        if (!uttar.ok) {
-            throw new Error(`HTTP error! status: ${uttar.status}`);
-        }
-        
-        const jaankari = await uttar.json();
-        return jaankari;
-    } catch (galti) {
-        console.error('Fetch execution failed: ', galti);
-        throw galti;
-    }
-}</code></pre>
-
-                        <h2>3. DOM Selector & Click Handlers</h2>
-                        <p>Page items को select करना, event interactions को bind करना, और dynamically styling classes को toggle करना:</p>
-                        <pre><code class="language-javascript">// Specific elements select करें
-const mukhyaCard = document.querySelector('.card-element');
-const sabhiTags = document.querySelectorAll('.tag');
-
-// click पर class toggle करें
-if (mukhyaCard) {
-    mukhyaCard.addEventListener('click', (ghatna) => {
-        // active status class toggle करें
-        mukhyaCard.classList.toggle('active');
-        console.log('Card state toggle triggered at:', ghatna.clientX);
-    });
-}
-
-// multiple tag nodes पर clicks bind करें
-sabhiTags.forEach(ekTag => {
-    ekTag.addEventListener('click', () => {
-        const tagKaText = ekTag.textContent;
-        console.log(`Tag selected: ${tagKaText}`);
-    });
-});</code></pre>
-
-                        <div class="callout callout-warning">
-                            <i data-lucide="alert-triangle"></i>
-                            <div class="callout-content">
-                                <div class="callout-title">Notice: ES6+ Syntax</div>
-                                <p>यह cheatsheet modern Arrow Functions और Destructuring elements का उपयोग करती है। यदि target browsers basic ES6 features का support नहीं करते हैं, तो browser compatibility tables की जांच करना सुनिश्चित करें।</p>
-                            </div>
-                        </div>
-
-                        <h2>4. Local Storage Configuration</h2>
-                        <p>Page reloads के बाद भी persistent रहने वाले data को read और write करना:</p>
-                        <pre><code class="language-javascript">// Preferences save करें (configurations याद रखता है)
-localStorage.setItem('theme', 'dark');
-localStorage.setItem('userId', '10984');
-
-// Preferences वापस load करें
-const bachayaHuaTheme = localStorage.getItem('theme') || 'light';
-const bachayaHuaSadasya = localStorage.getItem('userId');
-
-// Target item delete करें या सभी local records clean करें
-localStorage.removeItem('userId');
-localStorage.clear(); // pure localStorage domain empty करें</code></pre>
+                        <h3>Example 4: Quick file writing from Terminal</h3>
+                        <p>यदि आप nano/vim open किए बिना quick script config write details console commands use करना चाहते हैं:</p>
+                        <pre><code class="language-bash">cat > test.txt
+Write some lines here
+Press Ctrl+D to save and exit</code></pre>
 
                         <div class="backlinks-container">
                             <div class="backlinks-title">Linked References (Backlinks)</div>
                             <div class="backlinks-list">
-                                <a href="../index.html" class="backlink-item">
-                                    <i data-lucide="layout-dashboard"></i>
-                                    <span>Home Dashboard</span>
+                                <a href="index.html" class="backlink-item">
+                                    <i data-lucide="folder-open"></i>
+                                    <span>Files & Directories Index</span>
                                 </a>
-                                <a href="getting-started.html" class="backlink-item">
-                                    <i data-lucide="book-open"></i>
-                                    <span>Getting Started</span>
+                                <a href="../index.html" class="backlink-item">
+                                    <i data-lucide="terminal-square"></i>
+                                    <span>BASH Guide Index</span>
                                 </a>
                             </div>
                         </div>
@@ -304,6 +247,6 @@ localStorage.clear(); // pure localStorage domain empty करें</code></pre
     </div>
 
     <!-- Shared JS -->
-    <script src="../js/main.js"></script>
+    <script src="../../../../js/main.js"></script>
 </body>
 </html>

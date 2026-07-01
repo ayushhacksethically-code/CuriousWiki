@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="linux, arch, pacman, systemd, aur, terminal">
-    <title>Arch Linux Bible | CuriousWiki Linux</title>
+    <meta name="keywords" content="linux, bash, rmdir, commands, files, directories">
+    <title>rmdir Command Guide | CuriousWiki</title>
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/style.css">
 </head>
 <body>
     <div id="app">
@@ -51,18 +51,30 @@
                 </div>
 
                 <div class="nav-section">
-                    <div class="nav-section-title">Linux Bibles</div>
+                    <div class="nav-section-title">Linux & Shells</div>
                     <ul class="nav-list">
                         <li class="nav-item">
-                            <a href="pages/linux/arch-bible.html" class="nav-link">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
                                 <i data-lucide="book"></i>
-                                <span>Arch Bible</span>
+                                <span>Linux Bible</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/linux/linux-tools.html" class="nav-link">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
                                 <i data-lucide="pocket"></i>
                                 <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
                             </a>
                         </li>
                     </ul>
@@ -71,12 +83,6 @@
                 <div class="nav-section">
                     <div class="nav-section-title">Reference</div>
                     <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="pages/markdown-guide.html" class="nav-link">
-                                <i data-lucide="code"></i>
-                                <span>Markdown Guide</span>
-                            </a>
-                        </li>
                         <li class="nav-item">
                             <a href="pages/javascript-cheatsheet.html" class="nav-link">
                                 <i data-lucide="terminal"></i>
@@ -142,11 +148,13 @@
                     <i data-lucide="menu"></i>
                 </button>
                 <div class="breadcrumbs">
-                    <a href="../../index.html">Home</a>
+                    <a href="../../../../index.html">Home</a>
                     <span class="separator">></span>
-                    <a href="arch-bible.html">Linux</a>
+                    <a href="../index.html">BASH Guide</a>
                     <span class="separator">></span>
-                    <span>Arch Bible</span>
+                    <a href="index.html">Files & Directories</a>
+                    <span class="separator">></span>
+                    <span>rmdir Command</span>
                 </div>
                 <a id="edit-btn" href="#" target="_blank" class="edit-btn">
                     <i data-lucide="github"></i>
@@ -157,88 +165,47 @@
             <div class="content-container">
                 <article>
                     <header class="article-header">
-                        <h1 class="article-title">📖 Arch Linux Bible</h1>
+                        <h1 class="article-title">📁 rmdir (remove empty directories) Command</h1>
                         <div class="article-meta">
-                            <span><i data-lucide="calendar"></i> June 30, 2026</span>
-                            <span><i data-lucide="clock"></i> 5 min read</span>
-                            <span><i data-lucide="tag"></i> linux, arch, setup</span>
+                            <span><i data-lucide="calendar"></i> July 01, 2026</span>
+                            <span><i data-lucide="clock"></i> 3 min read</span>
+                            <span><i data-lucide="tag"></i> rmdir, directories, cleanup, folders</span>
                         </div>
                     </header>
 
                     <section class="article-body">
-                        <p>Arch Linux एक lightweight, customizable, और user-centric Linux distribution है। यह guide, Arch Linux के अंदर system configuration update करने, server status check करने, और dependencies manage करने के लिए एक comprehensive reference (bible) के रूप में काम करती है।</p>
+                        <p><strong><code>rmdir</code> (Remove Directory)</strong> command का काम केवल <strong>खाली फोल्डर्स (empty directories)</strong> को filesystem से हटाना है। यह directories को clear करने का एक safe method है क्योंकि अगर folder में कोई भी data/file होगी, तो यह error देगा और deletion block कर देगा।</p>
 
-                        <h2>1. Pacman Package Manager</h2>
-                        <p>System databases को sync करने, packages search करने, और installs manage करने के लिए primary tools:</p>
-                        <pre><code class="language-bash"># System synchronization aur updates pull karein (full upgrade)
-sudo pacman -Syu
+                        <h2>1. Syntax</h2>
+                        <pre><code class="language-bash">rmdir [options] directory_name(s)</code></pre>
 
-# New package install karein
-sudo pacman -S package_name
+                        <h2>2. Key Options & Flags</h2>
+                        <ul>
+                            <li><code>-p</code>, <code>--parents</code>: Empty nested directory path (जैसे <code>dir1/dir2/dir3</code>) को recursive style में auto check validation पर delete करता है।</li>
+                            <li><code>-v</code>, <code>--verbose</code>: Deletion status logs details show.</li>
+                        </ul>
 
-# Package aur uske unnecessary dependencies remove karein
-sudo pacman -Rns package_name
+                        <h2>3. Safe deletion vs rm -rf comparison</h2>
+                        <p>जब आप <code>rm -rf folder</code> चलाते हैं, तो वह बिना पूछे सब कुछ साफ़ कर देता है, जिससे important files उड़ने का ख़तरा रहता है। <code>rmdir</code> केवल तभी काम करेगा जब folder खाली हो:</p>
+                        
+                        <pre><code class="language-bash"># Fails if "app_logs" has files inside
+rmdir app_logs
+# Output: rmdir: failed to remove 'app_logs': Directory not empty
 
-# Local package database search karein
-pacman -Ss query_word
-
-# Local package cache complete clear karein
-sudo pacman -Scc</code></pre>
-
-                        <h2>2. Systemd Services Management</h2>
-                        <p>Arch init boot system processes (services) को control और configure करना:</p>
-                        <pre><code class="language-bash"># service status check karein
-systemctl status service_name
-
-# service start karein (current session)
-sudo systemctl start service_name
-
-# service boot startup par enable karein
-sudo systemctl enable service_name
-
-# service check default run status
-systemctl is-active service_name</code></pre>
-
-                        <div class="callout callout-warning">
-                            <i data-lucide="alert-triangle"></i>
-                            <div class="callout-content">
-                                <div class="callout-title">Important: AUR Safety check</div>
-                                <p>AUR helper tools (जैसे <code>yay</code> or <code>paru</code>) का compile/install script run करने से पहले हमेशा PKGBUILD script file को manually audit कर लें।</p>
-                            </div>
-                        </div>
-
-                        <h2>3. AUR (Arch User Repository)</h2>
-                        <p>Community driven custom programs compile करना और install करना:</p>
-                        <pre><code class="language-bash"># aur sources download karein
-git clone https://aur.archlinux.org/yay-bin.git
-
-# package directory me jump karein
-cd yay-bin
-
-# compile aur local install complete karein
-makepkg -si</code></pre>
-
-                        <h2>4. System Logs (Journald)</h2>
-                        <p>Core kernel logs और program runtime errors monitor करना:</p>
-                        <pre><code class="language-bash"># real-time live logs tail show karein
-journalctl -f
-
-# current boot process debug logs extract karein
-journalctl -b
-
-# specific service runtime error code list search karein
-journalctl -u service_name --since "1 hour ago"</code></pre>
+# Delete nested empty directories safely
+rmdir -p backup/january/week1
+# This deletes week1, then january, then backup (if all are empty recursively)</code></pre>
 
                         <div class="backlinks-container">
                             <div class="backlinks-title">Linked References (Backlinks)</div>
                             <div class="backlinks-list">
-                                <a href="../../index.html" class="backlink-item">
-                                    <i data-lucide="layout-dashboard"></i>
-                                    <span>Home Dashboard</span>
+                                <a href="index.html" class="backlink-item">
+                                    <i data-lucide="folder-open"></i>
+                                    <span>Files & Directories Index</span>
                                 </a>
-                                <a href="linux-tools.html" class="backlink-item">
-                                    <i data-lucide="pocket"></i>
-                                    <span>Linux Tools</span>
+                                <a href="../index.html" class="backlink-item">
+                                    <i data-lucide="terminal-square"></i>
+                                    <span>BASH Guide Index</span>
                                 </a>
                             </div>
                         </div>
@@ -247,7 +214,7 @@ journalctl -u service_name --since "1 hour ago"</code></pre>
                     <footer>
                         <div class="footer-content">
                             <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
-                            <span>GitHub Pages पर host किया गया है</span>
+                            <span>CuriousWiki Open Source Project</span>
                         </div>
                     </footer>
                 </article>
@@ -270,6 +237,6 @@ journalctl -u service_name --since "1 hour ago"</code></pre>
     </div>
 
     <!-- Shared JS -->
-    <script src="../../js/main.js"></script>
+    <script src="../../../../js/main.js"></script>
 </body>
 </html>

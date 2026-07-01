@@ -367,4 +367,78 @@ document.addEventListener('DOMContentLoaded', () => {
             return li;
         }
     }
+
+    // --- DYNAMIC MARKDOWN PARSER (marked.js) ---
+    function initMarkdownParser() {
+        const mdElements = document.querySelectorAll('.markdown-content, [data-markdown="true"]');
+        if (mdElements.length === 0) return; 
+        
+        const markedScript = document.createElement('script');
+        markedScript.src = "https://cdn.jsdelivr.net/npm/marked/marked.min.js";
+        markedScript.onload = () => {
+            mdElements.forEach(elem => {
+                const rawMarkdown = elem.textContent || elem.innerText;
+                if (window.marked) {
+                    elem.innerHTML = window.marked.parse(rawMarkdown);
+                    if (window.lucide) {
+                        window.lucide.createIcons();
+                    }
+                    initializeCodeBlocks(elem);
+                }
+            });
+        };
+        document.head.appendChild(markedScript);
+    }
+
+    function initializeCodeBlocks(container) {
+        const codeBlocks = container.querySelectorAll('pre');
+        codeBlocks.forEach(block => {
+            if (block.querySelector('.code-header')) return;
+            const codeElement = block.querySelector('code');
+            if (!codeElement) return;
+
+            let lang = 'code';
+            const classes = codeElement.className.split(' ');
+            classes.forEach(c => {
+                if (c.startsWith('language-')) {
+                    lang = c.replace('language-', '').toUpperCase();
+                }
+            });
+
+            const header = document.createElement('div');
+            header.className = 'code-header';
+            
+            const langSpan = document.createElement('span');
+            langSpan.textContent = lang;
+            header.appendChild(langSpan);
+
+            const copyBtn = document.createElement('button');
+            copyBtn.className = 'copy-btn';
+            copyBtn.innerHTML = '<i data-lucide="copy"></i> Copy';
+            
+            copyBtn.addEventListener('click', async () => {
+                try {
+                    await navigator.clipboard.writeText(codeElement.textContent);
+                    copyBtn.innerHTML = '<i data-lucide="check"></i> Copied!';
+                    copyBtn.style.color = 'var(--accent-success)';
+                    copyBtn.style.borderColor = 'var(--accent-success)';
+                    
+                    setTimeout(() => {
+                        copyBtn.innerHTML = '<i data-lucide="copy"></i> Copy';
+                        copyBtn.style.color = '';
+                        copyBtn.style.borderColor = '';
+                        if (window.lucide) window.lucide.createIcons();
+                    }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy text: ', err);
+                }
+            });
+
+            header.appendChild(copyBtn);
+            block.insertBefore(header, codeElement);
+        });
+        if (window.lucide) window.lucide.createIcons();
+    }
+
+    initMarkdownParser();
 });

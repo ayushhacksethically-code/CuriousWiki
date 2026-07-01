@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="javascript, programming, js, cheatsheet">
-    <title>JavaScript Cheat Sheet | CuriousWiki Reference</title>
+    <meta name="keywords" content="linux, editors, nano, vim, emacs, vi, default editor, debian, fedora, arch">
+    <title>Terminal Editors & Setup | CuriousWiki</title>
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../../css/style.css">
 </head>
 <body>
     <div id="app">
@@ -148,11 +148,11 @@
                     <i data-lucide="menu"></i>
                 </button>
                 <div class="breadcrumbs">
-                    <a href="../index.html">Home</a>
+                    <a href="../../../index.html">Home</a>
                     <span class="separator">></span>
-                    <a href="javascript-cheatsheet.html">Reference</a>
+                    <a href="index.html">BASH Guide</a>
                     <span class="separator">></span>
-                    <span>JS Cheat Sheet</span>
+                    <span>Terminal Editors Setup</span>
                 </div>
                 <a id="edit-btn" href="#" target="_blank" class="edit-btn">
                     <i data-lucide="github"></i>
@@ -163,116 +163,95 @@
             <div class="content-container">
                 <article>
                     <header class="article-header">
-                        <h1 class="article-title">⚡ JavaScript Cheat Sheet</h1>
+                        <h1 class="article-title">📝 Terminal Text Editors & Setup Guide</h1>
                         <div class="article-meta">
-                            <span><i data-lucide="calendar"></i> June 30, 2026</span>
-                            <span><i data-lucide="clock"></i> 4 min read</span>
-                            <span><i data-lucide="tag"></i> javascript, programming</span>
+                            <span><i data-lucide="calendar"></i> July 01, 2026</span>
+                            <span><i data-lucide="clock"></i> 5 min read</span>
+                            <span><i data-lucide="tag"></i> editors, config, linux</span>
                         </div>
                     </header>
 
                     <section class="article-body">
-                        <p>Developer workspaces में quick reference के लिए आवश्यक modern JavaScript code structures, helpers, और syntax formulas का एक collection.</p>
+                        <p>Linux Terminal में direct config files और code edit करने के लिए multiple options उपलब्ध हैं। इस guide में हम प्रमुख editors और default configurations के बारे में जानेंगे।</p>
 
-                        <h2>1. Array Methods का उपयोग</h2>
-                        <p>List values को filter, transform, या aggregate करने के लिए common functions:</p>
-                        <pre><code class="language-javascript">const upabhokta = [
-    { pehchanId: 1, naam: 'Alice', pad: 'admin', ank: 120 },
-    { pehchanId: 2, naam: 'Bob', pad: 'user', ank: 90 },
-    { pehchanId: 3, naam: 'Charlie', pad: 'user', ank: 200 }
-];
+                        <h2>1. Core Terminal Editors (मुख्य टेक्स्ट एडिटर्स)</h2>
+                        
+                        <h3>⚫ Nano Editor</h3>
+                        <p>यह beginners के लिए सबसे सरल Editor है। इसके shortcuts (जैसे copy, save, exit) screen के नीचे हमेशा visible रहते हैं।</p>
+                        <ul>
+                            <li><strong>Save File:</strong> <kbd>Ctrl</kbd> + <kbd>O</kbd></li>
+                            <li><strong>Exit:</strong> <kbd>Ctrl</kbd> + <kbd>X</kbd></li>
+                            <li><strong>Search Text:</strong> <kbd>Ctrl</kbd> + <kbd>W</kbd></li>
+                        </ul>
 
-// 1. Filter: admin users (prashashak) को extract करें
-const prashashak = upabhokta.filter(ekUpabhokta => ekUpabhokta.pad === 'admin');
+                        <h3>⚫ Vim / Vi Editor</h3>
+                        <p>Vi (Visual Instrument) पारंपरिक Unix editor है। Vim (Vi Improved) उसका extended standard version है। यह keyboard-driven modes पर काम करता है:</p>
+                        <ul>
+                            <li><strong>Normal Mode:</strong> File navigation के लिए (Default mode).</li>
+                            <li><strong>Insert Mode:</strong> Text लिखने के लिए (<kbd>i</kbd> दबाएं)।</li>
+                            <li><strong>Command Mode:</strong> Save/Exit करने के लिए (<kbd>Esc</kbd> के बाद <kbd>:</kbd> दबाएं)। <code>:wq</code> (save + exit) या <code>:q!</code> (discard + exit)।</li>
+                        </ul>
 
-// 2. Map: names की list (naamKiList) इकट्ठा करें
-const naamKiList = upabhokta.map(ekUpabhokta => ekUpabhokta.naam); // ['Alice', 'Bob', 'Charlie']
+                        <h3>⚫ GNU Emacs</h3>
+                        <p>यह एक extremely extensible, screen-oriented text editor है। इसे "an editor within an OS" भी कहा जाता है क्योंकि इसमें builtin terminal console, file manager, email client, और macros integrations मिलते हैं। Lisp language पर configure होने के कारण यह infinite levels of customizations support करता है।</p>
+                        <ul>
+                            <li><strong>Save File:</strong> <kbd>Ctrl</kbd> + <kbd>X</kbd>, फिर <kbd>Ctrl</kbd> + <kbd>S</kbd></li>
+                            <li><strong>Exit:</strong> <kbd>Ctrl</kbd> + <kbd>X</kbd>, फिर <kbd>Ctrl</kbd> + <kbd>C</kbd></li>
+                        </ul>
 
-// 3. Reduce: total points (kulAnk) calculate करें
-const kulAnk = upabhokta.reduce((jod, ekUpabhokta) => jod + ekUpabhokta.ank, 0); // 410
+                        <h2>2. Distro-specific Install Commands</h2>
+                        <p>अलग-अलग Linux distribution configurations में इन editors को install करने के commands:</p>
+                        <pre><code class="language-bash"># --- 1. Debian/Ubuntu Based Systems ---
+sudo apt update
+sudo apt install nano vim emacs
 
-// 4. Find: id = 2 वाले user (bablu) को select करें
-const bablu = upabhokta.find(ekUpabhokta => ekUpabhokta.pehchanId === 2);</code></pre>
+# --- 2. Fedora/RHEL Based Systems ---
+sudo dnf install nano vim-enhanced emacs
 
-                        <h2>2. Promises & Async/Await</h2>
-                        <p>Asynchronous network requests या delay states को clean और readable तरीके से handle करना:</p>
-                        <pre><code class="language-javascript">// Standard Promise-based delay helper
-const delay = (miliSecond) => new Promise(pooraKarein => setTimeout(pooraKarein, miliSecond));
+# --- 3. Arch Linux Based Systems ---
+sudo pacman -Syu nano vim emacs-nox</code></pre>
 
-// Async function dummy network fetch perform करने के लिए
-async function fetchUserData(sadasyaId) {
-    try {
-        console.log('Loading database records...');
-        await delay(1000); // 1 second database latency simulating
-        
-        const uttar = await fetch(`https://api.example.com/users/${sadasyaId}`);
-        if (!uttar.ok) {
-            throw new Error(`HTTP error! status: ${uttar.status}`);
-        }
-        
-        const jaankari = await uttar.json();
-        return jaankari;
-    } catch (galti) {
-        console.error('Fetch execution failed: ', galti);
-        throw galti;
-    }
-}</code></pre>
+                        <h2>3. Setting Default System Editor (डिफ़ॉल्ट एडिटर सेट करना)</h2>
+                        <p>जब आप <code>git commit</code> या <code>visudo</code> run करते हैं, तो OS automatically एक default editor launch करता है। इसे configuration paths में set करने के multiple ways हैं:</p>
 
-                        <h2>3. DOM Selector & Click Handlers</h2>
-                        <p>Page items को select करना, event interactions को bind करना, और dynamically styling classes को toggle करना:</p>
-                        <pre><code class="language-javascript">// Specific elements select करें
-const mukhyaCard = document.querySelector('.card-element');
-const sabhiTags = document.querySelectorAll('.tag');
+                        <h3>Method A: Shell Environment Variables (Universal Method)</h3>
+                        <p>अपनी profile config (जैसे <code>~/.bashrc</code> या <code>~/.bash_profile</code>) में Editor variable export करें:</p>
+                        <pre><code class="language-bash"># Default editor को Vim सेट करने के लिए:
+export EDITOR="vim"
+export VISUAL="vim"
 
-// click पर class toggle करें
-if (mukhyaCard) {
-    mukhyaCard.addEventListener('click', (ghatna) => {
-        // active status class toggle करें
-        mukhyaCard.classList.toggle('active');
-        console.log('Card state toggle triggered at:', ghatna.clientX);
-    });
-}
+# Default editor को Nano सेट करने के लिए:
+export EDITOR="nano"
+export VISUAL="nano"
 
-// multiple tag nodes पर clicks bind करें
-sabhiTags.forEach(ekTag => {
-    ekTag.addEventListener('click', () => {
-        const tagKaText = ekTag.textContent;
-        console.log(`Tag selected: ${tagKaText}`);
-    });
-});</code></pre>
+# Save करने के बाद profile reload करें:
+source ~/.bashrc</code></pre>
 
-                        <div class="callout callout-warning">
-                            <i data-lucide="alert-triangle"></i>
+                        <h3>Method B: System-wide Alternatives (Debian/Ubuntu)</h3>
+                        <p>Debian-based OS में system-wide global interactive shell selection utility का use करें:</p>
+                        <pre><code class="language-bash">sudo update-alternatives --config editor
+# Menu में से अपने मनपसंद editor का sequence number enter करें</code></pre>
+
+                        <h2>4. Editor Cheatsheet Resources (प्लेसहोल्डर्स)</h2>
+                        <p>आगे की development details और advanced commands के custom reference pages:</p>
+                        <div class="callout callout-info">
+                            <i data-lucide="book-open"></i>
                             <div class="callout-content">
-                                <div class="callout-title">Notice: ES6+ Syntax</div>
-                                <p>यह cheatsheet modern Arrow Functions और Destructuring elements का उपयोग करती है। यदि target browsers basic ES6 features का support नहीं करते हैं, तो browser compatibility tables की जांच करना सुनिश्चित करें।</p>
+                                <div class="callout-title">Editor Quick Cheat Sheets</div>
+                                <ul>
+                                    <li><strong>Nano Cheat Sheet:</strong> Basic shortcuts और configuration presets.</li>
+                                    <li><strong>Vim Cheat Sheet:</strong> Advanced commands, buffers, macros, and registers (Refer: <a href="../../vim-cheatsheet.html" class="wiki-link">Standard Vim Cheatsheet</a>).</li>
+                                    <li><strong>GNU Emacs Reference:</strong> Custom keybindings और buffers navigation mapping list.</li>
+                                </ul>
                             </div>
                         </div>
-
-                        <h2>4. Local Storage Configuration</h2>
-                        <p>Page reloads के बाद भी persistent रहने वाले data को read और write करना:</p>
-                        <pre><code class="language-javascript">// Preferences save करें (configurations याद रखता है)
-localStorage.setItem('theme', 'dark');
-localStorage.setItem('userId', '10984');
-
-// Preferences वापस load करें
-const bachayaHuaTheme = localStorage.getItem('theme') || 'light';
-const bachayaHuaSadasya = localStorage.getItem('userId');
-
-// Target item delete करें या सभी local records clean करें
-localStorage.removeItem('userId');
-localStorage.clear(); // pure localStorage domain empty करें</code></pre>
 
                         <div class="backlinks-container">
                             <div class="backlinks-title">Linked References (Backlinks)</div>
                             <div class="backlinks-list">
-                                <a href="../index.html" class="backlink-item">
-                                    <i data-lucide="layout-dashboard"></i>
-                                    <span>Home Dashboard</span>
-                                </a>
-                                <a href="getting-started.html" class="backlink-item">
-                                    <i data-lucide="book-open"></i>
-                                    <span>Getting Started</span>
+                                <a href="index.html" class="backlink-item">
+                                    <i data-lucide="terminal-square"></i>
+                                    <span>BASH Guide Index</span>
                                 </a>
                             </div>
                         </div>
@@ -304,6 +283,6 @@ localStorage.clear(); // pure localStorage domain empty करें</code></pre
     </div>
 
     <!-- Shared JS -->
-    <script src="../js/main.js"></script>
+    <script src="../../../js/main.js"></script>
 </body>
 </html>

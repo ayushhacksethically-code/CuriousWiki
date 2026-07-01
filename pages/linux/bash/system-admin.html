@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="developer, productivity, planning, focus">
-    <title>Productivity Hacks | CuriousWiki Workflows</title>
+    <meta name="keywords" content="bash, process management, packages, apt, dnf, pacman, compression, networking, curl, tar">
+    <title>Sysadmin, Packages & Network | CuriousWiki BASH</title>
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../../css/style.css">
 </head>
 <body>
     <div id="app">
@@ -148,11 +148,11 @@
                     <i data-lucide="menu"></i>
                 </button>
                 <div class="breadcrumbs">
-                    <a href="../index.html">Home</a>
+                    <a href="../../../index.html">Home</a>
                     <span class="separator">></span>
-                    <a href="productivity.html">Workflows</a>
+                    <a href="index.html">BASH Guide</a>
                     <span class="separator">></span>
-                    <span>Productivity Hacks</span>
+                    <span>System Administration & Package Management</span>
                 </div>
                 <a id="edit-btn" href="#" target="_blank" class="edit-btn">
                     <i data-lucide="github"></i>
@@ -163,80 +163,137 @@
             <div class="content-container">
                 <article>
                     <header class="article-header">
-                        <h1 class="article-title">🎯 Developer Productivity Hacks</h1>
+                        <h1 class="article-title">🖥️ Processes, Package Managers & Networking</h1>
                         <div class="article-meta">
-                            <span><i data-lucide="calendar"></i> June 30, 2026</span>
-                            <span><i data-lucide="clock"></i> 3 min read</span>
-                            <span><i data-lucide="tag"></i> developer, productivity, planning</span>
+                            <span><i data-lucide="calendar"></i> July 01, 2026</span>
+                            <span><i data-lucide="clock"></i> 8 min read</span>
+                            <span><i data-lucide="tag"></i> packages, network, processes</span>
                         </div>
                     </header>
 
                     <section class="article-body">
-                        <p>creative और development blocks के दौरान high output levels को बनाए रखने के लिए design किए गए सबसे प्रभावी developer scheduling frameworks, daily time-blocking principles, और note-taking mechanics का एक compilation.</p>
+                        <p>यह chapter Linux administration के parameters को cover करता है, जिसमें active processes control, package commands (apt, dnf, yum, pacman, brew), file compression, और network tools शामिल हैं।</p>
 
-                        <h2>1. Time-Blocking Framework</h2>
-                        <p>एक reactive to-do list के बजाय दिन को dedicated time windows (blocks) में विभाजित करना:</p>
+                        <h2>1. Process Management (प्रक्रिया प्रबंधन)</h2>
+                        <p>Linux में processes को view, modify, background execution, और kill करने के commands:</p>
                         <ul>
-                            <li><strong>Focus Blocks (2-3 hours)</strong>: High-value mental work (जैसे coding, writing, core planning) के लिए reserve हैं। notifications को पूरी तरह से बंद कर दें।</li>
-                            <li><strong>Administrative Blocks (30-60 mins)</strong>: Email responses को group करना, lists clean करना, project sheets update करना, और छोटी items को हल करना।</li>
-                            <li><strong>Buffer Blocks (15-30 mins)</strong>: जानकारी को पचाने, screens से दूर कदम रखने, और focus बहाल करने के लिए post-block rest buffers.</li>
+                            <li><strong><code>ps</code></strong>: Active processes की snapshot देखना:
+                                <pre><code class="language-bash"># CPU/Memory usage details के साथ सभी processes list करें
+ps aux | grep "node"</code></pre>
+                            </li>
+                            <li><strong><code>top</code> / <code>htop</code></strong>: System processes को dynamically real-time monitor करना.</li>
+                            <li><strong><code>kill</code> / <code>killall</code> / <code>pkill</code></strong>: Target process को signal भेजना:
+                                <pre><code class="language-bash">kill 1234      # PID 1234 को standard term (SIGTERM) भेजें
+kill -9 1234   # PID 1234 को forcefully kill (SIGKILL) करें
+pkill -f server # 'server' name वाली सभी processes kill करें</code></pre>
+                            </li>
+                            <li><strong><code>bg</code> / <code>fg</code> / <code>jobs</code></strong>: Background/Foreground management:
+                                <pre><code class="language-bash"># Command के अंत में '&' लगाने से वह background job में start होती है
+python3 server.py &
+jobs           # Running background jobs की list देखें
+fg %1          # Job ID 1 को foreground runtime पर लाएं</code></pre>
+                            </li>
+                            <li><strong><code>nohup</code></strong>: User log-out होने के बाद भी process background में running रखना:
+                                <pre><code class="language-bash">nohup ./serve.sh > server.log 2>&1 &</code></pre>
+                            </li>
                         </ul>
 
-                        <h2>2. The Pomodoro Strategy</h2>
-                        <p>जब काम शुरू करना मुश्किल हो, तो एक structured mini-interval के लिए काम करने का संकल्प लें:</p>
-                        <ol>
-                            <li>एक single task select करें (e.g. CSS layout models लिखें).</li>
-                            <li>Timer को <kbd>25 minutes</kbd> के लिए सेट करें और पूरे focus के साथ काम करें।</li>
-                            <li>जब timer बजे तो रुकें और <kbd>5 minute</kbd> का screen-free break लें।</li>
-                            <li>इसे 4 बार repeat करें, फिर खुद को एक लंबे <kbd>15-30 minute</kbd> के break से reward करें।</li>
-                        </ol>
-
-                        <div class="callout callout-success">
-                            <i data-lucide="check-circle-2"></i>
-                            <div class="callout-content">
-                                <div class="callout-title">Success Rule: Clean Environment</div>
-                                <p>Physical और browser spaces को minimal रखना subconscious cognitive energy levels को drain करने वाले background visual distractions को रोकता है।</p>
-                            </div>
-                        </div>
-
-                        <h2>3. High-Performance Setup Rules</h2>
-                        <p>Actionable items का एक set जो लंबे समय में बड़े सुधार लाता है:</p>
+                        <h2>2. Package Management (पैकेज प्रबंधन)</h2>
+                        <p>अलग-अलग OS architectures में packages install, update, और remove करने की cheatsheet:</p>
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Action Item</th>
-                                    <th>Methodology</th>
-                                    <th>Target Outcome</th>
+                                    <th>Package Manager</th>
+                                    <th>OS Ecosystem</th>
+                                    <th>Install Command</th>
+                                    <th>Update / Clean Cache</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><strong>Inbox Zero</strong></td>
-                                    <td>तुरंत archive करें; emails को दिन में दो बार process करें।</td>
-                                    <td>दैनिक digital noise को समाप्त करें।</td>
+                                    <td><strong>apt</strong></td>
+                                    <td>Debian / Ubuntu / Mint</td>
+                                    <td><code>sudo apt install git</code></td>
+                                    <td><code>sudo apt update && sudo apt upgrade</code></td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Digital Brain</strong></td>
-                                    <td>विचारों को तुरंत <a href="../index.html" class="wiki-link">CuriousWiki</a> जैसे wiki पर offload करें।</td>
-                                    <td>सक्रिय short-term memory को free करें।</td>
+                                    <td><strong>dnf</strong></td>
+                                    <td>Fedora / RHEL (Modern)</td>
+                                    <td><code>sudo dnf install git</code></td>
+                                    <td><code>sudo dnf upgrade</code></td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Phone Distance</strong></td>
-                                    <td>Focus blocks के दौरान mobile devices को दूसरे कमरे में रखें।</td>
-                                    <td>Passive social checking habits को रोकें।</td>
+                                    <td><strong>yum</strong></td>
+                                    <td>CentOS / Enterprise Linux (Legacy)</td>
+                                    <td><code>sudo yum install git</code></td>
+                                    <td><code>sudo yum update</code></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>pacman</strong></td>
+                                    <td>Arch Linux / Manjaro</td>
+                                    <td><code>sudo pacman -S git</code></td>
+                                    <td><code>sudo pacman -Syu</code></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>brew</strong></td>
+                                    <td>macOS / Homebrew (Linux)</td>
+                                    <td><code>brew install git</code></td>
+                                    <td><code>brew update && brew upgrade</code></td>
                                 </tr>
                             </tbody>
                         </table>
 
-                        <h2>4. Weekly Reviews</h2>
-                        <p>हर रविवार शाम (Sunday evening) knowledge base को review और clean करें। outdated tasks को delete करें, tags organize करें, floating items को आपस में link करें, और अगले हफ्ते के focus blocks के लिए targets सेट करें।</p>
+                        <h2>3. File Compression & Archiving (संपीड़न और पुरालेख)</h2>
+                        <p>Files को compress और extract करने के standard tar/zip formats:</p>
+
+                        <h3>⚫ 1. Tarballs (<code>.tar.gz</code>)</h3>
+                        <pre><code class="language-bash"># 1. Compress / Create Archive (z: gzip, c: create, v: verbose, f: file)
+tar -zcvf archive.tar.gz /path/to/folder
+
+# 2. Extract / Decompress (x: extract)
+tar -zxvf archive.tar.gz -C /target/destination/dir</code></pre>
+
+                        <h3>⚫ 2. Zip / Unzip (<code>.zip</code>)</h3>
+                        <pre><code class="language-bash"># 1. Compress folder recursively
+zip -r archive.zip /path/to/folder
+
+# 2. Extract zip archive
+unzip archive.zip -d /target/destination/dir</code></pre>
+
+                        <h2>4. Network Tools & Monitoring (नेटवर्क टूल्स)</h2>
+                        <p>Server connectivity और port binding diagnostics के commands:</p>
+                        <ul>
+                            <li><strong><code>ping</code></strong>: Remote host connectivity check करना:
+                                <pre><code class="language-bash">ping -c 3 google.com</code></pre>
+                            </li>
+                            <li><strong><code>ss</code> / <code>netstat</code></strong>: Network socket connections/ports list करना:
+                                <pre><code class="language-bash"># TCP/UDP bound ports with PID details list करें
+ss -tulpn</code></pre>
+                            </li>
+                            <li><strong><code>ip</code></strong>: Interfaces और local IP settings देखना:
+                                <pre><code class="language-bash">ip a</code></pre>
+                            </li>
+                            <li><strong><code>curl</code> / <code>wget</code></strong>: URL endpoint request and downloading:
+                                <pre><code class="language-bash"># Fetch response headers only
+curl -I https://github.com
+
+# Download file direct to custom name
+wget -O setup.sh https://example.com/install.sh</code></pre>
+                            </li>
+                            <li><strong><code>traceroute</code></strong>: Path trace packets mapping route to target:
+                                <pre><code class="language-bash">traceroute google.com</code></pre>
+                            </li>
+                            <li><strong><code>nslookup</code></strong>: DNS mapping resolution query:
+                                <pre><code class="language-bash">nslookup github.com</code></pre>
+                            </li>
+                        </ul>
 
                         <div class="backlinks-container">
                             <div class="backlinks-title">Linked References (Backlinks)</div>
                             <div class="backlinks-list">
-                                <a href="../index.html" class="backlink-item">
-                                    <i data-lucide="layout-dashboard"></i>
-                                    <span>Home Dashboard</span>
+                                <a href="index.html" class="backlink-item">
+                                    <i data-lucide="terminal-square"></i>
+                                    <span>BASH Guide Index</span>
                                 </a>
                             </div>
                         </div>
@@ -268,6 +325,6 @@
     </div>
 
     <!-- Shared JS -->
-    <script src="../js/main.js"></script>
+    <script src="../../../js/main.js"></script>
 </body>
 </html>

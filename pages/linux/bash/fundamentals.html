@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="bash, shell, fundamentals, redirection, streams, stdin, stdout, stderr, pipe, alias">
+    <title>BASH Fundamentals & Redirection | CuriousWiki</title>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Workflows</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/productivity.html" class="nav-link">
+                                <i data-lucide="clock"></i>
+                                <span>Productivity Hacks</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.0.0</span>
+                <span>Static Wiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="../../../index.html">Home</a>
+                    <span class="separator">></span>
+                    <a href="index.html">BASH Guide</a>
+                    <span class="separator">></span>
+                    <span>Fundamentals & Redirection</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">🛠️ BASH Fundamentals & Stream Redirections</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> July 01, 2026</span>
+                            <span><i data-lucide="clock"></i> 8 min read</span>
+                            <span><i data-lucide="tag"></i> terminal, commands, streams</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p>यह chapter Linux Shell execution के foundations को cover करता है, जिसमें essential commands, documentation, aliases, execution control, redirections, और pipes शामिल हैं।</p>
+
+                        <h2>1. Essential CLI Commands (मूल एवं उन्नत कमांड्स)</h2>
+                        <p>फ़ाइलें और directories navigate करने और manipulate करने के standard commands:</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Command</th>
+                                    <th>Syntax / Use Case</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>pwd</code></td>
+                                    <td><code>pwd</code></td>
+                                    <td>Print Working Directory (वर्तमान पथ दिखाता है)।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>ls</code></td>
+                                    <td><code>ls -lah</code></td>
+                                    <td>छुपी हुई फाइलों (hidden) और file size के साथ सूची दिखाता है।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>mkdir</code></td>
+                                    <td><code>mkdir -p projects/bash</code></td>
+                                    <td>Parents folders के साथ recursive path directories बनाता है।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>find</code></td>
+                                    <td><code>find . -name "*.log"</code></td>
+                                    <td>पूरे directory path में specific patterns खोजता है।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>xargs</code></td>
+                                    <td><code>find . -name "*.tmp" | xargs rm</code></td>
+                                    <td>Standard output को दूसरे command के arguments में convert करता है।</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>🔁 Repeat Commands & History Shortcuts</h3>
+                        <ul>
+                            <li><strong><code>watch</code></strong>: किसी command को regular intervals पर auto-repeat करने के लिए (जैसे resource update track करना):
+                                <pre><code class="language-bash"># हर 2 second में active network ports refresh करें
+watch -n 2 ss -tulpn</code></pre>
+                            </li>
+                            <li><strong><code>!!</code></strong>: ठीक पिछला command वापस run करने के लिए (अक्सर <code>sudo</code> भूलने पर useful):
+                                <pre><code class="language-bash">apt update  # Permission denied error
+sudo !!     # Execs: sudo apt update</code></pre>
+                            </li>
+                            <li><strong><code>!$</code></strong>: पिछले command के आखिरी argument को reuse करने के लिए:
+                                <pre><code class="language-bash">mkdir new_folder
+cd !$  # cd new_folder</code></pre>
+                            </li>
+                        </ul>
+
+                        <h2>2. Getting Help (दस्तावेज़ और सहायता)</h2>
+                        <p>Linux में commands का syntax समझने के multiple options हैं:</p>
+                        <ul>
+                            <li><code>man &lt;command&gt;</code>: Command का off-line user manual दिखाता है (पढ़ने के लिए <kbd>space</kbd> और quit करने के लिए <kbd>Q</kbd> दबाएं)।</li>
+                            <li><code>info &lt;command&gt;</code>: GNU commands की hypertext links वाली detail doc configuration दिखाता है।</li>
+                            <li><code>&lt;command&gt; --help</code>: Command का संक्षिप्त summary display करता है।</li>
+                            <li><code>help &lt;builtin&gt;</code>: Shell built-in commands (जैसे <code>cd</code>, <code>history</code>, <code>alias</code>) की documentation के लिए।</li>
+                        </ul>
+
+                        <h2>3. Bash Aliases (कस्टम शार्टकट्स)</h2>
+                        <p>बार-बार टाइप किए जाने वाले लंबे commands को एक keyword (alias) में save किया जा सकता है।</p>
+                        <pre><code class="language-bash"># Temporary Alias (वर्तमान session के लिए)
+alias ll='ls -lah'
+alias gs='git status'
+
+# Permanent Aliases
+# इसे अपनी ~/.bashrc फ़ाइल के अंत में लिखें, फिर 'source ~/.bashrc' चलाएं।</code></pre>
+
+                        <h2>4. Stopping Execution (कमांड बंद या सस्पेंड करना)</h2>
+                        <p>Terminal execution के control commands:</p>
+                        <ul>
+                            <li><kbd>Ctrl</kbd> + <kbd>C</kbd>: Active running command को <strong>SIGINT</strong> signal भेजकर तुरंत kill/terminate करता है।</li>
+                            <li><kbd>Ctrl</kbd> + <kbd>Z</kbd>: Program को foreground से <strong>SIGTSTP</strong> भेजकर suspend (pause) करता है। (आप <code>fg</code> से foreground, या <code>bg</code> से background में वापस resume कर सकते हैं)।</li>
+                            <li><kbd>Ctrl</kbd> + <kbd>D</kbd>: <strong>EOF</strong> (End of File) भेजता है। Active input shell session को log out करने के लिए इसका use होता है।</li>
+                        </ul>
+
+                        <h2>5. Standard Streams & Redirection</h2>
+                        <p>Linux में हर process के पास 3 standard communication channels होते हैं:</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Descriptor ID</th>
+                                    <th>Stream Name</th>
+                                    <th>Standard Device</th>
+                                    <th>Redirection Operators</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>0</code></td>
+                                    <td><strong>stdin</strong> (Standard Input)</td>
+                                    <td>Keyboard</td>
+                                    <td><code>&lt;</code>, <code>&lt;&lt;</code>, <code>&lt;&lt;&lt;</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>1</code></td>
+                                    <td><strong>stdout</strong> (Standard Output)</td>
+                                    <td>Monitor (Terminal Screen)</td>
+                                    <td><code>&gt;</code> (overwrite), <code>&gt;&gt;</code> (append)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>2</code></td>
+                                    <td><strong>stderr</strong> (Standard Error)</td>
+                                    <td>Monitor (Terminal Screen)</td>
+                                    <td><code>2&gt;</code>, <code>2&gt;&gt;</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>📤 Output & Error Redirection Examples</h3>
+                        <pre><code class="language-bash"># Standard output को file में save (overwrite) करें
+echo "Hello Wiki" > output.txt
+
+# Append output (बिना पुरानी data हटाए)
+echo "Line 2" >> output.txt
+
+# Error stream को file में redirect करें (2>)
+ls non_existent_folder 2> error.log
+
+# Output (1) और Errors (2) दोनों को एक ही file में भेजें (&>)
+compile-project &> build.log
+
+# Errors को silent/discard करने के लिए null device में भेजें (/dev/null)
+find / -name "*.conf" 2> /dev/null</code></pre>
+
+                        <h3>📥 Input Redirection (Here-Docs & Here-Strings)</h3>
+                        <pre><code class="language-bash"># File से input redirect करना
+wc -l < output.txt
+
+# Here-Document (<<): Multiple lines input script को direct pass करना
+cat << EOF > script.config
+db_port=3306
+db_user=root
+EOF
+
+# Here-String (<<<): Single string block input pass करना
+bc <<< "5 + 10"  # Computes math operation directly</code></pre>
+
+                        <h2>6. Pipes, Command and Process Substitution</h2>
+                        
+                        <h3>⚫ Pipes (<code>|</code>)</h3>
+                        <p>एक command के stdout stream को सीधे दूसरे command के stdin input में chain करने की process:</p>
+                        <pre><code class="language-bash"># active configurations को grep से filter करके count करें
+ss -tulpn | grep "8000" | wc -l</code></pre>
+
+                        <h3>⚫ Command Substitution (<code>$()</code>)</h3>
+                        <p>किसी command के output को string value की तरह use करना:</p>
+                        <pre><code class="language-bash"># Current Date variable folder path बनाना
+mkdir -p "backup-$(date +%Y-%m-%d)"</code></pre>
+
+                        <h3>⚫ Process Substitution (<code>&lt;()</code>)</h3>
+                        <p>किसी command के output को एक virtual read-only file structure pointer की तरह evaluate करना (multiple commands outputs compare करने के लिए helpful):</p>
+                        <pre><code class="language-bash"># दो directories की index listings compare करें
+diff <(ls folder1) <(ls folder2)</code></pre>
+
+                        <div class="backlinks-container">
+                            <div class="backlinks-title">Linked References (Backlinks)</div>
+                            <div class="backlinks-list">
+                                <a href="index.html" class="backlink-item">
+                                    <i data-lucide="terminal-square"></i>
+                                    <span>BASH Guide Index</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
+                            <span>CuriousWiki Open Source Project</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="../../../js/main.js"></script>
+</body>
+</html>

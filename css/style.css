@@ -408,6 +408,8 @@ article {
 .article-body {
     color: var(--text-secondary);
     font-size: 1.05rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .article-body p {
@@ -537,6 +539,8 @@ code {
     border-radius: 4px;
     color: var(--accent-primary);
     transition: background-color var(--transition-normal);
+    word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 pre {
@@ -608,6 +612,15 @@ table {
     margin: 1.5rem 0;
     font-size: 0.95rem;
     text-align: left;
+}
+
+@media (max-width: 768px) {
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
 th, td {
@@ -983,3 +996,213 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- PREMIUM TABLE OF CONTENTS (TOC) TREE --- */
+.toc-tree-container {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-md);
+    margin-top: 1.5rem;
+    transition: all var(--transition-normal);
+}
+
+.toc-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.toc-filter-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+}
+
+.toc-filter-input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(var(--accent-primary-rgb), 0.15);
+}
+
+.toc-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.toc-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.toc-action-btn:hover {
+    background-color: var(--bg-primary);
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+}
+
+.toc-action-btn i {
+    width: 14px;
+    height: 14px;
+}
+
+.toc-tree {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+details.toc-node {
+    width: 100%;
+}
+
+details.toc-node summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 1rem;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 500;
+    user-select: none;
+    transition: all var(--transition-fast);
+}
+
+details.toc-node summary::-webkit-details-marker {
+    display: none;
+}
+
+details.toc-node summary::before {
+    content: "▸";
+    display: inline-block;
+    width: 12px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    transition: transform var(--transition-fast);
+}
+
+details.toc-node[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+details.toc-node summary:hover {
+    background-color: var(--bg-primary);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+details.toc-node[open] > summary {
+    background-color: var(--bg-primary);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+details.toc-node > .toc-content {
+    padding: 0.75rem 1rem 0.75rem 1.75rem;
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: rgba(var(--accent-primary-rgb), 0.01);
+    border-left: 2px dashed rgba(var(--accent-primary-rgb), 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.toc-summary-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.toc-summary-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.toc-summary-title i {
+    width: 16px;
+    height: 16px;
+    color: var(--text-muted);
+}
+
+details.toc-node summary:hover .toc-summary-title i {
+    color: var(--accent-primary);
+}
+
+.badge {
+    background-color: rgba(var(--accent-primary-rgb), 0.1);
+    color: var(--accent-primary);
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    border: 1px solid rgba(var(--accent-primary-rgb), 0.2);
+}
+
+.toc-leaf-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all var(--transition-fast);
+}
+
+.toc-leaf-item:hover {
+    background-color: var(--bg-primary);
+    border-color: var(--accent-secondary);
+    color: var(--accent-secondary);
+}
+
+.toc-leaf-item .title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.toc-leaf-item .title i {
+    width: 14px;
+    height: 14px;
+    color: var(--text-muted);
+}
+
+.toc-leaf-item:hover .title i {
+    color: var(--accent-secondary);
+}
+

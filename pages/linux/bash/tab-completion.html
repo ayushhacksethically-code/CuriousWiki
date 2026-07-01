@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="javascript, programming, js, cheatsheet">
-    <title>JavaScript Cheat Sheet | CuriousWiki Reference</title>
+    <meta name="keywords" content="linux, bash, tab-completion, commands, files, directories">
+    <title>Bash TAB Completion | CuriousWiki</title>
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../../css/style.css">
 </head>
 <body>
     <div id="app">
@@ -148,11 +148,11 @@
                     <i data-lucide="menu"></i>
                 </button>
                 <div class="breadcrumbs">
-                    <a href="../index.html">Home</a>
+                    <a href="../../../index.html">Home</a>
                     <span class="separator">></span>
-                    <a href="javascript-cheatsheet.html">Reference</a>
+                    <a href="index.html">BASH Guide</a>
                     <span class="separator">></span>
-                    <span>JS Cheat Sheet</span>
+                    <span>TAB Completion</span>
                 </div>
                 <a id="edit-btn" href="#" target="_blank" class="edit-btn">
                     <i data-lucide="github"></i>
@@ -163,116 +163,104 @@
             <div class="content-container">
                 <article>
                     <header class="article-header">
-                        <h1 class="article-title">⚡ JavaScript Cheat Sheet</h1>
+                        <h1 class="article-title">⌨️ Bash Programmable TAB Completion</h1>
                         <div class="article-meta">
-                            <span><i data-lucide="calendar"></i> June 30, 2026</span>
-                            <span><i data-lucide="clock"></i> 4 min read</span>
-                            <span><i data-lucide="tag"></i> javascript, programming</span>
+                            <span><i data-lucide="calendar"></i> July 01, 2026</span>
+                            <span><i data-lucide="clock"></i> 6 min read</span>
+                            <span><i data-lucide="tag"></i> bash, autocomplete, scripting</span>
                         </div>
                     </header>
 
                     <section class="article-body">
-                        <p>Developer workspaces में quick reference के लिए आवश्यक modern JavaScript code structures, helpers, और syntax formulas का एक collection.</p>
+                        <p>जब आप Linux terminal पर command type करते समय <code>[TAB]</code> key दबाते हैं, तो Bash automatically contextual suggestions दिखाने का प्रयास करता है। इसे <strong>Completion Specification (compspec)</strong> कहा जाता है। BASH completion engine developers को custom scripting APIs provide करता है, जिसकी मदद से आप किसी भी command के लिए dynamic auto-completions set कर सकते हैं।</p>
 
-                        <h2>1. Array Methods का उपयोग</h2>
-                        <p>List values को filter, transform, या aggregate करने के लिए common functions:</p>
-                        <pre><code class="language-javascript">const upabhokta = [
-    { pehchanId: 1, naam: 'Alice', pad: 'admin', ank: 120 },
-    { pehchanId: 2, naam: 'Bob', pad: 'user', ank: 90 },
-    { pehchanId: 3, naam: 'Charlie', pad: 'user', ank: 200 }
-];
+                        <h2>1. Simple Static completion using <code>complete -W</code></h2>
+                        <p>अगर आपको किसी command के लिए options की एक static list define करनी है, तो <code>complete -W</code> (Word list) का उपयोग करें:</p>
+                        <pre><code class="language-bash"># Register foo, bar and bAr for echo command context
+complete -W "foo bar bAr" echo</code></pre>
 
-// 1. Filter: admin users (prashashak) को extract करें
-const prashashak = upabhokta.filter(ekUpabhokta => ekUpabhokta.pad === 'admin');
+                        <p>अब terminal पर type करके verify करें:</p>
+                        <pre><code class="language-bash">echo [TAB][TAB]
+# Output: bar  bAr  foo (automatically sorted alphabetically)
 
-// 2. Map: names की list (naamKiList) इकट्ठा करें
-const naamKiList = upabhokta.map(ekUpabhokta => ekUpabhokta.naam); // ['Alice', 'Bob', 'Charlie']
+echo f[TAB]
+# Autocompletes to: echo foo</code></pre>
 
-// 3. Reduce: total points (kulAnk) calculate करें
-const kulAnk = upabhokta.reduce((jod, ekUpabhokta) => jod + ekUpabhokta.ank, 0); // 410
-
-// 4. Find: id = 2 वाले user (bablu) को select करें
-const bablu = upabhokta.find(ekUpabhokta => ekUpabhokta.pehchanId === 2);</code></pre>
-
-                        <h2>2. Promises & Async/Await</h2>
-                        <p>Asynchronous network requests या delay states को clean और readable तरीके से handle करना:</p>
-                        <pre><code class="language-javascript">// Standard Promise-based delay helper
-const delay = (miliSecond) => new Promise(pooraKarein => setTimeout(pooraKarein, miliSecond));
-
-// Async function dummy network fetch perform करने के लिए
-async function fetchUserData(sadasyaId) {
-    try {
-        console.log('Loading database records...');
-        await delay(1000); // 1 second database latency simulating
-        
-        const uttar = await fetch(`https://api.example.com/users/${sadasyaId}`);
-        if (!uttar.ok) {
-            throw new Error(`HTTP error! status: ${uttar.status}`);
-        }
-        
-        const jaankari = await uttar.json();
-        return jaankari;
-    } catch (galti) {
-        console.error('Fetch execution failed: ', galti);
-        throw galti;
-    }
-}</code></pre>
-
-                        <h2>3. DOM Selector & Click Handlers</h2>
-                        <p>Page items को select करना, event interactions को bind करना, और dynamically styling classes को toggle करना:</p>
-                        <pre><code class="language-javascript">// Specific elements select करें
-const mukhyaCard = document.querySelector('.card-element');
-const sabhiTags = document.querySelectorAll('.tag');
-
-// click पर class toggle करें
-if (mukhyaCard) {
-    mukhyaCard.addEventListener('click', (ghatna) => {
-        // active status class toggle करें
-        mukhyaCard.classList.toggle('active');
-        console.log('Card state toggle triggered at:', ghatna.clientX);
-    });
+                        <h2>2. Dynamic completions using Functions (<code>complete -F</code>)</h2>
+                        <p>जब autocomplete logic complicated हो (जैसे options previous typed words या directory configuration पर depend करें), तो <code>-F</code> argument का use किया जाता है। यह autocomplete trigger होने पर shell function execute करता है।</p>
+                        
+                        <p>जैसे, हम चाहते हैं कि <code>echo foo </code> के बाद tab press करने पर current directory में मौजूद files की count dynamically check parameters calculate output updates:</p>
+                        
+                        <pre><code class="language-bash"># Write this in completion-tutorial.sh:
+_echo() {
+    # If the word before current cursor is "foo"
+    if [ "$3" == "foo" ]; then
+        COMPREPLY=( $(ls | wc -l) )
+    else
+        COMPREPLY=( $(compgen -W "foo bar bAr" -- "$2") )
+    fi
 }
+complete -F _echo echo</code></pre>
 
-// multiple tag nodes पर clicks bind करें
-sabhiTags.forEach(ekTag => {
-    ekTag.addEventListener('click', () => {
-        const tagKaText = ekTag.textContent;
-        console.log(`Tag selected: ${tagKaText}`);
-    });
-});</code></pre>
+                        <p>इसे source करके load करें:</p>
+                        <pre><code class="language-bash">source completion-tutorial.sh
+echo foo [TAB]
+# Output: 5 (if there are 5 files in current directory)</code></pre>
 
-                        <div class="callout callout-warning">
-                            <i data-lucide="alert-triangle"></i>
-                            <div class="callout-content">
-                                <div class="callout-title">Notice: ES6+ Syntax</div>
-                                <p>यह cheatsheet modern Arrow Functions और Destructuring elements का उपयोग करती है। यदि target browsers basic ES6 features का support नहीं करते हैं, तो browser compatibility tables की जांच करना सुनिश्चित करें।</p>
-                            </div>
-                        </div>
+                        <h2>3. Shell Arguments Explained ($1, $2, $3)</h2>
+                        <p>BASH completion system execution के समय functions handler parameters mapping logic provide करता है:</p>
+                        <ul>
+                            <li><strong><code>$1</code>:</strong> Command name (e.g., <code>echo</code>).</li>
+                            <li><strong><code>$2</code>:</strong> वर्तमान typed word (empty check if no characters entered yet).</li>
+                            <li><strong><code>$3</code>:</strong> Cursor position से ठीक पहले वाला word (इसे context evaluate करने के लिए use किया जाता है)।</li>
+                        </ul>
 
-                        <h2>4. Local Storage Configuration</h2>
-                        <p>Page reloads के बाद भी persistent रहने वाले data को read और write करना:</p>
-                        <pre><code class="language-javascript">// Preferences save करें (configurations याद रखता है)
-localStorage.setItem('theme', 'dark');
-localStorage.setItem('userId', '10984');
+                        <h2>4. Dynamic Matches using <code>compgen</code></h2>
+                        <p><code>compgen</code> utility list filter करने का काम करती है:</p>
+                        <pre><code class="language-bash">COMPREPLY=( $(compgen -W "foo bar bAr" -- "$2") )</code></pre>
+                        <ul>
+                            <li><strong><code>-- "$2"</code>:</strong> यह compgen को बताता है कि user ने जो typed characters (<code>$2</code>) लिखे हैं, केवल उन्हीं से शुरू होने वाले word suggestions return करे।</li>
+                            <li><strong><code>$IFS</code> (Internal Field Separator):</strong> Word splits patterns control delimiters, default settings tabs/newlines use.</li>
+                        </ul>
 
-// Preferences वापस load करें
-const bachayaHuaTheme = localStorage.getItem('theme') || 'light';
-const bachayaHuaSadasya = localStorage.getItem('userId');
+                        <h2>5. Advanced File Filters & Options (FITS file example)</h2>
+                        <p>Gnuastro program <code>asttable</code> का complex autocomplete example:</p>
+                        <p>हम चाहते हैं कि जब user <code>--wcsfile=</code> option type करे, तो terminal केवल <strong>FITS images (<code>.fits</code> / <code>.FITS</code>)</strong> ही autocomplete suggestions में दिखाए:</p>
+                        
+                        <pre><code class="language-bash">_asttable() {
+    local word prev
+    
+    # Handle '=' sign splitting anomalies
+    if [ "$2" = "=" ]; then word=""; else word="$2"; fi
+    if [ "$3" = "=" ]; then prev="${COMP_WORDS[COMP_CWORD-2]}"; else prev="${COMP_WORDS[COMP_CWORD-1]}"; fi
 
-// Target item delete करें या सभी local records clean करें
-localStorage.removeItem('userId');
-localStorage.clear(); // pure localStorage domain empty करें</code></pre>
+    case "$prev" in
+        --wcsfile)
+            # Filter files matching *.fits / *.FITS extension
+            COMPREPLY=( $(compgen -f -X "!*.[fF][iI][tT][sS]" -- "$word") )
+            ;;
+    esac
+}
+# -o nospace tells shell to avoid adding space after equal sign to allow prefix value
+complete -o nospace -F _asttable asttable</code></pre>
+
+                        <h3>Flags configuration:</h3>
+                        <ul>
+                            <li><code>-f</code>: files search path check.</li>
+                            <li><code>-X "!*.[fF][iI][tT][sS]"</code>: Excludes files that do NOT match the FITS extension.</li>
+                            <li><code>-o nospace</code>: prevents adding automatic space character, enabling option values to stick with option name (e.g. <code>--wcsfile=myfile.fits</code>).</li>
+                        </ul>
 
                         <div class="backlinks-container">
                             <div class="backlinks-title">Linked References (Backlinks)</div>
                             <div class="backlinks-list">
-                                <a href="../index.html" class="backlink-item">
+                                <a href="index.html" class="backlink-item">
+                                    <i data-lucide="terminal-square"></i>
+                                    <span>BASH Guide Index</span>
+                                </a>
+                                <a href="../../../index.html" class="backlink-item">
                                     <i data-lucide="layout-dashboard"></i>
                                     <span>Home Dashboard</span>
-                                </a>
-                                <a href="getting-started.html" class="backlink-item">
-                                    <i data-lucide="book-open"></i>
-                                    <span>Getting Started</span>
                                 </a>
                             </div>
                         </div>
@@ -304,6 +292,6 @@ localStorage.clear(); // pure localStorage domain empty करें</code></pre
     </div>
 
     <!-- Shared JS -->
-    <script src="../js/main.js"></script>
+    <script src="../../../js/main.js"></script>
 </body>
 </html>

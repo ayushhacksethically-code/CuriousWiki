@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="javascript, programming, js, cheatsheet">
-    <title>JavaScript Cheat Sheet | CuriousWiki Reference</title>
+    <meta name="keywords" content="linux, bash, pwd, commands, files, directories">
+    <title>pwd Command Guide | CuriousWiki</title>
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../../../css/style.css">
 </head>
 <body>
     <div id="app">
@@ -148,11 +148,13 @@
                     <i data-lucide="menu"></i>
                 </button>
                 <div class="breadcrumbs">
-                    <a href="../index.html">Home</a>
+                    <a href="../../../../index.html">Home</a>
                     <span class="separator">></span>
-                    <a href="javascript-cheatsheet.html">Reference</a>
+                    <a href="../index.html">BASH Guide</a>
                     <span class="separator">></span>
-                    <span>JS Cheat Sheet</span>
+                    <a href="index.html">Files & Directories</a>
+                    <span class="separator">></span>
+                    <span>pwd Command</span>
                 </div>
                 <a id="edit-btn" href="#" target="_blank" class="edit-btn">
                     <i data-lucide="github"></i>
@@ -163,116 +165,83 @@
             <div class="content-container">
                 <article>
                     <header class="article-header">
-                        <h1 class="article-title">⚡ JavaScript Cheat Sheet</h1>
+                        <h1 class="article-title">🐚 pwd (print working directory) Command</h1>
                         <div class="article-meta">
-                            <span><i data-lucide="calendar"></i> June 30, 2026</span>
+                            <span><i data-lucide="calendar"></i> July 01, 2026</span>
                             <span><i data-lucide="clock"></i> 4 min read</span>
-                            <span><i data-lucide="tag"></i> javascript, programming</span>
+                            <span><i data-lucide="tag"></i> pwd, commands, path, symlinks</span>
                         </div>
                     </header>
 
                     <section class="article-body">
-                        <p>Developer workspaces में quick reference के लिए आवश्यक modern JavaScript code structures, helpers, और syntax formulas का एक collection.</p>
+                        <p><strong><code>pwd</code> (Print Working Directory)</strong> एक बहुत ही basic और frequently used command है। इसका मुख्य काम यह बताना है कि आप इस समय Linux directory tree में किस directory/folder के अंदर काम कर रहे हैं (यानी आपका Current Path क्या है)।</p>
 
-                        <h2>1. Array Methods का उपयोग</h2>
-                        <p>List values को filter, transform, या aggregate करने के लिए common functions:</p>
-                        <pre><code class="language-javascript">const upabhokta = [
-    { pehchanId: 1, naam: 'Alice', pad: 'admin', ank: 120 },
-    { pehchanId: 2, naam: 'Bob', pad: 'user', ank: 90 },
-    { pehchanId: 3, naam: 'Charlie', pad: 'user', ank: 200 }
-];
+                        <h2>1. Shell Built-in vs System Binary</h2>
+                        <p>क्या आप जानते हैं कि Linux में <code>pwd</code> नाम की दो चीजें होती हैं? </p>
+                        <ul>
+                            <li><strong>Shell Built-in:</strong> यह BASH या ZSH shell के अंदर का inbuilt tool है। जब आप terminal पर <code>pwd</code> लिखते हैं, तो default रूप से यही run होता है। यह सुपर-फास्ट है क्योंकि इसके लिए shell को बाहर कोई नया process create नहीं करना पड़ता।</li>
+                            <li><strong>System Binary:</strong> यह hard disk पर store एक independent binary file है, जो आमतौर पर <code>/bin/pwd</code> पर होती है।</li>
+                        </ul>
+                        <pre><code class="language-bash"># यह चेक करने के लिए कि आपके terminal में कौन सा pwd चल रहा है:
+type -a pwd
+# Output:
+# pwd is a shell builtin
+# pwd is /bin/pwd</code></pre>
 
-// 1. Filter: admin users (prashashak) को extract करें
-const prashashak = upabhokta.filter(ekUpabhokta => ekUpabhokta.pad === 'admin');
+                        <h2>2. Options & Flags</h2>
+                        <p>आम तौर पर हम बिना किसी options के <code>pwd</code> चलाते हैं, लेकिन इसके दो बहुत महत्वपूर्ण flags हैं जो Symbolic Links (Symlinks) के साथ काम करते समय काम आते हैं:</p>
+                        
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Option Flag</th>
+                                    <th>Behavior / Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>-L</code>, <code>--logical</code></td>
+                                    <td><strong>Logical Path:</strong> यह पर्यावरण चर (environment variable) <code>$PWD</code> की value दिखाता है। अगर आप किसी symlinked folder के अंदर हैं, तो यह shortcut path ही दिखाएगा। (यह BASH builtin का default behavior है)।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>-P</code>, <code>--physical</code></td>
+                                    <td><strong>Physical Path:</strong> यह सभी symlinks को resolve करके उस directory का <strong>वास्तविक (actual physical) path</strong> दिखाता है। (यह <code>/bin/pwd</code> binary का default behavior है)।</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-// 2. Map: names की list (naamKiList) इकट्ठा करें
-const naamKiList = upabhokta.map(ekUpabhokta => ekUpabhokta.naam); // ['Alice', 'Bob', 'Charlie']
+                        <h2>3. Live Example: Logical vs Physical Paths</h2>
+                        <p>आइए इसे एक practical example से समझते हैं। मान लीजिए हम user home directory में <code>/var/log</code> directory का एक symlink (shortcut) बनाते हैं:</p>
 
-// 3. Reduce: total points (kulAnk) calculate करें
-const kulAnk = upabhokta.reduce((jod, ekUpabhokta) => jod + ekUpabhokta.ank, 0); // 410
+                        <pre><code class="language-bash"># Step 1: Symlink (shortcut) क्रिएट करें
+ln -s /var/log ~/log_shortcut
 
-// 4. Find: id = 2 वाले user (bablu) को select करें
-const bablu = upabhokta.find(ekUpabhokta => ekUpabhokta.pehchanId === 2);</code></pre>
+# Step 2: Shortcut folder के अंदर जाएँ
+cd ~/log_shortcut
 
-                        <h2>2. Promises & Async/Await</h2>
-                        <p>Asynchronous network requests या delay states को clean और readable तरीके से handle करना:</p>
-                        <pre><code class="language-javascript">// Standard Promise-based delay helper
-const delay = (miliSecond) => new Promise(pooraKarein => setTimeout(pooraKarein, miliSecond));
+# Step 3: बिना flags के pwd चलाएँ (Logical path दिखेगा)
+pwd
+# Output: /home/username/log_shortcut
 
-// Async function dummy network fetch perform करने के लिए
-async function fetchUserData(sadasyaId) {
-    try {
-        console.log('Loading database records...');
-        await delay(1000); // 1 second database latency simulating
-        
-        const uttar = await fetch(`https://api.example.com/users/${sadasyaId}`);
-        if (!uttar.ok) {
-            throw new Error(`HTTP error! status: ${uttar.status}`);
-        }
-        
-        const jaankari = await uttar.json();
-        return jaankari;
-    } catch (galti) {
-        console.error('Fetch execution failed: ', galti);
-        throw galti;
-    }
-}</code></pre>
+# Step 4: -P flag के साथ pwd चलाएँ (Actual physical location दिखेगी)
+pwd -P
+# Output: /var/log</code></pre>
 
-                        <h2>3. DOM Selector & Click Handlers</h2>
-                        <p>Page items को select करना, event interactions को bind करना, और dynamically styling classes को toggle करना:</p>
-                        <pre><code class="language-javascript">// Specific elements select करें
-const mukhyaCard = document.querySelector('.card-element');
-const sabhiTags = document.querySelectorAll('.tag');
-
-// click पर class toggle करें
-if (mukhyaCard) {
-    mukhyaCard.addEventListener('click', (ghatna) => {
-        // active status class toggle करें
-        mukhyaCard.classList.toggle('active');
-        console.log('Card state toggle triggered at:', ghatna.clientX);
-    });
-}
-
-// multiple tag nodes पर clicks bind करें
-sabhiTags.forEach(ekTag => {
-    ekTag.addEventListener('click', () => {
-        const tagKaText = ekTag.textContent;
-        console.log(`Tag selected: ${tagKaText}`);
-    });
-});</code></pre>
-
-                        <div class="callout callout-warning">
-                            <i data-lucide="alert-triangle"></i>
-                            <div class="callout-content">
-                                <div class="callout-title">Notice: ES6+ Syntax</div>
-                                <p>यह cheatsheet modern Arrow Functions और Destructuring elements का उपयोग करती है। यदि target browsers basic ES6 features का support नहीं करते हैं, तो browser compatibility tables की जांच करना सुनिश्चित करें।</p>
-                            </div>
-                        </div>
-
-                        <h2>4. Local Storage Configuration</h2>
-                        <p>Page reloads के बाद भी persistent रहने वाले data को read और write करना:</p>
-                        <pre><code class="language-javascript">// Preferences save करें (configurations याद रखता है)
-localStorage.setItem('theme', 'dark');
-localStorage.setItem('userId', '10984');
-
-// Preferences वापस load करें
-const bachayaHuaTheme = localStorage.getItem('theme') || 'light';
-const bachayaHuaSadasya = localStorage.getItem('userId');
-
-// Target item delete करें या सभी local records clean करें
-localStorage.removeItem('userId');
-localStorage.clear(); // pure localStorage domain empty करें</code></pre>
+                        <h2>4. $PWD Environment Variable</h2>
+                        <p>जब भी आप <code>cd</code> command से अपनी directory बदलते हैं, BASH shell automatically backend में <code>$PWD</code> और <code>$OLDPWD</code> (previous directory path) environment variables को update करता रहता है। आप चाहें तो इन्हें सीधे echo करके भी देख सकते हैं:</p>
+                        <pre><code class="language-bash">echo $PWD      # Current folder path
+echo $OLDPWD   # Last visited folder path (cd - इसी का उपयोग करता है)</code></pre>
 
                         <div class="backlinks-container">
                             <div class="backlinks-title">Linked References (Backlinks)</div>
                             <div class="backlinks-list">
-                                <a href="../index.html" class="backlink-item">
-                                    <i data-lucide="layout-dashboard"></i>
-                                    <span>Home Dashboard</span>
+                                <a href="index.html" class="backlink-item">
+                                    <i data-lucide="folder-open"></i>
+                                    <span>Files & Directories Index</span>
                                 </a>
-                                <a href="getting-started.html" class="backlink-item">
-                                    <i data-lucide="book-open"></i>
-                                    <span>Getting Started</span>
+                                <a href="../index.html" class="backlink-item">
+                                    <i data-lucide="terminal-square"></i>
+                                    <span>BASH Guide Index</span>
                                 </a>
                             </div>
                         </div>
@@ -304,6 +273,6 @@ localStorage.clear(); // pure localStorage domain empty करें</code></pre
     </div>
 
     <!-- Shared JS -->
-    <script src="../js/main.js"></script>
+    <script src="../../../../js/main.js"></script>
 </body>
 </html>

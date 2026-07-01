@@ -51,18 +51,30 @@
                 </div>
 
                 <div class="nav-section">
-                    <div class="nav-section-title">Linux Bibles</div>
+                    <div class="nav-section-title">Linux & Shells</div>
                     <ul class="nav-list">
                         <li class="nav-item">
-                            <a href="pages/linux/arch-bible.html" class="nav-link">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
                                 <i data-lucide="book"></i>
-                                <span>Arch Bible</span>
+                                <span>Linux Bible</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/linux/linux-tools.html" class="nav-link">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
                                 <i data-lucide="pocket"></i>
                                 <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
                             </a>
                         </li>
                     </ul>
@@ -71,12 +83,6 @@
                 <div class="nav-section">
                     <div class="nav-section-title">Reference</div>
                     <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="pages/markdown-guide.html" class="nav-link">
-                                <i data-lucide="code"></i>
-                                <span>Markdown Guide</span>
-                            </a>
-                        </li>
                         <li class="nav-item">
                             <a href="pages/javascript-cheatsheet.html" class="nav-link">
                                 <i data-lucide="terminal"></i>
@@ -166,7 +172,7 @@
                     </header>
 
                     <section class="article-body">
-                        <p>CuriousWiki को एक modular, beautiful, और highly portable knowledge browser के रूप में design किया गया है। चूंकि यह पूरी तरह से static HTML files पर चलता है, आप इसे किसी भी web browser में locally पढ़ सकते हैं, इसे GitHub Pages के माध्यम से आसानी से host कर सकते हैं, या बिना किसी running server के इसे devices पर sync कर सकते हैं।</p>
+                        <p>CuriousWiki को एक modular, beautiful, और highly portable knowledge base के रूप में design किया गया है। चूंकि यह पूरी तरह से static HTML files पर चलता है, आप इसे किसी भी web browser में आसानी से पढ़ सकते हैं और sync कर सकते हैं।</p>
 
                         <h2>1. Project Structure</h2>
                         <p>यहाँ बताया गया है कि आपके wiki folder में files को कैसे organize किया गया है:</p>
@@ -178,13 +184,13 @@
                         </ul>
 
                         <h2>2. New Page जोड़ना</h2>
-                        <p>अपने wiki में एक naya page जोड़ने के लिए, इन तीन steps को follow करें:</p>
+                        <p>CuriousWiki में एक naya page जोड़ने के लिए, इन तीन steps को follow करें:</p>
 
                         <div class="callout callout-info">
                             <i data-lucide="info"></i>
                             <div class="callout-content">
                                 <div class="callout-title">Step 1: Page Template को duplicate करें</div>
-                                <p><code>pages/</code> directory में किसी existing page (जैसे इस page) को copy करें और उसका rename करें (e.g. <code>my-new-topic.html</code>).</p>
+                                <p><code>pages/</code> directory में मौजूद <a href="template.html" class="wiki-link">template.html</a> फ़ाइल को copy करें और उसका name बदलें (जैसे <code>my-new-topic.html</code>)।</p>
                             </div>
                         </div>
 
@@ -192,7 +198,7 @@
                             <i data-lucide="info"></i>
                             <div class="callout-content">
                                 <div class="callout-title">Step 2: Sidebar में Link जोड़ें</div>
-                                <p>अपने नए page और <code>index.html</code> को खोलें, और <code>&lt;nav&gt;</code> element में अपना page link जोड़ें:</p>
+                                <p>नए page और <code>index.html</code> को खोलें, और <code>&lt;nav&gt;</code> element में page link जोड़ें:</p>
                                 <pre><code class="language-html">&lt;li class="nav-item"&gt;
     &lt;a href="pages/my-new-topic.html" class="nav-link"&gt;
         &lt;i data-lucide="file-text"&gt;&lt;/i&gt;
@@ -203,39 +209,25 @@
                         </div>
 
                         <div class="callout callout-info">
-                            <i data-lucide="info"></i>
+                            <i data-lucide="zap"></i>
                             <div class="callout-content">
-                                <div class="callout-title">Step 3: Search Index में Register करें</div>
-                                <p><code>js/main.js</code> खोलें aur <code>wikiPagesIndex</code> array में अपनी page details जोड़ें। यह आपके page को fuzzy search index में register करता है:</p>
-                                <pre><code class="language-javascript">{ 
-    title: "मेरा नया Topic", 
-    path: "pages/my-new-topic.html", 
-    tags: ["naya", "topic", "notes"], 
-    snippet: "इस नए topic की brief summary details." 
-}</code></pre>
+                                <div class="callout-title">Step 3: Search Index Automatic Sync</div>
+                                <p>जब आप <code>serve.sh</code> चलाते हैं, तो Nim server (या index script) automatically सभी HTML files को scan करके <code>search-index.json</code> database update कर देता है। आपको manual code edit करने की कोई ज़रूरत नहीं है!</p>
                             </div>
                         </div>
 
                         <h2>3. Cross-Linking Pages (Obsidian Style)</h2>
-                        <p>आप standard HTML का उपयोग करके अपने wiki body में अन्य notes के links बना सकते हैं, लेकिन हमने Obsidian के double-bracket syntax की नकल करने के लिए <code>.wiki-link</code> class को pre-style किया है:</p>
-                        <p>उदाहरण के लिए: formatting options सीखने के लिए <a href="markdown-guide.html" class="wiki-link">Markdown Guide</a> देखें, या JavaScript Cheat Sheet पर code snippets देखें।</p>
+                        <p>आप standard HTML का उपयोग करके wiki body में अन्य notes के links बना सकते हैं, लेकिन हमने Obsidian के double-bracket syntax की नकल करने के लिए <code>.wiki-link</code> class को pre-style किया है:</p>
+                        <p>उदाहरण के लिए: उदाहरण के लिए: JavaScript Cheat Sheet या Git Cheatsheet पर useful code snippets देखें।</p>
                         <p>इन्हें लिखने के लिए, निम्न code का उपयोग करें:</p>
-                        <pre><code class="language-html">&lt;a href="markdown-guide.html" class="wiki-link"&gt;Markdown Guide&lt;/a&gt;</code></pre>
+                        <pre><code class="language-html">&lt;a href="javascript-cheatsheet.html" class="wiki-link"&gt;JavaScript Cheat Sheet&lt;/a&gt;</code></pre>
 
-                        <h2>4. GitHub पर Host करना</h2>
-                        <p>अपने wiki को online publish करने और "Edit on GitHub" buttons को configure करने के लिए:</p>
+                        <h2>4. Contributing to CuriousWiki</h2>
+                        <p>इस wiki में नए updates, articles और improvements जोड़ने के लिए:</p>
                         <ol>
-                            <li>अपने <code>CuriousWiki</code> folder में git repository initialize करें:
-                                <pre><code class="language-bash">git init
-git add .
-git commit -m "Initial commit"</code></pre>
-                            </li>
-                            <li>इसे GitHub पर एक नए repository में push करें।</li>
-                            <li>Repository Settings (Pages section के तहत, deploy from <code>main</code> branch) में <strong>GitHub Pages</strong> enable करें।</li>
-                            <li><code>js/main.js</code> खोलें और Edit on GitHub function (line ~77) के top पर variables को अपने GitHub Username और Repository name के साथ configure करें:
-                                <pre><code class="language-javascript">const githubUsername = 'your-github-username';
-const githubRepo = 'CuriousWiki';</code></pre>
-                            </li>
+                            <li>नया content बनाने के लिए sidebar templates और style formats को follow करें।</li>
+                            <li>Changes करने के बाद pull requests open करें या direct issue create करें।</li>
+                            <li>Wiki content को regular intervals पर review किया जाता है ताकि information correct और up-to-date रहे।</li>
                         </ol>
 
                         <div class="backlinks-container">
@@ -245,10 +237,6 @@ const githubRepo = 'CuriousWiki';</code></pre>
                                     <i data-lucide="layout-dashboard"></i>
                                     <span>Home Dashboard</span>
                                 </a>
-                                <a href="markdown-guide.html" class="backlink-item">
-                                    <i data-lucide="code"></i>
-                                    <span>Markdown Guide</span>
-                                </a>
                             </div>
                         </div>
                     </section>
@@ -256,7 +244,7 @@ const githubRepo = 'CuriousWiki';</code></pre>
                     <footer>
                         <div class="footer-content">
                             <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
-                            <span>GitHub Pages पर host किया गया है</span>
+                            <span>CuriousWiki Open Source Project</span>
                         </div>
                     </footer>
                 </article>

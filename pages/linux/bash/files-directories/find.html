@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="linux, terminal, tools, curl, htop, grep, network">
-    <title>Linux CLI Tools | CuriousWiki Linux</title>
+    <meta name="keywords" content="linux, bash, find, commands, files, directories">
+    <title>find Command Guide | CuriousWiki</title>
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../../../css/style.css">
 </head>
 <body>
     <div id="app">
@@ -51,18 +51,30 @@
                 </div>
 
                 <div class="nav-section">
-                    <div class="nav-section-title">Linux Bibles</div>
+                    <div class="nav-section-title">Linux & Shells</div>
                     <ul class="nav-list">
                         <li class="nav-item">
-                            <a href="pages/linux/arch-bible.html" class="nav-link">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
                                 <i data-lucide="book"></i>
-                                <span>Arch Bible</span>
+                                <span>Linux Bible</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/linux/linux-tools.html" class="nav-link">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
                                 <i data-lucide="pocket"></i>
                                 <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
                             </a>
                         </li>
                     </ul>
@@ -71,12 +83,6 @@
                 <div class="nav-section">
                     <div class="nav-section-title">Reference</div>
                     <ul class="nav-list">
-                        <li class="nav-item">
-                            <a href="pages/markdown-guide.html" class="nav-link">
-                                <i data-lucide="code"></i>
-                                <span>Markdown Guide</span>
-                            </a>
-                        </li>
                         <li class="nav-item">
                             <a href="pages/javascript-cheatsheet.html" class="nav-link">
                                 <i data-lucide="terminal"></i>
@@ -142,11 +148,13 @@
                     <i data-lucide="menu"></i>
                 </button>
                 <div class="breadcrumbs">
-                    <a href="../../index.html">Home</a>
+                    <a href="../../../../index.html">Home</a>
                     <span class="separator">></span>
-                    <a href="linux-tools.html">Linux</a>
+                    <a href="../index.html">BASH Guide</a>
                     <span class="separator">></span>
-                    <span>Linux Tools</span>
+                    <a href="index.html">Files & Directories</a>
+                    <span class="separator">></span>
+                    <span>find Command</span>
                 </div>
                 <a id="edit-btn" href="#" target="_blank" class="edit-btn">
                     <i data-lucide="github"></i>
@@ -157,63 +165,67 @@
             <div class="content-container">
                 <article>
                     <header class="article-header">
-                        <h1 class="article-title">🛠️ Linux CLI Power Tools</h1>
+                        <h1 class="article-title">🔍 find (search filesystem hierarchy) Command</h1>
                         <div class="article-meta">
-                            <span><i data-lucide="calendar"></i> June 30, 2026</span>
-                            <span><i data-lucide="clock"></i> 3 min read</span>
-                            <span><i data-lucide="tag"></i> linux, tools, cheatsheet</span>
+                            <span><i data-lucide="calendar"></i> July 01, 2026</span>
+                            <span><i data-lucide="clock"></i> 8 min read</span>
+                            <span><i data-lucide="tag"></i> find, search, file-lookup, automation</span>
                         </div>
                     </header>
 
                     <section class="article-body">
-                        <p>system resources monitor करने, network logs check करने, और text manipulate करने के लिए essential command-line tools की reference bible.</p>
+                        <p><strong><code>find</code></strong> command Linux directories hierarchy में dynamic evaluations rules (files details like size, modification time, name expressions, owner types) के base पर targeted search operations perform करने का सबसे comprehensive tool है।</p>
 
-                        <h2>1. System Monitoring (Resource Checks)</h2>
-                        <p>CPU, memory, processes, और startup diagnostics monitor करने के tools:</p>
-                        <pre><code class="language-bash"># interactive process viewer open karein
-htop
+                        <h2>1. Syntax structure</h2>
+                        <pre><code class="language-bash">find [starting-point...] [search-conditions] [actions]</code></pre>
+                        <p><em>(starting-point default current folder <code>.</code> assume करता है यदि empty हो।)</em></p>
 
-# current system hardware details check karein
-fastfetch
+                        <h2>2. Filters and Evaluator Tests (खोजने के तरीके)</h2>
+                        <p>आप rules combinations dynamically join operators variables configuration parameters set कर सकते हैं:</p>
+                        <ul>
+                            <li><code>-name "pattern"</code>: Filenames matching search (e.g. <code>"*.sh"</code>). Case-insensitive search के लिए <code>-iname</code> का use करें।</li>
+                            <li><code>-type [f|d|l|s]</code>: File type selection logic: <code>f</code> (regular file), <code>d</code> (directory), <code>l</code> (symlink).</li>
+                            <li><code>-size [+/-]n</code>: Sizes filters setup: <code>+50M</code> (greater than 50 Megabytes), <code>-2k</code> (less than 2 Kilobytes).</li>
+                            <li><code>-mtime [+/-]n</code>: Modification time constraints: <code>-7</code> (modified in last 7 days), <code>+30</code> (modified more than 30 days ago).</li>
+                            <li><code>-perm [mode]</code>: Permissions bits octal validation (e.g. <code>-perm 644</code>).</li>
+                        </ul>
 
-# disk space storage distribution list show karein
-df -h
+                        <h2>3. Shell Executions Actions (खोजने के बाद क्या करें?)</h2>
+                        <p>फ़ाइलें मिलने के बाद <code>find</code> उनके साथ directly operations configure कर सकता है:</p>
+                        <ul>
+                            <li><code>-print</code>: Default behavior - results output to stdout display.</li>
+                            <li><code>-delete</code>: Found items को directly permanently delete logic trigger.</li>
+                            <li><code>-exec [command] {} \;</code>: प्रत्येक output match pattern details context path replace variables (<code>{}</code>) parameters पर command execute context updates.</li>
+                            <li><code>-execdir [command] {} \;</code>: (Highly Secure) matched subdirectory workspace path से command context launch करता है, (insecure permissions script injection points block करने के लिए recommended)।</li>
+                        </ul>
 
-# free RAM capacity check karein
-free -m</code></pre>
+                        <h2>4. Real-world Automation Examples</h2>
+                        
+                        <h3>Example 1: Find and delete temporary logs</h3>
+                        <p>सभी log folder matches patterns empty templates cleanup:</p>
+                        <pre><code class="language-bash">find /var/log -name "*.tmp" -type f -delete</code></pre>
 
-                        <h2>2. Searching & Text Filtering (grep, ripgrep)</h2>
-                        <p>Directories, text database records, aur config files search करने के modern commands:</p>
-                        <pre><code class="language-bash"># pattern files me check karein
-grep "error_code" /var/log/syslog
+                        <h3>Example 2: Find executable scripts in a folder</h3>
+                        <p>सभी shell files details checks permissions octal sets:</p>
+                        <pre><code class="language-bash">find ~/scripts -type f -name "*.sh" -perm /111</code></pre>
 
-# compile folder path files search recursively (ripgrep)
-rg --files-with-matches "import"
+                        <h3>Example 3: Find massive files and print details</h3>
+                        <p>50MB से बड़ी फ़ाइलों की details dynamic console print updates:</p>
+                        <pre><code class="language-bash">find /var/www -type f -size +50M -exec ls -lh {} \;</code></pre>
 
-# fast filename search inside directories (fd)
-fd "style.css"</code></pre>
-
-                        <h2>3. Networking Utilities (Ports & Connections)</h2>
-                        <p>Active ports identify करने, server connect testing, और sockets check करने के commands:</p>
-                        <pre><code class="language-bash"># active socket connections state list karein (network ports)
-ss -tulpn
-
-# ip configuration list show karein
-ip a
-
-# target network url response print fetch
-curl -I https://github.com</code></pre>
+                        <h3>Example 4: Search files changed today</h3>
+                        <pre><code class="language-bash">find /etc -type f -mtime 0</code></pre>
 
                         <div class="backlinks-container">
                             <div class="backlinks-title">Linked References (Backlinks)</div>
                             <div class="backlinks-list">
-                                <a href="../../index.html" class="backlink-item">
-                                    <i data-lucide="layout-dashboard"></i>
-                                    <span>Home Dashboard</span>
+                                <a href="index.html" class="backlink-item">
+                                    <i data-lucide="folder-open"></i>
+                                    <span>Files & Directories Index</span>
                                 </a>
-                                <a href="arch-bible.html" class="backlink-item">
-                                    <i data-lucide="book"></i>
-                                    <span>Arch Bible</span>
+                                <a href="../index.html" class="backlink-item">
+                                    <i data-lucide="terminal-square"></i>
+                                    <span>BASH Guide Index</span>
                                 </a>
                             </div>
                         </div>
@@ -222,7 +234,7 @@ curl -I https://github.com</code></pre>
                     <footer>
                         <div class="footer-content">
                             <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
-                            <span>GitHub Pages पर host किया गया है</span>
+                            <span>CuriousWiki Open Source Project</span>
                         </div>
                     </footer>
                 </article>
@@ -245,6 +257,6 @@ curl -I https://github.com</code></pre>
     </div>
 
     <!-- Shared JS -->
-    <script src="../../js/main.js"></script>
+    <script src="../../../../js/main.js"></script>
 </body>
 </html>

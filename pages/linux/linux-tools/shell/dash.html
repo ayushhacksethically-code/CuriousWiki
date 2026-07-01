@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="javascript, programming, js, cheatsheet">
-    <title>JavaScript Cheat Sheet | CuriousWiki Reference</title>
+    <meta name="keywords" content="linux, shell, ash, dash, almquist, debian, ubuntu, embedded linux, busybox">
+    <title>Almquist Shell (ash/dash) | CuriousWiki</title>
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../../../css/style.css">
 </head>
 <body>
     <div id="app">
@@ -33,7 +33,7 @@
 
             <nav class="sidebar-nav">
                 <div class="nav-section">
-                    <div class="nav-section-title">स्वागत</div>
+                    <div class="nav-section-title"> स्वागत </div>
                     <ul class="nav-list">
                         <li class="nav-item">
                             <a href="index.html" class="nav-link">
@@ -148,11 +148,13 @@
                     <i data-lucide="menu"></i>
                 </button>
                 <div class="breadcrumbs">
-                    <a href="../index.html">Home</a>
+                    <a href="../../../../index.html">Home</a>
                     <span class="separator">></span>
-                    <a href="javascript-cheatsheet.html">Reference</a>
+                    <a href="../index.html">Linux Tools</a>
                     <span class="separator">></span>
-                    <span>JS Cheat Sheet</span>
+                    <a href="index.html">Shells Guide</a>
+                    <span class="separator">></span>
+                    <span>Almquist Shell (ash)</span>
                 </div>
                 <a id="edit-btn" href="#" target="_blank" class="edit-btn">
                     <i data-lucide="github"></i>
@@ -163,116 +165,96 @@
             <div class="content-container">
                 <article>
                     <header class="article-header">
-                        <h1 class="article-title">⚡ JavaScript Cheat Sheet</h1>
+                        <h1 class="article-title">🐚 Almquist Shell (ash) & Debian Almquist Shell (DASH)</h1>
                         <div class="article-meta">
-                            <span><i data-lucide="calendar"></i> June 30, 2026</span>
+                            <span><i data-lucide="calendar"></i> July 01, 2026</span>
                             <span><i data-lucide="clock"></i> 4 min read</span>
-                            <span><i data-lucide="tag"></i> javascript, programming</span>
+                            <span><i data-lucide="tag"></i> ash, dash, shell, debian, alpine</span>
                         </div>
                     </header>
 
                     <section class="article-body">
-                        <p>Developer workspaces में quick reference के लिए आवश्यक modern JavaScript code structures, helpers, और syntax formulas का एक collection.</p>
+                        <p><strong>Almquist Shell (ash)</strong> Unix-like operating systems के लिए एक lightweight और highly performant shell है। यह Bourne Shell का clone है और इसके derived forks (जैसे <strong>DASH</strong>) Linux ecosystem में startup sequences को speed-up करने और embedded environments (जैसे BusyBox) में व्यापक रूप से उपयोग किए जाते हैं।</p>
 
-                        <h2>1. Array Methods का उपयोग</h2>
-                        <p>List values को filter, transform, या aggregate करने के लिए common functions:</p>
-                        <pre><code class="language-javascript">const upabhokta = [
-    { pehchanId: 1, naam: 'Alice', pad: 'admin', ank: 120 },
-    { pehchanId: 2, naam: 'Bob', pad: 'user', ank: 90 },
-    { pehchanId: 3, naam: 'Charlie', pad: 'user', ank: 200 }
-];
-
-// 1. Filter: admin users (prashashak) को extract करें
-const prashashak = upabhokta.filter(ekUpabhokta => ekUpabhokta.pad === 'admin');
-
-// 2. Map: names की list (naamKiList) इकट्ठा करें
-const naamKiList = upabhokta.map(ekUpabhokta => ekUpabhokta.naam); // ['Alice', 'Bob', 'Charlie']
-
-// 3. Reduce: total points (kulAnk) calculate करें
-const kulAnk = upabhokta.reduce((jod, ekUpabhokta) => jod + ekUpabhokta.ank, 0); // 410
-
-// 4. Find: id = 2 वाले user (bablu) को select करें
-const bablu = upabhokta.find(ekUpabhokta => ekUpabhokta.pehchanId === 2);</code></pre>
-
-                        <h2>2. Promises & Async/Await</h2>
-                        <p>Asynchronous network requests या delay states को clean और readable तरीके से handle करना:</p>
-                        <pre><code class="language-javascript">// Standard Promise-based delay helper
-const delay = (miliSecond) => new Promise(pooraKarein => setTimeout(pooraKarein, miliSecond));
-
-// Async function dummy network fetch perform करने के लिए
-async function fetchUserData(sadasyaId) {
-    try {
-        console.log('Loading database records...');
-        await delay(1000); // 1 second database latency simulating
-        
-        const uttar = await fetch(`https://api.example.com/users/${sadasyaId}`);
-        if (!uttar.ok) {
-            throw new Error(`HTTP error! status: ${uttar.status}`);
-        }
-        
-        const jaankari = await uttar.json();
-        return jaankari;
-    } catch (galti) {
-        console.error('Fetch execution failed: ', galti);
-        throw galti;
-    }
-}</code></pre>
-
-                        <h2>3. DOM Selector & Click Handlers</h2>
-                        <p>Page items को select करना, event interactions को bind करना, और dynamically styling classes को toggle करना:</p>
-                        <pre><code class="language-javascript">// Specific elements select करें
-const mukhyaCard = document.querySelector('.card-element');
-const sabhiTags = document.querySelectorAll('.tag');
-
-// click पर class toggle करें
-if (mukhyaCard) {
-    mukhyaCard.addEventListener('click', (ghatna) => {
-        // active status class toggle करें
-        mukhyaCard.classList.toggle('active');
-        console.log('Card state toggle triggered at:', ghatna.clientX);
-    });
-}
-
-// multiple tag nodes पर clicks bind करें
-sabhiTags.forEach(ekTag => {
-    ekTag.addEventListener('click', () => {
-        const tagKaText = ekTag.textContent;
-        console.log(`Tag selected: ${tagKaText}`);
-    });
-});</code></pre>
-
-                        <div class="callout callout-warning">
-                            <i data-lucide="alert-triangle"></i>
+                        <div class="callout callout-info">
+                            <i data-lucide="info"></i>
                             <div class="callout-content">
-                                <div class="callout-title">Notice: ES6+ Syntax</div>
-                                <p>यह cheatsheet modern Arrow Functions और Destructuring elements का उपयोग करती है। यदि target browsers basic ES6 features का support नहीं करते हैं, तो browser compatibility tables की जांच करना सुनिश्चित करें।</p>
+                                <div class="callout-title">Fast Fact</div>
+                                <p>मूल <code>ash</code> shell को Kenneth Almquist ने 1989 में release किया था। यह केवल 92KB size का super-lightweight shell है जो low-memory profiles के लिए सर्वश्रेष्ठ है।</p>
                             </div>
                         </div>
 
-                        <h2>4. Local Storage Configuration</h2>
-                        <p>Page reloads के बाद भी persistent रहने वाले data को read और write करना:</p>
-                        <pre><code class="language-javascript">// Preferences save करें (configurations याद रखता है)
-localStorage.setItem('theme', 'dark');
-localStorage.setItem('userId', '10984');
+                        <h2>1. Historical Overview (इतिहास)</h2>
+                        <p>Almquist shell (ash) को 1989 में Usenet news group <code>comp.sources.unix</code> पर पहली बार public release किया गया था।</p>
+                        <ul>
+                            <li>यह System V.4 variant of Bourne shell का complete open-source code replication/reimplementation था।</li>
+                            <li>1990 के दशक की शुरुआत में इसने BSD OS releases (NetBSD, FreeBSD) में original Unix Bourne shell को replace कर दिया।</li>
+                            <li>चूंकि Kenneth Almquist का मानना था कि line editing और history mechanisms को terminal driver level पर handle किया जाना चाहिए, इसलिए मूल <code>ash</code> में lines navigation support नहीं था (हालांकि इसके modern versions config inputs support करते हैं)।</li>
+                        </ul>
 
-// Preferences वापस load करें
-const bachayaHuaTheme = localStorage.getItem('theme') || 'light';
-const bachayaHuaSadasya = localStorage.getItem('userId');
+                        <h2>2. Debian Almquist Shell (DASH)</h2>
+                        <p>1997 में, Herbert Xu ने NetBSD's version of <code>ash</code> को Debian Linux पर port किया। 2002 में इसका नाम बदलकर <strong>DASH (Debian Almquist Shell)</strong> कर दिया गया।</p>
+                        
+                        <h3>DASH Key Specifications:</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Specification Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Developer</strong></td>
+                                    <td>Herbert Xu (net port from NetBSD)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>License</strong></td>
+                                    <td>3-clause BSD license / GNU GPL components</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Core Focus</strong></td>
+                                    <td>Strict POSIX Conformance and Slim Implementation</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Supported Features</strong></td>
+                                    <td>Optional GNU Readline command history (--with-libedit)</td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-// Target item delete करें या सभी local records clean करें
-localStorage.removeItem('userId');
-localStorage.clear(); // pure localStorage domain empty करें</code></pre>
+                        <h2>3. Ubuntu और Debian में Adoption</h2>
+                        <p>अक्टूबर 2006 (Ubuntu 6.10 Edgy Eft) में Ubuntu ने system level scripting default execution interpreter <code>/bin/sh</code> को <strong>Bash</strong> से हटाकर <strong>DASH</strong> पर link कर दिया।</p>
+                        
+                        <div class="callout callout-success">
+                            <i data-lucide="check-circle-2"></i>
+                            <div class="callout-content">
+                                <div class="callout-title">DASH over BASH (Why the shift?)</div>
+                                <p>DASH, BASH की तुलना में extremely compact और fast है। इसे default path script interpreter बनाने से Linux System Startup और Boot-up Speed में काफी तेज़ acceleration मिला।</p>
+                            </div>
+                        </div>
+
+                        <h3>The Bashism Problem (बैशइज़्म की चुनौतियाँ)</h3>
+                        <p>इस migration से कई legacy startup scripts क्रैश हो गईं क्योंकि वे shebang line <code>#!/bin/sh</code> का उपयोग कर रही थीं लेकिन उनके कोड में BASH-specific commands (जिन्हें <strong>"bashisms"</strong> कहा जाता है) लिखे हुए थे। इसके बाद Debian & Ubuntu teams ने अपनी system scripts को strictly POSIX-compliant clean standards पर migrate किया।</p>
+
+                        <h2>4. Embedded Linux & BusyBox Usage</h2>
+                        <p>DASH forks embedded devices में highly popular हैं:</p>
+                        <ul>
+                            <li><strong>BusyBox Integration:</strong> DASH का version 0.3.8-5 BusyBox execution suites के binary shell structure का base बना।</li>
+                            <li><strong>Lightweight Distros:</strong> <strong>Alpine Linux</strong>, <strong>Tiny Core Linux</strong>, और Router firmware setups (OpenWrt, Tomato, DD-WRT) BusyBox shell structure level पर ash implementations का use करते हैं।</li>
+                            <li><strong>Enterprise Devices:</strong> Android OS (Android 4.0 ICS से पहले) default terminal shells logic support के लिए ash ports का ही use करता था।</li>
+                        </ul>
 
                         <div class="backlinks-container">
                             <div class="backlinks-title">Linked References (Backlinks)</div>
                             <div class="backlinks-list">
-                                <a href="../index.html" class="backlink-item">
+                                <a href="index.html" class="backlink-item">
+                                    <i data-lucide="terminal"></i>
+                                    <span>Shells Guide Index</span>
+                                </a>
+                                <a href="../../../../index.html" class="backlink-item">
                                     <i data-lucide="layout-dashboard"></i>
                                     <span>Home Dashboard</span>
-                                </a>
-                                <a href="getting-started.html" class="backlink-item">
-                                    <i data-lucide="book-open"></i>
-                                    <span>Getting Started</span>
                                 </a>
                             </div>
                         </div>
@@ -304,6 +286,6 @@ localStorage.clear(); // pure localStorage domain empty करें</code></pre
     </div>
 
     <!-- Shared JS -->
-    <script src="../js/main.js"></script>
+    <script src="../../../../js/main.js"></script>
 </body>
 </html>
