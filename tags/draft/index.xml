@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Draft on CuriousWiki</title>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/draft.html</link>
+		<description>Recent content in Draft on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/draft/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>📟 Commands Index</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/commands.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/commands.html</guid>
+				<description>&lt;p&gt;CuriousWiki में उपलब्ध सभी commands के individual guides का index। आप नीचे दिए गए search bar या tabs का उपयोग करके commands को filter कर सकते हैं।&lt;/p&gt;&#xA;&lt;div class=&#34;cmd-search-container&#34;&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;cmd-filter-tabs&#34;&gt;&#xA;&lt;p&gt;All&lt;/p&gt;&#xA;&lt;p&gt;File Operation (फ़ाइल संचालन)&lt;/p&gt;&#xA;&lt;p&gt;Search &amp;amp; Filter (खोज और फ़िल्टर)&lt;/p&gt;&#xA;&lt;p&gt;System &amp;amp; Auto (सिस्टम और स्वचालन)&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;dashboard-grid&#34;&gt;&#xA;&lt;div class=&#34;dashboard-card&#34; data-name=&#34;pwd&#34; category=&#34;file&#34; desc=&#34;Linux directory tree में current active path/folder का location print करता है।&#34;&gt;&#xA;&lt;div class=&#34;card-icon&#34;&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;card-title&#34;&gt;&#xA;&lt;p&gt;pwd&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Linux directory tree में current active path/folder का location print करता है।&lt;/p&gt;&#xA;&lt;div class=&#34;card-footer&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;linux/bash/files-directories/pwd.html&#34;&gt;Guide खोलें →&lt;/a&gt; File Operation&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

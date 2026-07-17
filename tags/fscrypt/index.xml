@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Fscrypt on CuriousWiki</title>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/fscrypt.html</link>
+		<description>Recent content in Fscrypt on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/fscrypt/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>💾 Fstab (/etc/fstab) - File System Mounts Anatomy</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-bible/fstab.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-bible/fstab.html</guid>
+				<description>&lt;p&gt;Linux operating system boot sequence के during partitions और device filesystems को correct directories (mount points) पर automatically map / mount करने के लिए system configuration file &lt;strong&gt;&lt;code&gt;/etc/fstab&lt;/code&gt;&lt;/strong&gt; (File System Table) का use किया जाता है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-danger&#34;&gt;&#xA;&lt;i data-lucide=&#34;skull&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Risk Warning: Broken Boot Loop&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;&lt;code&gt;/etc/fstab&lt;/code&gt; file में minor typographical errors भी complete system boot loop collapse (System Emergency Recovery Shell) का reason बन सकती हैं। हमेशा editing complete होने के बाद active command verify verify करें (&lt;code&gt;sudo mount -a&lt;/code&gt;) reboot करने से पहले!&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

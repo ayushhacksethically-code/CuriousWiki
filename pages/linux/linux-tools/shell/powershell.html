@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="linux, shell, powershell, pwsh, .net objects, windows, mono manifesto, dsc, install powershell">
+    
+    <title>🐚 Microsoft PowerShell (pwsh)</title>
+    
+    
+    <link rel="stylesheet" href="/CuriousWiki/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/CuriousWiki/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/index.html">Pages</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/linux-tools/index.html">🛠️ Linux CLI Power Tools</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/linux-tools/shell/index.html">🐚 Command-Line Shells Guide</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>🐚 Microsoft PowerShell (pwsh)</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">🐚 Microsoft PowerShell (pwsh)</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> July 1, 2026</span>
+            <span><i data-lucide="clock"></i> 34 min read</span>
+            
+            <span><i data-lucide="tag"></i> linux, shell, powershell, pwsh, .net objects, windows, mono manifesto, dsc, install powershell</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <p><strong>PowerShell</strong> Microsoft द्वारा विकसित एक cross-platform task automation framework, command shell, और scripting language है। यह Windows, Linux और macOS पर चलता है और traditional shells की तरह plain text streams के बजाय <strong>.NET Objects</strong> flow पर काम करता है।</p>
+<div class="callout callout-info">
+<i data-lucide="info"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>The Monad Manifesto</p>
+</div>
+<p>PowerShell के आविष्कारक <strong>Jeffrey Snover</strong> ने 2002 में &ldquo;Monad Manifesto&rdquo; लिखा था। इसमें उन्होंने UNIX pipelines की utility को .NET platform के object flow concept के साथ मिलाकर modern scripting engine की blueprint पेश की थी।</p>
+</div>
+</div>
+<h2 id="1-architectural-features-परमख-वशषतए">1. Architectural Features (प्रमुख विशेषताएँ)</h2>
+<ul>
+<li><strong>Object-Oriented Pipelines:</strong> Outputs text data stream नहीं होते, बल्कि Structured .NET Objects होते हैं। आपको user profile या list columns filter करने के लिए <code>grep</code>, <code>awk</code>, या <code>sed</code> जैसी parsing commands की आवश्यकता नहीं होती।</li>
+<li><strong>Extensible Configuration Management (DSC):</strong> PowerShell Desired State Configuration (DSC) के ज़रिये infrastructure as code declarative configs repeatable deployments run कर सकता है।</li>
+<li><strong>Structured Formats Support:</strong> JSON, CSV, XML, और XML parsing structures के लिए direct native parsing functionality built-in मिलती है।</li>
+</ul>
+<h2 id="2-directory-structure-on-linux-लनकस-पर-डयरकटर">2. Directory Structure on Linux (लिनक्स पर डायरेक्टरी)</h2>
+<p>Linux distros पर packages install होने पर default profile और module paths इस प्रकार configure होते हैं:</p>
+<p><strong>PowerShell Home:</strong> <code>/opt/microsoft/powershell/7/</code></p>
+<p><strong>User Modules Path:</strong> <code>~/.local/share/powershell/Modules</code></p>
+<p><strong>System Shared Modules:</strong> <code>/usr/local/share/powershell/Modules</code></p>
+<p><strong>Profiles Configuration Scripts:</strong></p>
+<p>AllUsersAllHosts: <code>$PSHOME/profile.ps1</code></p>
+<p>CurrentUserAllHosts: <code>~/.config/powershell/profile.ps1</code></p>
+<p><strong>Readline Command History:</strong> <code>~/.local/share/powershell/PSReadLine/ConsoleHost_history.txt</code></p>
+<h2 id="3-linux-installation-scripts-लनकस-पर-इसटलशन">3. Linux Installation Scripts (लिनक्स पर इंस्टॉलेशन)</h2>
+<p>Linux distributions systems पर PowerShell 7 (Stable LTS release) install करने के repository scripts:</p>
+<h3 id="-ubuntu-using-apt">⚫ Ubuntu (using APT)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Update package index and install dependencies</span>
+</span></span><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get install -y wget apt-transport-https software-properties-common
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Download the Microsoft repository GPG keys</span>
+</span></span><span style="display:flex;"><span>source /etc/os-release
+</span></span><span style="display:flex;"><span>wget -q https://packages.microsoft.com/config/ubuntu/$VERSION_ID/packages-microsoft-prod.deb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Register Microsoft prod source keys</span>
+</span></span><span style="display:flex;"><span>sudo dpkg -i packages-microsoft-prod.deb
+</span></span><span style="display:flex;"><span>rm packages-microsoft-prod.deb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install PowerShell 7</span>
+</span></span><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get install -y powershell
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Start PowerShell shell</span>
+</span></span><span style="display:flex;"><span>pwsh
+</span></span></code></pre></div><h3 id="-debian-using-apt">⚫ Debian (using APT)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get install -y wget
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Fetch GPG keys package</span>
+</span></span><span style="display:flex;"><span>source /etc/os-release
+</span></span><span style="display:flex;"><span>wget -q https://packages.microsoft.com/config/debian/$VERSION_ID/packages-microsoft-prod.deb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Register keys</span>
+</span></span><span style="display:flex;"><span>sudo dpkg -i packages-microsoft-prod.deb
+</span></span><span style="display:flex;"><span>rm packages-microsoft-prod.deb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install PowerShell</span>
+</span></span><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get install -y powershell
+</span></span></code></pre></div><h3 id="-red-hat-enterprise-linux-rhel-8--9-using-dnf">⚫ Red Hat Enterprise Linux (RHEL 8 / 9 using DNF)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Get major version dynamically</span>
+</span></span><span style="display:flex;"><span>source /etc/os-release
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">${</span>VERSION_ID%.*<span style="color:#e6db74">}</span> -ge <span style="color:#ae81ff">8</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span> majorver<span style="color:#f92672">=</span>8;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">${</span>VERSION_ID%.*<span style="color:#e6db74">}</span> -ge <span style="color:#ae81ff">9</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span> majorver<span style="color:#f92672">=</span>9; <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Download and register repo keys</span>
+</span></span><span style="display:flex;"><span>curl -sSL -O https://packages.microsoft.com/config/rhel/$majorver/packages-microsoft-prod.rpm
+</span></span><span style="display:flex;"><span>sudo rpm -i packages-microsoft-prod.rpm
+</span></span><span style="display:flex;"><span>rm packages-microsoft-prod.rpm
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install packages</span>
+</span></span><span style="display:flex;"><span>sudo dnf update
+</span></span><span style="display:flex;"><span>sudo dnf install powershell -y
+</span></span></code></pre></div><h3 id="-alpine-linux-musl-x64-binary-tarball-method">⚫ Alpine Linux (musl-x64 binary tarball method)</h3>
+<p>Alpine Linux dynamically linked library features uses static package archives method:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Install dependencies</span>
+</span></span><span style="display:flex;"><span>sudo apk add --no-cache <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    ca-certificates less ncurses-terminfo-base krb5-libs libgcc <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span>    libintl libssl3 libstdc++ tzdata userspace-rcu zlib icu-libs curl
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Fetch musl package</span>
+</span></span><span style="display:flex;"><span>curl -L https://github.com/PowerShell/PowerShell/releases/download/v7.6.3/powershell-7.6.3-linux-musl-x64.tar.gz -o /tmp/powershell.tar.gz
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Extract to opt folder location</span>
+</span></span><span style="display:flex;"><span>sudo mkdir -p /opt/microsoft/powershell/7
+</span></span><span style="display:flex;"><span>sudo tar zxf /tmp/powershell.tar.gz -C /opt/microsoft/powershell/7
+</span></span><span style="display:flex;"><span>sudo chmod +x /opt/microsoft/powershell/7/pwsh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Symlink to bin path</span>
+</span></span><span style="display:flex;"><span>sudo ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
+</span></span></code></pre></div><h2 id="4-execution-policy--unsigned-scripts-सकरपटस-रन-करन-क-अनमत">4. Execution Policy &amp; Unsigned Scripts (स्क्रिप्ट्स रन करने की अनुमति)</h2>
+<p>Windows पर सुरक्षा कारणों से, PowerShell डिफ़ॉल्ट रूप से केवल digitally signed scripts को ही चलाने की अनुमति देता है। लेकिन <strong>Linux पर यह नियम भिन्न है</strong>:</p>
+<div class="callout callout-warning">
+<i data-lucide="alert-triangle"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Linux पर Execution Policy सीमाएँ (Platform Difference)</p>
+</div>
+<p>Linux और macOS पर PowerShell Core (pwsh) डिफ़ॉल्ट रूप से <strong>Unrestricted</strong> मोड में चलता है। Linux पर स्क्रिप्ट सिग्नेचर की जाँच नहीं होती है। यदि आप Linux पर <code>Set-ExecutionPolicy</code> चलाने की कोशिश करेंगे, तो यह निम्नलिखित एरर देगा:</p>
+<pre tabindex="0"><code class="language-none" data-lang="none">Set-ExecutionPolicy: Operation is not supported on this platform.
+</code></pre></div>
+</div>
+<p>आप Linux पर वर्तमान विभिन्न स्कोप्स की नीतियों को देखने के लिए निम्न कमांड चला सकते हैं (सभी डिफ़ॉल्ट रूप से Unrestricted दिखाएंगे):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-ExecutionPolicy -List
+</span></span></code></pre></div><h2 id="5-aliases--output-streams-कसटम-शरटकटस-और-आउटपट-सटरमस">5. Aliases &amp; Output Streams (कस्टम शार्टकट्स और आउटपुट स्ट्रीम्स)</h2>
+<p>PowerShell में एक ही काम को करने के कई तरीके होते हैं। इसे हम <strong>Write-Host</strong> और <strong>Write-Output</strong> के उदाहरण से समझ सकते हैं:</p>
+<h3 id="-write-host-vs-write-output">⚫ Write-Host vs Write-Output</h3>
+<ul>
+<li><strong>Write-Host:</strong> यह सीधे कंसोल (stdout/screen) पर टेक्स्ट लिखता है। इसका उपयोग केवल डिस्प्ले के लिए होता है, इसे किसी वेरिएबल में कैप्चर या पाइप नहीं किया जा सकता।</li>
+<li><strong>Write-Output:</strong> यह स्क्रीन पर लिखने के साथ-साथ आउटपुट को **Success Stream** में भी भेजता है, जिससे यह पाइपलाइन या वेरिएबल असाइनमेंट के लिए उपलब्ध रहता है।</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Success Stream में आउटपुट भेजें और वेरिएबल में स्टोर करें</span>
+</span></span><span style="display:flex;"><span>$message = Write-Output <span style="color:#e6db74">&#34;Hello World&#34;</span>
+</span></span><span style="display:flex;"><span>$message  <span style="color:#75715e"># &#34;Hello World&#34; आउटपुट करेगा (चूंकि यह स्ट्रीम में स्टोर था)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Write-Host से वेरिएबल खाली (null) रहेगा क्योंकि आउटपुट स्ट्रीम में नहीं जाता</span>
+</span></span><span style="display:flex;"><span>$messageHost = Write-Host <span style="color:#e6db74">&#34;Hello World&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ($messageHost <span style="color:#f92672">-eq</span> $null) {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Message is null&#34;</span>  <span style="color:#75715e"># यह प्रिंट होगा!</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>Write-Output</code> का डिफ़ॉल्ट एलियास (Alias) <code>Echo</code> या <code>Write</code> है, या फिर आप बिना किसी कमांड के केवल स्ट्रिंग लिखकर भी आउटपुट दे सकते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Echo <span style="color:#e6db74">&#39;Hello world&#39;</span>
+</span></span><span style="display:flex;"><span>Write <span style="color:#e6db74">&#39;Hello world&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;Hello world&#39;</span> <span style="color:#75715e"># direct string evaluation</span>
+</span></span></code></pre></div><h3 id="-common-cross-platform-aliases">⚫ Common Cross-Platform Aliases</h3>
+<p>PowerShell विंडोज और लिनक्स के पुराने डेवलपर्स की सुविधा के लिए कई कमांड्स को पहले से ही मैप (Alias) करके रखता है। जैसे डायरेक्टरी लिस्टिंग के लिए नीचे दिए गए तीनों कमांड्स एक ही परिणाम देंगे:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>dir            <span style="color:#75715e"># Old Windows CMD style (PowerShell maps it internally)</span>
+</span></span><span style="display:flex;"><span>ls             <span style="color:#75715e"># Bash/Linux style</span>
+</span></span><span style="display:flex;"><span>Get-ChildItem  <span style="color:#75715e"># Native PowerShell Cmdlet</span>
+</span></span></code></pre></div><h3 id="-custom-aliases-बनन-set-alias">⚫ Custom Aliases बनाना (Set-Alias)</h3>
+<p>आप <code>Set-Alias</code> का उपयोग करके अपनी पसंद के शॉर्टकट्स बना सकते हैं।</p>
+<div class="callout callout-warning">
+<i data-lucide="alert-triangle"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Linux-specific Command Behavior</p>
+</div>
+<p>विंडोज़ पर सामान्यतः <code>Test-NetConnection</code> को &ldquo;ping&rdquo; एलियास दिया जाता है, लेकिन <strong>Linux पर Test-NetConnection Cmdlet उपलब्ध नहीं होता है</strong>। इसके अलावा, Linux पर <code>ping</code> कमांड चलाने से सीधे नेटिव लिनक्स बाइनरी <code>/usr/bin/ping</code> एग्जीक्यूट होती है।</p>
+</div>
+</div>
+<p>इसलिए, Linux पर एलियास बनाने का सही प्रैक्टिकल उदाहरण निम्न प्रकार है (जहाँ <code>listdir</code> शॉर्टकट को <code>Get-ChildItem</code> पर मैप किया गया है):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># कस्टम एलियास &#39;listdir&#39; बनाएं</span>
+</span></span><span style="display:flex;"><span>Set-Alias -Name listdir -Value Get-ChildItem
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># अब आप सीधे listdir टाइप करके डायरेक्टरी देख सकते हैं</span>
+</span></span><span style="display:flex;"><span>listdir
+</span></span></code></pre></div><div class="callout callout-info">
+<i data-lucide="info"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>सेशन का ध्यान रखें</p>
+</div>
+<p>कस्टम एलियास केवल वर्तमान सेशन के एक्टिव रहने तक ही जीवित रहता है। सेशन बंद होने पर यह डिलीट हो जाता है। इसे स्थायी बनाने के लिए आप इसे अपने <code>$PROFILE</code> स्क्रिप्ट (उदा. <code>~/.config/powershell/profile.ps1</code>) में जोड़ सकते हैं।</p>
+</div>
+</div>
+<h2 id="6-the-pipeline--variable-flow-पइपलइन-और-वरएबल-फल">6. The Pipeline &amp; Variable Flow (पाइपलाइन और वेरिएबल फ्लो)</h2>
+<p>PowerShell की सबसे बड़ी शक्ति इसका **Pipeline (`|`)** है। यह टेक्स्ट के बजाय सीधे ऑब्जेक्ट्स को एक कमांड से दूसरी कमांड में भेजता है।</p>
+<p>उदाहरण के लिए, फ़ाइलों की केवल नाम (Name) प्रॉपर्टी फ़िल्टर करना:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Native Cmdlet Pipeline</span>
+</span></span><span style="display:flex;"><span>Get-ChildItem | Select-Object Name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># इसका शार्टकट वर्ज़न (gci = Get-ChildItem, Select = Select-Object)</span>
+</span></span><span style="display:flex;"><span>gci | Select Name
+</span></span></code></pre></div><p>पाइपलाइन का उपयोग करके आप फ़ाइलों की सूची पर लूप चला सकते हैं, जहाँ <code>$_</code> या <code>$PSItem</code> वर्तमान पाइपलाइन ऑब्जेक्ट को दर्शाता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># प्रत्येक फ़ाइल को /tmp/NewDirectory/ फ़ोल्डर में कॉपी करने के लिए Foreach लूप</span>
+</span></span><span style="display:flex;"><span>Get-ChildItem <span style="color:#f92672">-File</span> | ForEach-Object {
+</span></span><span style="display:flex;"><span>    Copy-Item -Path $_.FullName -Destination <span style="color:#e6db74">&#34;/tmp/NewDirectory/&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># शार्टकट रूप (Foreach-Object का एलियास % है)</span>
+</span></span><span style="display:flex;"><span>gci <span style="color:#f92672">-File</span> | % { Copy $_.FullName <span style="color:#e6db74">&#34;/tmp/NewDirectory/&#34;</span> }
+</span></span></code></pre></div><h2 id="7-calling-net-library-methods-डटनट-लइबरर-मथडस">7. Calling .NET Library Methods (डॉटनेट लाइब्रेरी मेथड्स)</h2>
+<p>चूँकि PowerShell पूरी तरह .NET पर आधारित है, आप इसके स्टेटिक (Static) और नॉन-स्टेटिक क्लास मेथड्स को सीधे एक्सेस कर सकते हैं।</p>
+<h3 id="-static-methods">⚫ Static Methods</h3>
+<p>स्टेटिक मेथड्स को क्लास को बिना इनिशियलाइज़ किए सीधे <code>[ClassName]::MethodName()</code> का उपयोग करके कॉल किया जा सकता है:</p>
+<div class="callout callout-warning">
+<i data-lucide="alert-triangle"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Linux vs Windows Path Separators</p>
+</div>
+<p>Linux पर बैकस्लैश (<code>\</code>) डायरेक्टरी सेपरेटर नहीं होता, बल्कि उसे फ़ाइल नाम का हिस्सा माना जाता है। इसलिए:</p>
+<ul>
+<li><code>[System.IO.Path]::GetFileName('C:\Windows\explorer.exe')</code> -&gt; Linux पर <code>C:\Windows\explorer.exe</code> ही रिटर्न करेगा।</li>
+<li>सही लिनक्स सिंटैक्स: <code>[System.IO.Path]::GetFileName('/etc/passwd')</code> -&gt; <code>passwd</code> रिटर्न करेगा।</li>
+</ul>
+</div>
+</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># Linux फ़ाइल पाथ से फ़ाइल नाम निकालना</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">System.IO.Path</span>]::GetFileName(<span style="color:#e6db74">&#39;/etc/passwd&#39;</span>)  <span style="color:#75715e"># &#34;passwd&#34; आउटपुट करेगा</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">System.IO.Path</span>]::GetFileName(<span style="color:#e6db74">&#39;/usr/bin/pwsh&#39;</span>)  <span style="color:#75715e"># &#34;pwsh&#34; आउटपुट करेगा</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># वर्तमान दिनांक और समय (DateTime Static Property)</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">System.DateTime</span>]::Now
+</span></span></code></pre></div><h3 id="-instance-methods-non-static">⚫ Instance Methods (Non-Static)</h3>
+<p>नॉन-स्टेटिक मेथड्स को सीधे क्लास पर कॉल नहीं किया जा सकता (जैसे <code>[System.DateTime]::AddHours(15)</code> एरर देगा)। इसके लिए पहले ऑब्जेक्ट का एक इंस्टेंस (Instance) बनाना होगा:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 1. पहले एक डेटटाइम ऑब्जेक्ट वेरिएबल में स्टोर करें</span>
+</span></span><span style="display:flex;"><span>$Object = [<span style="color:#66d9ef">System.DateTime</span>]::Now
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. अब इंस्टेंस मेथड को ऑब्जेक्ट के ऊपर कॉल करें</span>
+</span></span><span style="display:flex;"><span>$Object.AddHours(<span style="color:#ae81ff">15</span>)  <span style="color:#75715e"># लिनक्स पर सही फॉर्मेट में नई डेट/टाइम रिटर्न करेगा</span>
+</span></span></code></pre></div><h2 id="8-commenting-code-कमटस-लखन-क-तरक">8. Commenting Code (कमेंट्स लिखने का तरीका)</h2>
+<p>PowerShell स्क्रिप्ट में कोड को समझाने या डिबग करते समय कमेंट्स करने के लिए निम्न सिंटैक्स हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># यह एक सिंगल-लाइन कमेंट है (Single Line Comment)</span>
+</span></span><span style="display:flex;"><span>Get-ChildItem
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;#
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">यह एक मल्टी-लाइन कमेंट है (Multi-line Comment)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">इसमें आप कितनी भी लाइन्स लिख सकते हैं।
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#&gt;</span>
+</span></span><span style="display:flex;"><span>Get-ChildItem
+</span></span></code></pre></div><h2 id="9-creating-custom-objects-कसटम-ऑबजकटस-बनन">9. Creating Custom Objects (कस्टम ऑब्जेक्ट्स बनाना)</h2>
+<p>डेटा स्टोर करने, एक्सपोर्ट करने या पाइपलाइन में आगे भेजने के लिए कस्टम ऑब्जेक्ट्स बनाना बेहद सामान्य है।</p>
+<h3 id="-method-1-new-object-क-उपयग-करक">⚫ Method 1: New-Object का उपयोग करके</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># DateTime ऑब्जेक्ट बनाना</span>
+</span></span><span style="display:flex;"><span>$var = New-Object System.DateTime
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Argument List के साथ StreamReader ऑब्जेक्ट बनाना (Linux path का उपयोग करते हुए)</span>
+</span></span><span style="display:flex;"><span>$sr = New-Object System.IO.StreamReader -ArgumentList <span style="color:#e6db74">&#34;/etc/hostname&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># प्रॉपर्टीज के साथ एक खाली कस्टम ऑब्जेक्ट बनाना</span>
+</span></span><span style="display:flex;"><span>$newObject = New-Object -TypeName PSObject -Property @{
+</span></span><span style="display:flex;"><span>    ComputerName = <span style="color:#e6db74">&#34;SERVER1&#34;</span>
+</span></span><span style="display:flex;"><span>    Role = <span style="color:#e6db74">&#34;Interface&#34;</span>
+</span></span><span style="display:flex;"><span>    Environment = <span style="color:#e6db74">&#34;Production&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-method-2-pscustomobject-क-उपयग-करक-शरटकट-और-फसट">⚫ Method 2: [PSCustomObject] का उपयोग करके (शॉर्टकट और फ़ास्ट)</h3>
+<p>यह कस्टम ऑब्जेक्ट बनाने का सबसे छोटा, साफ़ और तेज़ तरीका माना जाता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$newObject = [<span style="color:#66d9ef">PSCustomObject</span>]@{
+</span></span><span style="display:flex;"><span>    ComputerName = <span style="color:#e6db74">&#39;SERVER1&#39;</span>
+</span></span><span style="display:flex;"><span>    Role = <span style="color:#e6db74">&#39;Interface&#39;</span>
+</span></span><span style="display:flex;"><span>    Environment = <span style="color:#e6db74">&#39;Production&#39;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-method-3-select-object-स-रनटइम-पर-एकसटर-परपरटज-जडन">⚫ Method 3: Select-Object से रनटाइम पर एक्स्ट्रा प्रॉपर्टीज़ जोड़ना</h3>
+<p>यदि आपके पास पहले से कोई ऑब्जेक्ट है, and आप उसमें एक्स्ट्रा कैलकुलेटेड प्रॉपर्टीज़ जोड़ना चाहते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># फ़ाइलों के साथ रनटाइम पर &#39;DateTime&#39; और &#39;CustomValue&#39; प्रॉपर्टी जोड़ना</span>
+</span></span><span style="display:flex;"><span>Get-ChildItem <span style="color:#f92672">-File</span> | Select-Object FullName, Name,
+</span></span><span style="display:flex;"><span>    @{Name=<span style="color:#e6db74">&#39;DateTime&#39;</span>; Expression={Get-Date}},
+</span></span><span style="display:flex;"><span>    @{Name=<span style="color:#e6db74">&#39;PropertyName&#39;</span>; Expression={<span style="color:#e6db74">&#39;CustomValue&#39;</span>}}
+</span></span></code></pre></div><div class="callout callout-info">
+<i data-lucide="info"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>एक महत्वपूर्ण टिप</p>
+</div>
+<p>ऑब्जेक्ट्स को CSV में सहेजने के लिए <code>Export-Csv</code> और वापस ऑब्जेक्ट बनाने के लिए <code>Import-Csv</code> का उपयोग करें। ध्यान रखें कि <code>Format-*</code> (जैसे Format-Table या Format-List) कमांड्स ऑब्जेक्ट्स को टेक्स्ट स्ट्रीम में बदल देते हैं, इसलिए इनका उपयोग डेटा प्रोसेसिंग के बिल्कुल अंत में ही करें।</p>
+</div>
+</div>
+<h2 id="10-variables-in-powershell-वरएबलस-गइड">10. Variables in PowerShell (वेरिएबल्स गाइड)</h2>
+<p>PowerShell में डेटा या वैल्यूज को स्टोर करने के लिए वेरिएबल्स का उपयोग किया जाता है। वेरिएबल के नाम हमेशा डॉलर साइन (<strong><code>$</code></strong>) से शुरू होते हैं, जैसे: <code>$Variable1</code>। वेरिएबल में टेक्स्ट (String), नंबर (Integer), ऐरे (Array), या यहाँ तक कि एडवांस .NET टाइप्स को स्टोर किया जा सकता है।</p>
+<h3 id="-101-simple-variables-सधरण-वरएबलस">⚫ 10.1 Simple Variables (साधारण वेरिएबल्स)</h3>
+<p>एक साधारण वेरिएबल घोषित (declare) करने के लिए <code>=</code> ऑपरेटर का उपयोग होता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># string type value स्टोर करना</span>
+</span></span><span style="display:flex;"><span>$foo = <span style="color:#e6db74">&#34;bar&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># integer type value स्टोर करना</span>
+</span></span><span style="display:flex;"><span>$count = <span style="color:#ae81ff">101</span>
+</span></span></code></pre></div><h3 id="-102-arrays-ऐर-डकलरशन-और-ऑपरशनस">⚫ 10.2 Arrays (ऐरे डिक्लेरेशन और ऑपरेशन्स)</h3>
+<p>ऐरे घोषित करने का सिंटैक्स भी सामान्य वेरिएबल जैसा ही है, बस वैल्यूज को कॉमा (<code>,</code>) से अलग किया जाता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># इंटीजर्स का ऐरे (Array of Integers)</span>
+</span></span><span style="display:flex;"><span>$myArrayOfInts = <span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># स्ट्रिंग्स का ऐरे (Array of Strings)</span>
+</span></span><span style="display:flex;"><span>$myArrayOfStrings = <span style="color:#e6db74">&#34;1&#34;</span>,<span style="color:#e6db74">&#34;2&#34;</span>,<span style="color:#e6db74">&#34;3&#34;</span>,<span style="color:#e6db74">&#34;4&#34;</span>
+</span></span></code></pre></div><h4 id="ऐर-म-नए-आइटमस-जड़न-adding-to-array">ऐरे में नए आइटम्स जोड़ना (Adding to Array)</h4>
+<p>आप <code>+</code> ऑपरेटर का उपयोग करके ऐरे में नए आइटम्स जोड़ सकते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># ऐरे में 5 नंबर जोड़ना</span>
+</span></span><span style="display:flex;"><span>$myArrayOfInts = $myArrayOfInts + <span style="color:#ae81ff">5</span>  <span style="color:#75715e"># अब ऐरे में: 1, 2, 3, 4, 5 होगा</span>
+</span></span></code></pre></div><h4 id="ऐर-क-आपस-म-जड़न-combining-arrays">ऐरे को आपस में जोड़ना (Combining Arrays)</h4>
+<p>दो ऐरे को आपस में मर्ज (Combine) करना भी बेहद आसान है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$myArrayOfInts = <span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>$myOtherArrayOfInts = <span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># दोनों को जोड़ना</span>
+</span></span><span style="display:flex;"><span>$myArrayOfInts = $myArrayOfInts + $myOtherArrayOfInts  <span style="color:#75715e"># अब ऐरे में: 1,2,3,4,5,6,7 होगा</span>
+</span></span></code></pre></div><h3 id="-103-list-assignment-of-multiple-variables-मलटपल-वरएबल-असइनमट">⚫ 10.3 List Assignment of Multiple Variables (मल्टीपल वेरिएबल असाइनमेंट)</h3>
+<p>PowerShell में आप एक साथ कई वेरिएबल्स को एक ऐरे या लिस्ट से वैल्यू असाइन कर सकते हैं।</p>
+<p>पुराने लंबे तरीके के बजाय:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$input = <span style="color:#e6db74">&#34;foo.bar.baz&#34;</span>
+</span></span><span style="display:flex;"><span>$parts = $input.Split(<span style="color:#e6db74">&#34;.&#34;</span>)
+</span></span><span style="display:flex;"><span>$foo = $parts[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>$bar = $parts[<span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>$baz = $parts[<span style="color:#ae81ff">2</span>]
+</span></span></code></pre></div><p>आप सीधे एक सिंगल लाइन में असाइनमेंट कर सकते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># एक साथ तीन वेरिएबल्स में वैल्यू स्प्लिट करना</span>
+</span></span><span style="display:flex;"><span>$foo, $bar, $baz = $input.Split(<span style="color:#e6db74">&#34;.&#34;</span>)
+</span></span></code></pre></div><p>अगर लिस्ट में वेरिएबल्स से ज़्यादा वैल्यूज़ हैं, तो आख़िरी वेरिएबल एक ऐरे बन जाता है और उसमें बची हुई सारी वैल्यूज़ स्टोर हो जाती हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># $foo में &#34;foo&#34; जाएगा, और $leftover में [&#34;bar&#34;, &#34;baz&#34;] का ऐरे जाएगा</span>
+</span></span><span style="display:flex;"><span>$foo, $leftover = $input.Split(<span style="color:#e6db74">&#34;.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$bar = $leftover[<span style="color:#ae81ff">0</span>]  <span style="color:#75715e"># &#34;bar&#34;</span>
+</span></span><span style="display:flex;"><span>$baz = $leftover[<span style="color:#ae81ff">1</span>]  <span style="color:#75715e"># &#34;baz&#34;</span>
+</span></span></code></pre></div><h3 id="-104-scope-वरएबल-सकप">⚫ 10.4 Scope (वेरिएबल स्कोप)</h3>
+<p>डिफ़ॉल्ट रूप से वेरिएबल अपने एंक्लोजिंग कंटेनर (जैसे फंक्शन) के अंदर लोकल रहता है। यदि कंटेनर से बाहर है, तो उसका स्कोप <strong>Global</strong> होता है। स्कोप को स्पेसिफाई करने के लिए <code>$scope:varname</code> सिंटैक्स का उपयोग करते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># ग्लोबल स्कोप में वेरिएबल</span>
+</span></span><span style="display:flex;"><span>$foo = <span style="color:#e6db74">&#34;Global Scope&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> myFunc {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># फंक्शन (लोकल) स्कोप में वेरिएबल</span>
+</span></span><span style="display:flex;"><span>    $foo = <span style="color:#e6db74">&#34;Function (local) scope&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    Write-Host $global:foo  <span style="color:#75715e"># &#34;Global Scope&#34; प्रिंट करेगा</span>
+</span></span><span style="display:flex;"><span>    Write-Host $local<span style="color:#960050;background-color:#1e0010">:</span>foo   <span style="color:#75715e"># &#34;Function (local) scope&#34; प्रिंट करेगा</span>
+</span></span><span style="display:flex;"><span>    Write-Host $foo         <span style="color:#75715e"># &#34;Function (local) scope&#34; प्रिंट करेगा</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>myFunc
+</span></span><span style="display:flex;"><span>Write-Host $foo             <span style="color:#75715e"># &#34;Global Scope&#34; प्रिंट करेगा</span>
+</span></span></code></pre></div><h3 id="-105-removing-a-variable-वरएबल-डलट-करन">⚫ 10.5 Removing a Variable (वेरिएबल डिलीट करना)</h3>
+<p>मेमोरी से किसी वेरिएबल को हटाने (Delete करने) के दो प्रमुख तरीके हैं:</p>
+<h4 id="वध-1-remove-item-cmdlet-क-उपयग-variable-provider">विधि 1: Remove-Item Cmdlet का उपयोग (Variable Provider)</h4>
+<p>चूँकि PowerShell वेरिएबल स्टोर को फ़ाइल सिस्टम की तरह एक प्रोवाइडर मानता है, आप <code>Remove-Item</code> का उपयोग कर सकते हैं। <strong>ध्यान दें कि इसमें वेरिएबल के आगे <code>$</code> नहीं लगाया जाता:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Remove-Item Variable<span style="color:#960050;background-color:#1e0010">:</span>\foo
+</span></span></code></pre></div><h4 id="वध-2-remove-variable-cmdlet-य-इसक-एलयस-rv-क-उपयग">विधि 2: Remove-Variable Cmdlet (या इसका एलियास rv) का उपयोग</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># वेरिएबल परिभाषित करें</span>
+</span></span><span style="display:flex;"><span>$var = <span style="color:#e6db74">&#34;Some Variable&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remove-Variable से डिलीट करें (variable name के आगे $ नहीं लगाएं)</span>
+</span></span><span style="display:flex;"><span>Remove-Variable -Name var
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># शार्टकट एलियास &#39;rv&#39; का उपयोग</span>
+</span></span><span style="display:flex;"><span>$anotherVar = <span style="color:#e6db74">&#34;Test&#34;</span>
+</span></span><span style="display:flex;"><span>rv anotherVar
+</span></span></code></pre></div><h2 id="11-operators-in-powershell-ऑपरटरस-गइड">11. Operators in PowerShell (ऑपरेटर्स गाइड)</h2>
+<p>ऑपरेटर्स (Operators) वे सिम्बल या कीवर्ड्स होते हैं जो कंपाइलर/इंटरप्रेटर को गणितीय (mathematical), तुलनात्मक (comparison) या तार्किक (logical) गणनाएं करने का निर्देश देते हैं। PowerShell में सामान्य अरिथमेटिक ऑपरेटर्स के साथ-साथ कई शक्तिशाली स्पेशल ऑपरेटर्स (जैसे <code>-like</code>, <code>-match</code>, <code>-replace</code>) भी उपलब्ध हैं जो कोडिंग को आसान बनाते हैं।</p>
+<h3 id="-111-comparison-operators-तलन-करन-वल-ऑपरटरस">⚫ 11.1 Comparison Operators (तुलना करने वाले ऑपरेटर्स)</h3>
+<p>PowerShell में तुलना करने वाले ऑपरेटर्स के आगे एक डैश (<code>-</code>) लगा होता है, जैसे <code>-eq</code> (equal के लिए), <code>-gt</code> (greater than के लिए) आदि।</p>
+<p>डिफ़ॉल्ट रूप से ये ऑपरेटर्स <strong>Case-Insensitive (अपर/लोअर केस में अंतर न करने वाले)</strong> होते हैं। व्यवहार को बदलने के लिए आप निम्न प्रीफिक्स लगा सकते हैं:</p>
+<ul>
+<li><code>i</code> : Case-Insensitive Explicit (उदा. <code>-ieq</code>)</li>
+<li><code>c</code> : Case-Sensitive Explicit (उदा. <code>-ceq</code>)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># डिफ़ॉल्ट रूप से Case-Insensitive है</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;A&#34;</span>   <span style="color:#75715e"># True रिटर्न करेगा</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;a&#34;</span> <span style="color:#f92672">-ceq</span> <span style="color:#e6db74">&#34;A&#34;</span>  <span style="color:#75715e"># False रिटर्न करेगा (क्योंकि यह केस सेंसिटिव है)</span>
+</span></span></code></pre></div><h4 id="सधरण-तलन-ऑपरटरस-simple-comparison-operators">साधारण तुलना ऑपरेटर्स (Simple Comparison Operators)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#ae81ff">2</span> <span style="color:#f92672">-eq</span> <span style="color:#ae81ff">2</span>   <span style="color:#75715e"># Equal to (==) -&gt; True</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> <span style="color:#f92672">-ne</span> <span style="color:#ae81ff">4</span>   <span style="color:#75715e"># Not equal to (!=) -&gt; True</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span> <span style="color:#f92672">-gt</span> <span style="color:#ae81ff">2</span>   <span style="color:#75715e"># Greater-than (&gt;) -&gt; True</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span> <span style="color:#f92672">-ge</span> <span style="color:#ae81ff">5</span>   <span style="color:#75715e"># Greater-than or equal to (&gt;=) -&gt; True</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span> <span style="color:#f92672">-lt</span> <span style="color:#ae81ff">10</span>  <span style="color:#75715e"># Less-than (&lt;) -&gt; True</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span> <span style="color:#f92672">-le</span> <span style="color:#ae81ff">5</span>   <span style="color:#75715e"># Less-than or equal to (&lt;=) -&gt; True</span>
+</span></span></code></pre></div><h4 id="सटरग-तलन-ऑपरटरस-string-comparison-operators">स्ट्रिंग तुलना ऑपरेटर्स (String Comparison Operators)</h4>
+<p>स्ट्रिंग्स को वाइल्डकार्ड या रेगुलर एक्सप्रेशन (Regex) के साथ मैच करने के लिए:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># वाइल्डकार्ड (*) का उपयोग करके मैच करें</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;MyString&#34;</span> <span style="color:#f92672">-like</span> <span style="color:#e6db74">&#34;*String&#34;</span>     <span style="color:#75715e"># True रिटर्न करेगा</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;MyString&#34;</span> <span style="color:#f92672">-notlike</span> <span style="color:#e6db74">&#34;Other*&#34;</span>   <span style="color:#75715e"># True रिटर्न करेगा</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># रेगुलर एक्सप्रेशन (Regex) का उपयोग करके मैच करें</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;MyString&#34;</span> <span style="color:#f92672">-match</span> <span style="color:#e6db74">&#39;^My.*$&#39;</span>     <span style="color:#75715e"># True रिटर्न करेगा</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;MyString&#34;</span> <span style="color:#f92672">-notmatch</span> <span style="color:#e6db74">&#39;^Other$&#39;</span> <span style="color:#75715e"># True रिटर्न करेगा</span>
+</span></span></code></pre></div><h4 id="कलकशन-तलन-ऑपरटरस-collection-comparison-operators">कलेक्शन तुलना ऑपरेटर्स (Collection Comparison Operators)</h4>
+<p>किसी ऐरे या लिस्ट के अंदर वैल्यू खोजने के लिए:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># ऐरे (Left) में वैल्यू (Right) मौजूद है या नहीं</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;abc&#34;</span>, <span style="color:#e6db74">&#34;def&#34;</span> <span style="color:#f92672">-contains</span> <span style="color:#e6db74">&#34;def&#34;</span>     <span style="color:#75715e"># True रिटर्न करेगा</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;abc&#34;</span>, <span style="color:#e6db74">&#34;def&#34;</span> <span style="color:#f92672">-notcontains</span> <span style="color:#e6db74">&#34;123&#34;</span>  <span style="color:#75715e"># True रिटर्न करेगा</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># वैल्यू (Left) ऐरे (Right) के अंदर है या नहीं</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;def&#34;</span> -in <span style="color:#e6db74">&#34;abc&#34;</span>, <span style="color:#e6db74">&#34;def&#34;</span>           <span style="color:#75715e"># True रिटर्न करेगा</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;123&#34;</span> -notin <span style="color:#e6db74">&#34;abc&#34;</span>, <span style="color:#e6db74">&#34;def&#34;</span>        <span style="color:#75715e"># True रिटर्न करेगा</span>
+</span></span></code></pre></div><h3 id="-112-arithmetic-operators-अकगणतय-ऑपरटरस">⚫ 11.2 Arithmetic Operators (अंकगणितीय ऑपरेटर्स)</h3>
+<p>नंबरों पर गणितीय गणना करने के लिए इनका उपयोग किया जाता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#ae81ff">1</span> + <span style="color:#ae81ff">2</span>    <span style="color:#75715e"># Addition (जोड़) -&gt; 3</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> - <span style="color:#ae81ff">2</span>    <span style="color:#75715e"># Subtraction (घटाव) -&gt; -1</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">-1</span>       <span style="color:#75715e"># ऋणात्मक मान निर्धारित करना (Negative Value)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> * <span style="color:#ae81ff">2</span>    <span style="color:#75715e"># Multiplication (गुणा) -&gt; 2</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> / <span style="color:#ae81ff">2</span>    <span style="color:#75715e"># Division (भाग) -&gt; 0.5</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> % <span style="color:#ae81ff">2</span>    <span style="color:#75715e"># Modulus (शेषफल) -&gt; 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">100</span> -shl <span style="color:#ae81ff">2</span>  <span style="color:#75715e"># Bitwise Shift-left -&gt; 400</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">100</span> -shr <span style="color:#ae81ff">1</span>  <span style="color:#75715e"># Bitwise Shift-right -&gt; 50</span>
+</span></span></code></pre></div><h3 id="-113-assignment-operators-असइनमट-ऑपरटरस">⚫ 11.3 Assignment Operators (असाइनमेंट ऑपरेटर्स)</h3>
+<p>वेरिएबल्स में वैल्यूज असाइन करने और साथ ही साथ गणना करने के लिए:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$var = <span style="color:#ae81ff">1</span>    <span style="color:#75715e"># Variable में वैल्यू असाइन करना</span>
+</span></span><span style="display:flex;"><span>$var += <span style="color:#ae81ff">2</span>   <span style="color:#75715e"># Addition: वैल्यू को 2 बढ़ाना ($var = $var + 2)</span>
+</span></span><span style="display:flex;"><span>$var -= <span style="color:#ae81ff">1</span>   <span style="color:#75715e"># Subtraction: वैल्यू को 1 घटाना</span>
+</span></span><span style="display:flex;"><span>$var *= <span style="color:#ae81ff">2</span>   <span style="color:#75715e"># Multiplication: वैल्यू को 2 से गुणा करना</span>
+</span></span><span style="display:flex;"><span>$var /= <span style="color:#ae81ff">2</span>   <span style="color:#75715e"># Division: वैल्यू को 2 से भाग देना</span>
+</span></span><span style="display:flex;"><span>$var %= <span style="color:#ae81ff">2</span>   <span style="color:#75715e"># Modulus: 2 से भाग देकर शेषफल असाइन करना</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># इनक्रीमेंट और डिक्रीमेंट (Increment &amp; Decrement)</span>
+</span></span><span style="display:flex;"><span>$var++      <span style="color:#75715e"># वैल्यू में 1 जोड़ना ($var = $var + 1)</span>
+</span></span><span style="display:flex;"><span>$var--      <span style="color:#75715e"># वैल्यू से 1 घटाना</span>
+</span></span></code></pre></div><h3 id="-114-redirection-operators-रडयरकशन-ऑपरटरस">⚫ 11.4 Redirection Operators (रीडायरेक्शन ऑपरेटर्स)</h3>
+<p>विभिन्न आउटपुट स्ट्रीम्स (जैसे Success, Error, Warning) को फ़ाइलों या अन्य स्ट्रीम्स में रीडायरेक्ट करने के लिए:</p>
+<h4 id="1-success-output-stream-सफलत-सटरम---1">1. Success Output Stream (सफलता स्ट्रीम - 1)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># आउटपुट को फाइल में भेजें (फाइल ओवरराइट होगी)</span>
+</span></span><span style="display:flex;"><span>Get-ChildItem &gt; files-list.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># आउटपुट को फाइल के अंत में जोड़ें (Append करें)</span>
+</span></span><span style="display:flex;"><span>Get-ChildItem &gt;&gt; files-list.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># सफलता (1) और एरर (2) दोनों को एरर स्ट्रीम में भेजें</span>
+</span></span><span style="display:flex;"><span>Get-ChildItem <span style="color:#ae81ff">1</span>&gt;&amp;<span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><h4 id="2-error-output-stream-एरर-सटरम---2">2. Error Output Stream (एरर स्ट्रीम - 2)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># एरर को फ़ाइल में ओवरराइट करके भेजें</span>
+</span></span><span style="display:flex;"><span>Get-ChildItem -Path <span style="color:#e6db74">&#34;/invalid-dir&#34;</span> <span style="color:#ae81ff">2</span>&gt; error.log
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># एरर को सफलता (Success) स्ट्रीम में मर्ज करें</span>
+</span></span><span style="display:flex;"><span>Get-ChildItem -Path <span style="color:#e6db74">&#34;/invalid-dir&#34;</span> <span style="color:#ae81ff">2</span>&gt;&amp;<span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><h4 id="3-अनय-महतवपरण-सटरमस-warning-3-verbose-4-debug-5-info-6">3. अन्य महत्वपूर्ण स्ट्रीम्स (Warning-3, Verbose-4, Debug-5, Info-6)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>cmdlet <span style="color:#ae81ff">3</span>&gt; warning.log  <span style="color:#75715e"># Warning output को फ़ाइल में भेजें</span>
+</span></span><span style="display:flex;"><span>cmdlet <span style="color:#ae81ff">3</span>&gt;&amp;<span style="color:#ae81ff">1</span>            <span style="color:#75715e"># Warnings को Success स्ट्रीम में भेजें</span>
+</span></span><span style="display:flex;"><span>cmdlet *&gt; all.log      <span style="color:#75715e"># सभी 6 स्ट्रीम्स को एक फ़ाइल में भेजें (Overwriting)</span>
+</span></span><span style="display:flex;"><span>cmdlet *&gt;&gt; all.log     <span style="color:#75715e"># सभी 6 स्ट्रीम्स को फ़ाइल में जोड़ें (Appending)</span>
+</span></span></code></pre></div><div class="callout callout-info">
+<i data-lucide="info"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>पाइपलाइन (`|`) और रीडायरेक्शन (`&gt;`) में अंतर</p>
+</div>
+<p>रीडायरेक्शन ऑपरेटर्स केवल स्ट्रीम्स को फ़ाइलों में या स्ट्रीम्स को स्ट्रीम्स में भेजते हैं। इसके विपरीत, पाइपलाइन (Pipe) ऑपरेटर पूरे के पूरे ऑब्जेक्ट्स को अगले कमांड या Cmdlet में इनपुट के रूप में भेजता है।</p>
+</div>
+</div>
+<h3 id="-115-mixing-operand-types-मशरत-डट-टइपस-और-बय-ऑपरटर-वयवहर">⚫ 11.5 Mixing Operand Types (मिश्रित डेटा टाइप्स और बायां ऑपरेटर व्यवहार)</h3>
+<p>PowerShell में जब आप अलग-अलग डेटा टाइप्स (जैसे String और Number) को जोड़ते या गुणा करते हैं, तो **बाईं ओर (Left-side) स्थित ऑपरेंड का डेटा टाइप पूरे ऑपरेशन का व्यवहार तय करता है**:</p>
+<h4 id="जड़-addition-क-समय">जोड़ (Addition) के समय:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># बायीं तरफ String होने पर यह टेक्स्ट जोड़ (Concatenation) करेगा:</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;4&#34;</span> + <span style="color:#ae81ff">2</span>  <span style="color:#75715e"># आउटपुट: &#34;42&#34; (String)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># बायीं तरफ Number होने पर यह गणितीय जोड़ (Mathematical Add) करेगा:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span> + <span style="color:#e6db74">&#34;2&#34;</span>  <span style="color:#75715e"># आउटपुट: 6 (Integer)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ऐरे में स्ट्रिंग जोड़ना:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span> + <span style="color:#e6db74">&#34;Hello&#34;</span>  <span style="color:#75715e"># आउटपुट: 1, 2, 3, &#34;Hello&#34; (Array)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># स्ट्रिंग में ऐरे जोड़ना (PowerShell ऐरे को स्पेस के साथ स्ट्रिंग में बदल देता है):</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Hello&#34;</span> + (<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># आउटपुट: &#34;Hello1 2 3&#34;</span>
+</span></span></code></pre></div><h4 id="गण-multiplication-क-समय">गुणा (Multiplication) के समय:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># बायीं तरफ String होने पर यह टेक्स्ट को दोहराएगा:</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;3&#34;</span> * <span style="color:#ae81ff">2</span>  <span style="color:#75715e"># आउटपुट: &#34;33&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># बायीं तरफ Number होने पर यह सामान्य गुणा करेगा:</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> * <span style="color:#e6db74">&#34;3&#34;</span>  <span style="color:#75715e"># आउटपुट: 6</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ऐरे को गुणा करना (ऐरे को दोहराएगा):</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span> * <span style="color:#ae81ff">2</span>  <span style="color:#75715e"># आउटपुट: 1, 2, 3, 1, 2, 3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># एरर केस (बायीं तरफ नंबर और दायीं तरफ ऐरे होने पर op_Multiply एरर आएगा):</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> * (<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># एरर: [System.Object[]] does not contain a method named &#39;op_Multiply&#39;</span>
+</span></span></code></pre></div><div class="callout callout-warning">
+<i data-lucide="alert-triangle"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Read-Host का गुप्त प्रभाव (Hidden Trap)</p>
+</div>
+<p><code>Read-Host</code> से लिया गया इनपुट हमेशा एक <strong>String</strong> होता है। यदि आप इसकी तुलना नंबर से करेंगे, तो परिणाम गलत आ सकता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$a = Read-Host <span style="color:#e6db74">&#34;Enter a number&#34;</span> <span style="color:#75715e"># इनपुट मान 33 दें</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># $a का मान &#34;33&#34; (String) है</span>
+</span></span><span style="display:flex;"><span>$a <span style="color:#f92672">-gt</span> <span style="color:#ae81ff">5</span> <span style="color:#75715e"># False रिटर्न करेगा (क्योंकि स्ट्रिंग &#34;33&#34; कैरेक्टर &#34;5&#34; से वर्णानुक्रम (alphabetically) में छोटा है)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># सही तरीका: इंटीजर में कास्ट करें</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">int</span>]$a <span style="color:#f92672">-gt</span> <span style="color:#ae81ff">5</span> <span style="color:#75715e"># True रिटर्न करेगा</span>
+</span></span></code></pre></div></div>
+</div>
+<h3 id="-116-logical-operators-तरकक-ऑपरटरस">⚫ 11.6 Logical Operators (तार्किक ऑपरेटर्स)</h3>
+<p>मल्टीपल कंडीशंस का मूल्यांकन करने के लिए:</p>
+<ul>
+<li><code>-and</code> : Logical AND (दोनों कंडीशंस का सच होना ज़रूरी है)</li>
+<li><code>-or</code> : Logical OR (किसी एक कंडीशन का सच होना ज़रूरी है)</li>
+<li><code>-xor</code> : Logical Exclusive OR (केवल एक कंडीशन सच होनी चाहिए)</li>
+<li><code>-not</code> या <code>!</code> : Logical NOT (कंडीशन का उल्टा सत्य)</li>
+</ul>
+<h3 id="-117-string-manipulation-operators-सटरग-हरफर-ऑपरटरस">⚫ 11.7 String Manipulation Operators (स्ट्रिंग हेरफेर ऑपरेटर्स)</h3>
+<h4 id="1-replace-ऑपरटर--replace">1. Replace ऑपरेटर (-replace)</h4>
+<p>यह ऑपरेटर रेगुलर एक्सप्रेशन (Regex) का उपयोग करके टेक्स्ट को बदलता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># साधारण प्रतिस्थापन</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;The rain in Seattle&#34;</span> <span style="color:#f92672">-replace</span> <span style="color:#e6db74">&#39;rain&#39;</span>,<span style="color:#e6db74">&#39;hail&#39;</span>  <span style="color:#75715e"># आउटपुट: &#34;The hail in Seattle&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Regex और कैप्चरिंग ग्रुप्स का उपयोग (Email से Domain निकालना)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># $1 पहले मैचिंग ग्रुप (.+) को दर्शाता है</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;kenmyer@contoso.com&#34;</span> <span style="color:#f92672">-replace</span> <span style="color:#e6db74">&#39;^[\w]+@(.+)&#39;</span>, <span style="color:#e6db74">&#39;$1&#39;</span>  <span style="color:#75715e"># आउटपुट: &#34;contoso.com&#34;</span>
+</span></span></code></pre></div><h4 id="2-split-और-join-ऑपरटरस--split-और--join">2. Split और Join ऑपरेटर्स (-split और -join)</h4>
+<p>स्ट्रिंग को ऐरे में तोड़ने और ऐरे को वापस स्ट्रिंग में जोड़ने के लिए:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># -split ऑपरेटर (स्पेस के आधार पर ऐरे में बदलना)</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;A B C&#34;</span> -split <span style="color:#e6db74">&#34; &#34;</span>  <span style="color:#75715e"># आउटपुट: @(&#34;A&#34;, &#34;B&#34;, &#34;C&#34;) ऐरे</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># -join ऑपरेटर (कोलन &#34;:&#34; के साथ जोड़ना)</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;E&#34;</span>,<span style="color:#e6db74">&#34;F&#34;</span>,<span style="color:#e6db74">&#34;G&#34;</span> -join <span style="color:#e6db74">&#34;:&#34;</span>  <span style="color:#75715e"># आउटपुट: &#34;E:F:G&#34; स्ट्रिंग</span>
+</span></span></code></pre></div><h2 id="12-special-operators-in-powershell-वशष-ऑपरटरस">12. Special Operators in PowerShell (विशेष ऑपरेटर्स)</h2>
+<p>PowerShell में कुछ विशेष ऑपरेटर्स (Special Operators) होते हैं जो एक्सेक्यूशन फ्लो (execution flow) को कंट्रोल करने और डेटा का स्वरूप बदलने में मदद करते हैं:</p>
+<h3 id="-121-array-expression-operator-ऐर-एकसपरशन-ऑपरटर---">⚫ 12.1 Array Expression Operator (ऐरे एक्सप्रेशन ऑपरेटर - `@(&hellip;)`)</h3>
+<p>यह ऑपरेटर किसी भी एक्सप्रेशन के आउटपुट को जबरन (forcefully) एक ऐरे (Array) के रूप में रिटर्न करता है, भले ही उसमें 0 या केवल 1 आइटम हो।</p>
+<p>यदि हम सामान्य रूप से लिनक्स की किसी सिंगल फ़ाइल की जानकारी प्राप्त करें, तो वह एक सिंगल ऑब्जेक्ट रिटर्न करता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># यह System.IO.FileInfo ऑब्जेक्ट रिटर्न करेगा</span>
+</span></span><span style="display:flex;"><span>$file = Get-ChildItem /etc/passwd
+</span></span><span style="display:flex;"><span>$file.GetType().FullName  <span style="color:#75715e"># आउटपुट: System.IO.FileInfo</span>
+</span></span></code></pre></div><p>लेकिन यदि हम इसे <code>@(...)</code> से रैप (wrap) कर दें, तो यह ऐरे बन जाता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># यह System.Object[] (Array) रिटर्न करेगा भले ही इसमें केवल 1 आइटम हो</span>
+</span></span><span style="display:flex;"><span>$fileArray = @(Get-ChildItem /etc/passwd)
+</span></span><span style="display:flex;"><span>$fileArray.GetType().FullName  <span style="color:#75715e"># आउटपुट: System.Object[] (Array)</span>
+</span></span><span style="display:flex;"><span>$fileArray.Count               <span style="color:#75715e"># आउटपुट: 1</span>
+</span></span></code></pre></div><p>यदि किसी डायरेक्टरी में कई आइटम्स हैं, तो यह सामान्य रूप से सभी का ऐरे रिटर्न करता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># डायरेक्टरी की सभी फ़ाइलों का ऐरे रिटर्न करेगा</span>
+</span></span><span style="display:flex;"><span>$dirArray = @(Get-ChildItem /etc)
+</span></span></code></pre></div><h3 id="-122-call-operator-कल-ऑपरटर---">⚫ 12.2 Call Operator (कॉल ऑपरेटर - `&amp;`)</h3>
+<p>यदि किसी वेरिएबल में कोई कमांड नाम, पाथ, या स्क्रिप्ट ब्लॉक (Script block) स्ट्रिंग के रूप में स्टोर है, तो उसे निष्पादित (execute) करने के लिए <code>&amp;</code> ऑपरेटर का उपयोग किया जाता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># स्ट्रिंग वेरिएबल में कमांड नाम स्टोर करें</span>
+</span></span><span style="display:flex;"><span>$command = <span style="color:#e6db74">&#39;Get-ChildItem&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># &amp; ऑपरेटर का उपयोग करके इसे रन करें</span>
+</span></span><span style="display:flex;"><span>&amp; $command -Path /etc/hosts  <span style="color:#75715e"># यह /etc/hosts फ़ाइल की जानकारी दिखाएगा</span>
+</span></span></code></pre></div><h3 id="-123-dot-sourcing-operator-डट-सरसग-ऑपरटर---">⚫ 12.3 Dot Sourcing Operator (डॉट सोर्सिंग ऑपरेटर - `.`)</h3>
+<p>यह ऑपरेटर किसी स्क्रिप्ट फ़ाइल को वर्तमान स्कोप (Current Scope) में रन करता है। इसका मतलब है कि स्क्रिप्ट के अंदर घोषित किए गए सभी वेरिएबल्स और फंक्शन्स रन होने के बाद भी आपके वर्तमान कंसोल सेशन में उपयोग के लिए उपलब्ध रहते हैं।</p>
+<div class="callout callout-warning">
+<i data-lucide="alert-triangle"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Linux Path Syntax</p>
+</div>
+<p>विंडोज़ पर सामान्यतः बैकस्लैश का उपयोग करके <code>. .\myScript.ps1</code> लिखा जाता है, लेकिन <strong>Linux पर फॉरवर्ड स्लैश का उपयोग करके <code>. ./myScript.ps1</code> लिखा जाना चाहिए।</strong> ध्यान रहे कि पहले डॉट (<code>.</code>) और <code>./</code> के बीच एक <strong>स्पेस</strong> होना आवश्यक है।</p>
+</div>
+</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># myScript.ps1 को वर्तमान कंसोल स्कोप में रन करें</span>
+</span></span><span style="display:flex;"><span>. ./myScript.ps1
+</span></span></code></pre></div><h2 id="13-basic-set-operations-कलकशन-और-सट-ऑपरशनस">13. Basic Set Operations (कलेक्शन और सेट ऑपरेशन्स)</h2>
+<p>PowerShell में किसी ऐरे या कलेक्शन के ऊपर अलग-अलग ऑपरेशन्स जैसे फ़िल्टरिंग, सॉर्टिंग, ग्रुपिंग और प्रोजेक्टिंग करना बेहद आसान है। इन सभी ऑपरेशन्स को **Set Operations** कहा जाता है:</p>
+<h3 id="-131-filtering-फलटरग-where-object--where--">⚫ 13.1 Filtering (फ़िल्टरिंग: Where-Object / where / ?)</h3>
+<p>किसी भी कलेक्शन को दी गई कंडीशन के आधार पर फ़िल्टर करने के लिए <code>Where-Object</code> का उपयोग किया जाता है। इसके तीन समानार्थी (Synonyms) शब्द हैं:</p>
+<ul>
+<li><code>Where-Object</code> (पूर्ण नाम)</li>
+<li><code>where</code> (एलियास)</li>
+<li><code>?</code> (शॉर्टकट एलियास)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># नाम की एक लिस्ट</span>
+</span></span><span style="display:flex;"><span>$names = @(<span style="color:#e6db74">&#34;Aaron&#34;</span>, <span style="color:#e6db74">&#34;Albert&#34;</span>, <span style="color:#e6db74">&#34;Alphonse&#34;</span>, <span style="color:#e6db74">&#34;Bernie&#34;</span>, <span style="color:#e6db74">&#34;Charlie&#34;</span>, <span style="color:#e6db74">&#34;Danny&#34;</span>, <span style="color:#e6db74">&#34;Ernie&#34;</span>, <span style="color:#e6db74">&#34;Frank&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># केवल वे नाम फ़िल्टर करें जो &#34;A&#34; से शुरू होते हैं (तीनों तरीके एक ही रिज़ल्ट देंगे)</span>
+</span></span><span style="display:flex;"><span>$names | Where-Object { $_ <span style="color:#f92672">-like</span> <span style="color:#e6db74">&#34;A*&#34;</span> }
+</span></span><span style="display:flex;"><span>$names | where { $_ <span style="color:#f92672">-like</span> <span style="color:#e6db74">&#34;A*&#34;</span> }
+</span></span><span style="display:flex;"><span>$names | ? { $_ <span style="color:#f92672">-like</span> <span style="color:#e6db74">&#34;A*&#34;</span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># आउटपुट:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Aaron</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Albert</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Alphonse</span>
+</span></span></code></pre></div><h3 id="-132-ordering-सरटग-sort-object--sort">⚫ 13.2 Ordering (सॉर्टिंग: Sort-Object / sort)</h3>
+<p>कलेक्शन के आइटम्स को बढ़ते (Ascending) या घटते (Descending) क्रम में सॉर्ट करने के लिए <code>Sort-Object</code> (शॉर्टकट: <code>sort</code>) का उपयोग किया जाता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$names = @(<span style="color:#e6db74">&#34;Aaron&#34;</span>, <span style="color:#e6db74">&#34;Aaron&#34;</span>, <span style="color:#e6db74">&#34;Bernie&#34;</span>, <span style="color:#e6db74">&#34;Charlie&#34;</span>, <span style="color:#e6db74">&#34;Danny&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># डिफ़ॉल्ट रूप से Ascending (बढ़ता क्रम) सॉर्ट होगा:</span>
+</span></span><span style="display:flex;"><span>$names | Sort-Object
+</span></span><span style="display:flex;"><span>$names | sort
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># आउटपुट: Aaron, Aaron, Bernie, Charlie, Danny</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Descending (घटता क्रम) में सॉर्ट करने के लिए:</span>
+</span></span><span style="display:flex;"><span>$names | Sort-Object -Descending
+</span></span><span style="display:flex;"><span>$names | sort -Descending
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># आउटपुट: Danny, Charlie, Bernie, Aaron, Aaron</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># किसी कस्टम एक्सप्रेशन के आधार पर सॉर्ट करना (जैसे अक्षरों की लंबाई/Length के आधार पर):</span>
+</span></span><span style="display:flex;"><span>$names | Sort-Object { $_.Length }
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># आउटपुट: Aaron, Aaron, Danny, Bernie, Charlie (छोटे शब्दों से बड़े शब्दों की ओर)</span>
+</span></span></code></pre></div><h3 id="-133-grouping-गरपग-group-object--group">⚫ 13.3 Grouping (ग्रुपिंग: Group-Object / group)</h3>
+<p>कलेक्शन के आइटम्स को किसी विशिष्ट गुण (Property) या एक्सप्रेशन के आधार पर अलग-अलग ग्रुप्स में विभाजित करने के लिए <code>Group-Object</code> (शॉर्टकट: <code>group</code>) का उपयोग किया जाता है।</p>
+<p>उदाहरण के लिए, अक्षरों की लम्बाई (Length) के आधार पर नाम लिस्ट को ग्रुप करना:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$names = @(<span style="color:#e6db74">&#34;Aaron&#34;</span>, <span style="color:#e6db74">&#34;Albert&#34;</span>, <span style="color:#e6db74">&#34;Alphonse&#34;</span>, <span style="color:#e6db74">&#34;Bernie&#34;</span>, <span style="color:#e6db74">&#34;Charlie&#34;</span>, <span style="color:#e6db74">&#34;Danny&#34;</span>, <span style="color:#e6db74">&#34;Ernie&#34;</span>, <span style="color:#e6db74">&#34;Frank&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$names | Group-Object -Property Length
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># आउटपुट रिस्पॉन्स:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Count Name                      Group</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ----- ----                      -----</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     4 5                         {Aaron, Danny, Ernie, Frank}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     2 6                         {Albert, Bernie}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     1 7                         {Charlie}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     1 8                         {Alphonse}</span>
+</span></span></code></pre></div><h3 id="-134-projecting-परजकटग-select-object--select">⚫ 13.4 Projecting (प्रोजेक्टिंग: Select-Object / select)</h3>
+<p>प्रोजेक्टिंग का मतलब है किसी ऑब्जेक्ट में से केवल चुनिंदा प्रॉपर्टीज़ (जैसे फ़ाइल का केवल नाम और पाथ) को एक्सट्रैक्ट करना या नई कस्टम प्रॉपर्टीज़ की गणना करना। इसके लिए <code>Select-Object</code> (शॉर्टकट: <code>select</code>) का उपयोग किया जाता है।</p>
+<div class="callout callout-warning">
+<i data-lucide="alert-triangle"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Linux-specific Object Properties</p>
+</div>
+<p>विंडोज़ पर फ़ाइलों में <code>Attributes</code> जैसी प्रॉपर्टीज़ होती हैं, लेकिन <strong>Linux पर फ़ाइल ऑब्जेक्ट्स में Unix-specific प्रॉपर्टीज़</strong> (जैसे <code>UnixMode</code>, <code>User</code>, <code>Group</code>, <code>Size</code>, <code>UnixFileMode</code>) मौजूद होती हैं।</p>
+</div>
+</div>
+<p>लिनक्स डायरेक्टरी की फाइलों से केवल विशिष्ट प्रॉपर्टीज फ़िल्टर करना:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># लिनक्स पर फ़ाइलों की सूची लें</span>
+</span></span><span style="display:flex;"><span>$dir = Get-ChildItem <span style="color:#e6db74">&#34;/etc&#34;</span> | Select-Object -First <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># केवल Name, FullName, और UnixMode प्रॉपर्टीज को प्रोजेक्ट करें</span>
+</span></span><span style="display:flex;"><span>$dir | Select-Object Name, FullName, UnixMode
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># आउटपुट रिज़ल्ट:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Name      FullName     UnixMode</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ----      --------     --------</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># abrt      /etc/abrt    drwxr-xr-x</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># adjtime   /etc/adjtime -rw-r--r--</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># aliases   /etc/aliases -rw-r--r--</span>
+</span></span></code></pre></div><p>किसी फ़ाइल ऑब्जेक्ट की पहली एंट्री लेकर उसकी <strong>सभी प्रॉपर्टीज़ (All Properties)</strong> को लिस्ट के रूप में देखना (जिसमें Linux-specific प्रॉपर्टीज़ भी शामिल होंगी):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-ChildItem <span style="color:#e6db74">&#34;/etc&#34;</span> | Select-Object -First <span style="color:#ae81ff">1</span> *
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># आउटपुट:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># PSPath              : Microsoft.PowerShell.Core\FileSystem::/etc/abrt</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># PSIsContainer       : True</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># UnixMode            : drwxr-xr-x</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># User                : root</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Group               : root</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Size                : 126</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Exists              : True</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># FullName            : /etc/abrt</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># UnixFileMode        : UserRead, UserWrite, UserExecute, GroupRead, GroupExecute...</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Attributes          : ReadOnly, Directory</span>
+</span></span></code></pre></div><h2 id="14-conditional-logic-शरत-और-नरणय-नरधरण">14. Conditional Logic (शर्त और निर्णय निर्धारण)</h2>
+<p>अन्य प्रोग्रामिंग भाषाओं की तरह, PowerShell भी कोड के निर्णय प्रवाह (Decision Flow) को नियंत्रित करने के लिए विभिन्न कंडीशनल स्टेटमेंट्स (जैसे <code>if</code>, <code>else</code>, और <code>elseif</code>) का समर्थन करता है।</p>
+<h3 id="-141-if-else-और-elseif">⚫ 14.1 if, else, और elseif</h3>
+<p>यदि <code>if((कंडीशन))</code> सच होती है, तो कर्ली ब्रैकेट्स <code>{...}</code> के अंदर का कोड निष्पादित होता है।</p>
+<div class="callout callout-warning">
+<i data-lucide="alert-triangle"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>समानता जाँच सिंटैक्स (Equality Operator)</p>
+</div>
+<p>ध्यान रखें कि PowerShell में समानता जांचने के लिए <code>=</code> या <code>==</code> का उपयोग नहीं किया जाता। यहाँ <strong><code>-eq</code> (Equality Cmdlet)</strong> का उपयोग करना अनिवार्य है।</p>
+</div>
+</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 1. साधारण if स्टेटमेंट</span>
+</span></span><span style="display:flex;"><span>$test = <span style="color:#e6db74">&#34;test&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ($test <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;test&#34;</span>) {
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;if condition met&#34;</span>  <span style="color:#75715e"># यह प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. if-else स्टेटमेंट (यदि कंडीशन पूरी नहीं होती)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ($test <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;test2&#34;</span>) {
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;if condition met&#34;</span>
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;if condition not met&#34;</span>  <span style="color:#75715e"># यह प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. if-elseif-else स्टेटमेंट</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ($test <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;test2&#34;</span>) {
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;if condition met&#34;</span>
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">elseif</span> ($test <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;test&#34;</span>) {
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;ifelse condition met&#34;</span>  <span style="color:#75715e"># यह प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;no conditions met&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-142-negation-शरत-क-नकरन">⚫ 14.2 Negation (शर्त को नकारना)</h3>
+<p>कई बार हम चाहते हैं कि ब्लॉक तब चले जब कंडीशन **गलत (False)** हो। इसके लिए निम्न विधियों का उपयोग होता है:</p>
+<h4 id="वध-1--not-ऑपरटर-क-उपयग-करक">विधि 1: -not ऑपरेटर का उपयोग करके</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$test = <span style="color:#e6db74">&#34;test&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">-not</span> ($test <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;test2&#34;</span>)) {
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;if condition not met&#34;</span>  <span style="color:#75715e"># यह प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="वध-2--समबल-logical-not-क-उपयग-करक">विधि 2: ! सिम्बल (Logical NOT) का उपयोग करके</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># ! का उपयोग कर पूरे एक्सप्रेशन को इनवर्ट करें</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (!($test <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;test2&#34;</span>)) {
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;if condition not met&#34;</span>  <span style="color:#75715e"># यह प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="वध-3--ne-not-equal-ऑपरटर-क-उपयग-करक">विधि 3: -ne (Not Equal) ऑपरेटर का उपयोग करके</h4>
+<p>यह सबसे सरल और पठनीय (readable) तरीका है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ($test <span style="color:#f92672">-ne</span> <span style="color:#e6db74">&#34;test2&#34;</span>) {
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;variable test is not equal to &#39;test2&#39;&#34;</span>  <span style="color:#75715e"># यह प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-143-if-conditional-shorthand-शरटहड-मलयकन">⚫ 14.3 If Conditional Shorthand (शार्टहैंड मूल्यांकन)</h3>
+<p>PowerShell में आप सीधे किसी ऑब्जेक्ट या स्ट्रिंग को <code>if</code> कंडीशन में रख सकते हैं। PowerShell इसे बूलियन वैल्यू की तरह इवैल्यूएट करता है:</p>
+<ul>
+<li><strong>खाली स्ट्रिंग (`&quot;&quot;`)</strong>, <strong>`0`</strong>, और <strong>`$null`</strong> हमेशा <strong>False</strong> में इवैल्यूएट होते हैं।</li>
+<li><strong>गैर-शून्य लंबाई वाली स्ट्रिंग</strong> या <strong>ऑब्जेक्ट</strong> हमेशा <strong>True</strong> इवैल्यूएट होते हैं।</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$boolean = $false
+</span></span><span style="display:flex;"><span>$string = <span style="color:#e6db74">&#34;false&#34;</span>     <span style="color:#75715e"># यह एक नॉन-एम्प्टी स्ट्रिंग है</span>
+</span></span><span style="display:flex;"><span>$emptyString = <span style="color:#e6db74">&#34;&#34;</span>     <span style="color:#75715e"># शून्य-लंबाई वाली स्ट्रिंग</span>
+</span></span><span style="display:flex;"><span>$nullVar = $null      <span style="color:#75715e"># नल ऑब्जेक्ट</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ($boolean) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># यह रन नहीं होगा क्योंकि वैल्यू $false है</span>
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;Boolean false&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ($string) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># यह रन होगा! क्योंकि &#34;false&#34; एक स्ट्रिंग ऑब्जेक्ट है जिसकी लेंथ 0 से अधिक है</span>
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;string exists and evaluates to true&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ($emptyString) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># यह रन नहीं होगा क्योंकि स्ट्रिंग खाली (zero-length) है</span>
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;Empty string&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ($nullVar) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># यह रन नहीं होगा क्योंकि वेरिएबल की वैल्यू $null है</span>
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;Null check&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="15-loops-in-powershell-लपस-गइड">15. Loops in PowerShell (लूप्स गाइड)</h2>
+<p>लूप (Loop) निर्देशों का एक समूह होता है जो किसी विशिष्ट शर्त (condition) के पूरे होने तक लगातार दोहराया जाता है। किसी कोड ब्लॉक को बार-बार दोहराना प्रोग्रामिंग का एक बुनियादी लेकिन महत्वपूर्ण हिस्सा है।</p>
+<h3 id="-151-foreach-लप-कवरड">⚫ 15.1 Foreach (लूप कीवर्ड)</h3>
+<p>ध्यान रखें कि PowerShell में **Foreach** शब्द के दो अर्थ होते हैं: एक तो <code>foreach</code> स्टेटमेंट (लूप कीवर्ड) और दूसरा <code>ForEach-Object</code> Cmdlet का एलियास। यहाँ हम <code>foreach</code> कीवर्ड लूप के बारे में बात कर रहे हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 1. ऐरे के आइटम्स को लूप में प्रिंट करना</span>
+</span></span><span style="display:flex;"><span>$Names = @(<span style="color:#e6db74">&#39;Amy&#39;</span>, <span style="color:#e6db74">&#39;Bob&#39;</span>, <span style="color:#e6db74">&#39;Celine&#39;</span>, <span style="color:#e6db74">&#39;David&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ForEach</span> ($Name <span style="color:#66d9ef">in</span> $Names) {
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;Hi, my name is </span>$Name<span style="color:#e6db74">!&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. Foreach लूप का आउटपुट सीधे वेरिएबल में कैप्चर करना</span>
+</span></span><span style="display:flex;"><span>$Numbers = <span style="color:#66d9ef">ForEach</span> ($Number <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">.20</span>) {
+</span></span><span style="display:flex;"><span>    $Number  <span style="color:#75715e"># या Write-Output $Number</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. लूप के अंदर पहले से बने ऐरे में डेटा जोड़ना</span>
+</span></span><span style="display:flex;"><span>$Numbers = @()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ForEach</span> ($Number <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">.20</span>) {
+</span></span><span style="display:flex;"><span>    $Numbers += $Number
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-152-for-फर-लप">⚫ 15.2 For (फ़ॉर लूप)</h3>
+<p>यदि आप किसी ऐरे के एक विशिष्ट इंडेक्स रेंज पर लूप चलाना चाहते हैं, तो <code>for</code> लूप सबसे बेहतर है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> ($i = <span style="color:#ae81ff">0</span>; $i <span style="color:#f92672">-le</span> <span style="color:#ae81ff">5</span>; $i++) {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;</span>$i<span style="color:#e6db74">&#34;</span>  <span style="color:#75715e"># 0 से 5 तक नंबर्स प्रिंट करेगा</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-153-foreach-method-ऑबजकट-ऐर-मथड">⚫ 15.3 ForEach() Method (ऑब्जेक्ट ऐरे मेथड)</h3>
+<p>PowerShell 4.0+ से आप सीधे किसी ऑब्जेक्ट ऐरे के ऊपर <code>.ForEach()</code> मेथड कॉल कर सकते हैं (यह पाइपलाइन से कहीं अधिक तेज़ होता है):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 1 से 10 तक संख्याओं का वर्ग (Square) निकालना (दोनों तरीके सही हैं):</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">.10</span>).<span style="color:#66d9ef">ForEach</span>({ $_ * $_ })
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">.10</span>).<span style="color:#66d9ef">ForEach</span>{ $_ * $_ }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># आउटपुट: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100</span>
+</span></span></code></pre></div><h3 id="-154-foreach-object-पइपलइन-आधरत-लप">⚫ 15.4 ForEach-Object (पाइपलाइन आधारित लूप)</h3>
+<p><code>ForEach-Object</code> पाइपलाइन से आने वाले इनपुट ऑब्जेक्ट्स पर लूप चलाने के लिए बना है। इसके डिफ़ॉल्ट एलियास <code>foreach</code> और <code>%</code> (शॉर्टकट) हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># पाइपलाइन के ज़रिए नामों को लूप करना</span>
+</span></span><span style="display:flex;"><span>$names = @(<span style="color:#e6db74">&#34;Amy&#34;</span>, <span style="color:#e6db74">&#34;Bob&#34;</span>, <span style="color:#e6db74">&#34;Celine&#34;</span>, <span style="color:#e6db74">&#34;David&#34;</span>)
+</span></span><span style="display:flex;"><span>$names | ForEach-Object { <span style="color:#e6db74">&#34;Hi, my name is </span>$_<span style="color:#e6db74">!&#34;</span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># % (शॉर्टकट एलियास) का उपयोग करके (यह सबसे ज्यादा लोकप्रिय है):</span>
+</span></span><span style="display:flex;"><span>$names | % { <span style="color:#e6db74">&#34;Hi, my name is </span>$_<span style="color:#e6db74">!&#34;</span> }
+</span></span></code></pre></div><h4 id="एडवस-उपयग--begin--process--end">एडवांस उपयोग (-Begin, -Process, -End)</h4>
+<p>पाइपलाइन आधारित होने के कारण, इसमें आप तीन ब्लॉक घोषित कर सकते हैं जो लूप की विभिन्न स्थितियों पर काम करते हैं:</p>
+<ul>
+<li><strong>-Begin:</strong> लूप शुरू होने से पहले केवल एक बार चलता है (उदा. डेटाबेस या कनेक्शन खोलने के लिए)।</li>
+<li><strong>-Process:</strong> पाइपलाइन से आने वाले प्रत्येक आइटम के लिए चलता है (यह मुख्य लूप है)।</li>
+<li><strong>-End:</strong> सभी आइटम्स प्रोसेस होने के बाद अंत में केवल एक बार चलता है (उदा. कनेक्शन बंद करने या रिपोर्ट बनाने के लिए)।</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#e6db74">&#34;Amy&#34;</span>, <span style="color:#e6db74">&#34;Bob&#34;</span>, <span style="color:#e6db74">&#34;Celine&#34;</span>, <span style="color:#e6db74">&#34;David&#34;</span> | ForEach-Object -Begin {
+</span></span><span style="display:flex;"><span>    $results = @()  <span style="color:#75715e"># ऐरे को इनिशियलाइज़ करें</span>
+</span></span><span style="display:flex;"><span>} -Process {
+</span></span><span style="display:flex;"><span>    $results += <span style="color:#e6db74">&#34;Hi, my name is </span>$_<span style="color:#e6db74">!&#34;</span>  <span style="color:#75715e"># प्रत्येक आइटम को जोड़ें</span>
+</span></span><span style="display:flex;"><span>} -End {
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;Total messages: </span>$($results.Count)<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    $results  <span style="color:#75715e"># अंत में सारा आउटपुट रिटर्न करें</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-155-continue-और-break">⚫ 15.5 Continue और Break</h3>
+<h4 id="continue-ऑपरटर-सकप-करन">Continue ऑपरेटर (स्किप करना)</h4>
+<p>यह वर्तमान इटरेशन को स्किप करके लूप के सबसे ऊपर चला जाता है।</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$i = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> ($i <span style="color:#f92672">-lt</span> <span style="color:#ae81ff">10</span>) {
+</span></span><span style="display:flex;"><span>    $i++
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ($i <span style="color:#f92672">-eq</span> <span style="color:#ae81ff">7</span>) { <span style="color:#66d9ef">continue</span> }  <span style="color:#75715e"># 7 होने पर आगे का कोड स्किप करें</span>
+</span></span><span style="display:flex;"><span>    Write-Host $i
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># आउटपुट: 1 से 10 तक संख्याएं प्रिंट होंगी लेकिन 7 नहीं दिखेगा</span>
+</span></span></code></pre></div><p><em>नोट: पाइपलाइन लूप (ForEach-Object) के अंदर <code>continue</code> की जगह <code>return</code> का उपयोग करना चाहिए।</em></p>
+<h4 id="break-ऑपरटर-बहर-नकलन">Break ऑपरेटर (बाहर निकलना)</h4>
+<p>यह किसी भी लूप से तुरंत बाहर निकल जाता है।</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$i = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> ($i <span style="color:#f92672">-lt</span> <span style="color:#ae81ff">10</span>) {
+</span></span><span style="display:flex;"><span>    $i++
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ($i <span style="color:#f92672">-eq</span> <span style="color:#ae81ff">7</span>) { <span style="color:#66d9ef">break</span> }  <span style="color:#75715e"># 7 होने पर लूप से बाहर निकलें</span>
+</span></span><span style="display:flex;"><span>    Write-Host $i
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># आउटपुट: केवल 1 से 6 तक प्रिंट करेगा</span>
+</span></span></code></pre></div><h4 id="break-labels-लबल-बरक">Break Labels (लेबल ब्रेक)</h4>
+<p>यदि आपके पास नेस्टेड लूप्स (nested loops) हैं, तो आप लेबल का उपयोग करके सीधे बाहरी लूप को ब्रेक कर सकते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$i = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">:</span>mainLoop <span style="color:#66d9ef">While</span> ($i <span style="color:#f92672">-lt</span> <span style="color:#ae81ff">15</span>) {
+</span></span><span style="display:flex;"><span>    $j = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">While</span> ($j <span style="color:#f92672">-lt</span> <span style="color:#ae81ff">15</span>) {
+</span></span><span style="display:flex;"><span>        $k = $i * $j
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> ($k <span style="color:#f92672">-gt</span> <span style="color:#ae81ff">100</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span> mainLoop  <span style="color:#75715e"># सीधे मुख्य लूप (mainLoop) से बाहर निकल जाएगा</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        $j++
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    $i++
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-156-while-वहइल-लप">⚫ 15.6 While (व्हाइल लूप)</h3>
+<p>यह लूप तब तक चलता है जब तक दी गई शर्त (condition) सत्य (true) रहती है।</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 10 से 0 तक उलटी गिनती (Countdown)</span>
+</span></span><span style="display:flex;"><span>$i = <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> ($i <span style="color:#f92672">-ge</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>    $i
+</span></span><span style="display:flex;"><span>    $i--
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="callout callout-warning">
+<i data-lucide="alert-triangle"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Linux-specific Process Monitor Example</p>
+</div>
+<p>विंडोज़ गाइड में <code>notepad.exe</code> को मॉनिटर करने का उदाहरण दिया जाता है, लेकिन <strong>Linux पर हम <code>sleep</code> जैसी प्रक्रिया (Process) को मॉनिटर करते हैं</strong>।</p>
+</div>
+</div>
+<p>लिनक्स पर किसी बैकग्राउंड प्रोसेस को मॉनिटर करने का व्यावहारिक उदाहरण:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 2 सेकंड के लिए बैकग्राउंड में लिनक्स &#39;sleep&#39; प्रोसेस शुरू करें</span>
+</span></span><span style="display:flex;"><span>Start-Process sleep -ArgumentList <span style="color:#e6db74">&#34;2&#34;</span> -NoNewWindow
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># जब तक sleep प्रोसेस एक्टिव है, तब तक शेल को स्लीप रखें</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (Get-Process sleep -ErrorAction SilentlyContinue) {
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;Process is still running...&#34;</span>
+</span></span><span style="display:flex;"><span>    Start-Sleep -Milliseconds <span style="color:#ae81ff">500</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-157-do-while-और-do-until">⚫ 15.7 Do-While और Do-Until</h3>
+<p>ये लूप हमेशा अपने कोड ब्लॉक को **कम से कम एक बार जरूर चलाते हैं**, क्योंकि शर्त की जाँच ब्लॉक के निष्पादित होने के बाद होती है।</p>
+<ul>
+<li><strong>Do-While:</strong> जब तक कंडीशन True है, तब तक लूप चलता है।</li>
+<li><strong>Do-Until:</strong> जब तक कंडीशन True नहीं हो जाती (अर्थात जब तक False है), तब तक लूप चलता है।</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 1. Do-While लूप</span>
+</span></span><span style="display:flex;"><span>$i = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Do</span> {
+</span></span><span style="display:flex;"><span>    $i++
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Number </span>$i<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">while</span> ($i <span style="color:#f92672">-ne</span> <span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># आउटपुट: Number 1, Number 2, Number 3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. Do-Until लूप (विपरीत व्यवहार)</span>
+</span></span><span style="display:flex;"><span>$i = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Do</span> {
+</span></span><span style="display:flex;"><span>    $i++
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Number </span>$i<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">until</span> ($i <span style="color:#f92672">-eq</span> <span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># आउटपुट: Number 1, Number 2, Number 3</span>
+</span></span></code></pre></div><h2 id="16-switch-statement-कडशनल-सवच-सटटमट">16. Switch Statement (कंडीशनल स्विच स्टेटमेंट)</h2>
+<p>स्विच स्टेटमेंट (Switch Statement) किसी वेरिएबल या मान की तुलना कई पूर्व-निर्धारित शर्तों (cases) से करने का एक साफ़ और पठनीय तरीका है। यह कई सारे <code>if-elseif</code> स्टेटमेंट्स का एक बेहतरीन विकल्प है।</p>
+<div class="callout callout-info">
+<i data-lucide="info"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>PowerShell Switch का डिफ़ॉल्ट व्यवहार (Fall-through)</p>
+</div>
+<p>अन्य प्रोग्रामिंग भाषाओं के विपरीत, PowerShell में स्विच स्टेटमेंट मैच मिलने के बाद रुकता नहीं है, बल्कि वह <strong>सभी शर्तों की तुलना करता है</strong>। यदि एक से अधिक शर्ते सत्य हैं, तो वह सभी के कोड ब्लॉक चलाएगा, जब तक कि आप <code>break</code> का उपयोग न करें।</p>
+</div>
+</div>
+<h3 id="-161-simple-switch-सधरण-सवच">⚫ 16.1 Simple Switch (साधारण स्विच)</h3>
+<p>यह डिफ़ॉल्ट रूप से Case-Insensitive (केस-सेंसिटिव नहीं) होता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$myValue = <span style="color:#e6db74">&#39;Second Condition&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> ($myValue) {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;First Condition&#39;</span>  { <span style="color:#e6db74">&#39;First Action&#39;</span> }
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Second Condition&#39;</span> { <span style="color:#e6db74">&#39;Second Action&#39;</span> }  <span style="color:#75715e"># यह प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-162-switch-with--casesensitive-parameter-कस-ससटव-मलन">⚫ 16.2 Switch with -CaseSensitive Parameter (केस-सेंसिटिव मिलान)</h3>
+<p>यदि आप चाहते हैं कि स्विच लोअरकेस और अपरकेस में अंतर करे, तो <code>-CaseSensitive</code> पैरामीटर का उपयोग करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> <span style="color:#f92672">-CaseSensitive</span> (<span style="color:#e6db74">&#39;Condition&#39;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;condition&#39;</span> { <span style="color:#e6db74">&#39;First Action&#39;</span> }
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Condition&#39;</span> { <span style="color:#e6db74">&#39;Second Action&#39;</span> }  <span style="color:#75715e"># केवल यह प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;conditioN&#39;</span> { <span style="color:#e6db74">&#39;Third Action&#39;</span> }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-163-switch-with--wildcard-parameter-वइलडकरड-मलन">⚫ 16.3 Switch with -Wildcard Parameter (वाइल्डकार्ड मिलान)</h3>
+<p>यह <code>*</code>, <code>?</code>, और <code>[...]</code> जैसे वाइल्डकार्ड पैटर्न के साथ मिलान करने की अनुमति देता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> <span style="color:#f92672">-Wildcard</span> (<span style="color:#e6db74">&#39;Condition&#39;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Condition&#39;</span>        { <span style="color:#e6db74">&#39;Normal match&#39;</span> }              <span style="color:#75715e"># प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Condit*&#39;</span>          { <span style="color:#e6db74">&#39;Zero or more characters&#39;</span> }   <span style="color:#75715e"># प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;C[aoc]ndit[f-l]on&#39;</span> { <span style="color:#e6db74">&#39;Range and set of chars&#39;</span> }   <span style="color:#75715e"># प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;C?ndition&#39;</span>        { <span style="color:#e6db74">&#39;Single character wildcard&#39;</span> } <span style="color:#75715e"># प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Test*&#39;</span>            { <span style="color:#e6db74">&#39;No match&#39;</span> }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-164-switch-with--file-parameter-फइल-इनपट-मलयकन">⚫ 16.4 Switch with -File Parameter (फाइल इनपुट मूल्यांकन)</h3>
+<p>यह पैरामीटर सीधे किसी फाइल से इनपुट प्राप्त करता है और उसकी प्रत्येक लाइन को व्यक्तिगत रूप से स्विच में इवैल्यूएट करता है।</p>
+<div class="callout callout-warning">
+<i data-lucide="alert-triangle"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Linux File Path Syntax</p>
+</div>
+<p>लिनक्स पर विंडोज़ ड्राइव पाथ्स की जगह लिनक्स के स्टैंडर्ड पाथ्स (उदा. <code>/tmp/input.txt</code>) का उपयोग किया जाना चाहिए।</p>
+</div>
+</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># मान लें कि /tmp/input.txt में दो लाइन्स हैं:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># condition</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># test</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> <span style="color:#f92672">-File</span> <span style="color:#e6db74">&#34;/tmp/input.txt&#34;</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;condition&#39;</span> { <span style="color:#e6db74">&#39;First Action&#39;</span> }   <span style="color:#75715e"># &#34;condition&#34; लाइन के लिए प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;test&#39;</span>      { <span style="color:#e6db74">&#39;Second Action&#39;</span> }  <span style="color:#75715e"># &#34;test&#34; लाइन के लिए प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;fail&#39;</span>      { <span style="color:#e6db74">&#39;Third Action&#39;</span> }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-165-simple-switch-with-default-condition-डफलट-करय">⚫ 16.5 Simple Switch with Default Condition (डिफ़ॉल्ट क्रिया)</h3>
+<p>यदि कोई भी केस मैच नहीं होता, तो <code>Default</code> ब्लॉक निष्पादित होता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> (<span style="color:#e6db74">&#39;UnknownValue&#39;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Skip Condition&#39;</span> { <span style="color:#e6db74">&#39;First Action&#39;</span> }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Default</span>          { <span style="color:#e6db74">&#39;Default Action&#39;</span> }  <span style="color:#75715e"># यह प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-166-switch-with--regex-parameter-रगलर-एकसपरशन-मलन">⚫ 16.6 Switch with -Regex Parameter (रेगुलर एक्सप्रेशन मिलान)</h3>
+<p>यह रेगुलर एक्सप्रेशन (Regex) के पैटर्न के आधार पर मिलान करने की अनुमति देता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> <span style="color:#f92672">-Regex</span> (<span style="color:#e6db74">&#39;Condition&#39;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Con\D+ion&#39;</span>    { <span style="color:#e6db74">&#39;One or more non-digits&#39;</span> }            <span style="color:#75715e"># प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Conditio*$&#39;</span>   { <span style="color:#e6db74">&#39;Zero or more &#34;o&#34; at the end&#39;</span> }      <span style="color:#75715e"># प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;C.ndition&#39;</span>    { <span style="color:#e6db74">&#39;Any single character&#39;</span> }              <span style="color:#75715e"># प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;^C\w+ition$&#39;</span>  { <span style="color:#e6db74">&#39;Anchors and word characters&#39;</span> }      <span style="color:#75715e"># प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Test&#39;</span>         { <span style="color:#e6db74">&#39;No match&#39;</span> }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-167-simple-switch-with-break-बरक-क-उपयग">⚫ 16.7 Simple Switch with Break (ब्रेक का उपयोग)</h3>
+<p>डिफ़ॉल्ट फॉल-थ्रू व्यवहार को रोकने के लिए आप <code>break</code> का उपयोग कर सकते हैं। यह मैच मिलते ही स्विच से बाहर निकल जाता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> (<span style="color:#e6db74">&#39;Condition&#39;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Condition&#39;</span> { 
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;First Action&#39;</span>   <span style="color:#75715e"># प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Condition&#39;</span> { 
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Second Action&#39;</span>  <span style="color:#75715e"># प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>            <span style="color:#75715e"># यहीं से स्विच बाहर निकल जाएगा</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Condition&#39;</span> { 
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;Third Action&#39;</span>   <span style="color:#75715e"># यह इवैल्यूएट नहीं होगा</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-168-switch-with--exact-parameter-सटक-मलन">⚫ 16.8 Switch with -Exact Parameter (सटीक मिलान)</h3>
+<p><code>-Exact</code> पैरामीटर सुनिश्चित करता है कि स्ट्रिंग का सटीक, केस-इनसेंसिटिव मिलान हो (इसमें वाइल्डकार्ड या Regex सिम्बल्स साधारण टेक्स्ट की तरह ट्रीट होते हैं):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> <span style="color:#f92672">-Exact</span> (<span style="color:#e6db74">&#39;Condition&#39;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;condition&#39;</span>  { <span style="color:#e6db74">&#39;First Action&#39;</span> }   <span style="color:#75715e"># प्रिंट होगा (क्योंकि केस-इनसेंसिटिव है)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Condition&#39;</span>  { <span style="color:#e6db74">&#39;Second Action&#39;</span> }  <span style="color:#75715e"># प्रिंट होगा</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Conditio*&#39;</span>  { <span style="color:#e6db74">&#39;Fifth Action&#39;</span> }   <span style="color:#75715e"># प्रिंट नहीं होगा (चूंकि * को वाइल्डकार्ड नहीं माना गया)</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-169-switch-with-expressions-कसटम-एकसपरशनस-मलन">⚫ 16.9 Switch with Expressions (कस्टम एक्सप्रेशन्स मिलान)</h3>
+<p>स्विच कंडीशंस में आप सीधे बूलियन या गणितीय एक्सप्रेशन्स भी रख सकते हैं (जहाँ <code>$_</code> वर्तमान इनपुट वैल्यू को दर्शाता है):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$myInput = <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> ($myInput) {
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">2</span>+<span style="color:#ae81ff">2</span>) { <span style="color:#e6db74">&#39;True. 2+2 = 4&#39;</span> }                  <span style="color:#75715e"># 0 != 4 (रन नहीं होगा)</span>
+</span></span><span style="display:flex;"><span>    (<span style="color:#ae81ff">2</span>-<span style="color:#ae81ff">2</span>) { <span style="color:#e6db74">&#39;True. 2-2 = 0&#39;</span> }                  <span style="color:#75715e"># 0 == 0 (रन होगा)</span>
+</span></span><span style="display:flex;"><span>    { $_ <span style="color:#f92672">-gt</span> <span style="color:#ae81ff">-1</span> <span style="color:#f92672">-and</span> $_ <span style="color:#f92672">-lt</span> <span style="color:#ae81ff">1</span> } { <span style="color:#e6db74">&#39;Value is 0&#39;</span> } <span style="color:#75715e"># बूलियन True (रन होगा)</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="17-strings-in-powershell-सटरगस-गइड">17. Strings in PowerShell (स्ट्रिंग्स गाइड)</h2>
+<p>PowerShell में स्ट्रिंग (String) टेक्स्ट डेटा को स्टोर और मैनिपुलेट करने का प्राथमिक माध्यम है। यहाँ स्ट्रिंग्स बनाने और उनके साथ काम करने के विभिन्न तरीके दिए गए हैं:</p>
+<h3 id="-171-multiline-string-बह-पकत-सटरग">⚫ 17.1 Multiline String (बहु-पंक्ति स्ट्रिंग)</h3>
+<p>PowerShell में कई लाइन्स की स्ट्रिंग्स बनाने के कई तरीके हैं:</p>
+<h4 id="वध-1-एसकप-करकटरस-य-newline-वरएबल-क-उपयग">विधि 1: एस्केप कैरेक्टर्स या NewLine वेरिएबल का उपयोग</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 1. बैक टिक और n (`n) का उपयोग करके (यह केवल डबल-कोटेड स्ट्रिंग्स में काम करता है)</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Hello</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">World&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. .NET [environment]::NewLine का उपयोग करके</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Hello{0}World&#34;</span> <span style="color:#f92672">-f</span> [<span style="color:#66d9ef">environment</span>]::NewLine
+</span></span></code></pre></div><h4 id="वध-2-सध-कट-बद-करन-स-पहल-नयलइन-एटर-करन">विधि 2: सीधे कोट बंद करने से पहले न्यूलाइन एंटर करना</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#e6db74">&#34;Hello
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">World&#34;</span>
+</span></span></code></pre></div><h4 id="वध-3-here-string-सबस-लकपरय-और-सफ-तरक">विधि 3: Here-String (सबसे लोकप्रिय और साफ तरीका)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#e6db74">@&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Hello
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">World
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;@</span>
+</span></span></code></pre></div><h3 id="-172-here-string-हर-सटरगस">⚫ 17.2 Here-String (हीर-स्ट्रिंग्स)</h3>
+<p>हीर-स्ट्रिंग का सबसे बड़ा फ़ायदा यह है कि इसमें आपको डबल या सिंगल कोट्स को एस्केप (जैसे <code>`&quot;</code>) करने की आवश्यकता नहीं होती।</p>
+<div class="callout callout-warning">
+<i data-lucide="alert-triangle"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Here-String सिंटैक्स नियम</p>
+</div>
+<p>हीर-स्ट्रिंग की शुरुआत <code>@&quot;</code> या <code>@'</code> के तुरंत बाद एक line break से होनी चाहिए, और इसका अंत <code>&quot;@</code> या <code>'@</code> से होना चाहिए। अंत वाला टैग लाइन की बिल्कुल शुरुआत में होना चाहिए (यहाँ तक कि स्पेस या टैब भी नहीं होना चाहिए)।</p>
+</div>
+</div>
+<h4 id="वसतर-करन-यगय-expandable-here-string">विस्तार करने योग्य (Expandable) Here-String:</h4>
+<p>डबल कोट्स <code>@&quot; ... &quot;@</code> के साथ वेरिएबल्स और सब-एक्सप्रेशन्स इवैल्यूएट (expand) हो जाते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#e6db74">@&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Simple Multiline String
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Current Date is: </span>$(Get-Date)<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;@</span>
+</span></span></code></pre></div><h4 id="शबदक-literal-here-string">शाब्दिक (Literal) Here-String:</h4>
+<p>सिंगल कोट्स <code>@' ... '@</code> के साथ कोई वेरिएबल या एक्सप्रेशन एक्सपैंड नहीं होता, वे वैसे के वैसे ही दिखते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#e6db74">@&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">This will not expand:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">$(Get-Date)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">because this is a literal here-string.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;@</span>
+</span></span></code></pre></div><h3 id="-173-concatenating-strings-सटरगस-क-आपस-म-जड़न">⚫ 17.3 Concatenating Strings (स्ट्रिंग्स को आपस में जोड़ना)</h3>
+<h4 id="1-वरएबल-इटरपलशन-string-interpolation">1. वेरिएबल इंटरपोलेशन (String Interpolation)</h4>
+<p>डबल-कोटेड स्ट्रिंग के अंदर सीधे वेरिएबल का नाम लिख देने से वैल्यू जुड़ जाती है (यह केवल वेरिएबल्स पर काम करता है, प्रॉपर्टीज़ पर नहीं):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$string1 = <span style="color:#e6db74">&#34;Power&#34;</span>
+</span></span><span style="display:flex;"><span>$string2 = <span style="color:#e6db74">&#34;Shell&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;Greetings from </span>$string1$string2<span style="color:#e6db74">&#34;</span> <span style="color:#75715e"># आउटपुट: Greetings from PowerShell</span>
+</span></span></code></pre></div><h4 id="2--ऑपरटर-क-उपयग-करक">2. `+` ऑपरेटर का उपयोग करके</h4>
+<p>यह तरीका ऑब्जेक्ट्स की प्रॉपर्टीज़ को जोड़ने के लिए भी काम करता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$string1 = <span style="color:#e6db74">&#34;Greetings from&#34;</span>
+</span></span><span style="display:flex;"><span>$string2 = <span style="color:#e6db74">&#34;PowerShell&#34;</span>
+</span></span><span style="display:flex;"><span>$string1 + <span style="color:#e6db74">&#34; &#34;</span> + $string2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ऑब्जेक्ट प्रॉपर्टी के साथ जोड़ना</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;The title of this console is &#39;&#34;</span> + $host.Name + <span style="color:#e6db74">&#34;&#39;&#34;</span>
+</span></span></code></pre></div><h4 id="3-सब-एकसपरशनस--क-उपयग-करक">3. सब-एक्सप्रेशन्स `$()` का उपयोग करके</h4>
+<p>स्ट्रिंग के अंदर ही किसी ऑब्जेक्ट की प्रॉपर्टी या मेथड को एक्सेस करने के लिए <code>$()</code> का उपयोग होता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#e6db74">&#34;Tomorrow is </span>$((Get-Date).AddDays(<span style="color:#ae81ff">1</span>).DayOfWeek)<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><h3 id="-174-special-characters-एसकप-करकटरस">⚫ 17.4 Special Characters (एस्केप कैरेक्टर्स)</h3>
+<p>डबल-कोटेड स्ट्रिंग्स में बैक टिक (<strong><code>`</code></strong>) एस्केप कैरेक्टर की तरह काम करता है:</p>
+<ul>
+<li><code>`0</code> : Null मान</li>
+<li><code>`a</code> : अलर्ट/बीप साउंड</li>
+<li><code>`b</code> : बैकस्पेस (Backspace)</li>
+<li><code>`n</code> : नई लाइन (Newline)</li>
+<li><code>`r</code> : कैरिज रिटर्न (Carriage return)</li>
+<li><code>`t</code> : हॉरिजॉन्टल टैब (Tab)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#e6db74">&#34;This</span><span style="color:#ae81ff">`t</span><span style="color:#e6db74">uses</span><span style="color:#ae81ff">`t</span><span style="color:#e6db74">tab</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">This is on a second line&#34;</span>
+</span></span></code></pre></div><p>यदि आप किसी ऑपरेटर या कैरेक्टर को साधारण टेक्स्ट की तरह प्रिंट करना चाहते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>`$ <span style="color:#75715e"># $ को साधारण टेक्स्ट बनाएगा</span>
+</span></span><span style="display:flex;"><span>`` <span style="color:#75715e"># बैक टिक को साधारण टेक्स्ट बनाएगा</span>
+</span></span><span style="display:flex;"><span>`&#34; <span style="color:#75715e"># डबल-कोट को साधारण टेक्स्ट बनाएगा</span>
+</span></span></code></pre></div><h3 id="-175-double-vs-single-quotes-डबल-बनम-सगल-कटस">⚫ 17.5 Double vs Single Quotes (डबल बनाम सिंगल कोट्स)</h3>
+<ul>
+<li><strong>डबल कोट्स (`&quot;&hellip;&quot;`):</strong> ये वेरिएबल्स और स्पेशल कैरेक्टर्स (जैसे `n) का मूल्यांकन (evaluation) करते हैं।</li>
+<li><strong>सिंगल कोट्स (`&rsquo;&hellip;&rsquo;`):</strong> ये शुद्ध शाब्दिक (literal) होते हैं। इनमें लिखे वेरिएबल्स या `n जैसे कैरेक्टर्स का मूल्यांकन नहीं होता।</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># सिंगल कोट्स के अंदर सिंगल कोट एस्केप करने के लिए दो बार सिंगल कोट लिखें:</span>
+</span></span><span style="display:flex;"><span>$myLiteralString = <span style="color:#e6db74">&#39;Simple string with &#39;&#39;single quotes&#39;&#39; and &#34;double quotes&#34;.&#39;</span>
+</span></span></code></pre></div><h3 id="-176-format-operator-फरमट-ऑपरटर----f">⚫ 17.6 Format Operator (फॉर्मेट ऑपरेटर - `-f`)</h3>
+<p>यह .NET फॉर्मेटिंग का उपयोग करके स्ट्रिंग बनाने का एक शक्तिशाली और साफ तरीका है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$hash = @{ city = <span style="color:#e6db74">&#39;Berlin&#39;</span> }
+</span></span><span style="display:flex;"><span>$result = <span style="color:#e6db74">&#39;You should really visit {0}&#39;</span> <span style="color:#f92672">-f</span> $hash.city  <span style="color:#75715e"># &#34;You should really visit Berlin&#34;</span>
+</span></span></code></pre></div><h2 id="18-hashtables-in-powershell-हश-टबलस">18. HashTables in PowerShell (हैश टेबल्स)</h2>
+<p>हैश टेबल (Hash Table या Dictionary) एक डेटा स्ट्रक्चर है जो **की-वैल्यू (Key-Value) पेयर्स** को मैप करने के लिए उपयोग किया जाता है।</p>
+<h3 id="-181-creating-a-hash-table-हश-टबल-बनन">⚫ 18.1 Creating a Hash Table (हैश टेबल बनाना)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 1. खाली हैश टेबल बनाना</span>
+</span></span><span style="display:flex;"><span>$hashTable = @{}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. डेटा के साथ हैश टेबल बनाना</span>
+</span></span><span style="display:flex;"><span>$hashTable = @{
+</span></span><span style="display:flex;"><span>    Name1 = <span style="color:#e6db74">&#39;Value1&#39;</span>
+</span></span><span style="display:flex;"><span>    Name2 = <span style="color:#e6db74">&#39;Value2&#39;</span>
+</span></span><span style="display:flex;"><span>    Name3 = <span style="color:#e6db74">&#39;Value3&#39;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="-182-accessing-values-वलय-एकसस-करन">⚫ 18.2 Accessing Values (वैल्यू एक्सेस करना)</h3>
+<p>हैश टेबल से वैल्यू निकालने के दो तरीके हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># सामान्य डॉट सिंटैक्स</span>
+</span></span><span style="display:flex;"><span>$hashTable.Name1  <span style="color:#75715e"># &#34;Value1&#34; रिटर्न करेगा</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># यदि की (Key) के नाम में स्पेस या विशेष कैरेक्टर्स हों:</span>
+</span></span><span style="display:flex;"><span>$specialHash = @{
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;Key 1&#39;</span> = <span style="color:#e6db74">&#39;Value3&#39;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>$specialHash.<span style="color:#e6db74">&#39;Key 1&#39;</span>  <span style="color:#75715e"># &#34;Value3&#34; रिटर्न करेगा</span>
+</span></span></code></pre></div><h3 id="-183-adding-key-value-pairs-नय-क-वलय-जड़न">⚫ 18.3 Adding Key-Value Pairs (नया की-वैल्यू जोड़ना)</h3>
+<h4 id="वध-1-add-ऑपरटर-">विधि 1: Add ऑपरेटर (`+=`)</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$hashTable = @{ Key1 = <span style="color:#e6db74">&#39;Value1&#39;</span> }
+</span></span><span style="display:flex;"><span>$hashTable += @{ Key2 = <span style="color:#e6db74">&#39;Value2&#39;</span> }  <span style="color:#75715e"># नया की-वैल्यू जुड़ जाएगा</span>
+</span></span></code></pre></div><h4 id="वध-2-add-मथड">विधि 2: .Add() मेथड</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$hashTable = @{ Key1 = <span style="color:#e6db74">&#39;Value1&#39;</span> }
+</span></span><span style="display:flex;"><span>$hashTable.Add(<span style="color:#e6db74">&#34;Key2&#34;</span>, <span style="color:#e6db74">&#34;Value2&#34;</span>)
+</span></span></code></pre></div><h3 id="-184-removing-key-value-pairs-क-वलय-डलट-करन">⚫ 18.4 Removing Key-Value Pairs (की-वैल्यू डिलीट करना)</h3>
+<div class="callout callout-warning">
+<i data-lucide="alert-triangle"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>HashTable.Remove() पैरामीटर सीमा</p>
+</div>
+<p>कई सोर्स गाइड्स में <code>$hashTable.Remove(&quot;Key&quot;, &quot;Value&quot;)</code> लिखा होता है, लेकिन **PowerShell में यह एक त्रुटि (Error) है**। <code>Remove()</code> मेथड केवल **1 पैरामीटर (की/Key)** लेता है। वैल्यू पास करने पर मेथड ओवरलोड एरर आता है।</p>
+</div>
+</div>
+<p>सही सिंटैक्स:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># केवल की (Key) नाम पास करें</span>
+</span></span><span style="display:flex;"><span>$hashTable.Remove(<span style="color:#e6db74">&#34;Key1&#34;</span>)
+</span></span></code></pre></div><h3 id="-185-looping--enumeration-हश-टबल-पर-लप-चलन">⚫ 18.5 Looping &amp; Enumeration (हैश टेबल पर लूप चलाना)</h3>
+<h4 id="1-keys-परपरट-क-उपयग-करक">1. Keys प्रॉपर्टी का उपयोग करके:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$hashTable = @{ Key1 = <span style="color:#e6db74">&#39;Value1&#39;</span>; Key2 = <span style="color:#e6db74">&#39;Value2&#39;</span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> ($key <span style="color:#66d9ef">in</span> $hashTable.Keys) {
+</span></span><span style="display:flex;"><span>    $value = $hashTable.$key
+</span></span><span style="display:flex;"><span>    Write-Output <span style="color:#e6db74">&#34;</span>$key<span style="color:#e6db74"> : </span>$value<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="2-getenumerator-क-उपयग-करक-सह-पइपलइनऑबजकट-वयवहर">2. GetEnumerator() का उपयोग करके (सही पाइपलाइन/ऑब्जेक्ट व्यवहार):</h4>
+<div class="callout callout-info">
+<i data-lucide="info"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>GetEnumerator() सिंटैक्स स्पष्टीकरण</p>
+</div>
+<p>ध्यान रहे कि standard <code>foreach</code> लूप में पाइपलाइन वेरिएबल <code>$_</code> काम नहीं करता। आपको लूप वेरिएबल (जैसे <code>$item</code>) का उपयोग करके <code>$item.Key</code> और <code>$item.Value</code> को एक्सेस करना चाहिए।</p>
+</div>
+</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># सही तरीका:</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> ($item <span style="color:#66d9ef">in</span> $hashTable.GetEnumerator()) {
+</span></span><span style="display:flex;"><span>    Write-Host <span style="color:#e6db74">&#34;Key: </span>$($item.Key)<span style="color:#e6db74">, Value: </span>$($item.Value)<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/CuriousWiki/js/main.js"></script>
+</body>
+</html>

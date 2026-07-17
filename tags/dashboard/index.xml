@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Dashboard on CuriousWiki</title>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/dashboard.html</link>
+		<description>Recent content in Dashboard on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/dashboard/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🧠 CuriousWiki Dashboard</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/index.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/index.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;CuriousWiki&lt;/strong&gt; में आपका स्वागत है, यह एक high-performance, static shared knowledge browser है। यह base static, beautifully styled, और responsive pages के साथ बनाया गया है, जिसे compile और read किया जा सकता है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;Tip: Live Search उपलब्ध है&lt;/div&gt;&#xA;&lt;p&gt;आप अपने notes को किसी भी समय &lt;span class=&#34;kbd&#34;&gt;Ctrl&lt;/span&gt; + &lt;span class=&#34;kbd&#34;&gt;K&lt;/span&gt; दबाकर या sidebar में search bar पर click करके तुरंत search कर सकते हैं।&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;अपन-knowledge-base-explore-कर&#34;&gt;अपना Knowledge Base Explore करें&lt;/h2&gt;&#xA;&lt;p&gt;guides, cheat sheets, और development workflows को explore करने के लिए नीचे दी गई category चुनें या sidebar का उपयोग करें:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

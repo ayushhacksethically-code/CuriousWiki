@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Preseed on CuriousWiki</title>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/preseed.html</link>
+		<description>Recent content in Preseed on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/preseed/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🔧 Linux Auto-Installers (Archinstall, Anaconda, Calamares)</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-bible/installers.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-bible/installers.html</guid>
+				<description>&lt;p&gt;पारंपरिक लिनक्स इंस्टॉलेशन में डिस्क विभाजन (partitioning), फ़ाइल सिस्टम निर्माण, बूटलोडर कॉन्फ़िगरेशन और बेसिक यूज़र सेटअप करने में समय और तकनीकी ज्ञान की आवश्यकता होती है। इस प्रक्रिया को सरल और स्वचालित (automated) करने के लिए विभिन्न distributions अलग-अलग &lt;strong&gt;Auto-installers&lt;/strong&gt; का उपयोग करते हैं।&lt;/p&gt;&#xA;&lt;p&gt;यह guide लिनक्स इकोसिस्टम के तीन सबसे लोकप्रिय auto-installers (Archinstall, Anaconda, Calamares) की नवीनतम कार्यप्रणाली, उनके उपयोग और unattended (स्वचालित) इंस्टॉलेशन सेटिंग्स को समझाती है।&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-archinstall-arch-linux-guided-auto-installer&#34;&gt;1. Archinstall (Arch Linux Guided Auto-installer)&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Archinstall&lt;/strong&gt; एक Python-based guided installer और helper library है जो Arch Linux live ISO के साथ pre-installed आता है। यह उन यूज़र्स के लिए बेहतरीन टूल है जो Arch के मैन्युअल कमांड्स के बिना एक त्वरित और मानक इंस्टॉलेशन चाहते हैं।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>🛠️ Case Study: Re-routing Broken Preseed Mirrors &amp; Avoiding 36 GB Zip Loop Explosion</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/preseed-mirror-debugging.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/preseed-mirror-debugging.html</guid>
+				<description>&lt;p&gt;कस्टम ऑपरेटिंग सिस्टम (जैसे Debian या BOSS Linux) का निर्माण या अनुकूलन करते समय हमें ऐसी जटिल समस्याओं का सामना करना पड़ता है जो सैद्धांतिक तौर पर सही दिखती हैं पर व्यावहारिक स्तर पर बूटलोडर या पैकेजर को क्रैश कर देती हैं। यह केस स्टडी इसी तरह की एक महत्वपूर्ण वास्तविक समस्या और उसके इंजीनियरिंग समाधान का विवरण देती है।&lt;/p&gt;&#xA;&lt;h2 id=&#34;main-the-36-gb-zip-loop-explosion&#34;&gt;Main: The 36 GB Zip Loop Explosion&lt;/h2&gt;&#xA;&lt;p&gt;लिनक्स डायरेक्टरीज़ में कई शॉर्टकट्स या सिम्बॉलिक लिंक्स (symlinks) होते हैं जो उसी डायरेक्टरी या उसके पेरेंट को पॉइंट करते हैं। ऐसी फाइलों को आर्काइव (compress) करते समय विशेष सावधानी की आवश्यकता होती है।&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

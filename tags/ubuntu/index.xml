@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Ubuntu on CuriousWiki</title>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/ubuntu.html</link>
+		<description>Recent content in Ubuntu on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🐚 Almquist Shell (ash) &amp; Debian Almquist Shell (DASH)</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/shell/dash.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/shell/dash.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Almquist Shell (ash)&lt;/strong&gt; Unix-like operating systems के लिए एक lightweight और highly performant shell है। यह Bourne Shell का clone है और इसके derived forks (जैसे &lt;strong&gt;DASH&lt;/strong&gt;) Linux ecosystem में startup sequences को speed-up करने और embedded environments (जैसे BusyBox) में व्यापक रूप से उपयोग किए जाते हैं।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Fast Fact&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;मूल &lt;code&gt;ash&lt;/code&gt; shell को Kenneth Almquist ने 1989 में release किया था। यह केवल 92KB size का super-lightweight shell है जो low-memory profiles के लिए सर्वश्रेष्ठ है।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>🔧 Linux Auto-Installers (Archinstall, Anaconda, Calamares)</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-bible/installers.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-bible/installers.html</guid>
+				<description>&lt;p&gt;पारंपरिक लिनक्स इंस्टॉलेशन में डिस्क विभाजन (partitioning), फ़ाइल सिस्टम निर्माण, बूटलोडर कॉन्फ़िगरेशन और बेसिक यूज़र सेटअप करने में समय और तकनीकी ज्ञान की आवश्यकता होती है। इस प्रक्रिया को सरल और स्वचालित (automated) करने के लिए विभिन्न distributions अलग-अलग &lt;strong&gt;Auto-installers&lt;/strong&gt; का उपयोग करते हैं।&lt;/p&gt;&#xA;&lt;p&gt;यह guide लिनक्स इकोसिस्टम के तीन सबसे लोकप्रिय auto-installers (Archinstall, Anaconda, Calamares) की नवीनतम कार्यप्रणाली, उनके उपयोग और unattended (स्वचालित) इंस्टॉलेशन सेटिंग्स को समझाती है।&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-archinstall-arch-linux-guided-auto-installer&#34;&gt;1. Archinstall (Arch Linux Guided Auto-installer)&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Archinstall&lt;/strong&gt; एक Python-based guided installer और helper library है जो Arch Linux live ISO के साथ pre-installed आता है। यह उन यूज़र्स के लिए बेहतरीन टूल है जो Arch के मैन्युअल कमांड्स के बिना एक त्वरित और मानक इंस्टॉलेशन चाहते हैं।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>☁️ AWS के लिए Linux AMIs (Amazon Machine Images)</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-bible/aws-amis.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-bible/aws-amis.html</guid>
+				<description>&lt;p&gt;AWS EC2 instances को spin-up करने के लिए Amazon Machine Images (AMIs) की आवश्यकता होती है। यह guide दुनिया के सबसे लोकप्रिय Linux distributions (Arch, Fedora, Ubuntu, Debian, Gentoo) के AWS AMIs, उनके default settings, login usernames और initialization steps को cover करती है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-warning&#34;&gt;&#xA;&lt;i data-lucide=&#34;alert-triangle&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;SSH Login Constraints&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;सुरक्षा के लिए, AWS official AMIs पर default रूप से password login और direct &lt;code&gt;root&lt;/code&gt; login disabled होते हैं। आपको हमेशा key-pair authentication (.pem/.ppk file) का उपयोग करना होगा।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>📖 Linux Bible</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-bible/index.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-bible/index.html</guid>
+				<description>&lt;p&gt;Linux एक powerful, open-source, और highly customizable kernel है जिसपर आधारित कई distributions (Fedora, Arch, Debian, Ubuntu आदि) चलते हैं। यह guide, Linux Wiki की श्रेणियों का एक व्यापक और व्यवस्थित सूचकांक (Table of Contents) प्रदान करती है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34; style=&#34;margin-bottom: 2rem;&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Quick Action: Linux Maintenance Guide&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;यदि आप package managers update (dnf, pacman, apt), systemd commands ya logs monitor tools देखना चाहते हैं, तो सीधे हमारे &lt;a href=&#34;maintenance.html&#34; class=&#34;wiki-link&#34;&gt;🔧 Linux Maintenance Guide&lt;/a&gt; को देखें।&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="linux, bash, mkdir, commands, files, directories">
+    
+    <title>📁 mkdir (make directories) Command</title>
+    
+    
+    <link rel="stylesheet" href="/CuriousWiki/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/CuriousWiki/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/index.html">Pages</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/bash/index.html">🐚 BASH Scripting &amp; CLI Master Class</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/bash/files-directories/index.html">📁 Linux Files &amp; Directories Guide</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>📁 mkdir (make directories) Command</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">📁 mkdir (make directories) Command</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> July 1, 2026</span>
+            <span><i data-lucide="clock"></i> 1 min read</span>
+            
+            <span><i data-lucide="tag"></i> linux, bash, mkdir, commands, files, directories</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <p><strong><code>mkdir</code> (Make Directory)</strong> command का काम Linux filesystem में नए empty folders (directories) create करना है। आप एक साथ एक या कई folders बना सकते हैं।</p>
+<h2 id="1-syntax">1. Syntax</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> directory_name<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h2 id="2-key-options--flags">2. Key Options &amp; Flags</h2>
+<ul>
+<li><code>-p</code>, <code>--parents</code>: <strong>यह सबसे महत्वपूर्ण flag है।</strong> इसकी मदद से आप nested directories (जैसे <code>folder1/folder2/folder3</code>) को एक ही बार में recursively create कर सकते हैं। अगर parent directory पहले से मौजूद नहीं होगी, तो यह बिना कोई error दिए उसे खुद बना देगा।</li>
+<li><code>-m</code>, <code>--mode</code>: Directory बनाते समय ही उसकी permissions (जैसे <code>755</code>, <code>700</code> octal permission values) set करने के लिए।</li>
+<li><code>-v</code>, <code>--verbose</code>: creation process की detail logs console पर दिखाता है (verbose mode)।</li>
+</ul>
+<h2 id="3-real-world-examples">3. Real-world Examples</h2>
+<h3 id="example-1-create-a-simple-folder">Example 1: Create a simple folder</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir app_scripts
+</span></span></code></pre></div><h3 id="example-2-recursive-parent-structure-super-useful">Example 2: Recursive parent structure (Super Useful)</h3>
+<p>अगर आप <code>-p</code> के बिना <code>mkdir a/b/c</code> चलाएंगे, तो shell error देगा (&ldquo;No such file or directory&rdquo;) क्योंकि <code>a</code> और <code>b</code> पहले से नहीं बने हैं। <code>-p</code> इसे fix करता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p src/assets/images/portraits
+</span></span></code></pre></div><h3 id="example-3-create-directory-with-secure-permissions">Example 3: Create directory with secure permissions</h3>
+<p>अगर आप चाहते हैं कि बनने वाला folder केवल आपके user के लिए readable/writable हो (private directory):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -m <span style="color:#ae81ff">700</span> secret_keys
+</span></span></code></pre></div><h3 id="example-4-verbose-creation-check">Example 4: Verbose creation check</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -pv project/libs
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Output:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># mkdir: created directory &#39;project&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># mkdir: created directory &#39;project/libs&#39;</span>
+</span></span></code></pre></div>
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/CuriousWiki/js/main.js"></script>
+</body>
+</html>

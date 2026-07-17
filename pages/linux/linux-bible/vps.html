@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="linux, vps, cloud, qcow2, digitalocean, hetzner, linode, ovh, proxmox, cloud-init, virtualization, hypervisor">
+    
+    <title>☁️ VPS पर Linux: विस्तृत इंस्टॉलेशन गाइड</title>
+    
+    
+    <link rel="stylesheet" href="/CuriousWiki/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/CuriousWiki/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/index.html">Pages</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/linux-bible/index.html">📖 Linux Bible</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>☁️ VPS पर Linux: विस्तृत इंस्टॉलेशन गाइड</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">☁️ VPS पर Linux: विस्तृत इंस्टॉलेशन गाइड</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> June 30, 2026</span>
+            <span><i data-lucide="clock"></i> 10 min read</span>
+            
+            <span><i data-lucide="tag"></i> linux, vps, cloud, qcow2, digitalocean, hetzner, linode, ovh, proxmox, cloud-init, virtualization, hypervisor</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <h2 id="भमक-virtualization-और-virtual-private-server-vps-कय-ह">भूमिका: Virtualization और Virtual Private Server (VPS) क्या है?</h2>
+<p>तकनीकी शब्दावली में, <strong>Virtual Private Server (VPS)</strong> एक ऐसी तकनीक है जिसके द्वारा एक भौतिक सर्वर (Physical Server) को virtualization सॉफ्टवेयर (जिसे <strong>Hypervisor</strong> कहा जाता है) की मदद से कई छोटे, स्वतंत्र वर्चुअल कंप्यूटर्स में विभाजित कर दिया जाता है।</p>
+<p>यह प्रक्रिया मुख्य रूप से दो प्रकार के Hypervisors के माध्यम से होती है:</p>
+<ul>
+<li><strong>Type 1 Hypervisor (Bare-Metal)</strong>: यह सीधे भौतिक सर्वर के हार्डवेयर पर चलता है। इसके उदाहरण हैं <strong>KVM (Kernel-based Virtual Machine)</strong>, VMware ESXi, और Proxmox VE (KVM आधारित)। यह बेहद कुशल और हाई-परफॉर्मेंस होता है।</li>
+<li><strong>Type 2 Hypervisor (Hosted)</strong>: यह एक पहले से मौजूद ऑपरेटिंग सिस्टम के ऊपर एप्लीकेशन के रूप में चलता है, जैसे VirtualBox या VMware Workstation।</li>
+</ul>
+<p>VPS सेवाएं (जैसे DigitalOcean, Linode, Hetzner, या OVH) मुख्य रूप से KVM या Xen जैसे bare-metal virtualization तकनीकों का उपयोग करती हैं। इससे हर उपभोक्ता (customer) को अपना एक स्वतंत्र, सुरक्षित और dedicated वातावरण मिलता है, जहाँ वे अपनी इच्छानुसार रूट एक्सेस (root access), कस्टम कर्नेल (custom kernel), और पैकेजों को कॉन्फ़िगर कर सकते हैं।</p>
+<div class="callout callout-info">
+<i data-lucide="info"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Cloud Images बनाम Standard ISO: बुनियादी अंतर</p>
+</div>
+<p>पारंपरिक रूप से, जब हम कंप्यूटर पर लिनक्स इंस्टॉल करते हैं, तो हम ISO इमेज को बूट करते हैं और एक ग्राफिकल या टेक्स्ट इंस्टॉलर (जैसे Anaconda या Calamares) के ज़रिए मैनुअल पार्टीशनिंग, यूजर क्रिएशन और सेटिंग्स चुनते हैं।</p>
+<p>लेकिन क्लाउड इन्फ्रास्ट्रक्चर में यह प्रक्रिया बहुत धीमी होगी। इसलिए क्लाउड प्रोवाइडर्स <strong>Cloud Images</strong> (आमतौर पर QCOW2 या RAW फॉर्मेट) का उपयोग करते हैं। ये पहले से इंस्टॉल और कॉन्फ़िगर की गई डिस्क इमेजेस होती हैं, जो बूट होते ही <strong>cloud-init</strong> टूल के माध्यम से प्रोवाइडर के Metadata API से कनेक्ट होकर होस्टनेम, नेटवर्क आईपी, और SSH चाबियों को खुद-ब-खुद कॉन्फ़िगर कर लेती हैं।</p>
+</div>
+</div>
+<hr>
+<h2 id="1-cloud-init-कय-ह-और-यह-कस-कम-करत-ह">1. cloud-init क्या है और यह कैसे काम करता है?</h2>
+<p>जब आप क्लाउड पर एक नया VPS बनाते हैं, तो वह सर्वर बूट होते ही आपके SSH keys, hostname और network को कैसे पहचानता है? इसका उत्तर है <strong>cloud-init</strong>।</p>
+<p>cloud-init एक multi-distribution package है जो लिनक्स क्लाउड इमेज के पहले बूट के दौरान रन होता है। इसके कार्य करने की प्रक्रिया कुछ इस प्रकार है:</p>
+<ol>
+<li><strong>Metadata Discovery</strong>: बूट होते ही cloud-init क्लाउड प्रोवाइडर के लोकल लिंक-लोकल आईपी एड्रेस (आमतौर पर <code>169.254.169.254</code>) पर HTTP रिक्वेस्ट भेजता है।</li>
+<li><strong>Data Fetching</strong>: इस API एंडपॉइंट से यह इंस्टेंस की विशिष्ट जानकारी (SSH Public Key, Hostname, Network Interfaces configuration, UserData) डाउनलोड करता है।</li>
+<li><strong>Configuration Execution</strong>: इसके बाद cloud-init स्थानीय सिस्टम पर निम्न बदलाव करता है:
+<ul>
+<li><code>/etc/hostname</code> को अपडेट करता है।</li>
+<li><code>~/.ssh/authorized_keys</code> में यूजर की SSH पब्लिक की लिखता है।</li>
+<li>यूजर के द्वारा दिए गए कस्टम स्क्रिप्ट्स (जैसे <code>bootcmd</code> या <code>runcmd</code>) को चलाता है।</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="2-digitalocean-पर-custom-linux-image-इसटल-करन">2. DigitalOcean पर Custom Linux Image इंस्टॉल करना</h2>
+<p>DigitalOcean आपको आधिकारिक लिनक्स डिस्ट्रोज़ के अलावा अपनी खुद की बनाई हुई या इंटरनेट से डाउनलोड की गई कस्टम QCOW2/RAW इमेजेस को अपलोड करके Droplet बनाने की अनुमति देता है।</p>
+<h3 id="कदम-दर-कदम-step-by-step-नरदश">कदम-दर-कदम (Step-by-Step) निर्देश:</h3>
+<h4 id="सटप-a-इमज-लक-खजन-और-डउनलड-करन">स्टेप A: इमेज लिंक खोजना और डाउनलोड करना</h4>
+<p>सबसे पहले अपने पसंदीदा ऑपरेटिंग सिस्टम की आधिकारिक क्लाउड इमेज ढूंढें। उदाहरण के लिए, Fedora Cloud, Arch Linux, या Debian Cloud की इमेजेस।</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Fedora Cloud Image: https://download.fedoraproject.org/pub/fedora/linux/releases/40/Cloud/x86_64/images/Fedora-Cloud-Base-Generic.x86_64-40-1.14.qcow2
+</span></span><span style="display:flex;"><span>Debian Cloud Image: https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-genericcloud-amd64.qcow2
+</span></span><span style="display:flex;"><span>Arch Cloud Image: https://fastly.mirror.pkgbuild.com/images/latest/Arch-Linux-x86_64-cloudimg.qcow2
+</span></span></code></pre></div><h4 id="सटप-b-digitalocean-म-इमज-इमपरट-करन">स्टेप B: DigitalOcean में इमेज इम्पोर्ट करना</h4>
+<ol>
+<li>अपने <strong>DigitalOcean Control Panel</strong> में लॉग इन करें।</li>
+<li>बाएँ साइडबार से <strong>Images</strong> पर क्लिक करें, फिर <strong>Custom Images</strong> टैब चुनें।</li>
+<li><strong>Add Image</strong> बटन पर क्लिक करें। आपके पास दो विकल्प होंगे: या तो अपने कंप्यूटर से फाइल अपलोड करें, या सीधे किसी URL से इम्पोर्ट करें। (URL विकल्प ज़्यादा तेज़ है क्योंकि DO के सर्वर्स सीधे इमेज को डाउनलोड करते हैं)।</li>
+<li>इमेज का URL पेस्ट करें, उसे एक नाम दें (जैसे <code>Debian-12-Custom</code>), डिस्ट्रो का नाम चुनें (जैसे <code>Debian</code>), और वह क्षेत्र (Region) चुनें जहाँ आप सर्वर बनाना चाहते हैं।</li>
+<li><strong>Upload Image</strong> पर क्लिक करें। DigitalOcean इसे डाउनलोड और डीकंप्रेस करेगा। प्रक्रिया पूरी होने पर इमेज की स्थिति &ldquo;Active&rdquo; हो जाएगी।</li>
+</ol>
+<h4 id="सटप-c-droplet-बनन">स्टेप C: Droplet बनाना</h4>
+<ol>
+<li>
+<p>कस्टम इमेज की लाइन में दाईं ओर <strong>More</strong> (तीन डॉट्स) बटन पर क्लिक करें और <strong>Create Droplet</strong> चुनें।</p>
+</li>
+<li>
+<p>droplet का साइज़ (CPU/RAM) चुनें।</p>
+</li>
+<li>
+<p>अपनी <strong>SSH Key</strong> का चयन करें। (यह बहुत महत्वपूर्ण है क्योंकि क्लाउड इमेज में कोई डिफ़ॉल्ट पासवर्ड सेट नहीं होता है)।</p>
+</li>
+<li>
+<p><strong>Create Droplet</strong> पर क्लिक करें। DigitalOcean क्लाउड-इनिट के माध्यम से आपकी चुनी हुई SSH की को Droplet के अंदर इंजेक्ट कर देगा।</p>
+</li>
+<li>
+<p>अब अपने टर्मिनल से कनेक्ट करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># यदि आपने Fedora इमेज यूज़ की है:</span>
+</span></span><span style="display:flex;"><span>ssh fedora@your_droplet_ip
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># यदि आपने Debian इमेज यूज़ की है:</span>
+</span></span><span style="display:flex;"><span>ssh admin@your_droplet_ip
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># यदि आपने Arch Linux इमेज यूज़ की है:</span>
+</span></span><span style="display:flex;"><span>ssh arch@your_droplet_ip
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="3-hetzner-cloud-पर-custom-qcow2raw-बट-इसटलशन">3. Hetzner Cloud पर Custom QCOW2/RAW बूट इंस्टॉलेशन</h2>
+<p>Hetzner Cloud में डिफ़ॉल्ट रूप से कस्टम इमेज डायरेक्ट अपलोड करने का विकल्प कुछ क्षेत्रों में सीमित हो सकता है, लेकिन हम Hetzner के <strong>Rescue System</strong> का उपयोग करके किसी भी कस्टम इमेज को सीधे VPS की हार्ड ड्राइव पर लिख (flash) सकते हैं।</p>
+<h3 id="कदम-दर-कदम-step-by-step-नरदश-1">कदम-दर-कदम (Step-by-Step) निर्देश:</h3>
+<h4 id="सटप-a-नय-vm-बनत-समय-userdata-बदलन">स्टेप A: नया VM बनाते समय UserData बदलना</h4>
+<p>Hetzner का अपना इन-हाउस क्लाउड-इनिट इन्फ्रास्ट्रक्चर होता है, जो कुछ डिफ़ॉल्ट सेटिंग्स को ओवरराइड कर देता है। इसे रोकने के लिए, जब आप Hetzner Console पर सर्वर बनाएं, तो नीचे <strong>User Data</strong> सेक्शन में यह YAML कॉन्फ़िगरेशन पेस्ट करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e">#cloud-config</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">vendor_data</span>: {<span style="color:#f92672">&#39;enabled&#39;</span>: <span style="color:#66d9ef">false</span>}
+</span></span></code></pre></div><p>यह महत्वपूर्ण है क्योंकि अन्यथा Hetzner का <code>vendor_data</code> आपके बूट सेटअप में रूट एक्सेस को ब्लॉक कर सकता है जिससे आप लॉग इन नहीं कर पाएंगे।</p>
+<h4 id="सटप-b-rescue-mode-म-बट-करन">स्टेप B: Rescue Mode में बूट करना</h4>
+<ol>
+<li>
+<p>Hetzner Cloud Console में अपने सर्वर पर क्लिक करें।</p>
+</li>
+<li>
+<p>बाएँ मेनू से <strong>Rescue</strong> पर क्लिक करें।</p>
+</li>
+<li>
+<p><strong>Enable Rescue Mode</strong> पर क्लिक करें, अपनी SSH की चुनें, और <strong>Reset Server</strong> बटन दबाकर सर्वर को रीबूट करें।</p>
+</li>
+<li>
+<p>अब आपका सर्वर रैम-डिस्क (RAM Disk) वाले रेस्क्यू मोड में बूट होगा। रेस्क्यू मोड में अपने टर्मिनल से कनेक्ट करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh root@your_server_ip
+</span></span></code></pre></div></li>
+</ol>
+<h4 id="सटप-c-डसक-क-पहचन-करन-और-इमज-लखन">स्टेप C: डिस्क की पहचान करना और इमेज लिखना</h4>
+<ol>
+<li>
+<p>रेस्क्यू मोड में डिस्क का नाम पता करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lsblk
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># आमतौर पर आपकी मुख्य हार्ड ड्राइव /dev/sda या /dev/nvme0n1 होगी।</span>
+</span></span></code></pre></div></li>
+<li>
+<p>क्लाउड इमेज को रेस्क्यू रैम के अंदर डाउनलोड करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Fedora Cloud Image download:</span>
+</span></span><span style="display:flex;"><span>curl -O https://download.fedoraproject.org/pub/fedora/linux/releases/40/Cloud/x86_64/images/Fedora-Cloud-Base-Generic.x86_64-40-1.14.qcow2
+</span></span></code></pre></div></li>
+<li>
+<p>Qemu यूटिलिटी का उपयोग करके इमेज को डिस्क पर लिखें। यह कमांड QCOW2 फ़ाइल को अनपैक करके सीधे वास्तविक हार्ड ड्राइव पर रॉ बाइनरी में लिख देगी:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># यदि आपकी मुख्य डिस्क /dev/sda है:</span>
+</span></span><span style="display:flex;"><span>qemu-img convert -f qcow2 -O raw Fedora-Cloud-Base-Generic.x86_64-40-1.14.qcow2 /dev/sda
+</span></span></code></pre></div></li>
+<li>
+<p>डिस्क पर लिखने के बाद, कैश को रैम से सिंक करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sync
+</span></span></code></pre></div></li>
+<li>
+<p>अब Hetzner Cloud Panel से रेस्क्यू मोड को डिसेबल करें और सर्वर को रीबूट करें।</p>
+</li>
+<li>
+<p>रीबूट के बाद सर्वर आपकी नई लिनक्स इमेज से सामान्य रूप से बूट होगा। अब आप कनेक्ट कर सकते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh fedora@your_server_ip
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="4-linode-पर-custom-disk-image-setup-lish-console">4. Linode पर Custom Disk Image Setup (Lish Console)</h2>
+<p>Linode (Akamai) पर कस्टम बूट करने के लिए हमें Linode के इंटरनल बूट मैनेजर को &ldquo;Direct Disk&rdquo; मोड पर सेट करना होता है, ताकि वह खुद का कर्नेल लोड करने के बजाय हमारी डिस्क इमेज के अंदर मौजूद GRUB बूटलोडर और लिनक्स कर्नेल का उपयोग करे।</p>
+<h3 id="कदम-दर-कदम-step-by-step-नरदश-2">कदम-दर-कदम (Step-by-Step) निर्देश:</h3>
+<h4 id="सटप-a-रसकय-मड-एकटवट-करन">स्टेप A: रेस्क्यू मोड एक्टिवेट करना</h4>
+<ol>
+<li>Linode Manager में जाकर एक नया <strong>Linode</strong> इंस्टेंस बनाएं (आप किसी भी डिफ़ॉल्ट ओएस का चयन कर सकते हैं, क्योंकि हम इसे पूरी तरह से मिटाने वाले हैं)।</li>
+<li>इंस्टेंस बनने के बाद, सर्वर को पावर ऑफ (Power Off) करें।</li>
+<li>ऊपर दाईं ओर <strong>Rescue</strong> टैब पर क्लिक करें।</li>
+<li>Linode डिस्क डिवाइस को डिफ़ॉल्ट असाइनमेंट के साथ रेस्क्यू मोड में बूट करने की पुष्टि करें (आमतौर पर आपकी डिस्क <code>/dev/sda</code> पर माउंट होगी)।</li>
+</ol>
+<h4 id="सटप-b-lish-linode-shell-क-उपयग-करक-कनकट-करन">स्टेप B: Lish (Linode Shell) का उपयोग करके कनेक्ट करना</h4>
+<ol>
+<li>
+<p>Linode में रेस्क्यू मोड शुरू होने के बाद, <strong>Launch LISH Console</strong> बटन पर क्लिक करें। यह एक वेब-बेस्ड टर्मिनल खोलेगा जो सर्वर के सीरियल कंसोल से सीधा कनेक्शन देता है।</p>
+</li>
+<li>
+<p>रेस्क्यू मोड में, नेटवर्क इनेबल्ड होने के बाद, रेस्क्यू एपीटी कैश को अपडेट करें और Qemu टूल्स इंस्टॉल करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update <span style="color:#f92672">&amp;&amp;</span> apt install qemu-utils curl -y
+</span></span></code></pre></div></li>
+<li>
+<p>कस्टम लिनक्स क्लाउड इमेज को डाउनलोड करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -O https://fastly.mirror.pkgbuild.com/images/latest/Arch-Linux-x86_64-basic.qcow2
+</span></span></code></pre></div></li>
+<li>
+<p>इसे वास्तविक वर्चुअल डिस्क (<code>/dev/sda</code>) पर लिखें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qemu-img convert -f qcow2 -O raw Arch-Linux-x86_64-basic.qcow2 /dev/sda
+</span></span></code></pre></div></li>
+<li>
+<p>सिंक कमांड चलाकर आश्वस्त करें कि सारा डेटा डिस्क पर लिखा जा चुका है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sync
+</span></span></code></pre></div></li>
+</ol>
+<h4 id="सटप-c-linode-configuration-बदलन-direct-disk-configuration">स्टेप C: Linode Configuration बदलना (Direct Disk Configuration)</h4>
+<ol>
+<li>
+<p>LISH बंद करें और Linode Manager इंटरफेस पर वापस आएं।</p>
+</li>
+<li>
+<p><strong>Configurations</strong> टैब में जाएं, और अपने बूट प्रोफ़ाइल के आगे <strong>Edit</strong> पर क्लिक करें।</p>
+</li>
+<li>
+<p><strong>Kernel</strong> सेटिंग्स के अंतर्गत, डिफ़ॉल्ट रूप से &ldquo;Linode Kernel&rdquo; चयनित होगा। इसे बदलकर <strong>Direct Disk</strong> (या GRUB2) कर दें। यह लिनोड को निर्देश देता है कि वह आपके द्वारा डिस्क पर फ्लैश किए गए वास्तविक GRUB बूटलोडर को बूट करे।</p>
+</li>
+<li>
+<p>सेटिंग्स सेव करें और सर्वर को <strong>Reboot</strong> करें।</p>
+</li>
+<li>
+<p>बूट होने के बाद आप अपने टर्मिनल से कनेक्ट कर सकते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh arch@your_linode_ip
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="5-ovh-eco-kimsufi-पर-custom-image-byoi-बट-करन">5. OVH Eco (Kimsufi) पर Custom Image (BYOI) बूट करना</h2>
+<p>OVH Cloud और उसके इको-ब्रांड्स (जैसे Kimsufi) पर <strong>Bring Your Own Image (BYOI)</strong> सुविधा मिलती है। इसके माध्यम से आप बिना किसी रेस्क्यू मोड के मैनुअल झंझट के, सीधे कंट्रोल पैनल से किसी बाहरी HTTP लिंक से इमेज फ़्लैश करवा सकते हैं।</p>
+<h3 id="कदम-दर-कदम-step-by-step-नरदश-3">कदम-दर-कदम (Step-by-Step) निर्देश:</h3>
+<h4 id="सटप-a-इमज-क-hashchecksum-वलय-पत-करन">स्टेप A: इमेज का Hash/Checksum वैल्यू पता करना</h4>
+<p>OVH सुरक्षा कारणों से केवल वही इमेजेस फ्लैश करता है जिनका SHA256 चेकसम पहले से सत्यापित हो।</p>
+<ol>
+<li>
+<p>अपने लोकल टर्मिनल पर अपनी चुनी हुई क्लाउड इमेज का SHA256 चेकसम निकालें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sha256sum Arch-Linux-x86_64-cloudimg.qcow2
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># यह आपको एक लंबी हेक्साडेसिमल स्ट्रिंग (checksum hash) देगा। इसे कॉपी कर लें।</span>
+</span></span></code></pre></div></li>
+</ol>
+<h4 id="सटप-b-ovh-control-panel-म-कनफगरशन-सबमट-करन">स्टेप B: OVH Control Panel में कॉन्फ़िगरेशन सबमिट करना</h4>
+<ol>
+<li><strong>OVHcloud Manager</strong> में लॉग इन करें।</li>
+<li><strong>Dedicated Servers</strong> सेक्शन में जाएं और अपना सर्वर सिलेक्ट करें।</li>
+<li>दाहिनी ओर <strong>OS Installation</strong> विकल्प के बगल में स्थित डॉट्स पर क्लिक करें और <strong>Install</strong> चुनें।</li>
+<li>यहाँ <strong>Bring Your Own Image (BYOI)</strong> विकल्प चुनें।</li>
+<li>निम्न फ़ील्ड्स को सावधानीपूर्वक भरें:
+<ul>
+<li><strong>Image URL</strong>: आपकी इमेज का सीधा HTTP/HTTPS लिंक (जैसे: <code>https://fastly.mirror.pkgbuild.com/images/latest/Arch-Linux-x86_64-cloudimg.qcow2</code>)।</li>
+<li><strong>Image Type</strong>: <code>qcow2</code> या <code>raw</code> (जो भी फ़ॉर्मेट हो)।</li>
+<li><strong>Checksum Type</strong>: <code>sha256</code></li>
+<li><strong>Image Checksum</strong>: स्टेप A में निकाला गया SHA256 हैश पेस्ट करें।</li>
+<li><strong>Path of the EFI bootloader</strong>: यदि इमेज UEFI बूट सपोर्ट करती है, तो EFI फाइल का पाथ लिखें: <code>\efi\boot\bootx64.efi</code></li>
+</ul>
+</li>
+<li><strong>Config Drive UserData</strong> सेक्शन में जाकर अपनी SSH पब्लिक की इनपुट करें ताकि बूट होते ही आपका क्रेडेंशियल सेट हो सके।</li>
+<li><strong>Install the system</strong> पर क्लिक करें। OVH का बैकएंड सर्वर को बूट करेगा, डिस्क को आपके दिए गए URL से ओवरराइट करेगा और आपको ईमेल के ज़रिए सूचित करेगा।</li>
+</ol>
+<hr>
+<h2 id="6-proxmox-ve-पर-kvm-cloud-init-vm-बनन-cli-method">6. Proxmox VE पर KVM Cloud-init VM बनाना (CLI Method)</h2>
+<p>Proxmox VE (PVE) पर कस्टम क्लाउड इमेजेस का उपयोग करके वर्चुअल मशीन बनाने के लिए वेब इंटरफेस से ज़्यादा तेज और कुशल तरीका Proxmox का कमांड लाइन इंटरफेस (CLI) है।</p>
+<h3 id="कदम-दर-कदम-step-by-step-नरदश-4">कदम-दर-कदम (Step-by-Step) निर्देश:</h3>
+<h4 id="सटप-a-proxmox-host-पर-कलउड-इमज-डउनलड-करन">स्टेप A: Proxmox Host पर क्लाउड इमेज डाउनलोड करना</h4>
+<ol>
+<li>
+<p>अपने Proxmox नोड पर SSH के माध्यम से लॉग इन करें (या Proxmox Shell खोलें)।</p>
+</li>
+<li>
+<p>इमेज डाउनलोड करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://fastly.mirror.pkgbuild.com/images/latest/Arch-Linux-x86_64-cloudimg.qcow2
+</span></span></code></pre></div></li>
+</ol>
+<h4 id="सटप-b-vm-क-नरमण-और-डसक-इमपरट">स्टेप B: VM का निर्माण और डिस्क इम्पोर्ट</h4>
+<ol>
+<li>
+<p>कमांड लाइन से एक नई वर्चुअल मशीन बनाएं (मान लेते हैं VM ID <code>100</code> है):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qm create <span style="color:#ae81ff">100</span> --name Linux-Cloud-Template --memory <span style="color:#ae81ff">2048</span> --cores <span style="color:#ae81ff">2</span> --net0 virtio,bridge<span style="color:#f92672">=</span>vmbr0
+</span></span></code></pre></div></li>
+<li>
+<p>QCOW2 इमेज को Proxmox के स्टोरेज वॉल्यूम में इम्पोर्ट करें (मान लें आपका लोकल डिस्क पूल <code>local-lvm</code> नाम से है):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qm disk import <span style="color:#ae81ff">100</span> Arch-Linux-x86_64-cloudimg.qcow2 local-lvm
+</span></span></code></pre></div><p><em>(यह कमांड इमेज को कन्वर्ट करके Proxmox VM के डिस्क वॉल्यूम में रजिस्टर कर देगी)</em></p>
+</li>
+<li>
+<p>अब उस इम्पोर्टेड डिस्क को VM से कनेक्ट करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qm set <span style="color:#ae81ff">100</span> --scsihw virtio-scsi-pci --scsi0 local-lvm:vm-100-disk-0
+</span></span></code></pre></div></li>
+</ol>
+<h4 id="सटप-c-cloud-init-drive-जडन-और-बट-आरडर-सट-करन">स्टेप C: Cloud-init Drive जोड़ना और बूट आर्डर सेट करना</h4>
+<ol>
+<li>
+<p>Cloud-init डेटा भेजने के लिए एक वर्चुअल CD-ROM ड्राइव (Cloud-Init drive) जोड़ें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qm set <span style="color:#ae81ff">100</span> --ide2 local-lvm:cloudinit
+</span></span></code></pre></div></li>
+<li>
+<p>VM को बूट करने के लिए इम्पोर्टेड डिस्क को प्राइमरी बूट डिवाइस बनाएं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qm set <span style="color:#ae81ff">100</span> --boot order<span style="color:#f92672">=</span>scsi0
+</span></span></code></pre></div></li>
+<li>
+<p>पॉइंटर और रीबूट डिस्प्ले सेटिंग्स को ऑप्टिमाइज़ करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qm set <span style="color:#ae81ff">100</span> --serial0 socket --vga serial0
+</span></span></code></pre></div></li>
+<li>
+<p>अब Proxmox GUI में जाएं, VM 100 पर क्लिक करें, और <strong>Cloud-Init</strong> सेक्शन में अपनी SSH Keys, IP configurations (DHCP/Static IP), और DNS भरें।</p>
+</li>
+<li>
+<p>VM को स्टार्ट करें। बूट के दौरान cloud-init डेटा को डिस्क से रीड करके सर्वर को स्टार्ट कर देगा।</p>
+</li>
+</ol>
+<div class="backlinks-container" style="margin-top: 3rem;">
+<div class="backlinks-title">
+<p>Linked References (Backlinks)</p>
+</div>
+</div>
+
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/CuriousWiki/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="linux, bash, pwd, commands, files, directories">
+    
+    <title>🐚 pwd (print working directory) Command</title>
+    
+    
+    <link rel="stylesheet" href="/CuriousWiki/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/CuriousWiki/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/index.html">Pages</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/bash/index.html">🐚 BASH Scripting &amp; CLI Master Class</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/bash/files-directories/index.html">📁 Linux Files &amp; Directories Guide</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>🐚 pwd (print working directory) Command</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">🐚 pwd (print working directory) Command</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> July 1, 2026</span>
+            <span><i data-lucide="clock"></i> 2 min read</span>
+            
+            <span><i data-lucide="tag"></i> linux, bash, pwd, commands, files, directories</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <p><strong><code>pwd</code> (Print Working Directory)</strong> एक बहुत ही basic और frequently used command है। इसका मुख्य काम यह बताना है कि आप इस समय Linux directory tree में किस directory/folder के अंदर काम कर रहे हैं (यानी आपका Current Path क्या है)।</p>
+<h2 id="1-shell-built-in-vs-system-binary">1. Shell Built-in vs System Binary</h2>
+<p>क्या आप जानते हैं कि Linux में <code>pwd</code> नाम की दो चीजें होती हैं?</p>
+<ul>
+<li><strong>Shell Built-in:</strong> यह BASH या ZSH shell के अंदर का inbuilt tool है। जब आप terminal पर <code>pwd</code> लिखते हैं, तो default रूप से यही run होता है। यह सुपर-फास्ट है क्योंकि इसके लिए shell को बाहर कोई नया process create नहीं करना पड़ता।</li>
+<li><strong>System Binary:</strong> यह hard disk पर store एक independent binary file है, जो आमतौर पर <code>/bin/pwd</code> पर होती है।</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># यह चेक करने के लिए कि आपके terminal में कौन सा pwd चल रहा है:</span>
+</span></span><span style="display:flex;"><span>type -a pwd
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Output:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pwd is a shell builtin</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># pwd is /bin/pwd</span>
+</span></span></code></pre></div><h2 id="2-options--flags">2. Options &amp; Flags</h2>
+<p>आम तौर पर हम बिना किसी options के <code>pwd</code> चलाते हैं, लेकिन इसके दो बहुत महत्वपूर्ण flags हैं जो Symbolic Links (Symlinks) के साथ काम करते समय काम आते हैं:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Option Flag</th>
+					<th>Behavior / Description</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>-L</code>, <code>--logical</code></td>
+					<td><strong>Logical Path:</strong> यह पर्यावरण चर (environment variable) <code>$PWD</code> की value दिखाता है। अगर आप किसी symlinked folder के अंदर हैं, तो यह shortcut path ही दिखाएगा। (यह BASH builtin का default behavior है)।</td>
+			</tr>
+			<tr>
+					<td><code>-P</code>, <code>--physical</code></td>
+					<td><strong>Physical Path:</strong> यह सभी symlinks को resolve करके उस directory का <strong>वास्तविक (actual physical) path</strong> दिखाता है। (यह <code>/bin/pwd</code> binary का default behavior है)।</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="3-live-example-logical-vs-physical-paths">3. Live Example: Logical vs Physical Paths</h2>
+<p>आइए इसे एक practical example से समझते हैं। मान लीजिए हम user home directory में <code>/var/log</code> directory का एक symlink (shortcut) बनाते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Step 1: Symlink (shortcut) क्रिएट करें</span>
+</span></span><span style="display:flex;"><span>ln -s /var/log ~/log_shortcut
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Step 2: Shortcut folder के अंदर जाएँ</span>
+</span></span><span style="display:flex;"><span>cd ~/log_shortcut
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Step 3: बिना flags के pwd चलाएँ (Logical path दिखेगा)</span>
+</span></span><span style="display:flex;"><span>pwd
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Output: /home/username/log_shortcut</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Step 4: -P flag के साथ pwd चलाएँ (Actual physical location दिखेगी)</span>
+</span></span><span style="display:flex;"><span>pwd -P
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Output: /var/log</span>
+</span></span></code></pre></div><h2 id="4-pwd-environment-variable">4. $PWD Environment Variable</h2>
+<p>जब भी आप <code>cd</code> command से अपनी directory बदलते हैं, BASH shell automatically backend में <code>$PWD</code> और <code>$OLDPWD</code> (previous directory path) environment variables को update करता रहता है। आप चाहें तो इन्हें सीधे echo करके भी देख सकते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo $PWD      <span style="color:#75715e"># Current folder path</span>
+</span></span><span style="display:flex;"><span>echo $OLDPWD   <span style="color:#75715e"># Last visited folder path (cd - इसी का उपयोग करता है)</span>
+</span></span></code></pre></div>
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/CuriousWiki/js/main.js"></script>
+</body>
+</html>

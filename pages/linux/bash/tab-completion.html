@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="linux, bash, tab-completion, commands, files, directories">
+    
+    <title>⌨️ Bash Programmable TAB Completion</title>
+    
+    
+    <link rel="stylesheet" href="/CuriousWiki/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/CuriousWiki/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/index.html">Pages</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/bash/index.html">🐚 BASH Scripting &amp; CLI Master Class</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>⌨️ Bash Programmable TAB Completion</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">⌨️ Bash Programmable TAB Completion</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> July 1, 2026</span>
+            <span><i data-lucide="clock"></i> 3 min read</span>
+            
+            <span><i data-lucide="tag"></i> linux, bash, tab-completion, commands, files, directories</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <p>जब आप Linux terminal पर command type करते समय <code>[TAB]</code> key दबाते हैं, तो Bash automatically contextual suggestions दिखाने का प्रयास करता है। इसे <strong>Completion Specification (compspec)</strong> कहा जाता है। BASH completion engine developers को custom scripting APIs provide करता है, जिसकी मदद से आप किसी भी command के लिए dynamic auto-completions set कर सकते हैं।</p>
+<h2 id="1-simple-static-completion-using-complete--w">1. Simple Static completion using <code>complete -W</code></h2>
+<p>अगर आपको किसी command के लिए options की एक static list define करनी है, तो <code>complete -W</code> (Word list) का उपयोग करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Register foo, bar and bAr for echo command context</span>
+</span></span><span style="display:flex;"><span>complete -W <span style="color:#e6db74">&#34;foo bar bAr&#34;</span> echo
+</span></span></code></pre></div><p>अब terminal पर type करके verify करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#f92672">[</span>TAB<span style="color:#f92672">][</span>TAB<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Output: bar  bAr  foo (automatically sorted alphabetically)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>echo f<span style="color:#f92672">[</span>TAB<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Autocompletes to: echo foo</span>
+</span></span></code></pre></div><h2 id="2-dynamic-completions-using-functions-complete--f">2. Dynamic completions using Functions (<code>complete -F</code>)</h2>
+<p>जब autocomplete logic complicated हो (जैसे options previous typed words या directory configuration पर depend करें), तो <code>-F</code> argument का use किया जाता है। यह autocomplete trigger होने पर shell function execute करता है।</p>
+<p>जैसे, हम चाहते हैं कि <code>echo foo </code> के बाद tab press करने पर current directory में मौजूद files की count dynamically check parameters calculate output updates:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Write this in completion-tutorial.sh:</span>
+</span></span><span style="display:flex;"><span>_echo<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># If the word before current cursor is &#34;foo&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$3<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;foo&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        COMPREPLY<span style="color:#f92672">=(</span> <span style="color:#66d9ef">$(</span>ls | wc -l<span style="color:#66d9ef">)</span> <span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        COMPREPLY<span style="color:#f92672">=(</span> <span style="color:#66d9ef">$(</span>compgen -W <span style="color:#e6db74">&#34;foo bar bAr&#34;</span> -- <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span> <span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>complete -F _echo echo
+</span></span></code></pre></div><p>इसे source करके load करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source completion-tutorial.sh
+</span></span><span style="display:flex;"><span>echo foo <span style="color:#f92672">[</span>TAB<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Output: 5 (if there are 5 files in current directory)</span>
+</span></span></code></pre></div><h2 id="3-shell-arguments-explained-1-2-3">3. Shell Arguments Explained ($1, $2, $3)</h2>
+<p>BASH completion system execution के समय functions handler parameters mapping logic provide करता है:</p>
+<ul>
+<li><strong><code>$1</code>:</strong> Command name (e.g., <code>echo</code>).</li>
+<li><strong><code>$2</code>:</strong> वर्तमान typed word (empty check if no characters entered yet).</li>
+<li><strong><code>$3</code>:</strong> Cursor position से ठीक पहले वाला word (इसे context evaluate करने के लिए use किया जाता है)।</li>
+</ul>
+<h2 id="4-dynamic-matches-using-compgen">4. Dynamic Matches using <code>compgen</code></h2>
+<p><code>compgen</code> utility list filter करने का काम करती है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>COMPREPLY<span style="color:#f92672">=(</span> <span style="color:#66d9ef">$(</span>compgen -W <span style="color:#e6db74">&#34;foo bar bAr&#34;</span> -- <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span> <span style="color:#f92672">)</span>
+</span></span></code></pre></div><ul>
+<li><strong><code>-- &quot;$2&quot;</code>:</strong> यह compgen को बताता है कि user ने जो typed characters (<code>$2</code>) लिखे हैं, केवल उन्हीं से शुरू होने वाले word suggestions return करे।</li>
+<li><strong><code>$IFS</code> (Internal Field Separator):</strong> Word splits patterns control delimiters, default settings tabs/newlines use.</li>
+</ul>
+<h2 id="5-advanced-file-filters--options-fits-file-example">5. Advanced File Filters &amp; Options (FITS file example)</h2>
+<p>Gnuastro program <code>asttable</code> का complex autocomplete example:</p>
+<p>हम चाहते हैं कि जब user <code>--wcsfile=</code> option type करे, तो terminal केवल <strong>FITS images (<code>.fits</code> / <code>.FITS</code>)</strong> ही autocomplete suggestions में दिखाए:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>_asttable<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    local word prev
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Handle &#39;=&#39; sign splitting anomalies</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;=&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span> word<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>; <span style="color:#66d9ef">else</span> word<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$3<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;=&#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span> prev<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>COMP_WORDS[COMP_CWORD-2]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">else</span> prev<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>COMP_WORDS[COMP_CWORD-1]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;</span>$prev<span style="color:#e6db74">&#34;</span> in
+</span></span><span style="display:flex;"><span>        --wcsfile<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Filter files matching *.fits / *.FITS extension</span>
+</span></span><span style="display:flex;"><span>            COMPREPLY<span style="color:#f92672">=(</span> <span style="color:#66d9ef">$(</span>compgen -f -X <span style="color:#e6db74">&#34;!*.[fF][iI][tT][sS]&#34;</span> -- <span style="color:#e6db74">&#34;</span>$word<span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">)</span> <span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>            ;;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">esac</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># -o nospace tells shell to avoid adding space after equal sign to allow prefix value</span>
+</span></span><span style="display:flex;"><span>complete -o nospace -F _asttable asttable
+</span></span></code></pre></div><h3 id="flags-configuration">Flags configuration:</h3>
+<ul>
+<li><code>-f</code>: files search path check.</li>
+<li><code>-X &quot;!*.[fF][iI][tT][sS]&quot;</code>: Excludes files that do NOT match the FITS extension.</li>
+<li><code>-o nospace</code>: prevents adding automatic space character, enabling option values to stick with option name (e.g. <code>--wcsfile=myfile.fits</code>).</li>
+</ul>
+
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/CuriousWiki/js/main.js"></script>
+</body>
+</html>

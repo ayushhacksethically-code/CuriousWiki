@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="linux, bash, cd, commands, files, directories">
+    
+    <title>🚀 cd (change directory) Command</title>
+    
+    
+    <link rel="stylesheet" href="/CuriousWiki/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/CuriousWiki/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/index.html">Pages</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/bash/index.html">🐚 BASH Scripting &amp; CLI Master Class</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/bash/files-directories/index.html">📁 Linux Files &amp; Directories Guide</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>🚀 cd (change directory) Command</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">🚀 cd (change directory) Command</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> July 1, 2026</span>
+            <span><i data-lucide="clock"></i> 2 min read</span>
+            
+            <span><i data-lucide="tag"></i> linux, bash, cd, commands, files, directories</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <p><strong><code>cd</code> (Change Directory)</strong> command का काम terminal navigation को संभालना है, यानी एक folder से दूसरे folder में जाना। चूँकि यह command आपके current shell session के environment को directly affect करती है, इसलिए इसे <strong>Shell Built-in</strong> के रूप में built किया गया है (इसका कोई independent binary executable file <code>/bin/cd</code> नहीं होता)।</p>
+<h2 id="1-syntax--core-shortcuts">1. Syntax &amp; Core Shortcuts</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>directory<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h3 id="quick-shortcuts-शरटकटस">Quick Shortcuts (शॉर्टकट्स):</h3>
+<ul>
+<li><code>cd</code> (बिना किसी argument के): आपको सीधे आपके <strong>Home Directory</strong> (<code>~</code>) में ले जाता है।</li>
+<li><code>cd ~</code>: यह भी आपको Home directory में ले जाता है।</li>
+<li><code>cd -</code>: आपको <strong>पिछली directory</strong> (previous folder) में वापस भेज देता है। (यह command line पर काम करते समय बहुत समय बचाता है)।</li>
+<li><code>cd ..</code>: Directory tree में एक step ऊपर (parent directory) जाता है।</li>
+</ul>
+<h2 id="2-options-for-symlinks">2. Options for Symlinks</h2>
+<p>जैसे <code>pwd</code> में होता है, <code>cd</code> में भी path resolution के लिए flags होते हैं:</p>
+<ul>
+<li><code>cd -L [path]</code>: <strong>Logical path</strong> follow करता है (symlinks shortcuts को preserve रखता है, default behavior)।</li>
+<li><code>cd -P [path]</code>: <strong>Physical path</strong> follow करता है (symlink को resolve करके उसकी actual source directory location पर ले जाता है)।</li>
+</ul>
+<h2 id="3-cdpath-navigation-speed-up">3. CDPATH: Navigation Speed-up</h2>
+<p>क्या आप बार-बार <code>cd /var/www/my-project</code> या <code>cd /home/user/workspace/app</code> लिखते-लिखते थक गए हैं?</p>
+<p>आप <code>CDPATH</code> environment variable का उपयोग कर सकते हैं। यह shell को बताता है कि जब आप <code>cd folder_name</code> चलाएं और वह current directory में न मिले, तो उसे किन directories में search करना चाहिए:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># इसे अपने ~/.bashrc में जोड़ें:</span>
+</span></span><span style="display:flex;"><span>export CDPATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;.:/var/www:/home/user/workspace&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># अब आप terminal पर कहीं भी हों, सीधे project folder में cd कर सकते हैं:</span>
+</span></span><span style="display:flex;"><span>cd my-project
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Shell automatically इसे /var/www/my-project या /home/user/workspace/my-project में खोजकर स्विच कर देगा!</span>
+</span></span></code></pre></div><h2 id="4-common-examples">4. Common Examples</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Go to projects directory</span>
+</span></span><span style="display:flex;"><span>cd /var/www/html/projects
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Go up two folders</span>
+</span></span><span style="display:flex;"><span>cd ../..
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Switch back and forth between two directories</span>
+</span></span><span style="display:flex;"><span>cd -
+</span></span></code></pre></div>
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/CuriousWiki/js/main.js"></script>
+</body>
+</html>

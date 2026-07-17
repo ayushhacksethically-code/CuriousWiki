@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="linux, bash, alias, unalias, builtins, commands, shell, source">
+    
+    <title>⚡ BASH Builtins &amp; Custom Aliases</title>
+    
+    
+    <link rel="stylesheet" href="/CuriousWiki/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/CuriousWiki/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/index.html">Pages</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/linux-tools/index.html">🛠️ Linux CLI Power Tools</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>⚡ BASH Builtins &amp; Custom Aliases</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">⚡ BASH Builtins &amp; Custom Aliases</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> July 5, 2026</span>
+            <span><i data-lucide="clock"></i> 3 min read</span>
+            
+            <span><i data-lucide="tag"></i> linux, bash, alias, unalias, builtins, commands, shell, source</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <p>BASH shell के अंदर functions और programs को fast execute करने के लिए <strong>Builtin Commands</strong> और custom shortcuts (<strong>Aliases</strong>) का use किया जाता है। यह guide <code>alias.txt</code> file के essential controls को simple language में describe करती है।</p>
+<div class="callout callout-info">
+<i data-lucide="info"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>What are Builtin Commands?</p>
+</div>
+<p>Builtin commands सीधे shell memory से run होते हैं। इनके लिए file system से external application load नहीं करनी पड़ती, इसलिए ये fast execute होते हैं (जैसे <code>cd</code>, <code>alias</code>, <code>source</code>)।</p>
+</div>
+</div>
+<h2 id="1-aliases-setup-शरटकट-बनन">1. Aliases Setup (शॉर्टकट बनाना)</h2>
+<p>Long terminal commands को brief name assign करने के लिए <code>alias</code> utility का use होता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># All defined aliases check करें</span>
+</span></span><span style="display:flex;"><span>alias -p
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># एक नया custom shortcut/alias create करें</span>
+</span></span><span style="display:flex;"><span>alias ll<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ls -la --color=auto&#34;</span>
+</span></span><span style="display:flex;"><span>alias gs<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;git status&#34;</span>
+</span></span><span style="display:flex;"><span>alias update<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sudo apt update &amp;&amp; sudo apt upgrade -y&#34;</span>
+</span></span></code></pre></div><div class="callout callout-warning">
+<i data-lucide="alert-triangle"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Temporary vs Permanent Aliases</p>
+</div>
+<p>Terminal में check-in किया हुआ alias session close होते ही clear हो जाता है। इसे permanently preserve करने के लिए <code>~/.bashrc</code> file के end में link/command add करें और <code>source ~/.bashrc</code> command से shell refresh करें।</p>
+</div>
+</div>
+<h3 id="alias-क-delete-करन-unalias">Alias को Delete करना (Unalias)</h3>
+<p>किसी defined alias shortcut को drop/remove करने के लिए <code>unalias</code> command run करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Single alias remove करें</span>
+</span></span><span style="display:flex;"><span>unalias gs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># सारे active aliases clean करें</span>
+</span></span><span style="display:flex;"><span>unalias -a
+</span></span></code></pre></div><h2 id="2-key-bash-builtin-reference">2. Key BASH Builtin Reference</h2>
+<p>नीचे primary built-in utilities और उनके parameters describe किये गए हैं:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Command Syntax</th>
+<th>Purpose (Hinglish Detail)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>: [arguments]</code></td>
+<td>Null command/Noop handler. कुछ काम नहीं करता, हमेशा exit status <code>0</code> देता है।</td>
+</tr>
+<tr>
+<td><code>. filename</code> or<br />
+<code>source filename</code></td>
+<td>Current shell environment में configuration या function files को read और execute करने के लिए use होता है।</td>
+</tr>
+<tr>
+<td><code>bg [jobspec]</code></td>
+<td>Suspended/stopped jobs को background worker mode में process करने के लिए run करें।</td>
+</tr>
+<tr>
+<td><code>fg [jobspec]</code></td>
+<td>Background में run होने वाली processes को foreground task view में वापस resume/drag करता है।</td>
+</tr>
+<tr>
+<td><code>declare [options]</code></td>
+<td>Variables के type attribute define करने के लिए use होता है (जैसे arrays या read-only status)।</td>
+</tr>
+<tr>
+<td><code>eval [args]</code></td>
+<td>Arguments को compile/build करके shell command बनाता है और execute करता है।</td>
+</tr>
+<tr>
+<td><code>exec [command]</code></td>
+<td>Current shell process window को replace करके input program run करता है (Command exit होने पर Shell tab बंद हो जाता है)।</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-readline-keyboard-configuration-bind">3. Readline Keyboard Configuration (bind)</h2>
+<p>Keyboard inputs और sequences को internal functions या macro strings से link करने के लिए <code>bind</code> control use होता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># List all readline functions</span>
+</span></span><span style="display:flex;"><span>bind -l
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Active key bindings mappings check करें</span>
+</span></span><span style="display:flex;"><span>bind -p
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Key sequence script bind syntax</span>
+</span></span><span style="display:flex;"><span>bind <span style="color:#e6db74">&#39;&#34;\C-x\C-r&#34;: re-read-init-file&#39;</span> <span style="color:#75715e"># Ctrl+x Ctrl+r दबाने पर configuration file reload होगी</span>
+</span></span></code></pre></div><h2 id="4-variables-handling-export-readonly">4. Variables Handling (export, readonly)</h2>
+<p>Shell parameters define करने और sub-processes में pass करने के shortcuts:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Variable parameters को sub-shells (Environment) के लिए mark करें</span>
+</span></span><span style="display:flex;"><span>export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$PATH<span style="color:#e6db74">:/usr/local/bin&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Variable read-only status create करें (constant assignment check)</span>
+</span></span><span style="display:flex;"><span>readonly MaxAttempts<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># MaxAttempts=10 -&gt; Bash error: MaxAttempts: readonly variable</span>
+</span></span></code></pre></div>
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/CuriousWiki/js/main.js"></script>
+</body>
+</html>

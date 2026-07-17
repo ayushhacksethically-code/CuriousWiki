@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="linux, installation, archinstall, anaconda, calamares, kickstart, preseed, debian, fedora, ubuntu, arch, cockpit, webui">
+    
+    <title>🔧 Linux Auto-Installers (Archinstall, Anaconda, Calamares)</title>
+    
+    
+    <link rel="stylesheet" href="/CuriousWiki/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/CuriousWiki/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/index.html">Pages</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/linux-bible/index.html">📖 Linux Bible</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>🔧 Linux Auto-Installers (Archinstall, Anaconda, Calamares)</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">🔧 Linux Auto-Installers (Archinstall, Anaconda, Calamares)</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> July 1, 2026</span>
+            <span><i data-lucide="clock"></i> 5 min read</span>
+            
+            <span><i data-lucide="tag"></i> linux, installation, archinstall, anaconda, calamares, kickstart, preseed, debian, fedora, ubuntu, arch, cockpit, webui</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <p>पारंपरिक लिनक्स इंस्टॉलेशन में डिस्क विभाजन (partitioning), फ़ाइल सिस्टम निर्माण, बूटलोडर कॉन्फ़िगरेशन और बेसिक यूज़र सेटअप करने में समय और तकनीकी ज्ञान की आवश्यकता होती है। इस प्रक्रिया को सरल और स्वचालित (automated) करने के लिए विभिन्न distributions अलग-अलग <strong>Auto-installers</strong> का उपयोग करते हैं।</p>
+<p>यह guide लिनक्स इकोसिस्टम के तीन सबसे लोकप्रिय auto-installers (Archinstall, Anaconda, Calamares) की नवीनतम कार्यप्रणाली, उनके उपयोग और unattended (स्वचालित) इंस्टॉलेशन सेटिंग्स को समझाती है।</p>
+<hr>
+<h2 id="1-archinstall-arch-linux-guided-auto-installer">1. Archinstall (Arch Linux Guided Auto-installer)</h2>
+<p><strong>Archinstall</strong> एक Python-based guided installer और helper library है जो Arch Linux live ISO के साथ pre-installed आता है। यह उन यूज़र्स के लिए बेहतरीन टूल है जो Arch के मैन्युअल कमांड्स के बिना एक त्वरित और मानक इंस्टॉलेशन चाहते हैं।</p>
+<div class="callout callout-warning">
+<i data-lucide="alert-triangle"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>महत्वपूर्ण चेतावनी (Warnings)</p>
+</div>
+<ul>
+<li><strong>अलग डिफ़ॉल्ट्स (Different Defaults)</strong>: यह इंस्टॉलर रेगुलर मैनुअल इंस्टॉलेशन गाइड से थोड़े alag defaults का उपयोग करता है। इसलिए जब भी आप Arch community से support मांगें, तो यह ज़रूर बताएं कि आपने सिस्टम <code>archinstall</code> के ज़रिए इंस्टॉल किया है और <code>/var/log/archinstall/install.log</code> फ़ाइल ज़रूर प्रदान करें।</li>
+<li><strong>मैन्युअल विभाजन (Manual Partitioning)</strong>: इसका मैन्युअल विभाजन टूल ओवरलैपिंग पार्टिशन्स (overlapping partitions), गलत तरीके से संरेखित पार्टिशन्स (misaligned partitions) या बैकअप GPT हेडर के साथ ओवरलैप होने वाली अंतिम विभाजन त्रुटियों से सुरक्षा प्रदान नहीं करता है।</li>
+<li><strong>खाली रूट पासवर्ड (Root Password)</strong>: यदि आप रूट पासवर्ड को खाली छोड़ देते हैं, तो रूट अकाउंट डिसेबल हो जाएगा और एडमिनिस्ट्रेटर प्रिविलेज के लिए <code>sudo</code> का उपयोग होगा।</li>
+</ul>
+</div>
+</div>
+<h3 id="मखय-वशषतए-archinstall-44-updates">मुख्य विशेषताएं (Archinstall 4.4 Updates):</h3>
+<ul>
+<li><strong>Color-Coded Validation</strong>: नए 4.4+ वर्जन्स में इंस्टॉलेशन से ठीक पहले एक कॉम्प्रिहेंसिव चेक रन होता है:
+<ul>
+<li><span style="color: var(--accent-danger); font-weight: bold;">Red Warning</span>: बूटलोडर त्रुटियों जैसे क्रिटिकल इश्यूज जो बूटिंग रोक सकते हैं (इंस्टॉलेशन ब्लॉक हो जाता है)।</li>
+<li><span style="color: var(--accent-warning); font-weight: bold;">Yellow Warning</span>: नेटवर्क कॉन्फ़िगरेशन या नॉन-क्रिटिकल एरर्स की चेतावनी।</li>
+<li><span style="color: var(--accent-success); font-weight: bold;">Green Status</span>: सिस्टम सुरक्षित तरीके से इंस्टॉल होने के लिए तैयार है।</li>
+</ul>
+</li>
+<li><strong>New Profiles support</strong>: Shipped desktop profiles में अब <strong>Niri DankMaterialShell</strong> का सपोर्ट और Plymouth boot-splash सेटिंग्स उपलब्ध हैं।</li>
+<li><strong>Scriptable profiles</strong>: यह python helper library के रूप में भी काम कर सकता है जिससे custom automated python configurations run की जा सकें।</li>
+</ul>
+<h4 id="कस-चलए-running-the-installer">कैसे चलाएं (Running the Installer):</h4>
+<ol>
+<li>
+<p>आधिकारिक Arch ISO बूट करें।</p>
+</li>
+<li>
+<p><strong>(वैकल्पिक) Live ISO पर Archinstall अपडेट करें</strong> (यदि ISO बनने के बाद कोई नया अपडेट आया हो):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pacman -Sy archinstall
+</span></span></code></pre></div></li>
+<li>
+<p>टर्मिनल पर इंस्टॉलर रन करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>archinstall
+</span></span></code></pre></div></li>
+<li>
+<p>दिए गए विकल्पों का पालन करें, और इंस्टॉलेशन पूरा होने के बाद रीबूट करें।</p>
+</li>
+</ol>
+<h4 id="network--mirror-configuration-notes">Network &amp; Mirror configuration notes:</h4>
+<ul>
+<li>यह लाइव ISO पर कॉन्फ़िगर की गई वायर्ड या वायरलेस (जैसे <code>iwctl</code>) सेटिंग्स और वाईफाई पासवर्ड्स को ऑटोमैटिक रूप से टारगेट सिस्टम में कॉपी कर लेता है।</li>
+<li>अतिरिक्त पैकेज डालने के लिए आप <code>Write additional packages to install</code> प्रॉम्प्ट के आगे पैकेजेस के नाम स्पेस देकर लिख सकते हैं।</li>
+</ul>
+<h4 id="unattendedsilent-installation-कसटम-सकरपट">Unattended/Silent installation (कस्टम स्क्रिप्ट):</h4>
+<p>सुरक्षित और ऑटोमैटेड इंस्टॉलेशन के लिए आप JSON कॉन्फ़िगरेशन फाइल्स का उपयोग कर सकते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>archinstall --config user_configuration.json --creds user_credentials.json
+</span></span></code></pre></div><hr>
+<h2 id="2-anaconda-installer-fedora-rhel--centos">2. Anaconda Installer (Fedora, RHEL &amp; CentOS)</h2>
+<p><strong>Anaconda</strong> रेड हैट (Red Hat) और फेडोरा (Fedora) द्वारा उपयोग किया जाने वाला आधिकारिक, शक्तिशाली और एडवांस सिस्टम इंस्टॉलर है। यह पारंपरिक रूप से GTK-based GUI और TUI मोड्स में काम करता रहा है।</p>
+<div class="callout callout-info">
+<i data-lucide="info"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Modern Update: Web UI / Cockpit Integration</p>
+</div>
+<p>Fedora और RHEL के नए संस्करणों में, Anaconda को एक आधुनिक <strong>Web-based User Interface (Web UI)</strong> में ट्रांजिशन किया जा रहा है। यह नया इंटरफ़ेस <strong>Cockpit</strong> तकनीक और PatternFly डिज़ाइन टोकन्स पर आधारित है, जो HTML/CSS/JS के माध्यम से एक बेहद साफ और उत्तरदायी (responsive) स्थानीय तथा रिमोट इंस्टॉलेशन अनुभव प्रदान करता है।</p>
+</div>
+</div>
+<h3 id="मखय-वशषतए">मुख्य विशेषताएं:</h3>
+<ul>
+<li><strong>Kickstart Files (ऑटोमेशन)</strong>: Anaconda का सबसे शक्तिशाली पहलू <strong>Kickstart</strong> है। यह एक साधारण टेक्स्ट फ़ाइल होती है जिसमें इंस्टॉलेशन के सभी उत्तर (पार्टीशन, पैकेजेस, यूज़र, टाइमज़ोन) पहले से लिखे होते हैं।</li>
+<li><strong>Anaconda-ks.cfg</strong>: हर बार जब आप Fedora मैन्युअली इंस्टॉल करते हैं, तो Anaconda आपके द्वारा चुने गए विकल्पों के आधार पर <code>/root/anaconda-ks.cfg</code> फ़ाइल ऑटो-जेनरेट करता है, जिसे आप भविष्य में क्लोन बनाने के लिए उपयोग कर सकते हैं।</li>
+</ul>
+<h4 id="kickstart-script-क-उदहरण-basic-kickstart-configuration">Kickstart Script का उदाहरण (Basic kickstart configuration):</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span># System authorization information
+</span></span><span style="display:flex;"><span>auth --enableshadow --passalgo=sha512
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Use graphical install
+</span></span><span style="display:flex;"><span>graphical
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Keyboard layouts, language &amp; timezone
+</span></span><span style="display:flex;"><span>keyboard --vckeymap=us --layout=us
+</span></span><span style="display:flex;"><span>lang en_US.UTF-8
+</span></span><span style="display:flex;"><span>timezone Asia/Kolkata --isUtc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Root password
+</span></span><span style="display:flex;"><span>rootpw --plaintext supersecretpassword
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Partitioning configuration (Automatic partition)
+</span></span><span style="display:flex;"><span>autopart --type=lvm
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Packages to install
+</span></span><span style="display:flex;"><span>%packages
+</span></span><span style="display:flex;"><span>@core
+</span></span><span style="display:flex;"><span>neofetch
+</span></span><span style="display:flex;"><span>git
+</span></span><span style="display:flex;"><span>%end
+</span></span></code></pre></div><h4 id="kickstart-बट-करन-क-कमड">Kickstart बूट करने का कमांड:</h4>
+<p>Fedora बूट मेनू पर जाकर <code>Tab</code> या <code>e</code> दबाएं और बूट पैरामीटर्स के अंत में अपनी किकस्टार्ट फ़ाइल का HTTP URL जोड़ें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>linux inst.ks<span style="color:#f92672">=</span>http://192.168.1.100/ks.cfg
+</span></span></code></pre></div><hr>
+<h2 id="3-calamares-distribution-independent-installer-framework">3. Calamares (Distribution Independent Installer Framework)</h2>
+<p><strong>Calamares</strong> एक ओपन-सोर्स, सिस्टम-स्वतंत्र (distribution agnostic) ग्राफical installer framework है। इसका उपयोग Manjaro, Debian Live, EndeavourOS, NixOS, KDE Neon और अन्य सौ से अधिक डिस्ट्रोज़ द्वारा किया जाता है।</p>
+<div class="callout callout-info">
+<i data-lucide="info"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Calamares 3.4.x Updates (Codeberg Migration)</p>
+</div>
+<p>Calamares प्रोजेक्ट अब आधिकारिक रूप से <strong>Codeberg</strong> पर माइग्रेट हो चुका है। 3.4.x सीरीज़ में मुख्य सुधार NVMe और MMC फ़्लैश ड्राइव्स पर पार्टीशन एलाइनमेंट (partition alignment forcing 4K blocks) को लेकर हैं। इसके अलावा KDE Plasma और डिस्प्ले मैनेजर्स के कॉन्फ़िगरेशन को सिंक्रोनाइज़ करने की क्षमता में सुधार किया गया है।</p>
+</div>
+</div>
+<h3 id="मखय-वशषतए-1">मुख्य विशेषताएं:</h3>
+<ul>
+<li><strong>Highly Modular</strong>: Calamares को पूरी तरह से C++ और Python मॉड्यूल्स के ज़रिए कस्टमाइज़ किया जा सकता है।</li>
+<li><strong>Branding Integration</strong>: डिस्ट्रो डेवलपर्स बहुत आसानी से इसकी थीम, लोगो, slides और बैकएंड ऑपरेशन्स को XML/YAML फाइलों द्वारा बदल सकते हैं।</li>
+<li><strong>Luks Encryption &amp; Btrfs support</strong>: बूट-सपोर्ट के साथ डिस्क पर LUKS encryption और Btrfs subvolumes को सेट करने के लिए एडवांस पार्टीशनिंग विजेट्स प्रदान करता है।</li>
+</ul>
+<h4 id="कसटम-मडयलस-और-कनफगरशन">कस्टम मॉड्यूल्स और कॉन्फ़िगरेशन:</h4>
+<p>Calamares की मुख्य सेटिंग्स <code>/etc/calamares/settings.conf</code> में होती हैं। डेवलपर यहाँ तय करते हैं कि कौन से मॉड्यूल्स किस क्रम में चलेंगे:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># /etc/calamares/settings.conf example snippet</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">sequence</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">show</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">welcome</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">locale</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">keyboard</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">partition</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">users</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">exec</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">partition</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">mount</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">unpackfs</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">bootloader</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">show</span>:
+</span></span><span style="display:flex;"><span>        - <span style="color:#ae81ff">finished</span>
+</span></span></code></pre></div>
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/CuriousWiki/js/main.js"></script>
+</body>
+</html>

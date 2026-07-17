@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Layout on CuriousWiki</title>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/layout.html</link>
+		<description>Recent content in Layout on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 03 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/layout/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🔌 gEDA Project (Electronic Design Automation)</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/geda.html</link>
+				<pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/geda.html</guid>
+				<description>&lt;p&gt;gEDA project ne ek complete GPL-licensed suite aur toolkit banayi hai (aur ispe kaam chal raha hai) jo &lt;strong&gt;Electronic Design Automation (EDA)&lt;/strong&gt; tools ke liye hai. In tools ka use electrical circuit design, schematic capture, simulation, prototyping, aur production ke liye kiya jata hai. Filhal, gEDA project electronics design ke liye free software applications ka ek mature suite offer karta hai, jisme schematic capture, attribute management, bill of materials (BOM) generation, 20 se zyada netlist formats me netlisting, analog aur digital simulation, aur printed circuit board (PCB) layout shamil hain.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>🎨 Modern Web &amp; CSS Layout Tips</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/web-tips.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/web-tips.html</guid>
+				<description>&lt;p&gt;Modern web designs में Flexbox layouts, CSS Grid variables, smooth hover transitions, और responsive media-query breakpoints के लिए quick recipes और tricks.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-flexbox-क-सथ-कछ-भ-center-करन&#34;&gt;1. Flexbox के साथ कुछ भी Center करना&lt;/h2&gt;&#xA;&lt;p&gt;Parent block के अंदर child elements को vertically और horizontally center करने का standard modern method:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;centered-parent&lt;/span&gt; {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;display&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;flex&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;justify-content&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;center&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;/* horizontal centering */&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;align-items&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;center&lt;/span&gt;;     &lt;span style=&#34;color:#75715e&#34;&gt;/* vertical centering */&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;min-height&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;vh&lt;/span&gt;;       &lt;span style=&#34;color:#75715e&#34;&gt;/* full height container */&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-dynamic-css-grids&#34;&gt;2. Dynamic CSS Grids&lt;/h2&gt;&#xA;&lt;p&gt;Media queries के बिना browser widths को भरने के लिए dynamically wrap और scale होने वाले automatic grid columns बनाना:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

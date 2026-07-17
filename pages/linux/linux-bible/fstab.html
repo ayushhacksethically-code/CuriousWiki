@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="fstab, mount, blkid, uuid, filesystem, fscrypt, boot, partitioning">
+    
+    <title>💾 Fstab (/etc/fstab) - File System Mounts Anatomy</title>
+    
+    
+    <link rel="stylesheet" href="/CuriousWiki/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/CuriousWiki/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/index.html">Pages</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/linux-bible/index.html">📖 Linux Bible</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>💾 Fstab (/etc/fstab) - File System Mounts Anatomy</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">💾 Fstab (/etc/fstab) - File System Mounts Anatomy</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> July 10, 2026</span>
+            <span><i data-lucide="clock"></i> 2 min read</span>
+            
+            <span><i data-lucide="tag"></i> fstab, mount, blkid, uuid, filesystem, fscrypt, boot, partitioning</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <p>Linux operating system boot sequence के during partitions और device filesystems को correct directories (mount points) पर automatically map / mount करने के लिए system configuration file <strong><code>/etc/fstab</code></strong> (File System Table) का use किया जाता है।</p>
+<div class="callout callout-danger">
+<i data-lucide="skull"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Risk Warning: Broken Boot Loop</p>
+</div>
+<p><code>/etc/fstab</code> file में minor typographical errors भी complete system boot loop collapse (System Emergency Recovery Shell) का reason बन सकती हैं। हमेशा editing complete होने के बाद active command verify verify करें (<code>sudo mount -a</code>) reboot करने से पहले!</p>
+</div>
+</div>
+<h2 id="1-anatomy-of-fstab-6-columns-breakdown">1. Anatomy of fstab (6 Columns Breakdown)</h2>
+<p>fstab file की each line spaces/tabs के by separated <strong>6 Columns</strong> configuration parameters contains करती है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>#                                                        
+</span></span><span style="display:flex;"><span>UUID=1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d    /              ext4    defaults,noatime      0       1
+</span></span></code></pre></div><h3 id="field-description-table">Field Description Table:</h3>
+<table>
+	<thead>
+			<tr>
+					<th>Column Number</th>
+					<th>Field Name</th>
+					<th>Purpose &amp; Behavior (Hinglish)</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>1</strong></td>
+					<td>Device Identifier</td>
+					<td>Disk Partition identity specification (UUID, LABEL ya device file <code>/dev/sdb1</code>)</td>
+			</tr>
+			<tr>
+					<td><strong>2</strong></td>
+					<td>Mount Point</td>
+					<td>Directory path जहाँ partition structure display होगा (e.g. <code>/</code>, <code>/home</code>, <code>/boot/efi</code>)</td>
+			</tr>
+			<tr>
+					<td><strong>3</strong></td>
+					<td>Filesystem Type</td>
+					<td>Storage format layout type (e.g. <code>ext4</code>, <code>btrfs</code>, <code>vfat</code>, <code>ntfs-3g</code>)</td>
+			</tr>
+			<tr>
+					<td><strong>4</strong></td>
+					<td>Mount Options</td>
+					<td>Read/Write settings parameters (e.g. <code>defaults</code>, <code>noatime</code>, <code>ro</code> (read-only), <code>nofail</code>)</td>
+			</tr>
+			<tr>
+					<td><strong>5</strong></td>
+					<td>Dump Flag</td>
+					<td>Archiving backup dump utility flag (Legacy feature, mostly set to <code>0</code>)</td>
+			</tr>
+			<tr>
+					<td><strong>6</strong></td>
+					<td>FSCK Pass</td>
+					<td>Boot time integrity checks priority (<code>1</code> for root root filesystem, <code>2</code> for others, <code>0</code> disable check)</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="2-retrieving-device-identity-uuid-vs-name">2. Retrieving Device Identity (UUID vs Name)</h2>
+<p>Kernel updates के समय device file names (जैसे <code>/dev/sda1</code> to <code>/dev/sdb1</code>) dynamically change हो सकते हैं। इसलिए partition target locate करने के लिए static identifiers (जैसे <strong>UUID</strong> - Universally Unique Identifier) का use recommended है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Current connected storage partitions UUID list display karein</span>
+</span></span><span style="display:flex;"><span>blkid
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Alternative detailed block storage info print</span>
+</span></span><span style="display:flex;"><span>lsblk -f
+</span></span></code></pre></div><p>output looks like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/dev/sda1: UUID=&#34;F3A1-C13F&#34; BLOCK_SIZE=&#34;512&#34; TYPE=&#34;vfat&#34; PARTUUID=&#34;4a7e-128a&#34;
+</span></span><span style="display:flex;"><span>/dev/sda2: UUID=&#34;c21689ea-bc44-482a-a957-fc7a599185a6&#34; TYPE=&#34;ext4&#34;
+</span></span></code></pre></div><h2 id="3-standard-mount-options--optimizations">3. Standard Mount Options &amp; Optimizations</h2>
+<p>Storage life extend और reading speeds improve करने के configuration hacks:</p>
+<ul>
+<li><strong><code>defaults</code></strong>: standard options apply करता है (rw, suid, dev, exec, auto, nouser, async).</li>
+<li><strong><code>noatime</code></strong>: Files read करते समय system access timestamp details update disable करता है। Solid State Drives (SSDs) की lifespan update counts drop करने के लिए heavily recommended configuration है।</li>
+<li><strong><code>nofail</code></strong>: External hard-disks या network mounts specify करते समय use करें। Partition connect fail होने पर system boot abort नहीं करेगा।</li>
+</ul>
+<h2 id="4-testing--validation-safety-first">4. Testing &amp; Validation (Safety First!)</h2>
+<p>Config file write edit save check command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Execute all fstab configurations immediately (without rebooting)</span>
+</span></span><span style="display:flex;"><span>sudo mount -a
+</span></span></code></pre></div><p>अगर command without error exit (silent) हो जाता है, तो configuration secure details verified हैं।<br>
+अगर terminal standard outputs parse configurations warning throws करता है, तो error details fix करें immediately before restarting system!</p>
+
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/CuriousWiki/js/main.js"></script>
+</body>
+</html>

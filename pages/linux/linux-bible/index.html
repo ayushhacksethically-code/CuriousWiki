@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="linux, pacman, systemd, aur, terminal, category, wiki, index, fedora, debian, ubuntu">
+    
+    <title>📖 Linux Bible</title>
+    
+    
+    <link rel="stylesheet" href="/CuriousWiki/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/CuriousWiki/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/index.html">Pages</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>📖 Linux Bible</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">📖 Linux Bible</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> June 30, 2026</span>
+            <span><i data-lucide="clock"></i> 7 min read</span>
+            
+            <span><i data-lucide="tag"></i> linux, pacman, systemd, aur, terminal, category, wiki, index, fedora, debian, ubuntu</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <p>Linux एक powerful, open-source, और highly customizable kernel है जिसपर आधारित कई distributions (Fedora, Arch, Debian, Ubuntu आदि) चलते हैं। यह guide, Linux Wiki की श्रेणियों का एक व्यापक और व्यवस्थित सूचकांक (Table of Contents) प्रदान करती है।</p>
+<div class="callout callout-info" style="margin-bottom: 2rem;">
+<i data-lucide="info"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Quick Action: Linux Maintenance Guide</p>
+</div>
+<p>यदि आप package managers update (dnf, pacman, apt), systemd commands ya logs monitor tools देखना चाहते हैं, तो सीधे हमारे <a href="maintenance.html" class="wiki-link">🔧 Linux Maintenance Guide</a> को देखें।</p>
+</div>
+</div>
+<h2 id="-table-of-contents-वषय-सच">📚 Table of Contents (विषय सूची)</h2>
+<p>विषयों को खोजने के लिए फ़िल्टर बार का उपयोग करें या सभी श्रेणियों को विस्तार से देखने के लिए Expand बटन का उपयोग करें:</p>
+<div class="toc-tree-container">
+<div class="toc-toolbar">
+<div class="toc-actions">
+<p>Expand All</p>
+<p>Collapse All</p>
+</div>
+</div>
+<div class="toc-tree">
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>हिन्दी (Hindi)</p>
+</div>
+<p><span class="badge">2</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<ol>
+<li>Linux के बारे में (About Linux)</li>
+</ol>
+</div>
+<p><span class="badge">18</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>1.1. Installation प्रक्रिया (Installation process)</p>
+</div>
+<p><span class="badge">35</span></p>
+</div>
+<div class="toc-content">
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.5rem; width: 100%;">
+<p><a href="aws-amis.html" class="toc-leaf-item" style="padding: 0.4rem 0.75rem;"><span class="title"><em></em> AWS के लिए Linux AMIs</span></a> <a href="vps.html" class="toc-leaf-item" style="padding: 0.4rem 0.75rem;"><span class="title"><em></em> VPS पर Linux (Linux on a VPS)</span></a> <a href="installers.html" class="toc-leaf-item" style="padding: 0.4rem 0.75rem;"><span class="title"><em></em> Auto-installers (Archinstall, Anaconda, Calamares)</span></a></p>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> ISO Builder / Archiso</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Diskless प्रणालियाँ (Diskless system)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> dm-crypt / Encrypting system</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Windows के साथ Dual boot</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> सामान्य समस्या निवारण (General troubleshooting)</span></p>
+</div>
+<p><a href="fstab.html" class="toc-leaf-item" style="padding: 0.4rem 0.75rem;"><span class="title"><em></em> fstab Configuration &amp; Genfstab</span></a></p>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> मौजूदा Linux से Linux इंस्टॉल करना</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Removable medium पर इंस्टॉल</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> LVM पर Linux इंस्टॉल करना</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> WSL पर Linux इंस्टॉल करना</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> ZFS पर Linux इंस्टॉल करना</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Docker के ज़रिए Linux इंस्टॉल</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> SSH के ज़रिए Linux इंस्टॉल</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Accessibility विकल्पों के साथ इंस्टॉल</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Fake RAID के साथ Linux इंस्टॉल</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> guided installer के साथ Linux इंस्टॉल</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> इंस्टॉल करने की गाइड (Installation guide)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> iSCSI/Boot</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Software RAID पर LVM</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> VM में इंस्टॉल माइग्रेट करना (VM Migration)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Multiboot USB drive</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Netboot</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> ऑफ़लाइन इंस्टॉलेशन (Offline installation)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Pacstrap / Boostrapping</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> PXE (Preboot Execution Environment)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Proxmox पर Linux (Proxmox Guest)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Systemd-firstboot</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Systemd-repart</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> USB फ़्लैश इंस्टॉलेशन माध्यम</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Ventoy</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> VirtualBox पर Linux (VirtualBox Guest)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> VMware पर Linux (VMware Guest)</span></p>
+</div>
+</div>
+</div>
+<div style="font-weight: 600; font-size: 0.85rem; margin: 1.25rem 0 0.25rem 0; color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem;">
+<p>लेख (Articles):</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.5rem; margin-top: 0.5rem; width: 100%;">
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Linux OS Overview</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Linux boot प्रक्रिया (Linux boot process)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Linux build system</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Linux distributions की तुलना (Linux distributions comparison)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Linux User Repository (LUR)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Linux-आधारित distributions (Linux-based distributions)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Linux शब्दावली (Linux terminology)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> official repositories (आधिकारिक रिपोजिटरी)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Mirrors (मिरर्स)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Package Building Tool</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Creating packages (पैकेज बनाना)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Repository submission guidelines (दिशानिर्देश)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> FAQ (अक्सर पूछे जाने वाले प्रश्न)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Getting involved (शामिल होना)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Linux press coverage (मीडिया कवरेज)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> Linux is the best (Linux सर्वश्रेष्ठ है)</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> ASCII art</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.4rem 0.75rem;">
+<p><span class="title"> April Jokes (अप्रैल मज़ाक)</span></p>
+</div>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<ol start="2">
+<li>विकास (Development)</li>
+</ol>
+</div>
+<p><span class="badge">48</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<div class="title">
+<p>2.1. Electronic design automation (EDA)</p>
+</div>
+<p><span class="badge">6 (Science में भी)</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>2.2. Frameworks</p>
+</div>
+<p><span class="badge">4</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<div class="title">
+<p>2.2.1. Web frameworks</p>
+</div>
+<p><span class="badge">2 (Web apps में भी)</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<div class="title">
+<p>2.3. Integrated development environments (IDEs)</p>
+</div>
+<p><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item">
+<div class="title">
+<p>2.4. Issue tracking systems</p>
+</div>
+<p><span class="badge">5 (Web apps में भी)</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>2.5. प्रोग्रामिंग भाषाएँ (Programming languages)</p>
+</div>
+<p><span class="badge">32</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<div class="title">
+<p>2.5.1. Command-line shells</p>
+</div>
+<p><span class="badge">10 (Command-line में भी)</span></p>
+</div>
+<div class="toc-leaf-item">
+<div class="title">
+<p>2.5.2. Lisp dialects</p>
+</div>
+<p><span class="badge">4</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<div class="title">
+<p>2.6. Text editors</p>
+</div>
+<p><span class="badge">16 (Applications में भी)</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>2.7. Version control system</p>
+</div>
+<p><span class="badge">9</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<div class="title">
+<p>2.7.1. Git web interfaces</p>
+</div>
+<p><span class="badge">7 (Web apps में भी)</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<div class="title">
+<p>2.8. Widget toolkits</p>
+</div>
+<p><span class="badge">3 (Graphical interfaces में भी)</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<div class="title">
+<ol start="3">
+<li>Disambiguation pages</li>
+</ol>
+</div>
+<p><span class="badge">26</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<ol start="4">
+<li>हार्डवेयर (Hardware)</li>
+</ol>
+</div>
+<p><span class="badge">16</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<div class="title">
+<p>4.1. Bluetooth</p>
+</div>
+<p><span class="badge">6 (Wireless networking में भी)</span></p>
+</div>
+<div class="toc-leaf-item">
+<div class="title">
+<p>4.2. CPU</p>
+</div>
+<p><span class="badge">9</span></p>
+</div>
+<div class="toc-leaf-item">
+<div class="title">
+<p>4.3. Digital imaging</p>
+</div>
+<p><span class="badge">8</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>4.4. डिस्प्ले (Displays)</p>
+</div>
+<p><span class="badge">6</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<div class="title">
+<p>4.4.1. डिस्प्ले नियंत्रण (Display control)</p>
+</div>
+<p><span class="badge">6 (Power management में भी)</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<div class="title">
+<p>4.5. Docks</p>
+</div>
+<p><span class="badge">2</span></p>
+</div>
+<div class="toc-leaf-item">
+<div class="title">
+<p>4.6. Graphics</p>
+</div>
+<p><span class="badge">33</span></p>
+</div>
+<div class="toc-leaf-item">
+<div class="title">
+<p>4.7. Hardware detection &amp; troubleshooting</p>
+</div>
+<p><span class="badge">9</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>4.8. इनपुट उपकरण (Input devices)</p>
+</div>
+<p><span class="badge">25 (Input में भी)</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 4.8.1. कीबोर्ड (Keyboards)</span><span class="badge">9</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 4.8.2. माउस (Mice)</span><span class="badge">13</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>4.9. लैपटॉप (Laptops)</p>
+</div>
+<p><span class="badge">7</span></p>
+</div>
+<div class="toc-content">
+<p>लैपटॉप निर्माता (Laptop Manufacturers):</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.4rem;">
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Lenovo</span><span class="badge">184</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Dell</span><span class="badge">68</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">HP</span><span class="badge">51</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">ASUS</span><span class="badge">48</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Acer</span><span class="badge">21</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">MSI</span><span class="badge">16</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Apple</span><span class="badge">10</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Framework</span><span class="badge">10</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">GPD</span><span class="badge">8</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">TUXEDO</span><span class="badge">8</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Xiaomi</span><span class="badge">5</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Samsung</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Panasonic</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Sony</span><span class="badge">3</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">System76</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Toshiba</span><span class="badge">3</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Huawei</span><span class="badge">2</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Intel</span><span class="badge">2</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">LG</span><span class="badge">2</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Alienware</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Chrome OS</span><span class="badge">13</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Chuwi</span><span class="badge">2</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Clevo</span><span class="badge">3</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Eluktronics</span><span class="badge">1</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Eve</span><span class="badge">0</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">HASEE</span><span class="badge">1</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Jumper</span><span class="badge">1</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Mechrevo</span><span class="badge">1</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Microsoft</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">OnexPlayer</span><span class="badge">1</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Razer</span><span class="badge">3</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">XMG</span><span class="badge">1</span></p>
+</div>
+<div class="toc-leaf-item" style="padding: 0.3rem 0.6rem;">
+<p><span class="title">Zwide</span><span class="badge">1</span></p>
+</div>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 4.10. Mainboards and BIOS</span><span class="badge">6</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>4.11. मोबाइल उपकरण (Mobile devices)</p>
+</div>
+<p><span class="badge">4</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 4.11.1. Android</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 4.11.2. iOS</span><span class="badge">2</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 4.12. Modems</span><span class="badge">13 (Networking में भी)</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 4.13. प्रिंटर (Printers)</span><span class="badge">11</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 4.14. Smartcards</span><span class="badge">10</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 4.15. ध्वनि (Sound)</span><span class="badge">21 (Multimedia में भी)</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>4.16. स्टोरेज (Storage)</p>
+</div>
+<p><span class="badge">18</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 4.16.1. Optical disc</span><span class="badge">5</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 4.17. Tablet PCs</span><span class="badge">8</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 4.18. TV cards</span><span class="badge">8 (Television में भी)</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 4.19. Ultra-mobile PC</span><span class="badge">4</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<ol start="5">
+<li>सूचियाँ (Lists)</li>
+</ol>
+</div>
+<p><span class="badge">5</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 5.1. सॉफ्टवेयर की सूचियाँ (Lists of software)</span><span class="badge">33 (Software में भी)</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<ol start="6">
+<li>नेटवर्किंग (Networking)</li>
+</ol>
+</div>
+<p><span class="badge">50</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>6.1. Directory services</p>
+</div>
+<p><span class="badge">4</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>6.1.1. Domain Name System (DNS)</p>
+</div>
+<p><span class="badge">21</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 6.1.1.1. Multicast DNS</span><span class="badge">1</span></p>
+</div>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>6.2. Distributed computing</p>
+</div>
+<p><span class="badge">9</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 6.2.1. Volunteer computing</span><span class="badge">2 (Science में भी)</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>6.3. ईमेल (Email)</p>
+</div>
+<p><span class="badge">4</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>6.3.1. ईमेल क्लाइंट्स (Email clients)</p>
+</div>
+<p><span class="badge">9</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 6.3.1.1. Mail retrieval agents</span><span class="badge">5 (Commands में भी)</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.3.2. ईमेल सर्वर (Mail server)</span><span class="badge">30 (Servers में भी)</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.4. Firewalls</span><span class="badge">14 (Security में भी)</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>6.5. Instant messaging</p>
+</div>
+<p><span class="badge">9 (Internet applications में भी)</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 6.5.1. Internet Relay Chat (IRC)</span><span class="badge">16 (Protocols में भी)</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.5.2. XMPP</span><span class="badge">5 (Protocols, Servers में भी)</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.6. Modems</span><span class="badge">13 (Hardware में भी)</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>6.7. नेटवर्क कॉन्फ़िगरेशन (Network configuration)</p>
+</div>
+<p><span class="badge">10</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 6.7.1. Network managers</span><span class="badge">6</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.8. नेटवर्क मॉनिटरिंग (Network monitoring)</span><span class="badge">11 (Monitoring में भी)</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.9. नेटवर्क साझाकरण (Network sharing)</span><span class="badge">13</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>6.10. Peer-to-peer (P2P)</p>
+</div>
+<p><span class="badge">7</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 6.10.1. BitTorrent</span><span class="badge">7 (Internet apps, Protocols में भी)</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>6.11. Protocols</p>
+</div>
+<p><span class="badge">8</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 6.11.1. BitTorrent</span><span class="badge">7</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.11.2. DHCP</span><span class="badge">5</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.11.3. DNS</span><span class="badge">21</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.11.4. File Transfer Protocol (FTP)</span><span class="badge">1</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.11.5. IRC</span><span class="badge">16</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.11.6. Network Time Protocol (NTP)</span><span class="badge">5</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.11.7. Secure Shell (SSH)</span><span class="badge">18</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.11.8. Transport Layer Security (TLS)</span><span class="badge">6</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.11.9. WebDAV</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.11.10. XMPP</span><span class="badge">5</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>6.12. सर्वर (Servers)</p>
+</div>
+<p><span class="badge">21</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 6.12.1. Domain Name System (DNS)</span><span class="badge">21</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.12.2. FTP servers</span><span class="badge">2</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.12.3. Mail server</span><span class="badge">30</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.12.4. Media servers</span><span class="badge">8</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.12.5. Network Time Protocol (NTP)</span><span class="badge">5</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.12.6. Proxy servers</span><span class="badge">10</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.12.7. VPN</span><span class="badge">19</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.12.8. Web server</span><span class="badge">12</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.12.9. WebDAV</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.12.10. XMPP</span><span class="badge">5</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>6.13. Streaming</p>
+</div>
+<p><span class="badge">9</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 6.13.1. Media servers</span><span class="badge">8</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.13.2. Web server</span><span class="badge">12</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.14. Telephony</span><span class="badge">3</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.15. Voice over IP (VoIP)</span><span class="badge">11</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>6.16. वेब (Web)</p>
+</div>
+<p><span class="badge">3</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>6.16.1. Web applications</p>
+</div>
+<p><span class="badge">36</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">6.16.1.1. Content management systems</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">6.16.1.2. Git web interfaces</span><span class="badge">7</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">6.16.1.3. Issue tracking systems</span><span class="badge">5</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">6.16.1.4. Web admin interfaces</span><span class="badge">7</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">6.16.1.5. Web frameworks</span><span class="badge">2</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">6.16.1.6. Wiki software</span><span class="badge">4</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.16.2. Web browser</span><span class="badge">19 (Internet apps में भी)</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 6.16.3. Web server</span><span class="badge">12 (Servers में भी)</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>6.17. वायरलेस नेटवर्किंग (Wireless networking)</p>
+</div>
+<p><span class="badge">8</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 6.17.1. Bluetooth</span><span class="badge">6 (Hardware में भी)</span></p>
+</div>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<ol start="7">
+<li>सॉफ्टवेयर (Software)</li>
+</ol>
+</div>
+<p><span class="badge">0</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>7.1. एप्लिकेशन्स (Applications)</p>
+</div>
+<p><span class="badge">17</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 7.1.1. सुगमता (Accessibility)</span><span class="badge">10</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.1.2. Application launchers</span><span class="badge">9</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.1.3. Console applications</span><span class="badge">26 (Commands में भी)</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.1.4. Data compression and archiving</span><span class="badge">8</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>7.1.5. Database management systems</p>
+</div>
+<p><span class="badge">15</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">7.1.5.1. Relational DBMSs</span><span class="badge">5</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.1.6. शब्दकोश (Dictionaries)</span><span class="badge">3</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>7.1.7. Emulation</p>
+</div>
+<p><span class="badge">16</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">7.1.7.1. Terminal emulators</span><span class="badge">20 (Command-line में भी)</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.1.8. फ़ाइल प्रबंधक (File managers)</span><span class="badge">12</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>7.1.9. गेमिंग (Gaming)</p>
+</div>
+<p><span class="badge">46</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">7.1.9.1. Game engines</span><span class="badge">4</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>7.1.10. इंटरनेट एप्लिकेशन्स (Internet applications)</p>
+</div>
+<p><span class="badge">9</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">7.1.10.1. Anonymity networks</span><span class="badge">3 (Security में भी)</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.10.2. BitTorrent</span><span class="badge">7</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.10.3. Cryptocurrencies</span><span class="badge">2</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.10.4. Download utilities</span><span class="badge">7</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.10.5. Email clients</span><span class="badge">9</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.10.6. File sharing</span><span class="badge">7</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.10.7. Groupware</span><span class="badge">1</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.10.8. Instant messaging</span><span class="badge">9</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.10.9. News aggregators</span><span class="badge">5</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.10.10. Remote desktop</span><span class="badge">13</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.10.11. Usenet clients</span><span class="badge">3</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.10.12. Web browser</span><span class="badge">19</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>7.1.11. मल्टीमीडिया (Multimedia)</p>
+</div>
+<p><span class="badge">27</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">7.1.11.1. Audio</span><span class="badge">11</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.11.2. Image</span><span class="badge">7</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.11.3. Media servers</span><span class="badge">8</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.11.4. Sound</span><span class="badge">21</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.11.5. Television</span><span class="badge">3</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.11.6. Video</span><span class="badge">8</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.1.12. नोट्स लेने वाले सॉफ्टवेयर (Note-taking software)</span><span class="badge">7</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.1.13. Office</span><span class="badge">14</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.1.14. पासवर्ड प्रबंधक (Password managers)</span><span class="badge">4 (Security में भी)</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>7.1.15. विज्ञान (Science)</p>
+</div>
+<p><span class="badge">15</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">7.1.15.1. Electronic design automation</span><span class="badge">6</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.15.2. Numerical analysis</span><span class="badge">5</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.1.15.3. Volunteer computing</span><span class="badge">2</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.1.16. खोज (Search)</span><span class="badge">5</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.1.17. Simulation</span><span class="badge">3</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.1.18. सिस्टम मॉनिटर्स (System monitors)</span><span class="badge">10</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.1.19. Text editors</span><span class="badge">16</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.1.20. Web applications</span><span class="badge">36</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>7.2. Command-line</p>
+</div>
+<p><span class="badge">5 (System admin में भी)</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">7.2.1. Command-line shells</span><span class="badge">10</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>7.2.2. Commands</p>
+</div>
+<p><span class="badge">88</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">7.2.2.1. Console applications</span><span class="badge">26</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.2.2.2. Download utilities</span><span class="badge">7</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.2.2.3. Mail retrieval agents</span><span class="badge">5</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.2.2.4. Package managers</span><span class="badge">8</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.2.2.5. Shell builtins</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.2.2.6. Superseded commands</span><span class="badge">3</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.2.2.7. Terminal multiplexers</span><span class="badge">5</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.2.2.8. Xorg commands</span><span class="badge">12</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">7.2.3. Terminal emulators</span><span class="badge">20</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.3. File formats</span><span class="badge">8</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.4. Lists of software</span><span class="badge">33</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>7.5. सॉफ्टवेयर कंपनियाँ (Software companies)</p>
+</div>
+<p><span class="badge">0</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">Canonical</span><span class="badge">1</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">Google</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">Oracle</span><span class="badge">6</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">Red Hat</span><span class="badge">3</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 7.6. Software comparisons</span><span class="badge">6</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>7.7. सॉफ्टवेयर प्रोजेक्ट्स (Software projects)</p>
+</div>
+<p><span class="badge">0</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">Apache</span><span class="badge">7</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">Arch projects</span><span class="badge">9</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">Deepin</span><span class="badge">1</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">EFF</span><span class="badge">3</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">GNOME</span><span class="badge">14</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">GNU</span><span class="badge">16</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">KDE</span><span class="badge">14</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">LXDE</span><span class="badge">3</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">Mozilla</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">OpenBSD</span><span class="badge">5</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">Suckless</span><span class="badge">5</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">Xfce</span><span class="badge">3</span></p>
+</div>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<ol start="8">
+<li>सिस्टम प्रशासन (System administration)</li>
+</ol>
+</div>
+<p><span class="badge">28</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title"> 8.1. बैकअप (Backup)</span><span class="badge">16</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.2. Boot process</p>
+</div>
+<p><span class="badge">19</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.2.1. Boot loaders</span><span class="badge">12</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.2.2. Bootsplash</span><span class="badge">2 (Eye candy में भी)</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.2.3. Init</span><span class="badge">8</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.2.4. Initramfs</span><span class="badge">4</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 8.3. Command-line</span><span class="badge">5 (Software में भी)</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 8.4. कॉन्फ़िगरेशन फ़ाइलें (Configuration files)</span><span class="badge">14</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 8.5. Configuration management</span><span class="badge">7</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.6. Eye candy</p>
+</div>
+<p><span class="badge">26</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.6.1. Bootsplash</span><span class="badge">2 (Boot process में भी)</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.6.2. फ़ॉन्ट्स (Fonts)</span><span class="badge">9</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 8.7. File sharing</span><span class="badge">7 (Internet apps में भी)</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.8. File systems</p>
+</div>
+<p><span class="badge">46</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.8.1. Clustered file systems</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.8.2. Data-at-rest encryption</span><span class="badge">20 (Encryption में भी)</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.8.3. FUSE</span><span class="badge">8</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.8.4. Pseudo file systems</span><span class="badge">1</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.8.5. Stackable file systems</span><span class="badge">2</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.8.6. Storage virtualization</span><span class="badge">7</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 8.9. Freedesktop.org</span><span class="badge">8</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.10. Graphical user interfaces</p>
+</div>
+<p><span class="badge">3</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.10.1. Desktop environments</p>
+</div>
+<p><span class="badge">13</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">GNOME</span><span class="badge">14</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">KDE</span><span class="badge">14</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">LXDE</span><span class="badge">3</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">Xfce</span><span class="badge">3</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.10.2. Display managers</span><span class="badge">13</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.10.3. Wayland</p>
+</div>
+<p><span class="badge">7</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.10.3.1. Wayland compositors</span><span class="badge">12</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.10.4. Widget toolkits</span><span class="badge">3</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.10.5. Window managers</p>
+</div>
+<p><span class="badge">1</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.10.5.1. Dynamic window managers</span><span class="badge">9</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.10.5.2. Stacking window managers</span><span class="badge">15</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.10.5.3. Tiling window managers</span><span class="badge">13</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.10.6. X server</p>
+</div>
+<p><span class="badge">51</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.10.6.1. Xorg commands</span><span class="badge">12</span></p>
+</div>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.11. इनपुट (Input)</p>
+</div>
+<p><span class="badge">2</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.11.1. Input devices</p>
+</div>
+<p><span class="badge">25</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">Keyboards</span><span class="badge">9</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">Mice</span><span class="badge">13</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.11.2. Input methods</span><span class="badge">11</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.11.3. Keyboard configuration</span><span class="badge">14</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 8.12. कर्नेल (Kernel)</span><span class="badge">37</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 8.13. Linux console</span><span class="badge">5</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.14. स्थानीयकरण (Localization)</p>
+</div>
+<p><span class="badge">14</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.14.1. Input methods</span><span class="badge">11</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 8.15. लॉगिंग (Logging)</span><span class="badge">6</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.16. मॉनिटरिंग (Monitoring)</p>
+</div>
+<p><span class="badge">2</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.16.1. Network monitoring</span><span class="badge">11</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.16.2. System monitors</span><span class="badge">10</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 8.17. अधिसूचना (Notification)</span><span class="badge">2</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.18. पैकेज प्रबंधन (Package management)</p>
+</div>
+<p><span class="badge">26</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.18.1. Package manager</span><span class="badge">9</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.19. बिजली प्रबंधन (Power management)</p>
+</div>
+<p><span class="badge">16</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.19.1. Display control</span><span class="badge">6</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.20. सुरक्षा (Security)</p>
+</div>
+<p><span class="badge">39</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.20.1. Access control</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.20.2. Anonymity networks</span><span class="badge">3</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.20.3. Authentication</p>
+</div>
+<p><span class="badge">25</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.20.3.1. Universal 2nd Factor</span><span class="badge">6</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.20.4. Cryptography</p>
+</div>
+<p><span class="badge">5</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.20.4.1. Cryptocurrencies</span><span class="badge">2</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.20.4.2. Digital signature</p>
+</div>
+<p><span class="badge">0</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.20.4.2.1. OpenPGP</span><span class="badge">25</span></p>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.20.4.3. Encryption</p>
+</div>
+<p><span class="badge">13</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.20.4.3.1. Data-at-rest encryption</span><span class="badge">20</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.20.4.4. Transport Layer Security</span><span class="badge">6</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.20.5. Firewalls</span><span class="badge">14</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.20.6. Intrusion detection</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.20.7. Password managers</span><span class="badge">4</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.20.8. Proxy servers</span><span class="badge">10</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.20.9. Sandboxing</span><span class="badge">15</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.20.10. Secure Shell (SSH)</span><span class="badge">18</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.20.11. Security testing</span><span class="badge">3</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.20.12. Surveillance</span><span class="badge">3 (निगरानी)</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.20.13. Virtual Private Network</p>
+</div>
+<p><span class="badge">19</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.20.13.1. VPN providers</span><span class="badge">6</span></p>
+</div>
+</div>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.21. Synchronization</p>
+</div>
+<p><span class="badge">5</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.21.1. Cloud synchronization</span><span class="badge">2</span></p>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title">8.21.2. Network Time Protocol (NTP)</span><span class="badge">5</span></p>
+</div>
+</div>
+<div class="toc-leaf-item">
+<p><span class="title"> 8.22. सिस्टम रिकवरी (System recovery)</span><span class="badge">17</span></p>
+</div>
+<div class="toc-summary-content">
+<div class="toc-summary-title">
+<p>8.23. Virtualization</p>
+</div>
+<p><span class="badge">37</span></p>
+</div>
+<div class="toc-content">
+<div class="toc-leaf-item">
+<p><span class="title">8.23.1. Hypervisors</span><span class="badge">13</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/CuriousWiki/js/main.js"></script>
+</body>
+</html>

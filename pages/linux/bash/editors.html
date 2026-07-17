@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="linux, editors, nano, vim, emacs, vi, default editor, debian, fedora, arch, neovim, helix, micro">
+    
+    <title>📝 Terminal Text Editors &amp; Setup Guide</title>
+    
+    
+    <link rel="stylesheet" href="/CuriousWiki/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/CuriousWiki/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/index.html">Pages</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/bash/index.html">🐚 BASH Scripting &amp; CLI Master Class</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>📝 Terminal Text Editors &amp; Setup Guide</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">📝 Terminal Text Editors &amp; Setup Guide</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> July 11, 2026</span>
+            <span><i data-lucide="clock"></i> 11 min read</span>
+            
+            <span><i data-lucide="tag"></i> linux, editors, nano, vim, emacs, vi, default editor, debian, fedora, arch, neovim, helix, micro</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <p>Linux Terminal में direct code और config files को edit करने के लिए multiple options उपलब्ध हैं। इस guide में हम प्रमुख editors, उनके paradigms, setup configurations, और characteristics के बारे में विस्तार से जानेंगे।</p>
+<h2 id="1-understanding-terminal-editor-paradigms-एडटर-परडइमस">1. Understanding Terminal Editor Paradigms (एडिटर पैराडाइम्स)</h2>
+<p>Editor चुनने से पहले, उनके <strong>architectural paradigms</strong> को समझना बहुत ज़रूरी है। Terminal text editors मुख्य रूप से दो categories में विभाजित होते हैं:</p>
+<ul>
+<li><strong>Modal Editing (Vim, Helix):</strong>
+<ul>
+<li>ये editors अलग-अलग active modes में काम करते हैं।</li>
+<li><strong>Normal Mode:</strong> default mode है, जिसमें keyboard की keys से text type नहीं होता, बल्कि वे cursor navigation और text editing commands की तरह काम करते हैं (जैसे: <span class="kbd">d</span> और फिर <span class="kbd">w</span> दबाने पर एक word delete होता है)।</li>
+<li><strong>Insert Mode:</strong> text लिखने के लिए <span class="kbd">i</span> key दबाकर Insert Mode में जाना पड़ता है। Normal Mode में वापस आने के लिए <span class="kbd">Esc</span> दबाया जाता है।</li>
+<li><strong>Benefit:</strong> Keyboard की home row से हाथ हटाए बिना बहुत तेज़ी से editing की जा सकती है।</li>
+</ul>
+</li>
+<li><strong>Modeless Editing (Nano, Micro):</strong>
+<ul>
+<li>इसमें केवल एक ही <strong>single mode</strong> होता है, जहाँ key presses से हमेशा text input होता है।</li>
+<li>Document में navigate करने के लिए <strong>arrow keys</strong> या <strong>Control/Alt keyboard configurations (chords)</strong> का उपयोग करना पड़ता है।</li>
+<li>ये editors standard GUI word processors (जैसे Notepad, VS Code) की तरह व्यवहार करते हैं।</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-the-classics-the-titans-of-the-terminal-टरमनल-क-दगगज">2. The Classics: The Titans of the Terminal (टर्मिनल के दिग्गज)</h2>
+<p>ये वे classic editors हैं जिन्होंने computing history को आकार दिया है। ये सभी Unix servers पर natively pre-installed और highly documented होते हैं:</p>
+<h3 id="-vim-vi-improved">⚫ Vim (Vi IMproved)</h3>
+<ul>
+<li>Bram Moolenaar द्वारा 1991 में released, यह 1976 के vi editor का extended version है।</li>
+<li><strong>Philosophy:</strong> हाथों को keyboard की home row पर रखना और editing को movements और commands की भाषा की तरह इस्तेमाल करना।</li>
+<li><strong>Best Features:</strong> <code>.vimrc</code> config file के ज़रिए infinite customization, script plugins support, multiple clipboard registers, और लगभग सभी systems में default presence.</li>
+<li><strong>Basic Commands:</strong>
+<ul>
+<li><span class="kbd">i</span> - Insert Mode में जाने के लिए</li>
+<li><span class="kbd">Esc</span> - Normal Mode में वापस आने के लिए</li>
+<li><span class="kbd">:w</span> - File को save (write) करने के लिए</li>
+<li><span class="kbd">:q!</span> - बिना changes save किये quit करने के लिए</li>
+<li><span class="kbd">dd</span> - Current line को delete करने के लिए</li>
+<li><span class="kbd">yy</span> - Line को copy (yank) करने के लिए</li>
+<li><span class="kbd">p</span> - Copied content को paste करने के लिए</li>
+</ul>
+</li>
+<li><strong>Pros:</strong> Muscle memory तैयार होने के बाद बेजोड़ editing speed; near-universal availability.</li>
+<li><strong>Cons:</strong> Steep learning curve (सीखना कठिन है); default setup को configuration के बिना उपयोग करना मुश्किल होता है।</li>
+</ul>
+<h3 id="-gnu-emacs">⚫ GNU Emacs</h3>
+<ul>
+<li>Richard Stallman द्वारा 1976 में developed, यह Lisp-based computing environment है।</li>
+<li><strong>Philosophy:</strong> Editor पूरी तरह से <strong>extensible</strong> होना चाहिए, जहाँ Emacs के अंदर की हर चीज़ एक Lisp object है जिसे real-time में reprogram किया जा सकता है।</li>
+<li><strong>Best Features:</strong> Org-mode (notes/productivity manager), built-in terminal, mail client, web browser, games, और directly editor buffer के अंदर active shell processes run करना।</li>
+<li><strong>Basic Commands:</strong>
+<ul>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">X</span>, फिर <span class="kbd">Ctrl</span> + <span class="kbd">F</span> - File search करके open करने के लिए</li>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">X</span>, फिर <span class="kbd">Ctrl</span> + <span class="kbd">S</span> - File save करने के लिए</li>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">X</span>, फिर <span class="kbd">Ctrl</span> + <span class="kbd">C</span> - Emacs exit करने के लिए</li>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">S</span> - Forward search करने के लिए</li>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">K</span> - Line को kill (cut) करने के लिए</li>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">Y</span> - Text को yank (paste) करने के लिए</li>
+</ul>
+</li>
+<li><strong>Pros:</strong> Unlimited settings customization; Org-mode एक बेजोड़ productivity engine है।</li>
+<li><strong>Cons:</strong> RAM and resource footprint बहुत ज़्यादा है; complex chords keys के कारण उंगलियों में दर्द (&ldquo;Emacs Pinky&rdquo;) हो सकता है।</li>
+</ul>
+<h3 id="-gnu-nano">⚫ GNU Nano</h3>
+<ul>
+<li>GNU Nano, पुराने Pine email composer (Pico) का clone है। यह simple, modeless और तुरंत समझ आने वाला editor है।</li>
+<li><strong>Philosophy:</strong> Visual simplicity; beginners को editor से exit करने के लिए manual पढ़ने की आवश्यकता नहीं होती।</li>
+<li><strong>Best Features:</strong> Screen के नीचे permanent shortcut menu display होना; simple search and replace; easy file-locking functionality.</li>
+<li><strong>Basic Commands:</strong>
+<ul>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">O</span> - File save (writeout) करने के लिए</li>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">X</span> - Editor close (exit) करने के लिए</li>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">W</span> - Text search (Where Is) करने के लिए</li>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">K</span> - Line cut करने के लिए</li>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">U</span> - Line paste (uncut) करने के लिए</li>
+</ul>
+</li>
+<li><strong>Pros:</strong> Zero learning curve; config files को तुरंत edit करने के लिए बेहतरीन।</li>
+<li><strong>Cons:</strong> Advanced programming features का अभाव; multi-cursors support नहीं; बड़ी files में navigation बहुत धीमा होता है।</li>
+</ul>
+<h3 id="-ed">⚫ Ed</h3>
+<ul>
+<li>Ken Thompson द्वारा 1969 में लिखा गया original Unix line editor है, जब computer monitors नहीं होते थे और output कागज़ के रोल (teletypes) पर print होता था।</li>
+<li><strong>Philosophy:</strong> Screen को re-draw किये बिना line addresses और regular expressions का उपयोग करके text बदलना।</li>
+<li><strong>Best Features:</strong> Microscopic disk space footprint; shell scripts के अंदर highly scriptable; standard POSIX systems में built-in उपस्थित।</li>
+<li><strong>Basic Commands:</strong>
+<ul>
+<li><span class="kbd">a</span> - Current line के बाद text append करने के लिए</li>
+<li><span class="kbd">.</span> - Text input बंद करने के लिए (अलग line में dot लिखकर)</li>
+<li><span class="kbd">p</span> - Active line print करने के लिए</li>
+<li><span class="kbd">,p</span> - पूरी file को print करने के लिए</li>
+<li><span class="kbd">w</span> - Changes को disk पर write करने के लिए</li>
+<li><span class="kbd">q</span> - Editor close करने के लिए</li>
+</ul>
+</li>
+<li><strong>Pros:</strong> CPU cycles और RAM का न्यूनतम उपयोग।</li>
+<li><strong>Cons:</strong> Visual scrollback न होने के कारण आधुनिक programming के लिए लगभग अनुपयोगी।</li>
+</ul>
+<h2 id="3-the-modern-powerhouses-ides-in-the-terminal-टरमनल-म-आधनक-ides">3. The Modern Powerhouses: IDEs in the Terminal (टर्मिनल में आधुनिक IDEs)</h2>
+<p>ये editors terminal text editing को आधुनिक युग में लाते हैं। ये <strong>LSP (Language Server Protocol)</strong> और <strong>Treesitter parser engines</strong> का उपयोग करके IDE-level autocompletion, code diagnostics, और code syntax highlighting प्रदान करते हैं:</p>
+<h3 id="-neovim">⚫ Neovim</h3>
+<ul>
+<li>Vim का community-driven fork है जो extensibility और modern development workflows पर केंद्रित है।</li>
+<li><strong>Philosophy:</strong> Vim के codebase को refactor करके asynchronous job execution, native Lua configurations, और modular APIs support प्रदान करना।</li>
+<li><strong>Best Features:</strong> Native LSP integration, Treesitter parser engine, built-in terminal emulator, और modern Lua-based plugins का विशाल ecosystem.</li>
+<li><strong>Basic Commands:</strong> Vim के सभी standard commands syntax को support करता है, और user-defined settings `init.lua` configure file से load होती हैं।</li>
+<li><strong>Pros:</strong> सुपर-फ़ास्ट; highly customizable; plugins (Lazy/Packer) के ज़रिए इसे VS Code की तरह powerful बनाया जा सकता है।</li>
+<li><strong>Cons:</strong> Capabilites का full use करने के लिए language servers और plugins को manually configure करना पड़ता है।</li>
+</ul>
+<h3 id="-helix">⚫ Helix</h3>
+<ul>
+<li>Rust में लिखा गया modern modal editor है, जो Kakoune से प्रेरित &ldquo;Selection First&rdquo; editing paradigm पर आधारित है।
+<ul>
+<li><strong>Vim (Action first):</strong> <span class="kbd">d</span> (delete) + <span class="kbd">w</span> (word) = Word delete करें।</li>
+<li><strong>Helix (Object first):</strong> <span class="kbd">w</span> (word select करें) + <span class="kbd">d</span> (selection delete करें) = Select करके delete करें।</li>
+</ul>
+</li>
+<li><strong>Philosophy:</strong> &ldquo;Batteries-included&rdquo; (बिना किसी config file के out-of-the-box LSP, Treesitter syntax highlighting, fuzzy finder, और themes काम करते हैं)।</li>
+<li><strong>Best Features:</strong> Native multiple selections, built-in LSP configurations, Rust-based high performance, और key pop-up help menus.</li>
+<li><strong>Basic Commands:</strong>
+<ul>
+<li><span class="kbd">w</span> - Word को आगे select करने के लिए</li>
+<li><span class="kbd">d</span> - Selected text को delete करने के लिए</li>
+<li><span class="kbd">Space</span> + <span class="kbd">f</span> - Fuzzy file finder open करने के लिए</li>
+<li><span class="kbd">Space</span> + <span class="kbd">w</span> - Split windows/window controls के लिए</li>
+<li><span class="kbd">g</span> <span class="kbd">e</span> - Document के अंत (end) में जाने के लिए</li>
+</ul>
+</li>
+<li><strong>Pros:</strong> Autocomplete के लिए zero-configuration; selection-first model बहुत intuitive (सहज) है।</li>
+<li><strong>Cons:</strong> Configurations TOML format में होती हैं; कोई plugin ecosystem नहीं है (extensions को core app में compile करना पड़ता है)।</li>
+</ul>
+<h3 id="-kakoune">⚫ Kakoune</h3>
+<ul>
+<li>Selection-first model और multiple cursors के इर्द-गिर्द डिज़ाइन किया गया modal editor है।</li>
+<li><strong>Philosophy:</strong> Interactive refactoring (बदलाव या delete करने से पहले आपको screen पर दिखना चाहिए कि आप क्या modify कर रहे हैं)।</li>
+<li><strong>Best Features:</strong> Clean multi-cursor system; strict orthogonal design (यह multiplexer features को copy करने के बजाय external shell tools के साथ integrate होता है)।</li>
+<li><strong>Basic Commands:</strong>
+<ul>
+<li><span class="kbd">%</span> - पूरी file का content select करने के लिए</li>
+<li><span class="kbd">s</span> - Regular expression का उपयोग करके selection को filter करने के लिए</li>
+<li><span class="kbd">d</span> - Selection को delete करने के लिए</li>
+<li><span class="kbd">c</span> - Selection को change करने के लिए (delete करके insert mode में जाना)</li>
+</ul>
+</li>
+<li><strong>Pros:</strong> Regex-based multi-line editing; lightweight.</li>
+<li><strong>Cons:</strong> Vim/Neovim के मुकाबले छोटा user base; अनोखे keybindings के कारण वापस Vim पर जाना कठिन होता है।</li>
+</ul>
+<h3 id="-micro">⚫ Micro</h3>
+<ul>
+<li>Go language में लिखा गया modern modeless editor है, जो GUI-style text editor की सरलता को terminal में लाता है।</li>
+<li><strong>Philosophy:</strong> Modeless editing और standard desktop keyboard shortcuts (अगर आप Notepad चला सकते हैं, तो Micro भी चला लेंगे)।</li>
+<li><strong>Best Features:</strong> True mouse support (scrolling, clicking, drag-to-select), standard OS shortcuts (Ctrl+C, Ctrl+V, Ctrl+Z), built-in terminal, और automatic plugin manager.</li>
+<li><strong>Basic Commands:</strong>
+<ul>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">S</span> - File save करने के लिए</li>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">Q</span> - Editor exit करने के लिए</li>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">F</span> - Text search करने के लिए</li>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">E</span> - Command bar open करने के लिए (जैसे `:set softwrap true`)</li>
+</ul>
+</li>
+<li><strong>Pros:</strong> Beginners के लिए सबसे आसान; बेहतरीन mouse support.</li>
+<li><strong>Cons:</strong> Modal editing जितनी speed नहीं; Go runtime compilation के कारण binary size बड़ा होता है।</li>
+</ul>
+<h2 id="4-the-advanced-specialists-उननत-वशषजञ-एडटरस">4. The Advanced Specialists (उन्नत विशेषज्ञ एडिटर्स)</h2>
+<p>विशेष workflows या data environments के लिए डिज़ाइन किये गए editors:</p>
+<h3 id="-vis">⚫ Vis</h3>
+<ul>
+<li>Vi के modal editing और Rob Pike के Sam editor (Plan 9) के structural regular expressions को combine करता है।</li>
+<li><strong>Philosophy:</strong> Modal keys को structural commands parsing के साथ intersect करना।</li>
+<li><strong>Best Features:</strong> True structural regex parsing (selection matches के अंदर nested edit करने की सुविधा), lightweight Lua scripting API, और multi-cursor support.</li>
+<li><strong>Basic Commands:</strong>
+<ul>
+<li><code>:x/regex/</code> - Selection matches extract करने के लिए</li>
+<li><code>:y/regex/</code> - Target pattern वाली lines select करने के लिए</li>
+<li>Standard Vim movement keys (<span class="kbd">h</span>, <span class="kbd">j</span>, <span class="kbd">k</span>, <span class="kbd">l</span>)</li>
+</ul>
+</li>
+<li><strong>Pros:</strong> विशाल data files को आसानी से handle करता है; structural regex जटिल edits को बहुत सरल बनाता है।</li>
+<li><strong>Cons:</strong> बहुत छोटा user base और सीमित documentation.</li>
+</ul>
+<h3 id="-joe-joes-own-editor">⚫ JOE (Joe&rsquo;s Own Editor)</h3>
+<ul>
+<li>Modeless, robust editor है जो WordStar application के keyboard shortcuts layout को replicate करता है।</li>
+<li><strong>Philosophy:</strong> Customizable emulator templates के साथ full-featured visual editor प्रदान करना।</li>
+<li><strong>Best Features:</strong> Symlinks के ज़रिए दूसरे editors को emulate करना (`jstar` -&gt; WordStar, `jmacs` -&gt; Emacs, `jpico` -&gt; Pico), multiple window splitting, और built-in calculator.</li>
+<li><strong>Basic Commands (WordStar mode):</strong>
+<ul>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">K</span> + <span class="kbd">D</span> - File save करने के लिए</li>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">C</span> - Editor close करने के लिए</li>
+<li><span class="kbd">Ctrl</span> + <span class="kbd">K</span> + <span class="kbd">E</span> - File open करने के लिए</li>
+</ul>
+</li>
+<li><strong>Pros:</strong> Highly configurable; modern file-locking safety के साथ classic interface.</li>
+<li><strong>Cons:</strong> WordStar से अपरिचित users के लिए default key combinations काफी कठिन हैं।</li>
+</ul>
+<h2 id="5-the-ultra-minimalists-constraints-oriented-नयनतम-एडटरस">5. The Ultra-Minimalists: Constraints-oriented (न्यूनतम एडिटर्स)</h2>
+<p>जब IoT chips, embedded systems या recovery shells में storage और memory की बहुत कमी हो, तब ये काम आते हैं:</p>
+<h3 id="-zile-zile-is-lossy-emacs">⚫ Zile (Zile Is Lossy Emacs)</h3>
+<ul>
+<li>C language में लिखा गया एक बहुत छोटा Emacs clone है, जिसमें heavy dependencies (जैसे Lisp interpreter) नहीं होते।</li>
+<li><strong>Philosophy:</strong> 100KB से कम disk space में Emacs का muscle memory experience प्रदान करना।</li>
+<li><strong>Best Features:</strong> Emacs like key combos, multiple buffers support, और multi-level undo/redo operations.</li>
+<li><strong>Basic Commands:</strong> Emacs key chords का उपयोग करता है (<span class="kbd">Ctrl</span>+<span class="kbd">X</span> <span class="kbd">Ctrl</span>+<span class="kbd">S</span> to save).</li>
+<li><strong>Pros:</strong> नगण्य memory usage; किसी भी CPU architecture पर run होने की क्षमता.</li>
+<li><strong>Cons:</strong> कोई package/extension system नहीं; limited formatting tools.</li>
+</ul>
+<h3 id="-sled-simple-line-editor">⚫ SLED (Simple Line Editor)</h3>
+<ul>
+<li>Recovery shell environments में quick edits के लिए windowed, lightweight editor है।</li>
+<li><strong>Philosophy:</strong> Ed जैसे raw line editors से एक कदम आगे, जो 50KB से कम space में clean visual window layout देता है।</li>
+<li><strong>Best Features:</strong> Visual scroll windows, simple shortcut bottom menu, और immediate response speed.</li>
+<li><strong>Basic Commands:</strong>
+<ul>
+<li><span class="kbd">F2</span> - File save करने के लिए</li>
+<li><span class="kbd">F10</span> - Editor close करने के लिए</li>
+<li>Movement के लिए standard Arrow keys</li>
+</ul>
+</li>
+<li><strong>Pros:</strong> Tiny footprint; system recovery tasks के लिए standard choice.</li>
+<li><strong>Cons:</strong> बहुत ही limited features; no syntax highlighting.</li>
+</ul>
+<h3 id="-e3">⚫ e3</h3>
+<ul>
+<li>Assembly language में लिखा गया technical marvel है, जिसकी standard library (libc) पर zero dependencies हैं।</li>
+<li><strong>Philosophy:</strong> Boot sector या ROM partition में fit होने वाला visual editor बनाना।</li>
+<li><strong>Best Features:</strong> 30KB से कम size; launch configurations के आधार पर selectable personalities (जैसे Vim, Emacs, Nano, या WordStar की तरह काम कर सकता है)।</li>
+<li><strong>Basic Commands:</strong> Selected mode के commands inherit करता है (जैसे <code>e3vi</code> -&gt; Vim bindings, <code>e3pi</code> -&gt; Nano bindings).</li>
+<li><strong>Pros:</strong> Zero external runtime dependencies; system recovery environments के लिए perfect.</li>
+<li><strong>Cons:</strong> Advanced developer options, Unicode, और syntax coloring का अभाव।</li>
+</ul>
+<h2 id="6-comparison-matrix-तलनतमक-तलक">6. Comparison Matrix (तुलनात्मक तालिका)</h2>
+<p>सभी 13 editors के specs की comparative table:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Editor</th>
+					<th>Language</th>
+					<th>Size on Disk</th>
+					<th>Primary Paradigm</th>
+					<th>Native LSP</th>
+					<th>Best Use-Case</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>Vim</strong></td>
+					<td>C</td>
+					<td>~3 MB</td>
+					<td>Modal</td>
+					<td>No (via plugin)</td>
+					<td>Universal Editing</td>
+			</tr>
+			<tr>
+					<td><strong>Emacs</strong></td>
+					<td>C / Lisp</td>
+					<td>~120 MB</td>
+					<td>Modeless / Chords</td>
+					<td>No (via plugin)</td>
+					<td>Org-Mode &amp; Extensibility</td>
+			</tr>
+			<tr>
+					<td><strong>Nano</strong></td>
+					<td>C</td>
+					<td>~300 KB</td>
+					<td>Modeless</td>
+					<td>No</td>
+					<td>Quick Config Edits</td>
+			</tr>
+			<tr>
+					<td><strong>Ed</strong></td>
+					<td>C</td>
+					<td>~50 KB</td>
+					<td>Line Editor</td>
+					<td>No</td>
+					<td>Recovery / Scripting</td>
+			</tr>
+			<tr>
+					<td><strong>Neovim</strong></td>
+					<td>C / Lua</td>
+					<td>~10 MB</td>
+					<td>Modal</td>
+					<td>Yes (native)</td>
+					<td>Custom Modern IDE</td>
+			</tr>
+			<tr>
+					<td><strong>Helix</strong></td>
+					<td>Rust</td>
+					<td>~15 MB</td>
+					<td>Modal (Selection First)</td>
+					<td>Yes (built-in)</td>
+					<td>Out-of-box IDE</td>
+			</tr>
+			<tr>
+					<td><strong>Kakoune</strong></td>
+					<td>C++</td>
+					<td>~2 MB</td>
+					<td>Modal (Selection First)</td>
+					<td>No (via bridge)</td>
+					<td>Interactive Regex Edits</td>
+			</tr>
+			<tr>
+					<td><strong>Micro</strong></td>
+					<td>Go</td>
+					<td>~12 MB</td>
+					<td>Modeless</td>
+					<td>No</td>
+					<td>Desktop Keybind Users</td>
+			</tr>
+			<tr>
+					<td><strong>Vis</strong></td>
+					<td>C / Lua</td>
+					<td>~500 KB</td>
+					<td>Modal + Structural</td>
+					<td>No</td>
+					<td>Regex-heavy Refactoring</td>
+			</tr>
+			<tr>
+					<td><strong>JOE</strong></td>
+					<td>C</td>
+					<td>~800 KB</td>
+					<td>Modeless</td>
+					<td>No</td>
+					<td>WordStar Enthusiasts</td>
+			</tr>
+			<tr>
+					<td><strong>Zile</strong></td>
+					<td>C</td>
+					<td>~100 KB</td>
+					<td>Modeless / Chords</td>
+					<td>No</td>
+					<td>Low-spec Emacs Emulation</td>
+			</tr>
+			<tr>
+					<td><strong>SLED</strong></td>
+					<td>C</td>
+					<td>~50 KB</td>
+					<td>Modeless</td>
+					<td>No</td>
+					<td>Embedded Recovery Disk</td>
+			</tr>
+			<tr>
+					<td><strong>e3</strong></td>
+					<td>Assembly</td>
+					<td>~25 KB</td>
+					<td>Multi-Personality</td>
+					<td>No</td>
+					<td>IoT / Assembly Recovery</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="7-optimizing-your-terminal-workspace-टरमनल-वरकसपस-अनकलन">7. Optimizing Your Terminal Workspace (टर्मिनल वर्कस्पेस अनुकूलन)</h2>
+<p>पसंदीदा text editor चुनने के बाद, command-line environment को custom tools के साथ integrate करना महत्वपूर्ण है:</p>
+<h3 id="using-a-terminal-multiplexer-tmux">Using a Terminal Multiplexer (tmux)</h3>
+<p>Multiplexer आपको single terminal session में multiple layout split window panes create करने की अनुमति देता है, जिससे compile output logs monitor करना आसान होता है। SSH session disconnect होने पर भी processes active रहती हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Start a new tmux session named &#34;dev&#34;</span>
+</span></span><span style="display:flex;"><span>tmux new -s dev
+</span></span></code></pre></div><p>tmux session के अंदर, screen को vertically split करने के लिए <span class="kbd">Ctrl</span> + <span class="kbd">B</span> के बाद <span class="kbd">%</span> दबाएं, या horizontally split करने के लिए <span class="kbd">&quot;</span> दबाएं।</p>
+<h3 id="setting-your-default-system-editor">Setting Your Default System Editor</h3>
+<p>Git, Crontab, और Visudo जैसे utility programs default text files edit करने के लिए <code>$EDITOR</code> environment variable को lookup करते हैं। इसे set करने के लिए config paths (जैसे <code>~/.bashrc</code> या <code>~/.zshrc</code>) में variable update करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Add this line to define your default editor</span>
+</span></span><span style="display:flex;"><span>export EDITOR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hx&#34;</span> <span style="color:#75715e"># Sets Helix as default. You can change it to &#34;nvim&#34;, &#34;nano&#34; etc.</span>
+</span></span></code></pre></div><p>Changes apply करने के लिए command-line reload config run करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source ~/.bashrc
+</span></span></code></pre></div>
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/CuriousWiki/js/main.js"></script>
+</body>
+</html>

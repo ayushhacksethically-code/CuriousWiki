@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Rm on CuriousWiki</title>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/rm.html</link>
+		<description>Recent content in Rm on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/rm/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🗑️ rm (remove files or directories) Command</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/files-directories/rm.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/files-directories/rm.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;&lt;code&gt;rm&lt;/code&gt; (Remove)&lt;/strong&gt; command का उपयोग Linux operating system से files और directories को permanent delete करने के लिए किया जाता है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-danger&#34;&gt;&#xA;&lt;i data-lucide=&#34;skull&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;🚨 WARNING: No Recycle Bin&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Linux CLI/terminal में &lt;code&gt;rm&lt;/code&gt; से delete की गई files Windows की तरह &amp;ldquo;Recycle Bin&amp;rdquo; या &amp;ldquo;Trash&amp;rdquo; में नहीं जातीं। ये permanent delete होती हैं, इसलिए इसका उपयोग बहुत सावधानी से करें!&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;1-syntax&#34;&gt;1. Syntax&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rm &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;options&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; file_name&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;s&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-key-options--safety-flags&#34;&gt;2. Key Options &amp;amp; Safety Flags&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;-f&lt;/code&gt;, &lt;code&gt;--force&lt;/code&gt;: बिना किसी prompt/confirmation के सीधे force delete करता है। अगर फ़ाइल मौजूद नहीं है, तो भी कोई error warning नहीं दिखाता।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-i&lt;/code&gt;: &lt;strong&gt;Interactive Mode:&lt;/strong&gt; हर एक file को delete करने से पहले user से confirmation (yes/no) मांगता है। (accidental deletions से बचने के लिए उत्तम)।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-I&lt;/code&gt;: अगर आप 3 से अधिक files या recursive directories को delete कर रहे हैं, तो केवल &lt;strong&gt;एक बार&lt;/strong&gt; confirm prompt पूछेगा (less annoying than &lt;code&gt;-i&lt;/code&gt;).&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-r&lt;/code&gt;, &lt;code&gt;-R&lt;/code&gt;, &lt;code&gt;--recursive&lt;/code&gt;: Folder को उसके अंदर के सभी contents (files/sub-folders) सहित recursively delete करने के लिए। (directories हटाने के लिए यह flag अनिवार्य है)।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;--&lt;/code&gt;: Hyphen prefix वाली tricky files (जैसे &lt;code&gt;-myfile.txt&lt;/code&gt;) को safely delete करने के लिए delimiter mapping.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;3-safe-deletion-examples&#34;&gt;3. Safe Deletion Examples&lt;/h2&gt;&#xA;&lt;h3 id=&#34;example-1-safe-deletion-using-interactive-checks&#34;&gt;Example 1: Safe deletion using interactive checks&lt;/h3&gt;&#xA;&lt;p&gt;गलतियों से बचने के लिए command line पर &lt;code&gt;-i&lt;/code&gt; use करें:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

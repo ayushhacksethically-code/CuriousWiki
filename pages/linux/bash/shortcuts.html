@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="linux, bash, shortcuts, keyboard, commands, history">
+    
+    <title>⌨️ BASH Keyboard Shortcuts Cheat Sheet</title>
+    
+    
+    <link rel="stylesheet" href="/CuriousWiki/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/CuriousWiki/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/index.html">Pages</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/bash/index.html">🐚 BASH Scripting &amp; CLI Master Class</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>⌨️ BASH Keyboard Shortcuts Cheat Sheet</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">⌨️ BASH Keyboard Shortcuts Cheat Sheet</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> July 11, 2026</span>
+            <span><i data-lucide="clock"></i> 6 min read</span>
+            
+            <span><i data-lucide="tag"></i> linux, bash, shortcuts, keyboard, commands, history</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <p>Linux Terminal पर BASH shell का उपयोग करते समय keyboard shortcuts का उपयोग करके आप अपनी command-line execution speeds और productivity को 10x बढ़ा सकते हैं। यहाँ navigation (cursor movement), line editing, history control, और job management के सभी important shortcuts की list दी गई है।</p>
+<div class="callout callout-info">
+<i data-lucide="info"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>Readline Library Configuration</p>
+</div>
+<p>BASH shell keyboard bindings को control करने के लिए internally <strong>Readline Library</strong> का use करता है। Defaults modes <code>emacs</code> style key-bindings पर config होते हैं। अगर आप Vim keyboard mode prefer करते हैं, तो terminal पर <code>set -o vi</code> toggle कर सकते हैं।</p>
+</div>
+</div>
+<h2 id="1-moving-cursor-navigation">1. Moving (Cursor Navigation)</h2>
+<p>Terminal input cursor को command line में character-by-character या word-by-word shift करने के shortcuts:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>Description (Hinglish / Hindi)</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">A</span></td>
+					<td>Command line के <strong>beginning (शुरुआत)</strong> पर cursor ले जाने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">E</span></td>
+					<td>Command line के <strong>end (आखिर)</strong> पर cursor ले जाने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">B</span></td>
+					<td>Cursor को <strong>एक character पीछे</strong> ले जाने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">F</span></td>
+					<td>Cursor को <strong>एक character आगे</strong> ले जाने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">F</span></td>
+					<td>Cursor को <strong>एक word आगे (forward)</strong> le जाने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">B</span></td>
+					<td>Cursor को <strong>एक word पीछे (backward)</strong> le जाने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">X</span> <span class="kbd">Ctrl</span> + <span class="kbd">X</span></td>
+					<td>Line की शुरुआत और cursor की current position के बीच <strong>toggle</strong> (बदलने) के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">]</span> + <span class="kbd">x</span></td>
+					<td>Cursor को line में आगे मौजूद character <code>x</code> की location पर ले जाने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">Ctrl</span> + <span class="kbd">]</span> + <span class="kbd">x</span></td>
+					<td>Cursor को line in back direction में <code>x</code> character की location पर ले जाने के लिए।</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="2-edit--other-operations">2. Edit / Other Operations</h2>
+<p>Line edit करने, text cut/paste करने, और terminal buffer clear करने के operations:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>Description (Hinglish / Hindi)</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">D</span></td>
+					<td>Cursor के स्थान वाले character को <strong>delete</strong> (मिटाने) के लिए। (अगर line empty है, तो shell <strong>exit</strong> हो जाएगा)।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">H</span></td>
+					<td>Cursor से ठीक पहले वाले character को <strong>delete</strong> करने के लिए (Backspace की तरह)।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">U</span></td>
+					<td>Cursor position से <strong>पहले (before)</strong> की पूरी command line को <strong>clear</strong> या <strong>cut</strong> करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">K</span></td>
+					<td>Cursor position के <strong>बाद (after)</strong> की पूरी command line को <strong>clear</strong> या <strong>cut</strong> करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">W</span></td>
+					<td>Cursor से <strong>पहले वाले word</strong> को <strong>delete</strong> या <strong>cut</strong> करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">D</span></td>
+					<td>Cursor point से लेकर <strong>word के अंत तक</strong> का text <strong>delete</strong> या <strong>cut</strong> करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">Y</span></td>
+					<td>पहले delete या cut किये गए text को current position पर <strong>paste</strong> करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">I</span></td>
+					<td>Command <strong>autocomplete</strong> करने के लिए (Tab key की तरह)।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">L</span></td>
+					<td>Terminal screen को <strong>clear</strong> (साफ) करने के लिए (clear command की तरह)।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">C</span></td>
+					<td>अभी चल रहे (running) command या process को <strong>kill</strong> (बंद) करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">Z</span></td>
+					<td>Running process को रोककर (suspend) <strong>background</strong> में भेजने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">_</span></td>
+					<td>पिछली editing या बदलाव को <strong>undo</strong> (वापस पहले जैसा) करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">X</span> <span class="kbd">Ctrl</span> + <span class="kbd">U</span></td>
+					<td>आखिरी बदलाव को <strong>undo</strong> करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">T</span></td>
+					<td>Cursor से ठीक पहले वाले <strong>दो characters को आपस में बदलने (swap)</strong> के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Esc</span> + <span class="kbd">T</span></td>
+					<td>Cursor से ठीक पहले वाले <strong>दो words को आपस में बदलने (swap)</strong> के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">T</span></td>
+					<td>अभी वाले word को पिछले word के साथ <strong>swap</strong> करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">Backspace</span></td>
+					<td>Cursor से ठीक पहले वाले <strong>word को delete</strong> करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">&lt;</span></td>
+					<td>Command history की <strong>सबसे पहली line</strong> पर जाने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">&gt;</span></td>
+					<td>Command history की <strong>सबसे आखिरी line</strong> पर जाने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">?</span></td>
+					<td>Command line में files और folders के suggestions (help) देखने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">*</span></td>
+					<td>Current path की सभी files/folders को command line में insert करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">.</span></td>
+					<td>पिछली command के <strong>last argument</strong> (आखिरी शब्द) को insert करने के लिए (e.g. <code>vim file.txt</code> execute करने के बाद Alt+. दबाने पर <code>file.txt</code> लिखा जाएगा)।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">C</span></td>
+					<td>Cursor वाले word के पहले character को <strong>capitalize</strong> (बड़ा) करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">U</span></td>
+					<td>Cursor से लेकर word के अंत तक के text को <strong>uppercase</strong> (CAPITAL) करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">L</span></td>
+					<td>Cursor से लेकर word के अंत तक के text को <strong>lowercase</strong> (small letters) करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">R</span></td>
+					<td>Line में किये गए सभी बदलावों को revert (रद्द) करके command को पहले जैसा करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Alt</span> + <span class="kbd">Ctrl</span> + <span class="kbd">E</span></td>
+					<td>Command line में मौजूद variables और aliases को expand (विस्तार) करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><code>~</code> + <span class="kbd">TAB</span> + <span class="kbd">TAB</span></td>
+					<td>System के सभी <strong>users</strong> की list देखने के लिए।</td>
+			</tr>
+			<tr>
+					<td><code>$</code> + <span class="kbd">TAB</span> + <span class="kbd">TAB</span></td>
+					<td>System के सभी <strong>variables</strong> की list देखने के लिए।</td>
+			</tr>
+			<tr>
+					<td><code>@</code> + <span class="kbd">TAB</span> + <span class="kbd">TAB</span></td>
+					<td><code>/etc/hosts</code> file में मौजूद hosts की list देखने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">TAB</span></td>
+					<td>Command और paths को <strong>autocomplete</strong> करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><code>cd -</code></td>
+					<td><strong>पिछली working directory</strong> में वापस जाने के लिए।</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="3-history-commands">3. History Commands</h2>
+<p>Command history search करने, navigate करने, और commands execute करने के shortcuts:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>Description (Hinglish / Hindi)</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">R</span></td>
+					<td>Command history में पीछे की तरफ <strong>search</strong> करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">S</span></td>
+					<td>Command history में आगे की तरफ <strong>search</strong> करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">P</span></td>
+					<td>History से <strong>पिछली command</strong> लाने के लिए (Up Arrow key की तरह)।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">N</span></td>
+					<td>History से <strong>अगली command</strong> लाने के लिए (Down Arrow key की तरह)।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">O</span></td>
+					<td>Search में मिली command को <strong>execute</strong> (रन) करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><span class="kbd">Ctrl</span> + <span class="kbd">G</span></td>
+					<td>History search mode से बाहर निकलने (exit) के लिए।</td>
+			</tr>
+			<tr>
+					<td><code>!!</code></td>
+					<td><strong>ठीक पिछली command</strong> को फिर से run करने के लिए (जैसे <code>sudo !!</code>)।</td>
+			</tr>
+			<tr>
+					<td><code>!vi</code></td>
+					<td>History में <code>vi</code> से शुरू होने वाली <strong>पिछली command</strong> को run करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><code>!vi:p</code></td>
+					<td><code>vi</code> से शुरू होने वाली पिछली command को run किये बिना केवल <strong>print</strong> करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><code>!n</code></td>
+					<td>History list में से number <code>n</code> वाली command को run करने के लिए।</td>
+			</tr>
+			<tr>
+					<td><code>!$</code></td>
+					<td>पिछली command के <strong>आखिरी argument</strong> (शब्द) को run करने के लिए.</td>
+			</tr>
+			<tr>
+					<td><code>!^</code></td>
+					<td>पिछली command के <strong>पहले argument</strong> को run करने के लिए.</td>
+			</tr>
+			<tr>
+					<td><code>^abc^xyz</code></td>
+					<td>पिछली command में <code>abc</code> शब्द को <code>xyz</code> से बदलकर फिर से run करने के लिए.</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="4-job-control-kill-a-job">4. Job Control (Kill a Job)</h2>
+<p>Background/foreground jobs को control और terminate (बंद) करने के commands:</p>
+<p>चले रहे (running) background jobs की list देखने के लिए:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>jobs
+</span></span></code></pre></div><p>Output का format कुछ ऐसा होता है: <code>[1]+ Running sleep 100 &amp;</code>, जहाँ <code>1</code> job number है। किसी specific job को kill (बंद) करने के लिए:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Job number &#39;n&#39; को बंद (kill) करने के लिए</span>
+</span></span><span style="display:flex;"><span>kill %n
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Example: job index 1 को बंद करने के लिए</span>
+</span></span><span style="display:flex;"><span>kill %1
+</span></span></code></pre></div>
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/CuriousWiki/js/main.js"></script>
+</body>
+</html>
