@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Powershell on CuriousWiki</title>
-		<link>http://example.org/tags/powershell.html</link>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/powershell.html</link>
 		<description>Recent content in Powershell on CuriousWiki</description>
 		<generator>Hugo</generator>
 		<language>hi</language>
@@ -12,19 +12,19 @@
 		
 			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>🐚 Command-Line Shells Guide</title>
-				<link>http://example.org/pages/linux/linux-tools/shell/index.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/shell/index.html</link>
 				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/linux/linux-tools/shell/index.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/shell/index.html</guid>
 				<description>&lt;p&gt;Linux, macOS, और Windows operating systems में commands execute करने और scripting workflows configure करने के लिए उपयोग होने वाले प्रमुख &lt;strong&gt;Shells&lt;/strong&gt; की विस्तृत जानकारी।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Shell क्या है?&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Shell एक interface/program है जो user से inputs (commands) लेता है, उन्हें OS Kernel को भेजता है, और outcome/output display करता. Terminal Window सिर्फ एक host/container wrapper है, जिसके अंदर actual shell (जैसे Bash, Zsh) चलता है।&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;1-core-unixlinux-shells&#34;&gt;1. Core Unix/Linux Shells&lt;/h2&gt;&#xA;&lt;h3 id=&#34;-sh-bourne-shell&#34;&gt;⚫ sh (Bourne Shell)&lt;/h3&gt;&#xA;&lt;p&gt;यह Unix system का मूल (original) shell है, जिसे Steve Bourne ने Bell Labs में विकसित किया था। यह बहुत basic है और आज की तारीख में mostly interactive use के बजाय compatibility scripts चलाने के काम आता है।&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>🐚 Microsoft PowerShell (pwsh)</title>
-				<link>http://example.org/pages/linux/linux-tools/shell/powershell.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/shell/powershell.html</link>
 				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/linux/linux-tools/shell/powershell.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/shell/powershell.html</guid>
 				<description>&lt;p&gt;&lt;strong&gt;PowerShell&lt;/strong&gt; Microsoft द्वारा विकसित एक cross-platform task automation framework, command shell, और scripting language है। यह Windows, Linux और macOS पर चलता है और traditional shells की तरह plain text streams के बजाय &lt;strong&gt;.NET Objects&lt;/strong&gt; flow पर काम करता है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;The Monad Manifesto&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;PowerShell के आविष्कारक &lt;strong&gt;Jeffrey Snover&lt;/strong&gt; ने 2002 में &amp;ldquo;Monad Manifesto&amp;rdquo; लिखा था। इसमें उन्होंने UNIX pipelines की utility को .NET platform के object flow concept के साथ मिलाकर modern scripting engine की blueprint पेश की थी।&lt;/p&gt;</description>
 			</item>
 	</channel>

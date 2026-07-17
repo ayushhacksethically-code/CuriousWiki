@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Tab-Completion on CuriousWiki</title>
-		<link>http://example.org/tags/tab-completion.html</link>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/tab-completion.html</link>
 		<description>Recent content in Tab-Completion on CuriousWiki</description>
 		<generator>Hugo</generator>
 		<language>hi</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/tab-completion/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/tab-completion/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>⌨️ Bash Programmable TAB Completion</title>
-				<link>http://example.org/pages/linux/bash/tab-completion.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/tab-completion.html</link>
 				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/linux/bash/tab-completion.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/tab-completion.html</guid>
 				<description>&lt;p&gt;जब आप Linux terminal पर command type करते समय &lt;code&gt;[TAB]&lt;/code&gt; key दबाते हैं, तो Bash automatically contextual suggestions दिखाने का प्रयास करता है। इसे &lt;strong&gt;Completion Specification (compspec)&lt;/strong&gt; कहा जाता है। BASH completion engine developers को custom scripting APIs provide करता है, जिसकी मदद से आप किसी भी command के लिए dynamic auto-completions set कर सकते हैं।&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-simple-static-completion-using-complete--w&#34;&gt;1. Simple Static completion using &lt;code&gt;complete -W&lt;/code&gt;&lt;/h2&gt;&#xA;&lt;p&gt;अगर आपको किसी command के लिए options की एक static list define करनी है, तो &lt;code&gt;complete -W&lt;/code&gt; (Word list) का उपयोग करें:&lt;/p&gt;</description>
 			</item>
 	</channel>

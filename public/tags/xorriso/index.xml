@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Xorriso on CuriousWiki</title>
-		<link>http://example.org/tags/xorriso.html</link>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/xorriso.html</link>
 		<description>Recent content in Xorriso on CuriousWiki</description>
 		<generator>Hugo</generator>
 		<language>hi</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/xorriso/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/xorriso/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>🛠️ Case Study: Re-routing Broken Preseed Mirrors &amp; Avoiding 36 GB Zip Loop Explosion</title>
-				<link>http://example.org/pages/preseed-mirror-debugging.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/preseed-mirror-debugging.html</link>
 				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/preseed-mirror-debugging.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/preseed-mirror-debugging.html</guid>
 				<description>&lt;p&gt;कस्टम ऑपरेटिंग सिस्टम (जैसे Debian या BOSS Linux) का निर्माण या अनुकूलन करते समय हमें ऐसी जटिल समस्याओं का सामना करना पड़ता है जो सैद्धांतिक तौर पर सही दिखती हैं पर व्यावहारिक स्तर पर बूटलोडर या पैकेजर को क्रैश कर देती हैं। यह केस स्टडी इसी तरह की एक महत्वपूर्ण वास्तविक समस्या और उसके इंजीनियरिंग समाधान का विवरण देती है।&lt;/p&gt;&#xA;&lt;h2 id=&#34;main-the-36-gb-zip-loop-explosion&#34;&gt;Main: The 36 GB Zip Loop Explosion&lt;/h2&gt;&#xA;&lt;p&gt;लिनक्स डायरेक्टरीज़ में कई शॉर्टकट्स या सिम्बॉलिक लिंक्स (symlinks) होते हैं जो उसी डायरेक्टरी या उसके पेरेंट को पॉइंट करते हैं। ऐसी फाइलों को आर्काइव (compress) करते समय विशेष सावधानी की आवश्यकता होती है।&lt;/p&gt;</description>
 			</item>
 	</channel>

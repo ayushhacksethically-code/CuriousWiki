@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Mkdir on CuriousWiki</title>
-		<link>http://example.org/tags/mkdir.html</link>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/mkdir.html</link>
 		<description>Recent content in Mkdir on CuriousWiki</description>
 		<generator>Hugo</generator>
 		<language>hi</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/mkdir/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/mkdir/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>📁 mkdir (make directories) Command</title>
-				<link>http://example.org/pages/linux/bash/files-directories/mkdir.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/files-directories/mkdir.html</link>
 				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/linux/bash/files-directories/mkdir.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/files-directories/mkdir.html</guid>
 				<description>&lt;p&gt;&lt;strong&gt;&lt;code&gt;mkdir&lt;/code&gt; (Make Directory)&lt;/strong&gt; command का काम Linux filesystem में नए empty folders (directories) create करना है। आप एक साथ एक या कई folders बना सकते हैं।&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-syntax&#34;&gt;1. Syntax&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;options&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; directory_name&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;s&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-key-options--flags&#34;&gt;2. Key Options &amp;amp; Flags&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;-p&lt;/code&gt;, &lt;code&gt;--parents&lt;/code&gt;: &lt;strong&gt;यह सबसे महत्वपूर्ण flag है।&lt;/strong&gt; इसकी मदद से आप nested directories (जैसे &lt;code&gt;folder1/folder2/folder3&lt;/code&gt;) को एक ही बार में recursively create कर सकते हैं। अगर parent directory पहले से मौजूद नहीं होगी, तो यह बिना कोई error दिए उसे खुद बना देगा।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-m&lt;/code&gt;, &lt;code&gt;--mode&lt;/code&gt;: Directory बनाते समय ही उसकी permissions (जैसे &lt;code&gt;755&lt;/code&gt;, &lt;code&gt;700&lt;/code&gt; octal permission values) set करने के लिए।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-v&lt;/code&gt;, &lt;code&gt;--verbose&lt;/code&gt;: creation process की detail logs console पर दिखाता है (verbose mode)।&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;3-real-world-examples&#34;&gt;3. Real-world Examples&lt;/h2&gt;&#xA;&lt;h3 id=&#34;example-1-create-a-simple-folder&#34;&gt;Example 1: Create a simple folder&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir app_scripts&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;example-2-recursive-parent-structure-super-useful&#34;&gt;Example 2: Recursive parent structure (Super Useful)&lt;/h3&gt;&#xA;&lt;p&gt;अगर आप &lt;code&gt;-p&lt;/code&gt; के बिना &lt;code&gt;mkdir a/b/c&lt;/code&gt; चलाएंगे, तो shell error देगा (&amp;ldquo;No such file or directory&amp;rdquo;) क्योंकि &lt;code&gt;a&lt;/code&gt; और &lt;code&gt;b&lt;/code&gt; पहले से नहीं बने हैं। &lt;code&gt;-p&lt;/code&gt; इसे fix करता है:&lt;/p&gt;</description>
 			</item>
 	</channel>

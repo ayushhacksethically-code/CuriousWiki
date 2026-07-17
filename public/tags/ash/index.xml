@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Ash on CuriousWiki</title>
-		<link>http://example.org/tags/ash.html</link>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/ash.html</link>
 		<description>Recent content in Ash on CuriousWiki</description>
 		<generator>Hugo</generator>
 		<language>hi</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/ash/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/ash/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>🐚 Almquist Shell (ash) &amp; Debian Almquist Shell (DASH)</title>
-				<link>http://example.org/pages/linux/linux-tools/shell/dash.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/shell/dash.html</link>
 				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/linux/linux-tools/shell/dash.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/shell/dash.html</guid>
 				<description>&lt;p&gt;&lt;strong&gt;Almquist Shell (ash)&lt;/strong&gt; Unix-like operating systems के लिए एक lightweight और highly performant shell है। यह Bourne Shell का clone है और इसके derived forks (जैसे &lt;strong&gt;DASH&lt;/strong&gt;) Linux ecosystem में startup sequences को speed-up करने और embedded environments (जैसे BusyBox) में व्यापक रूप से उपयोग किए जाते हैं।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Fast Fact&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;मूल &lt;code&gt;ash&lt;/code&gt; shell को Kenneth Almquist ने 1989 में release किया था। यह केवल 92KB size का super-lightweight shell है जो low-memory profiles के लिए सर्वश्रेष्ठ है।&lt;/p&gt;</description>
 			</item>
 	</channel>

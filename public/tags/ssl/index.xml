@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Ssl on CuriousWiki</title>
-		<link>http://example.org/tags/ssl.html</link>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/ssl.html</link>
 		<description>Recent content in Ssl on CuriousWiki</description>
 		<generator>Hugo</generator>
 		<language>hi</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>🛡️ Acme.sh - Zero Dependency SSL/TLS Let&#39;s Encrypt Client</title>
-				<link>http://example.org/pages/linux/linux-tools/acme-sh.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/acme-sh.html</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/linux/linux-tools/acme-sh.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/acme-sh.html</guid>
 				<description>&lt;p&gt;&lt;strong&gt;acme.sh&lt;/strong&gt; एक zero-dependency, pure Unix shell script-based ACME client protocol execution tool है। यह base ACME protocol standards (जैसे Let&amp;rsquo;s Encrypt, ZeroSSL, Buypass) का use करके automatic domain SSL certificates issue, verify, install और renew कर सकता है। इसके लिए Certbot की तरह massive dependencies (जैसे Python binaries) install करने की need नहीं होती।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Non-root Privileges Installation&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Certbot को system settings access करने के लिए root/sudo privilege level mandatory होता है। acme.sh easily &lt;strong&gt;non-root normal user directories&lt;/strong&gt; (&lt;code&gt;~/.acme.sh/&lt;/code&gt;) में standalone execute हो सकता है, जिससे server architecture secure रहती है।&lt;/p&gt;</description>
 			</item>
 	</channel>

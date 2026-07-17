@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Htop on CuriousWiki</title>
-		<link>http://example.org/tags/htop.html</link>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/htop.html</link>
 		<description>Recent content in Htop on CuriousWiki</description>
 		<generator>Hugo</generator>
 		<language>hi</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Tue, 30 Jun 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/htop/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/htop/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>🛠️ Linux CLI Power Tools</title>
-				<link>http://example.org/pages/linux/linux-tools/index.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/index.html</link>
 				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/linux/linux-tools/index.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/index.html</guid>
 				<description>&lt;p&gt;system resources monitor करने, network logs check करने, और text manipulate करने के लिए essential command-line tools की reference bible.&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Interactive Shells Guide&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Linux, Windows और macOS में उपयोग होने वाले अलग-अलग shells (जैसे Bash, Zsh, PowerShell, Fish, dash, ksh) के बारे में विस्तार से जानने के लिए &lt;a href=&#34;shell/index.html&#34; class=&#34;wiki-link&#34;&gt;Shells Guide&lt;/a&gt; देखें।&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Specialized Tool Guides&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;BASH utilities, system automation, and setup scripts ko check aur customize karne ke liye humari interactive guides padhein:&lt;/p&gt;</description>
 			</item>
 	</channel>

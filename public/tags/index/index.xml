@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Index on CuriousWiki</title>
-		<link>http://example.org/tags/index.html</link>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/index.html</link>
 		<description>Recent content in Index on CuriousWiki</description>
 		<generator>Hugo</generator>
 		<language>hi</language>
@@ -12,19 +12,19 @@
 		
 			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/index/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/index/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>🧠 CuriousWiki Dashboard</title>
-				<link>http://example.org/index.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/index.html</link>
 				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/index.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/index.html</guid>
 				<description>&lt;p&gt;&lt;strong&gt;CuriousWiki&lt;/strong&gt; में आपका स्वागत है, यह एक high-performance, static shared knowledge browser है। यह base static, beautifully styled, और responsive pages के साथ बनाया गया है, जिसे compile और read किया जा सकता है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;Tip: Live Search उपलब्ध है&lt;/div&gt;&#xA;&lt;p&gt;आप अपने notes को किसी भी समय &lt;span class=&#34;kbd&#34;&gt;Ctrl&lt;/span&gt; + &lt;span class=&#34;kbd&#34;&gt;K&lt;/span&gt; दबाकर या sidebar में search bar पर click करके तुरंत search कर सकते हैं।&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;अपन-knowledge-base-explore-कर&#34;&gt;अपना Knowledge Base Explore करें&lt;/h2&gt;&#xA;&lt;p&gt;guides, cheat sheets, और development workflows को explore करने के लिए नीचे दी गई category चुनें या sidebar का उपयोग करें:&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>📖 Linux Bible</title>
-				<link>http://example.org/pages/linux/linux-bible/index.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-bible/index.html</link>
 				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/linux/linux-bible/index.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-bible/index.html</guid>
 				<description>&lt;p&gt;Linux एक powerful, open-source, और highly customizable kernel है जिसपर आधारित कई distributions (Fedora, Arch, Debian, Ubuntu आदि) चलते हैं। यह guide, Linux Wiki की श्रेणियों का एक व्यापक और व्यवस्थित सूचकांक (Table of Contents) प्रदान करती है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34; style=&#34;margin-bottom: 2rem;&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Quick Action: Linux Maintenance Guide&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;यदि आप package managers update (dnf, pacman, apt), systemd commands ya logs monitor tools देखना चाहते हैं, तो सीधे हमारे &lt;a href=&#34;maintenance.html&#34; class=&#34;wiki-link&#34;&gt;🔧 Linux Maintenance Guide&lt;/a&gt; को देखें।&lt;/p&gt;</description>
 			</item>
 	</channel>

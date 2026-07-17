@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Gpu on CuriousWiki</title>
-		<link>http://example.org/tags/gpu.html</link>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/gpu.html</link>
 		<description>Recent content in Gpu on CuriousWiki</description>
 		<generator>Hugo</generator>
 		<language>hi</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/gpu/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/gpu/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>🖥️ Alacritty - GPU Accelerated Terminal Emulator Setup</title>
-				<link>http://example.org/pages/linux/linux-tools/alacritty.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/alacritty.html</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/linux/linux-tools/alacritty.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/alacritty.html</guid>
 				<description>&lt;p&gt;&lt;strong&gt;Alacritty&lt;/strong&gt; एक lightweight, system-optimized, और hardware-accelerated (GPU based) terminal emulator है जो Rust language में बना है। यह render tasks के लिए graphics card का directly use करता है, जिससे performance smooth होती है और command execution latency (input lag) zero हो जाती है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Simplicity First Philosophy&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Alacritty tabs या splits को native feature की तरह process नहीं करता। यह strictly performance और correct text representation पर focus करता है। Tabs/Splits support के लिए इसे &lt;strong&gt;tmux&lt;/strong&gt; (Terminal Multiplexer) के साथ combine करके use करना standard Linux workflow है।&lt;/p&gt;</description>
 			</item>
 	</channel>

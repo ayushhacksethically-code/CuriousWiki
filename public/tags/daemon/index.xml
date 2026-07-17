@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Daemon on CuriousWiki</title>
-		<link>http://example.org/tags/daemon.html</link>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/daemon.html</link>
 		<description>Recent content in Daemon on CuriousWiki</description>
 		<generator>Hugo</generator>
 		<language>hi</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/daemon/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/daemon/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>⏰ Cron Jobs &amp; Scheduling Automation Guide</title>
-				<link>http://example.org/pages/linux/linux-tools/cron.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/cron.html</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/linux/linux-tools/cron.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/cron.html</guid>
 				<description>&lt;p&gt;Linux Operating System में tasks को predefined intervals (जैसे daily database backups, log rotation, updates sync) पर automated execution के लिए &lt;strong&gt;Cron Daemon&lt;/strong&gt; का use किया जाता है। Cron schedules को configure करने वाली list table को &lt;strong&gt;Crontab&lt;/strong&gt; (Cron Table) कहा जाता है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Daemon Execution&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Cron background में daemon service (&lt;code&gt;crond&lt;/code&gt;) की तरह runtime execution checks करता रहता है। System startup के समय systemd configuration इसे automatic load कर देती है।&lt;/p&gt;</description>
 			</item>
 	</channel>

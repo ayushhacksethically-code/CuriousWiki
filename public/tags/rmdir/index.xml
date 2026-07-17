@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Rmdir on CuriousWiki</title>
-		<link>http://example.org/tags/rmdir.html</link>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/rmdir.html</link>
 		<description>Recent content in Rmdir on CuriousWiki</description>
 		<generator>Hugo</generator>
 		<language>hi</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/rmdir/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/rmdir/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>📁 rmdir (remove empty directories) Command</title>
-				<link>http://example.org/pages/linux/bash/files-directories/rmdir.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/files-directories/rmdir.html</link>
 				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/linux/bash/files-directories/rmdir.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/files-directories/rmdir.html</guid>
 				<description>&lt;p&gt;&lt;strong&gt;&lt;code&gt;rmdir&lt;/code&gt; (Remove Directory)&lt;/strong&gt; command का काम केवल &lt;strong&gt;खाली फोल्डर्स (empty directories)&lt;/strong&gt; को filesystem से हटाना है। यह directories को clear करने का एक safe method है क्योंकि अगर folder में कोई भी data/file होगी, तो यह error देगा और deletion block कर देगा।&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-syntax&#34;&gt;1. Syntax&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rmdir &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;options&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; directory_name&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;s&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-key-options--flags&#34;&gt;2. Key Options &amp;amp; Flags&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;-p&lt;/code&gt;, &lt;code&gt;--parents&lt;/code&gt;: Empty nested directory path (जैसे &lt;code&gt;dir1/dir2/dir3&lt;/code&gt;) को recursive style में auto check validation पर delete करता है।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-v&lt;/code&gt;, &lt;code&gt;--verbose&lt;/code&gt;: Deletion status logs details show.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;3-safe-deletion-vs-rm--rf-comparison&#34;&gt;3. Safe deletion vs rm -rf comparison&lt;/h2&gt;&#xA;&lt;p&gt;जब आप &lt;code&gt;rm -rf folder&lt;/code&gt; चलाते हैं, तो वह बिना पूछे सब कुछ साफ़ कर देता है, जिससे important files उड़ने का ख़तरा रहता है। &lt;code&gt;rmdir&lt;/code&gt; केवल तभी काम करेगा जब folder खाली हो:&lt;/p&gt;</description>
 			</item>
 	</channel>

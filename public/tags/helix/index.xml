@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Helix on CuriousWiki</title>
-		<link>http://example.org/tags/helix.html</link>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/helix.html</link>
 		<description>Recent content in Helix on CuriousWiki</description>
 		<generator>Hugo</generator>
 		<language>hi</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Sat, 11 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/helix/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/helix/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>📝 Terminal Text Editors &amp; Setup Guide</title>
-				<link>http://example.org/pages/linux/bash/editors.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/editors.html</link>
 				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/linux/bash/editors.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/editors.html</guid>
 				<description>&lt;p&gt;Linux Terminal में direct code और config files को edit करने के लिए multiple options उपलब्ध हैं। इस guide में हम प्रमुख editors, उनके paradigms, setup configurations, और characteristics के बारे में विस्तार से जानेंगे।&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-understanding-terminal-editor-paradigms-एडटर-परडइमस&#34;&gt;1. Understanding Terminal Editor Paradigms (एडिटर पैराडाइम्स)&lt;/h2&gt;&#xA;&lt;p&gt;Editor चुनने से पहले, उनके &lt;strong&gt;architectural paradigms&lt;/strong&gt; को समझना बहुत ज़रूरी है। Terminal text editors मुख्य रूप से दो categories में विभाजित होते हैं:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Modal Editing (Vim, Helix):&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ये editors अलग-अलग active modes में काम करते हैं।&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Normal Mode:&lt;/strong&gt; default mode है, जिसमें keyboard की keys से text type नहीं होता, बल्कि वे cursor navigation और text editing commands की तरह काम करते हैं (जैसे: &lt;span class=&#34;kbd&#34;&gt;d&lt;/span&gt; और फिर &lt;span class=&#34;kbd&#34;&gt;w&lt;/span&gt; दबाने पर एक word delete होता है)।&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Insert Mode:&lt;/strong&gt; text लिखने के लिए &lt;span class=&#34;kbd&#34;&gt;i&lt;/span&gt; key दबाकर Insert Mode में जाना पड़ता है। Normal Mode में वापस आने के लिए &lt;span class=&#34;kbd&#34;&gt;Esc&lt;/span&gt; दबाया जाता है।&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Benefit:&lt;/strong&gt; Keyboard की home row से हाथ हटाए बिना बहुत तेज़ी से editing की जा सकती है।&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Modeless Editing (Nano, Micro):&lt;/strong&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;इसमें केवल एक ही &lt;strong&gt;single mode&lt;/strong&gt; होता है, जहाँ key presses से हमेशा text input होता है।&lt;/li&gt;&#xA;&lt;li&gt;Document में navigate करने के लिए &lt;strong&gt;arrow keys&lt;/strong&gt; या &lt;strong&gt;Control/Alt keyboard configurations (chords)&lt;/strong&gt; का उपयोग करना पड़ता है।&lt;/li&gt;&#xA;&lt;li&gt;ये editors standard GUI word processors (जैसे Notepad, VS Code) की तरह व्यवहार करते हैं।&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2-the-classics-the-titans-of-the-terminal-टरमनल-क-दगगज&#34;&gt;2. The Classics: The Titans of the Terminal (टर्मिनल के दिग्गज)&lt;/h2&gt;&#xA;&lt;p&gt;ये वे classic editors हैं जिन्होंने computing history को आकार दिया है। ये सभी Unix servers पर natively pre-installed और highly documented होते हैं:&lt;/p&gt;</description>
 			</item>
 	</channel>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Unalias on CuriousWiki</title>
-		<link>http://example.org/tags/unalias.html</link>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/unalias.html</link>
 		<description>Recent content in Unalias on CuriousWiki</description>
 		<generator>Hugo</generator>
 		<language>hi</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Sun, 05 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/unalias/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/unalias/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>⚡ BASH Builtins &amp; Custom Aliases</title>
-				<link>http://example.org/pages/linux/linux-tools/alias.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/alias.html</link>
 				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/linux/linux-tools/alias.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-tools/alias.html</guid>
 				<description>&lt;p&gt;BASH shell के अंदर functions और programs को fast execute करने के लिए &lt;strong&gt;Builtin Commands&lt;/strong&gt; और custom shortcuts (&lt;strong&gt;Aliases&lt;/strong&gt;) का use किया जाता है। यह guide &lt;code&gt;alias.txt&lt;/code&gt; file के essential controls को simple language में describe करती है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;What are Builtin Commands?&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Builtin commands सीधे shell memory से run होते हैं। इनके लिए file system से external application load नहीं करनी पड़ती, इसलिए ये fast execute होते हैं (जैसे &lt;code&gt;cd&lt;/code&gt;, &lt;code&gt;alias&lt;/code&gt;, &lt;code&gt;source&lt;/code&gt;)।&lt;/p&gt;</description>
 			</item>
 	</channel>

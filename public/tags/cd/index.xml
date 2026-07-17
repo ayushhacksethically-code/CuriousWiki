@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Cd on CuriousWiki</title>
-		<link>http://example.org/tags/cd.html</link>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/cd.html</link>
 		<description>Recent content in Cd on CuriousWiki</description>
 		<generator>Hugo</generator>
 		<language>hi</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/cd/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/cd/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>🚀 cd (change directory) Command</title>
-				<link>http://example.org/pages/linux/bash/files-directories/cd.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/files-directories/cd.html</link>
 				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/linux/bash/files-directories/cd.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/files-directories/cd.html</guid>
 				<description>&lt;p&gt;&lt;strong&gt;&lt;code&gt;cd&lt;/code&gt; (Change Directory)&lt;/strong&gt; command का काम terminal navigation को संभालना है, यानी एक folder से दूसरे folder में जाना। चूँकि यह command आपके current shell session के environment को directly affect करती है, इसलिए इसे &lt;strong&gt;Shell Built-in&lt;/strong&gt; के रूप में built किया गया है (इसका कोई independent binary executable file &lt;code&gt;/bin/cd&lt;/code&gt; नहीं होता)।&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-syntax--core-shortcuts&#34;&gt;1. Syntax &amp;amp; Core Shortcuts&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;options&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;directory&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;quick-shortcuts-शरटकटस&#34;&gt;Quick Shortcuts (शॉर्टकट्स):&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;cd&lt;/code&gt; (बिना किसी argument के): आपको सीधे आपके &lt;strong&gt;Home Directory&lt;/strong&gt; (&lt;code&gt;~&lt;/code&gt;) में ले जाता है।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;cd ~&lt;/code&gt;: यह भी आपको Home directory में ले जाता है।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;cd -&lt;/code&gt;: आपको &lt;strong&gt;पिछली directory&lt;/strong&gt; (previous folder) में वापस भेज देता है। (यह command line पर काम करते समय बहुत समय बचाता है)।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;cd ..&lt;/code&gt;: Directory tree में एक step ऊपर (parent directory) जाता है।&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2-options-for-symlinks&#34;&gt;2. Options for Symlinks&lt;/h2&gt;&#xA;&lt;p&gt;जैसे &lt;code&gt;pwd&lt;/code&gt; में होता है, &lt;code&gt;cd&lt;/code&gt; में भी path resolution के लिए flags होते हैं:&lt;/p&gt;</description>
 			</item>
 	</channel>

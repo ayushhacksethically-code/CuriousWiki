@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Virtualization on CuriousWiki</title>
-		<link>http://example.org/tags/virtualization.html</link>
+		<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/virtualization.html</link>
 		<description>Recent content in Virtualization on CuriousWiki</description>
 		<generator>Hugo</generator>
 		<language>hi</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Tue, 30 Jun 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://example.org/tags/virtualization/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/virtualization/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>☁️ VPS पर Linux: विस्तृत इंस्टॉलेशन गाइड</title>
-				<link>http://example.org/pages/linux/linux-bible/vps.html</link>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-bible/vps.html</link>
 				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
-				<guid>http://example.org/pages/linux/linux-bible/vps.html</guid>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/linux-bible/vps.html</guid>
 				<description>&lt;h2 id=&#34;भमक-virtualization-और-virtual-private-server-vps-कय-ह&#34;&gt;भूमिका: Virtualization और Virtual Private Server (VPS) क्या है?&lt;/h2&gt;&#xA;&lt;p&gt;तकनीकी शब्दावली में, &lt;strong&gt;Virtual Private Server (VPS)&lt;/strong&gt; एक ऐसी तकनीक है जिसके द्वारा एक भौतिक सर्वर (Physical Server) को virtualization सॉफ्टवेयर (जिसे &lt;strong&gt;Hypervisor&lt;/strong&gt; कहा जाता है) की मदद से कई छोटे, स्वतंत्र वर्चुअल कंप्यूटर्स में विभाजित कर दिया जाता है।&lt;/p&gt;&#xA;&lt;p&gt;यह प्रक्रिया मुख्य रूप से दो प्रकार के Hypervisors के माध्यम से होती है:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Type 1 Hypervisor (Bare-Metal)&lt;/strong&gt;: यह सीधे भौतिक सर्वर के हार्डवेयर पर चलता है। इसके उदाहरण हैं &lt;strong&gt;KVM (Kernel-based Virtual Machine)&lt;/strong&gt;, VMware ESXi, और Proxmox VE (KVM आधारित)। यह बेहद कुशल और हाई-परफॉर्मेंस होता है।&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Type 2 Hypervisor (Hosted)&lt;/strong&gt;: यह एक पहले से मौजूद ऑपरेटिंग सिस्टम के ऊपर एप्लीकेशन के रूप में चलता है, जैसे VirtualBox या VMware Workstation।&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;VPS सेवाएं (जैसे DigitalOcean, Linode, Hetzner, या OVH) मुख्य रूप से KVM या Xen जैसे bare-metal virtualization तकनीकों का उपयोग करती हैं। इससे हर उपभोक्ता (customer) को अपना एक स्वतंत्र, सुरक्षित और dedicated वातावरण मिलता है, जहाँ वे अपनी इच्छानुसार रूट एक्सेस (root access), कस्टम कर्नेल (custom kernel), और पैकेजों को कॉन्फ़िगर कर सकते हैं।&lt;/p&gt;</description>
 			</item>
 	</channel>
