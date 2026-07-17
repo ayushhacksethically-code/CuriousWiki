@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Symlinks on CuriousWiki</title>
+		<link>http://example.org/tags/symlinks.html</link>
+		<description>Recent content in Symlinks on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/symlinks/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>📁 Linux Files &amp; Directories Guide</title>
+				<link>http://example.org/pages/linux/bash/files-directories/index.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/bash/files-directories/index.html</guid>
+				<description>&lt;p&gt;Linux and BASH environments में files and directory structures management, permissions settings, standards layouts, और advanced links/searching operations की specifications।&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-filesystem-hierarchy-standard-fhs&#34;&gt;1. Filesystem Hierarchy Standard (FHS)&lt;/h2&gt;&#xA;&lt;p&gt;Linux directory tree root (&lt;code&gt;/&lt;/code&gt;) से start होता है। FHS standards के base पर directories का purpose structured होता है:&lt;/p&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Directory Path&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Primary Purpose&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;Root Directory:&lt;/strong&gt; System filesystem का base entry point.&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;/bin&lt;/code&gt; | &lt;code&gt;/sbin&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Standard binary executables (commands) और system admin commands (superuser binaries).&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;/boot&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Boot-loader files, kernel images, और configuration systems details.&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;/dev&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;Device files:&lt;/strong&gt; physical and virtual hardware references (e.g. &lt;code&gt;/dev/null&lt;/code&gt;, &lt;code&gt;/dev/sda&lt;/code&gt;).&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;/etc&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;Configurations:&lt;/strong&gt; System level custom config settings (e.g., &lt;code&gt;/etc/passwd&lt;/code&gt;, &lt;code&gt;/etc/fstab&lt;/code&gt;).&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;/home&lt;/code&gt; | &lt;code&gt;/root&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Users&amp;rsquo; home folders directories (regular users home path vs root superuser home path).&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;/var&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Variable files changing sizes: log folders (&lt;code&gt;/var/log&lt;/code&gt;), databases, emails.&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;/tmp&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Temporary storage location (typically cleared automatically on system reboot).&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;2-core-directory-operations-मल-नरदशक-सचलन&#34;&gt;2. Core Directory Operations (मूल निर्देशिका संचालन)&lt;/h2&gt;&#xA;&lt;p&gt;Terminal navigation और folder management commands:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

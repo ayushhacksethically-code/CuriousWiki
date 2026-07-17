@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="geda, eda, pcb, layout, circuit, schematic, simulation, electronica">
+    <title>gEDA Project Guide | CuriousWiki Reference</title>
+    <!-- Lucide Icons CDN -->
+    
+    <link rel="stylesheet" href="../css/style.css?v=1.0.1">
+    
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">></span>
+                    <span>Reference</span>
+                    <span class="separator">></span>
+                    <span>gEDA Project Guide</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">🔌 gEDA Project (Electronic Design Automation)</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> July 03, 2026</span>
+                            <span><i data-lucide="clock"></i> 4 min read</span>
+                            <span><i data-lucide="tag"></i> eda, pcb, electronics, hardware</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p>gEDA project ne ek complete GPL-licensed suite aur toolkit banayi hai (aur ispe kaam chal raha hai) jo <strong>Electronic Design Automation (EDA)</strong> tools ke liye hai. In tools ka use electrical circuit design, schematic capture, simulation, prototyping, aur production ke liye kiya jata hai. Filhal, gEDA project electronics design ke liye free software applications ka ek mature suite offer karta hai, jisme schematic capture, attribute management, bill of materials (BOM) generation, 20 se zyada netlist formats me netlisting, analog aur digital simulation, aur printed circuit board (PCB) layout shamil hain.</p>
+
+                        <p>gEDA project ki shuruat POSIX systems ke liye free EDA tools ki kami ki wajah se hui thi, jiska primary purpose free hardware ya open-source hardware ko promote karna tha. Yeh suite mainly GNU/Linux platform par develop kiya jata hai, lekin is baat ka bhi dhyan rakha jata hai ki ye tools baki platforms par bhi sahi se chal sakein.</p>
+                        
+                        <p>Source: <a href="http://www.gpleda.org/" target="_blank" rel="noopener noreferrer">gEDA Homepage</a></p>
+
+                        <div class="callout callout-info">
+                            <i data-lucide="info"></i>
+                            <div class="callout-content">
+                                <div class="callout-title">gEDA Scope</div>
+                                <p>Yeh toolkit full electronic workflow ko handle karti hai: Schematic sketch karne se lekar PCB production aur gerber generation tak.</p>
+                            </div>
+                        </div>
+
+                        <h2>⚙️ Installation (इन्स्टॉलेशन)</h2>
+                        <p>gEDA Tools ko setup karne ke liye standard packages ko install karna hoga:</p>
+                        <ul>
+                            <li>AUR se <code>geda-gaf</code> install karne se aapko schematic editor aur attribute editor mil jayenge.</li>
+                            <li>Font scaling ko sahi rakhne ke liye <code>ttf-dejavu</code> aur <code>ttf-liberation</code> install karna zaroori ho sakta hai.</li>
+                            <li>AUR se <code>pcb</code> install karne se aapko PCB layout editor mil jayega.</li>
+                        </ul>
+
+                        <pre><code class="language-bash"># geda-gaf aur pcb ko AUR helper (jaise yay) se install karein:
+yay -S geda-gaf pcb ttf-dejavu ttf-liberation</code></pre>
+
+                        <h2>🛠️ First PCB (पहला पीसीबी)</h2>
+                        
+                        <h3>1. Schematic Symbol Create Karein (सिंबल बनाना)</h3>
+                        <p>Aap naye symbol bilkul waise hi bana sakte hain jaise aap schematics banate hain. Sabse pehle ek empty file open karein:</p>
+                        <pre><code class="language-bash">gschem mysymbol.sym</code></pre>
+                        
+                        <p>Aur pins add karne ke liye <kbd>ap</kbd> aur attributes edit karne ke liye <kbd>aa</kbd> shortcut ka use karein. Attributes ki details ke liye <a href="http://wiki.geda-project.org/geda:master_attributes_list" target="_blank" rel="noopener noreferrer">gEDA Master Attributes List</a> check karein.</p>
+                        
+                        <div class="callout callout-warning">
+                            <i data-lucide="alert-triangle"></i>
+                            <div class="callout-content">
+                                <div class="callout-title">Absolute Zero Alignments</div>
+                                <p>Kaam khatam hone ke baad, apne symbol ko absolute zero coordinates par translate karna na bhoolein (shortcut: <kbd>et</kbd>). Agar aap aisa nahi karte, toh jab aap ise schematic me place karenge toh symbol viewport se bahar gayab ho jayega.</p>
+                            </div>
+                        </div>
+
+                        <p>Symbol ko save karne ke liye <kbd>fs</kbd> dabayein aur is command se validation check karein:</p>
+                        <pre><code class="language-bash">gsymcheck -vv mysymbol.sym</code></pre>
+
+                        <h4>Schematic Search Path Config</h4>
+                        <p>Apne local symbol ko <code>gschem</code> ke search path me add karna zaroori hai. Iske liye project folder me ek file banayein jiska naam <code>gafrc</code> ho, aur usme ye line likhein:</p>
+                        <pre><code class="language-scheme">(component-library "./symbols")</code></pre>
+                        <p>Iske baad apne saare custom components/symbols ko <code>symbols</code> subfolder ke andar copy kar dein.</p>
+
+                        <h3>2. Schematic Create Karein (स्केमैटिक बनाना)</h3>
+                        <p>Schematic editor ko open karne ke liye command run karein:</p>
+                        <pre><code class="language-bash">gschem</code></pre>
+                        <p>Naye circuits ko design aur connect karne ke liye workspace use karein. Zyada details ke liye <a href="http://wiki.geda-project.org/geda:faq-gschem" target="_blank" rel="noopener noreferrer">gschem FAQ page</a> check karein.</p>
+
+                        <h3>3. PCB Create aur Route Karein (पीसीबी रूटिंग)</h3>
+                        <p>Jab aap schematic complete kar lein aur PCB routing shuru karni ho, toh ek <code>gsch2pcb</code> project set up karein. Ek nayi file banayein jiska naam <strong><code>firstpcb.prj</code></strong> ho aur usme ye configure karein:</p>
+                        <pre><code class="language-text">schematics firstpcb.sch
+empty-footprint nofootprint
+output-name firstpcb</code></pre>
+
+                        <p>Yeh project setup <code>firstpcb.sch</code> file ko parse karega, 'nofootprint' wale elements ko ignore karega, aur ye output files generate karega:</p>
+                        <ul>
+                            <li><strong><code>firstpcb.pcb</code></strong>: Layout aur routing file</li>
+                            <li><strong><code>firstpcb.net</code></strong>: Connections netlist</li>
+                            <li><strong><code>firstpcb.cmd</code></strong>: Pin name commands</li>
+                        </ul>
+
+                        <p>Agar local directories load karni hain toh <code>.prj</code> file me ye lines zaroor add karein:</p>
+                        <pre><code class="language-text">elements-dir footprints
+elements-dir symbols</code></pre>
+
+                        <p>Ab design synchronise karne ke liye command run karein:</p>
+                        <pre><code class="language-bash">gsch2pcb -f firstpcb.prj</code></pre>
+                        <p>Iske baad <code>gsch2pcb</code> aapko feedback dega ya required netlist update kar dega.</p>
+
+                        <div class="backlinks-container">
+                            <div class="backlinks-title">Linked References (Backlinks)</div>
+                            <div class="backlinks-list">
+                                <a href="../index.html" class="backlink-item">
+                                    <i data-lucide="layout-dashboard"></i>
+                                    <span>Home Dashboard</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, aur JS ke sath banaya gaya hai.</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

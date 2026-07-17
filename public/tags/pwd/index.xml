@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Pwd on CuriousWiki</title>
+		<link>http://example.org/tags/pwd.html</link>
+		<description>Recent content in Pwd on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/pwd/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🐚 pwd (print working directory) Command</title>
+				<link>http://example.org/pages/linux/bash/files-directories/pwd.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/bash/files-directories/pwd.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;&lt;code&gt;pwd&lt;/code&gt; (Print Working Directory)&lt;/strong&gt; एक बहुत ही basic और frequently used command है। इसका मुख्य काम यह बताना है कि आप इस समय Linux directory tree में किस directory/folder के अंदर काम कर रहे हैं (यानी आपका Current Path क्या है)।&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-shell-built-in-vs-system-binary&#34;&gt;1. Shell Built-in vs System Binary&lt;/h2&gt;&#xA;&lt;p&gt;क्या आप जानते हैं कि Linux में &lt;code&gt;pwd&lt;/code&gt; नाम की दो चीजें होती हैं?&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Shell Built-in:&lt;/strong&gt; यह BASH या ZSH shell के अंदर का inbuilt tool है। जब आप terminal पर &lt;code&gt;pwd&lt;/code&gt; लिखते हैं, तो default रूप से यही run होता है। यह सुपर-फास्ट है क्योंकि इसके लिए shell को बाहर कोई नया process create नहीं करना पड़ता।&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;System Binary:&lt;/strong&gt; यह hard disk पर store एक independent binary file है, जो आमतौर पर &lt;code&gt;/bin/pwd&lt;/code&gt; पर होती है।&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# यह चेक करने के लिए कि आपके terminal में कौन सा pwd चल रहा है:&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;type -a pwd&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Output:&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# pwd is a shell builtin&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# pwd is /bin/pwd&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-options--flags&#34;&gt;2. Options &amp;amp; Flags&lt;/h2&gt;&#xA;&lt;p&gt;आम तौर पर हम बिना किसी options के &lt;code&gt;pwd&lt;/code&gt; चलाते हैं, लेकिन इसके दो बहुत महत्वपूर्ण flags हैं जो Symbolic Links (Symlinks) के साथ काम करते समय काम आते हैं:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

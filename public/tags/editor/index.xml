@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Editor on CuriousWiki</title>
+		<link>http://example.org/tags/editor.html</link>
+		<description>Recent content in Editor on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 30 Jun 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/editor/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>⌨️ Vim Text Editor Cheatsheet</title>
+				<link>http://example.org/pages/vim-cheatsheet.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/vim-cheatsheet.html</guid>
+				<description>&lt;p&gt;Vim modes के अंदर files को efficiently edit करने के लिए essential keyboard shortcuts, cursor movements, deletion macros, text search commands, और registers.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-cursor-movement-normal-mode&#34;&gt;1. Cursor Movement (Normal Mode)&lt;/h2&gt;&#xA;&lt;p&gt;Arrow keys या mouse का उपयोग किए बिना text को जल्दी navigate करना:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;h&lt;/span&gt;: cursor को एक character left ले जाएं&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;j&lt;/span&gt;: cursor को एक line down ले जाएं&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;k&lt;/span&gt;: cursor को एक line up ले जाएं&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;l&lt;/span&gt;: cursor को एक character right ले जाएं&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;w&lt;/span&gt;: अगले word के start पर jump करें&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;b&lt;/span&gt;: पिछले word के start पर jump करें&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;0&lt;/span&gt;: current line के start पर जाएं&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;$&lt;/span&gt;: current line के end पर जाएं&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;G&lt;/span&gt;: document की last line पर jump करें&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;gg&lt;/span&gt;: document की first line पर jump करें&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2-mode-switching&#34;&gt;2. Mode Switching&lt;/h2&gt;&#xA;&lt;p&gt;Insert, Visual, और Command-Line modes के बीच transition करना:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

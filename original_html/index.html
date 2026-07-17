@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="dashboard, home, index, wiki">
+    <title>CuriousWiki | Shared Knowledge Dashboard</title>
+    <!-- Lucide Icons CDN -->
+    
+    <link rel="stylesheet" href="css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span class="separator">></span>
+                    <span>Dashboard</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">🧠 CuriousWiki Dashboard</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> आज Update किया गया</span>
+                            <span><i data-lucide="folder"></i> Index</span>
+                            <span><i data-lucide="user"></i> Narayanas</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p><strong>CuriousWiki</strong> में आपका स्वागत है, यह एक high-performance, static shared knowledge browser है। यह base static, beautifully styled, और responsive pages के साथ बनाया गया है, जिसे compile और read किया जा सकता है।</p>
+                        
+                        <div class="callout callout-info">
+                            <i data-lucide="info"></i>
+                            <div class="callout-content">
+                                <div class="callout-title">Tip: Live Search उपलब्ध है</div>
+                                <p>आप अपने notes को किसी भी समय <kbd>Ctrl</kbd> + <kbd>K</kbd> दबाकर या sidebar में search bar पर click करके तुरंत search कर सकते हैं।</p>
+                            </div>
+                        </div>
+
+                        <h2>अपना Knowledge Base Explore करें</h2>
+                        <p>guides, cheat sheets, और development workflows को explore करने के लिए नीचे दी गई category चुनें या sidebar का उपयोग करें:</p>
+
+                        <div class="dashboard-grid">
+                            <div class="dashboard-card">
+                                <div class="card-icon"><i data-lucide="book-open"></i></div>
+                                <div class="card-title">Getting Started</div>
+                                <div class="card-desc">Double brackets setup करने, pages और folders बनाने, और tags register करने की guide.</div>
+                                <div class="card-footer">
+                                    <a href="pages/getting-started.html">Guide खोलें →</a>
+                                    <span>2m</span>
+                                </div>
+                            </div>
+
+
+                            <div class="dashboard-card">
+                                <div class="card-icon"><i data-lucide="terminal"></i></div>
+                                <div class="card-title">JS Cheat Sheet</div>
+                                <div class="card-desc">Promises, async loops, DOM selectors, और storage के लिए आवश्यक developer formulas.</div>
+                                <div class="card-footer">
+                                    <a href="pages/javascript-cheatsheet.html">Sheet देखें →</a>
+                                    <span>4m</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-icon"><i data-lucide="clock"></i></div>
+                                <div class="card-title">Productivity Hacks</div>
+                                <div class="card-desc">Pomodoro, time blocking sheets, reviews, और focus mode targets के लिए workflows.</div>
+                                <div class="card-footer">
+                                    <a href="pages/productivity.html">Hacks देखें →</a>
+                                    <span>3m</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-icon"><i data-lucide="git-branch"></i></div>
+                                <div class="card-title">Git Cheatsheet</div>
+                                <div class="card-desc">Commits, branch mergers, stashes, rebases, और pushes के लिए command-line guidelines.</div>
+                                <div class="card-footer">
+                                    <a href="pages/git-cheatsheet.html">Sheet देखें →</a>
+                                    <span>3m</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-icon"><i data-lucide="globe"></i></div>
+                                <div class="card-title">Web/CSS Tips</div>
+                                <div class="card-desc">Flexbox alignments, Grid columns, custom animations, और variables के लिए quick recipes.</div>
+                                <div class="card-footer">
+                                    <a href="pages/web-tips.html">Tips खोलें →</a>
+                                    <span>3m</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-icon"><i data-lucide="keyboard"></i></div>
+                                <div class="card-title">Vim Cheatsheet</div>
+                                <div class="card-desc">Keyboard navigation shortcuts, deletion shortcuts, search regex, और buffer registers.</div>
+                                <div class="card-footer">
+                                    <a href="pages/vim-cheatsheet.html">Sheet देखें →</a>
+                                    <span>2m</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-icon"><i data-lucide="cpu"></i></div>
+                                <div class="card-title">Nim Cheatsheet</div>
+                                <div class="card-desc">Types, async socket handlers, templates, और file systems के लिए code formulas.</div>
+                                <div class="card-footer">
+                                    <a href="pages/nim-cheatsheet.html">Sheet देखें →</a>
+                                    <span>4m</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-icon"><i data-lucide="cpu"></i></div>
+                                <div class="card-title">gEDA Project</div>
+                                <div class="card-desc">Schematic capture, PCB design, netlisting, aur local symbols library automation.</div>
+                                <div class="card-footer">
+                                    <a href="pages/geda.html">Guide देखें →</a>
+                                    <span>4m</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-icon"><i data-lucide="book"></i></div>
+                                <div class="card-title">Linux Bible</div>
+                                <div class="card-desc">OS Boot sequences, package managers, installers, and systemd maintenance protocols.</div>
+                                <div class="card-footer">
+                                    <a href="pages/linux/linux-bible/index.html">Bible खोलें →</a>
+                                    <span>8m</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-icon"><i data-lucide="pocket"></i></div>
+                                <div class="card-title">Linux Tools</div>
+                                <div class="card-desc">System monitors (htop, fastfetch), log filtering (ripgrep, grep) & active port diagnostics.</div>
+                                <div class="card-footer">
+                                    <a href="pages/linux/linux-tools/index.html">Tools खोलें →</a>
+                                    <span>3m</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-icon"><i data-lucide="terminal"></i></div>
+                                <div class="card-title">Shells Guide</div>
+                                <div class="card-desc">Detailed comparison of interactive shells (Bash, Zsh, Fish) and Windows environments (Cmd, PowerShell).</div>
+                                <div class="card-footer">
+                                    <a href="pages/linux/linux-tools/shell/index.html">Guide देखें →</a>
+                                    <span>5m</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-icon"><i data-lucide="terminal-square"></i></div>
+                                <div class="card-title">BASH Guide</div>
+                                <div class="card-desc">Redirections, streams, custom editor setups, scripting data types, arrays, conditionals, loops, package managers, and networking.</div>
+                                <div class="card-footer">
+                                    <a href="pages/linux/bash/index.html">Guide खोलें →</a>
+                                    <span>10m</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-icon"><i data-lucide="folder"></i></div>
+                                <div class="card-title">Files & Directories</div>
+                                <div class="card-desc">Linux Directory Tree (FHS), soft/hard links, file permissions (chmod, chown), special permissions, and find commands.</div>
+                                <div class="card-footer">
+                                    <a href="pages/linux/bash/files-directories/index.html">Guide खोलें →</a>
+                                    <span>7m</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card">
+                                <div class="card-icon"><i data-lucide="book-marked"></i></div>
+                                <div class="card-title">Commands Index</div>
+                                <div class="card-desc">CuriousWiki में उपलब्ध सभी BASH और Linux utility commands के detailed guides का एक central index.</div>
+                                <div class="card-footer">
+                                    <a href="pages/commands.html">Index खोलें →</a>
+                                    <span>2m</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
+                            <span>CuriousWiki Open Source Project</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results Rendered Here -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

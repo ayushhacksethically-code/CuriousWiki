@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="linux, sysadmin, preseed, debian, xorriso, mirror, zip, recursion">
+    <title>Case Study: preseed Mirror Debugging & Zip Recursion | CuriousWiki</title>
+    <!-- Lucide Icons CDN -->
+    
+    <link rel="stylesheet" href="../css/style.css?v=1.0.1">
+    
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">></span>
+                    <span>Case Studies & Tutorials</span>
+                    <span class="separator">></span>
+                    <span>Preseed & Zip Debugging</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">🛠️ Case Study: Re-routing Broken Preseed Mirrors & Avoiding 36 GB Zip Loop Explosion</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> July 01, 2026</span>
+                            <span><i data-lucide="clock"></i> 5 min read</span>
+                            <span><i data-lucide="tag"></i> debian, preseed, symlink, zip, sysadmin</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p>कस्टम ऑपरेटिंग सिस्टम (जैसे Debian या BOSS Linux) का निर्माण या अनुकूलन करते समय हमें ऐसी जटिल समस्याओं का सामना करना पड़ता है जो सैद्धांतिक तौर पर सही दिखती हैं पर व्यावहारिक स्तर पर बूटलोडर या पैकेजर को क्रैश कर देती हैं। यह केस स्टडी इसी तरह की एक महत्वपूर्ण वास्तविक समस्या और उसके इंजीनियरिंग समाधान का विवरण देती है।</p>
+
+                        <h2>Main: The 36 GB Zip Loop Explosion</h2>
+                        <p>लिनक्स डायरेक्टरीज़ में कई शॉर्टकट्स या सिम्बॉलिक लिंक्स (symlinks) होते हैं जो उसी डायरेक्टरी या उसके पेरेंट को पॉइंट करते हैं। ऐसी फाइलों को आर्काइव (compress) करते समय विशेष सावधानी की आवश्यकता होती है।</p>
+
+                        <div class="callout callout-danger">
+                            <i data-lucide="alert-octagon"></i>
+                            <div class="callout-content">
+                                <div class="callout-title">36 GB की ज़िप धमाका!</div>
+                                <p>Extracted ISO फोल्डर के अंदर एक सिम्बॉलिक लिंक था: <code>debian -> .</code> (यहाँ <code>.</code> वर्तमान निर्देशिका को दर्शाता है)। जब हमने बिना किसी एहतियात के सामान्य <code>zip -r</code> कमांड चलाया, तो ज़िप यूटिलिटी इस लिंक को एक असली डायरेक्टरी मानकर उसके अंदर लूप में घुस गई और वही फाइलें बार-बार कंप्रेस करने लगी। परिणामस्वरूप, एक 800 MB का फोल्डर <strong>36 GB</strong> की विशालकाय फाइल में बदल गया!</p>
+                            </div>
+                        </div>
+
+                        <h3>1. इनफिनिट लूप रिकर्सन (Infinite Loop Recursion)</h3>
+                        <p>ज़िप टूल ने इस शॉर्टकट को इस प्रकार ट्रेवर्स किया:</p>
+                        <pre><code>NarayanaIso/
+└── debian/ (points back to .)
+    └── debian/
+        └── debian/
+            └── debian/ ... (infinity)</code></pre>
+
+                        <h3>2. समाधान: <code>-y</code> फ़्लैग का असली दम</h3>
+                        <p>इस इनफिनिट लूप को तोड़ने के लिए ज़िप कमांड को सिम्बॉलिक लिंक्स को बिना फॉलो किए उनके मूल रूप (shortcut) में ही स्टोर करने का आदेश देना होता है। इसके लिए <code>-y</code> (या <code>--symlinks</code>) फ़्लैग का उपयोग किया जाता है:</p>
+
+                        <pre><code class="language-bash"># गलत तरीका (Infinite Recursion):
+zip -r -9 archive.zip /path/to/folder
+
+# सही तरीका (Symlink Preservation):
+zip -ry -9 archive.zip /path/to/folder</code></pre>
+                        <p>जैसे ही हमने <code>-y</code> फ़्लैग को जोड़ा, कम्प्रेस्ड फाइल का साइज **36 GB से सीधे सिमटकर 886 MB** हो गया!</p>
+
+                        <hr>
+
+                        <h2>💡 Sysadmin Best Practices & Checklist</h2>
+                        <p>कस्टम लिनक्स बूट डिस्क या बैकअप पर काम करते समय इस चेकलिस्ट का पालन करें:</p>
+                        
+                        <ul>
+                            <li><strong>Write Permissions Check:</strong> जब आप ISO से फाइलें कॉपी करते हैं, तो वे डिफ़ॉल्ट रूप से Read-Only (444) होती हैं। कोई भी बदलाव करने से पहले उन्हें <code>chmod -R u+w /path/to/source</code> चलाकर राइट-परमिशन प्रदान करें।</li>
+                            <li><strong>Recreate md5sum.txt:</strong> बूटलोडर की अखंडता जांच (Integrity Check) फेल होने से बचाने के लिए फ़ाइलें एडिट करने के बाद हमेशा <code>md5sum.txt</code> को दोबारा जनरेट करें।</li>
+                            <li><strong>xorriso Output Path Isolation:</strong> <code>xorriso</code> चलाते समय अपनी टारगेट आउटपुट ISO फ़ाइल को सोर्स डायरेक्टरी के रूट से बाहर रखें (जैसे <code>Downloads/</code> या <code>home</code> रूट) ताकि कम्पाइलेशन के समय सोर्स फ़ोल्डर पॉल्यूट न हो।</li>
+                        </ul>
+
+                        <div class="backlinks-container">
+                            <div class="backlinks-title">Linked References (Backlinks)</div>
+                            <div class="backlinks-list">
+                                <a href="../index.html" class="backlink-item">
+                                    <i data-lucide="layout-dashboard"></i>
+                                    <span>Home Dashboard</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

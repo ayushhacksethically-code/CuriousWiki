@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Columns on CuriousWiki</title>
+		<link>http://example.org/tags/columns.html</link>
+		<description>Recent content in Columns on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 05 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/columns/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>📊 AWK: Pattern Scanning &amp; Text Processing</title>
+				<link>http://example.org/pages/linux/linux-tools/awk.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/awk.html</guid>
+				<description>&lt;p&gt;Linux environments में logs analysis और tabular files formatting के लिए &lt;strong&gt;AWK&lt;/strong&gt; language सबसे powerful scripting engine है। यह lines को &lt;strong&gt;Records&lt;/strong&gt; और space-separated parameters को &lt;strong&gt;Fields&lt;/strong&gt; की form में dynamically parse करता है। यह reference guide &lt;code&gt;awk.txt&lt;/code&gt; manual पर based है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Basic Syntax Structure&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;&lt;code&gt;awk [options] &#39;pattern { action }&#39; input-file&lt;/code&gt;&lt;br&gt;&#xA;Default behaviour: हर source line को read करके check करता है कि क्या वह &lt;code&gt;pattern&lt;/code&gt; criteria satisfy करता है, अगर हाँ तो bracket &lt;code&gt;{ action }&lt;/code&gt; blocks execute होते हैं।&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

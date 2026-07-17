@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Tar on CuriousWiki</title>
+		<link>http://example.org/tags/tar.html</link>
+		<description>Recent content in Tar on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/tar/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🖥️ Processes, Package Managers &amp; Networking</title>
+				<link>http://example.org/pages/linux/bash/system-admin.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/bash/system-admin.html</guid>
+				<description>&lt;p&gt;यह chapter Linux administration के parameters को cover करता है, जिसमें active processes control, package commands (apt, dnf, yum, pacman, brew), file compression, और network tools शामिल हैं।&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-process-management-परकरय-परबधन&#34;&gt;1. Process Management (प्रक्रिया प्रबंधन)&lt;/h2&gt;&#xA;&lt;p&gt;Linux में processes को view, modify, background execution, और kill करने के commands:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;code&gt;ps&lt;/code&gt;&lt;/strong&gt;: Active processes की snapshot देखना:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# CPU/Memory usage details के साथ सभी processes list करें&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ps aux | grep &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;node&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;code&gt;top&lt;/code&gt; / &lt;code&gt;htop&lt;/code&gt;&lt;/strong&gt;: System processes को dynamically real-time monitor करना.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

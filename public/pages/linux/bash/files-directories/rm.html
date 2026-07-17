@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="linux, bash, rm, commands, files, directories">
+    
+    <title>🗑️ rm (remove files or directories) Command</title>
+    
+    
+    <link rel="stylesheet" href="/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/pages/index.html">Pages</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/pages/linux/bash/index.html">🐚 BASH Scripting &amp; CLI Master Class</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/pages/linux/bash/files-directories/index.html">📁 Linux Files &amp; Directories Guide</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>🗑️ rm (remove files or directories) Command</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">🗑️ rm (remove files or directories) Command</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> July 1, 2026</span>
+            <span><i data-lucide="clock"></i> 2 min read</span>
+            
+            <span><i data-lucide="tag"></i> linux, bash, rm, commands, files, directories</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <p><strong><code>rm</code> (Remove)</strong> command का उपयोग Linux operating system से files और directories को permanent delete करने के लिए किया जाता है।</p>
+<div class="callout callout-danger">
+<i data-lucide="skull"></i>
+<div class="callout-content">
+<div class="callout-title">
+<p>🚨 WARNING: No Recycle Bin</p>
+</div>
+<p>Linux CLI/terminal में <code>rm</code> से delete की गई files Windows की तरह &ldquo;Recycle Bin&rdquo; या &ldquo;Trash&rdquo; में नहीं जातीं। ये permanent delete होती हैं, इसलिए इसका उपयोग बहुत सावधानी से करें!</p>
+</div>
+</div>
+<h2 id="1-syntax">1. Syntax</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> file_name<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h2 id="2-key-options--safety-flags">2. Key Options &amp; Safety Flags</h2>
+<ul>
+<li><code>-f</code>, <code>--force</code>: बिना किसी prompt/confirmation के सीधे force delete करता है। अगर फ़ाइल मौजूद नहीं है, तो भी कोई error warning नहीं दिखाता।</li>
+<li><code>-i</code>: <strong>Interactive Mode:</strong> हर एक file को delete करने से पहले user से confirmation (yes/no) मांगता है। (accidental deletions से बचने के लिए उत्तम)।</li>
+<li><code>-I</code>: अगर आप 3 से अधिक files या recursive directories को delete कर रहे हैं, तो केवल <strong>एक बार</strong> confirm prompt पूछेगा (less annoying than <code>-i</code>).</li>
+<li><code>-r</code>, <code>-R</code>, <code>--recursive</code>: Folder को उसके अंदर के सभी contents (files/sub-folders) सहित recursively delete करने के लिए। (directories हटाने के लिए यह flag अनिवार्य है)।</li>
+<li><code>--</code>: Hyphen prefix वाली tricky files (जैसे <code>-myfile.txt</code>) को safely delete करने के लिए delimiter mapping.</li>
+</ul>
+<h2 id="3-safe-deletion-examples">3. Safe Deletion Examples</h2>
+<h3 id="example-1-safe-deletion-using-interactive-checks">Example 1: Safe deletion using interactive checks</h3>
+<p>गलतियों से बचने के लिए command line पर <code>-i</code> use करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -i config.json
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Prompt: rm: remove regular file &#39;config.json&#39;? y/n</span>
+</span></span></code></pre></div><h3 id="example-2-remove-a-folder-recursively-force-delete">Example 2: Remove a folder recursively (Force delete)</h3>
+<p>यह command बहुत common है, पर ध्यान से चलाएँ (विशेषकर permissions permissions root levels पर):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -rf tmp_projects/
+</span></span></code></pre></div><h3 id="example-3-tricky-filenames-starting-with-hyphen">Example 3: Tricky filenames starting with hyphen</h3>
+<p>अगर आपने गलती से <code>-file.txt</code> नाम की file बना ली है, तो normal <code>rm -file.txt</code> इसे command logic flag समझकर error देगा। इसे ऐसे delete करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rm -- -file.txt
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># OR</span>
+</span></span><span style="display:flex;"><span>rm ./-file.txt
+</span></span></code></pre></div>
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

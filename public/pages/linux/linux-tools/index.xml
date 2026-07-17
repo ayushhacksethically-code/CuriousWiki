@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>🛠️ Linux CLI Power Tools on CuriousWiki</title>
+		<link>http://example.org/pages/linux/linux-tools/index.html</link>
+		<description>Recent content in 🛠️ Linux CLI Power Tools on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 10 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/pages/linux/linux-tools/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>⏰ Cron Jobs &amp; Scheduling Automation Guide</title>
+				<link>http://example.org/pages/linux/linux-tools/cron.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/cron.html</guid>
+				<description>&lt;p&gt;Linux Operating System में tasks को predefined intervals (जैसे daily database backups, log rotation, updates sync) पर automated execution के लिए &lt;strong&gt;Cron Daemon&lt;/strong&gt; का use किया जाता है। Cron schedules को configure करने वाली list table को &lt;strong&gt;Crontab&lt;/strong&gt; (Cron Table) कहा जाता है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Daemon Execution&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Cron background में daemon service (&lt;code&gt;crond&lt;/code&gt;) की तरह runtime execution checks करता रहता है। System startup के समय systemd configuration इसे automatic load कर देती है।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>📦 AUR Helpers (yay &amp; paru) - Arch User Repository Guide</title>
+				<link>http://example.org/pages/linux/linux-tools/aur-helpers.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/aur-helpers.html</guid>
+				<description>&lt;p&gt;Arch Linux में official repositories के अलावा, user-submitted packages का एक बहुत बड़ा repository है जिसे &lt;strong&gt;Arch User Repository (AUR)&lt;/strong&gt; कहा जाता है। AUR packages को easily search, build, install और update करने के लिए &lt;strong&gt;AUR Helpers&lt;/strong&gt; (जैसे &lt;code&gt;yay&lt;/code&gt; और &lt;code&gt;paru&lt;/code&gt;) का use किया जाता है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-warning&#34;&gt;&#xA;&lt;i data-lucide=&#34;alert-triangle&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Security Alert: Verify PKGBUILDs&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;चूंकि AUR packages community-submitted होते हैं, इसलिए safety के लिए package install करने से पहले उसके &lt;strong&gt;PKGBUILD&lt;/strong&gt; script को review करना important है। कभी भी blindly root permission (sudo) के साथ compile commands run न करें।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>🖥️ Alacritty - GPU Accelerated Terminal Emulator Setup</title>
+				<link>http://example.org/pages/linux/linux-tools/alacritty.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/alacritty.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Alacritty&lt;/strong&gt; एक lightweight, system-optimized, और hardware-accelerated (GPU based) terminal emulator है जो Rust language में बना है। यह render tasks के लिए graphics card का directly use करता है, जिससे performance smooth होती है और command execution latency (input lag) zero हो जाती है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Simplicity First Philosophy&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Alacritty tabs या splits को native feature की तरह process नहीं करता। यह strictly performance और correct text representation पर focus करता है। Tabs/Splits support के लिए इसे &lt;strong&gt;tmux&lt;/strong&gt; (Terminal Multiplexer) के साथ combine करके use करना standard Linux workflow है।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>🛡️ Acme.sh - Zero Dependency SSL/TLS Let&#39;s Encrypt Client</title>
+				<link>http://example.org/pages/linux/linux-tools/acme-sh.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/acme-sh.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;acme.sh&lt;/strong&gt; एक zero-dependency, pure Unix shell script-based ACME client protocol execution tool है। यह base ACME protocol standards (जैसे Let&amp;rsquo;s Encrypt, ZeroSSL, Buypass) का use करके automatic domain SSL certificates issue, verify, install और renew कर सकता है। इसके लिए Certbot की तरह massive dependencies (जैसे Python binaries) install करने की need नहीं होती।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Non-root Privileges Installation&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Certbot को system settings access करने के लिए root/sudo privilege level mandatory होता है। acme.sh easily &lt;strong&gt;non-root normal user directories&lt;/strong&gt; (&lt;code&gt;~/.acme.sh/&lt;/code&gt;) में standalone execute हो सकता है, जिससे server architecture secure रहती है।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>⚡ BASH Builtins &amp; Custom Aliases</title>
+				<link>http://example.org/pages/linux/linux-tools/alias.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/alias.html</guid>
+				<description>&lt;p&gt;BASH shell के अंदर functions और programs को fast execute करने के लिए &lt;strong&gt;Builtin Commands&lt;/strong&gt; और custom shortcuts (&lt;strong&gt;Aliases&lt;/strong&gt;) का use किया जाता है। यह guide &lt;code&gt;alias.txt&lt;/code&gt; file के essential controls को simple language में describe करती है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;What are Builtin Commands?&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Builtin commands सीधे shell memory से run होते हैं। इनके लिए file system से external application load नहीं करनी पड़ती, इसलिए ये fast execute होते हैं (जैसे &lt;code&gt;cd&lt;/code&gt;, &lt;code&gt;alias&lt;/code&gt;, &lt;code&gt;source&lt;/code&gt;)।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>📊 AWK: Pattern Scanning &amp; Text Processing</title>
+				<link>http://example.org/pages/linux/linux-tools/awk.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/awk.html</guid>
+				<description>&lt;p&gt;Linux environments में logs analysis और tabular files formatting के लिए &lt;strong&gt;AWK&lt;/strong&gt; language सबसे powerful scripting engine है। यह lines को &lt;strong&gt;Records&lt;/strong&gt; और space-separated parameters को &lt;strong&gt;Fields&lt;/strong&gt; की form में dynamically parse करता है। यह reference guide &lt;code&gt;awk.txt&lt;/code&gt; manual पर based है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Basic Syntax Structure&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;&lt;code&gt;awk [options] &#39;pattern { action }&#39; input-file&lt;/code&gt;&lt;br&gt;&#xA;Default behaviour: हर source line को read करके check करता है कि क्या वह &lt;code&gt;pattern&lt;/code&gt; criteria satisfy करता है, अगर हाँ तो bracket &lt;code&gt;{ action }&lt;/code&gt; blocks execute होते हैं।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>🔍 Grep: Pattern Searching &amp; Text Filtering</title>
+				<link>http://example.org/pages/linux/linux-tools/grep.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/grep.html</guid>
+				<description>&lt;p&gt;Linux systems में files के contents के अंदर specific words या regular expressions (patterns) find करने के लिए &lt;strong&gt;grep (Global Regular Expression Print)&lt;/strong&gt; command का use किया जाता है। यह guide &lt;code&gt;grep.txt&lt;/code&gt; manual पर based है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Grep Synopsis&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;&lt;code&gt;grep [OPTIONS] PATTERNS [FILE...]&lt;/code&gt;&lt;br&gt;&#xA;अगर कोई FILE parameter skip किया जाए या &lt;code&gt;-&lt;/code&gt; provide किया जाए, तो grep automatically standard input (stdin) से read करता है।&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;1-core-operations-बसक-कमडस&#34;&gt;1. Core Operations (बेसिक कमांड्स)&lt;/h2&gt;&#xA;&lt;p&gt;Normal pattern matching के लिए standard syntax:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

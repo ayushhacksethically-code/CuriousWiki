@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="bash, loops, conditionals, functions, error handling, trap, set strict mode">
+    <title>Logic & Control Flow | CuriousWiki BASH</title>
+    <!-- Lucide Icons CDN -->
+    
+    <link rel="stylesheet" href="../../../css/style.css?v=1.0.1">
+    
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="../../../index.html">Home</a>
+                    <span class="separator">></span>
+                    <a href="index.html">BASH Guide</a>
+                    <span class="separator">></span>
+                    <span>Logic & Control Flow</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">⚙️ BASH Logic, Loops & Custom Functions</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> July 01, 2026</span>
+                            <span><i data-lucide="clock"></i> 6 min read</span>
+                            <span><i data-lucide="tag"></i> logic, loops, error-handling</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p>यह chapter scripts में logic branching (conditionals), iterations (loops), functions implementation, और professional shell exit configurations (strict flags, signal trapping) को cover करता है।</p>
+
+                        <h2>1. Conditionals (निर्णय नियंत्रण)</h2>
+                        <p>BASH में conditionals check करने के लिए <code>[[ ... ]]</code> (advanced brackets syntax) का use किया जाता है।</p>
+                        <pre><code class="language-bash">declare -i age=20
+
+# 1. Standard If-Elif-Else Statement
+if [[ $age -ge 18 ]]; then
+    echo "You can vote!"
+elif [[ $age -gt 15 ]]; then
+    echo "Teenager"
+else
+    echo "Child"
+fi
+
+# 2. Case Statement (Switch-Case Pattern)
+status_code="404"
+case "$status_code" in
+    "200") echo "Success OK" ;;
+    "404") echo "Page Not Found" ;;
+    "500"|"502") echo "Server Error" ;;
+    *) echo "Unknown Status" ;;
+esac</code></pre>
+
+                        <h3>📁 File & Path Conditionals (फ़ाइल तुलना ऑपरेटर)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Operator</th>
+                                    <th>Check Condition</th>
+                                    <th>Usage Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>-f "$file"</code></td>
+                                    <td>True यदि path एक normal file है और exists करती है।</td>
+                                    <td><code>[[ -f "config.json" ]]</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>-d "$dir"</code></td>
+                                    <td>True यदि path एक valid directory है।</td>
+                                    <td><code>[[ -d "/var/log" ]]</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>-r "$file"</code></td>
+                                    <td>True यदि file read-accessible (पढ़ने योग्य) है।</td>
+                                    <td><code>[[ -r "/etc/hosts" ]]</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>-w "$file"</code></td>
+                                    <td>True यदि file write-accessible (लिखने योग्य) है।</td>
+                                    <td><code>[[ -w "/var/log/syslog" ]]</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>-s "$file"</code></td>
+                                    <td>True यदि file exists करती है और empty (खाली) नहीं है (size &gt; 0)।</td>
+                                    <td><code>[[ -s "output.log" ]]</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>2. Loops (लूप संरचनाएं)</h2>
+                        
+                        <h3>⚫ For Loops (लिस्ट पर इटरेशन)</h3>
+                        <pre><code class="language-bash"># Standard list loop
+for fruit in "Apple" "Banana" "Orange"; do
+    echo "Fruit: $fruit"
+done
+
+# C-Style structure loop
+for ((i=1; i<=5; i++)); do
+    echo "Counter: $i"
+done</code></pre>
+
+                        <h3>⚫ While & Until Loops (कंडीशन आधारित लूप)</h3>
+                        <pre><code class="language-bash"># While Loop: जब तक condition true है, तब तक चलेगा
+declare -i count=1
+while [[ $count -le 3 ]]; do
+    echo "Count: $count"
+    count+=1
+done
+
+# Until Loop: जब तक condition true नहीं होती (यानी false है), तब तक चलेगा
+declare -i port=8000
+until ss -tulpn | grep -q "$port"; do
+    echo "Waiting for port $port to start..."
+    sleep 1
+done</code></pre>
+
+                        <h2>3. Functions (कस्टम फंक्शन्स)</h2>
+                        <p>Code readability और clean scope maintain करने के लिए functions define किए जाते हैं:</p>
+                        <pre><code class="language-bash"># Defining a function
+function initialize_backup() {
+    # Local variable (सिर्फ function scope में accessible)
+    local dest_dir=$1
+    local src_dir=$2
+    
+    echo "Backing up from $src_dir to $dest_dir"
+    
+    # Return code / Success status check
+    if [[ -d "$src_dir" ]]; then
+        return 0 # Success exit
+    else
+        return 1 # Failure code
+    fi
+}
+
+# Calling a function with arguments
+initialize_backup "/var/backups" "/home/user/data"
+status=$? # exit status save करें
+echo "Backup Status: $status"</code></pre>
+
+                        <h2>4. Strict Mode and Error Handling (त्रुटि प्रबंधन)</h2>
+                        <p>Standard shell default behavior पर command failure होने पर भी script continue कर देता है। Production-ready scripts को robust बनाने के लिए <strong>Strict Mode flags</strong> configure करें:</p>
+                        <pre><code class="language-bash">#!/bin/bash
+set -e  # किसी भी command के fail (non-zero exit) होने पर script execution तुरंत रोकें।
+set -u  # Unset (non-declared) variables use करने पर script exit करें।
+set -o pipefail # Pipeline (|) के बीच में कोई command fail होने पर भी error return करें।
+
+# --- Combined Strict Mode ---
+set -euo pipefail</code></pre>
+
+                        <h3>🚨 Signal Trapping (सिग्नल्स और क्लीनअप)</h3>
+                        <p>जब user execution के बीच में <kbd>Ctrl+C</kbd> (SIGINT) दबाए, या script abnormal exit हो, तो temporary files clean-up करने के लिए <code>trap</code> command का use किया जाता है:</p>
+                        <pre><code class="language-bash"># Temporary file initialize करें
+temp_log="/tmp/sys-status.tmp"
+
+# Cleanup function
+function cleanup() {
+    echo "🧹 Cleaning up temporary files..."
+    rm -f "$temp_log"
+    echo "Done."
+}
+
+# Trap signal hooks (Exit, Interrupt or Terminate होने पर cleanup call करें)
+trap cleanup EXIT SIGINT SIGTERM
+
+# Logic execution simulating delay
+echo "Processing records..." > "$temp_log"
+sleep 5 # User can interrupt with Ctrl+C here to test cleanup</code></pre>
+
+                        <div class="backlinks-container">
+                            <div class="backlinks-title">Linked References (Backlinks)</div>
+                            <div class="backlinks-list">
+                                <a href="index.html" class="backlink-item">
+                                    <i data-lucide="terminal-square"></i>
+                                    <span>BASH Guide Index</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
+                            <span>CuriousWiki Open Source Project</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="../../../js/main.js"></script>
+</body>
+</html>

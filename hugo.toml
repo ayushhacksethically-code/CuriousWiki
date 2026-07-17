@@ -1,0 +1,10 @@
+baseURL = 'http://example.org/'
+languageCode = 'hi'
+title = 'CuriousWiki'
+theme = ''
+uglyURLs = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

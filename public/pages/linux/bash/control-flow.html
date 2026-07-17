@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="bash, loops, conditionals, functions, error handling, trap, set strict mode">
+    
+    <title>⚙️ BASH Logic, Loops &amp; Custom Functions</title>
+    
+    
+    <link rel="stylesheet" href="/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/pages/index.html">Pages</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/pages/linux/bash/index.html">🐚 BASH Scripting &amp; CLI Master Class</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>⚙️ BASH Logic, Loops &amp; Custom Functions</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">⚙️ BASH Logic, Loops &amp; Custom Functions</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> July 1, 2026</span>
+            <span><i data-lucide="clock"></i> 3 min read</span>
+            
+            <span><i data-lucide="tag"></i> bash, loops, conditionals, functions, error handling, trap, set strict mode</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <p>यह chapter scripts में logic branching (conditionals), iterations (loops), functions implementation, और professional shell exit configurations (strict flags, signal trapping) को cover करता है।</p>
+<h2 id="1-conditionals-नरणय-नयतरण">1. Conditionals (निर्णय नियंत्रण)</h2>
+<p>BASH में conditionals check करने के लिए <code>[[ ... ]]</code> (advanced brackets syntax) का use किया जाता है।</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>declare -i age<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 1. Standard If-Elif-Else Statement</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> $age -ge <span style="color:#ae81ff">18</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;You can vote!&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elif</span> <span style="color:#f92672">[[</span> $age -gt <span style="color:#ae81ff">15</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Teenager&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Child&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. Case Statement (Switch-Case Pattern)</span>
+</span></span><span style="display:flex;"><span>status_code<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;404&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;</span>$status_code<span style="color:#e6db74">&#34;</span> in
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;200&#34;</span><span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;Success OK&#34;</span> ;;
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;404&#34;</span><span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;Page Not Found&#34;</span> ;;
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;500&#34;</span>|<span style="color:#e6db74">&#34;502&#34;</span><span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;Server Error&#34;</span> ;;
+</span></span><span style="display:flex;"><span>    *<span style="color:#f92672">)</span> echo <span style="color:#e6db74">&#34;Unknown Status&#34;</span> ;;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">esac</span>
+</span></span></code></pre></div><h3 id="-file--path-conditionals-फइल-तलन-ऑपरटर">📁 File &amp; Path Conditionals (फ़ाइल तुलना ऑपरेटर)</h3>
+<table>
+	<thead>
+			<tr>
+					<th>Operator</th>
+					<th>Check Condition</th>
+					<th>Usage Example</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>-f &quot;$file&quot;</code></td>
+					<td>True यदि path एक normal file है और exists करती है।</td>
+					<td><code>[[ -f &quot;config.json&quot; ]]</code></td>
+			</tr>
+			<tr>
+					<td><code>-d &quot;$dir&quot;</code></td>
+					<td>True यदि path एक valid directory है।</td>
+					<td><code>[[ -d &quot;/var/log&quot; ]]</code></td>
+			</tr>
+			<tr>
+					<td><code>-r &quot;$file&quot;</code></td>
+					<td>True यदि file read-accessible (पढ़ने योग्य) है।</td>
+					<td><code>[[ -r &quot;/etc/hosts&quot; ]]</code></td>
+			</tr>
+			<tr>
+					<td><code>-w &quot;$file&quot;</code></td>
+					<td>True यदि file write-accessible (लिखने योग्य) है।</td>
+					<td><code>[[ -w &quot;/var/log/syslog&quot; ]]</code></td>
+			</tr>
+			<tr>
+					<td><code>-s &quot;$file&quot;</code></td>
+					<td>True यदि file exists करती है और empty (खाली) नहीं है (size &gt; 0)।</td>
+					<td><code>[[ -s &quot;output.log&quot; ]]</code></td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="2-loops-लप-सरचनए">2. Loops (लूप संरचनाएं)</h2>
+<h3 id="-for-loops-लसट-पर-इटरशन">⚫ For Loops (लिस्ट पर इटरेशन)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Standard list loop</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> fruit in <span style="color:#e6db74">&#34;Apple&#34;</span> <span style="color:#e6db74">&#34;Banana&#34;</span> <span style="color:#e6db74">&#34;Orange&#34;</span>; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Fruit: </span>$fruit<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># C-Style structure loop</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> <span style="color:#f92672">((</span>i<span style="color:#f92672">=</span>1; i&lt;<span style="color:#f92672">=</span>5; i++<span style="color:#f92672">))</span>; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Counter: </span>$i<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span></code></pre></div><h3 id="-while--until-loops-कडशन-आधरत-लप">⚫ While &amp; Until Loops (कंडीशन आधारित लूप)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># While Loop: जब तक condition true है, तब तक चलेगा</span>
+</span></span><span style="display:flex;"><span>declare -i count<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#f92672">[[</span> $count -le <span style="color:#ae81ff">3</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Count: </span>$count<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    count<span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Until Loop: जब तक condition true नहीं होती (यानी false है), तब तक चलेगा</span>
+</span></span><span style="display:flex;"><span>declare -i port<span style="color:#f92672">=</span><span style="color:#ae81ff">8000</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">until</span> ss -tulpn | grep -q <span style="color:#e6db74">&#34;</span>$port<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Waiting for port </span>$port<span style="color:#e6db74"> to start...&#34;</span>
+</span></span><span style="display:flex;"><span>    sleep <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span>
+</span></span></code></pre></div><h2 id="3-functions-कसटम-फकशनस">3. Functions (कस्टम फंक्शन्स)</h2>
+<p>Code readability और clean scope maintain करने के लिए functions define किए जाते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Defining a function</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> initialize_backup<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Local variable (सिर्फ function scope में accessible)</span>
+</span></span><span style="display:flex;"><span>    local dest_dir<span style="color:#f92672">=</span>$1
+</span></span><span style="display:flex;"><span>    local src_dir<span style="color:#f92672">=</span>$2
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Backing up from </span>$src_dir<span style="color:#e6db74"> to </span>$dest_dir<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Return code / Success status check</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> -d <span style="color:#e6db74">&#34;</span>$src_dir<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span> <span style="color:#75715e"># Success exit</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e"># Failure code</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Calling a function with arguments</span>
+</span></span><span style="display:flex;"><span>initialize_backup <span style="color:#e6db74">&#34;/var/backups&#34;</span> <span style="color:#e6db74">&#34;/home/user/data&#34;</span>
+</span></span><span style="display:flex;"><span>status<span style="color:#f92672">=</span>$? <span style="color:#75715e"># exit status save करें</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Backup Status: </span>$status<span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><h2 id="4-strict-mode-and-error-handling-तरट-परबधन">4. Strict Mode and Error Handling (त्रुटि प्रबंधन)</h2>
+<p>Standard shell default behavior पर command failure होने पर भी script continue कर देता है। Production-ready scripts को robust बनाने के लिए <strong>Strict Mode flags</strong> configure करें:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span>set -e  <span style="color:#75715e"># किसी भी command के fail (non-zero exit) होने पर script execution तुरंत रोकें।</span>
+</span></span><span style="display:flex;"><span>set -u  <span style="color:#75715e"># Unset (non-declared) variables use करने पर script exit करें।</span>
+</span></span><span style="display:flex;"><span>set -o pipefail <span style="color:#75715e"># Pipeline (|) के बीच में कोई command fail होने पर भी error return करें।</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># --- Combined Strict Mode ---</span>
+</span></span><span style="display:flex;"><span>set -euo pipefail
+</span></span></code></pre></div><h3 id="-signal-trapping-सगनलस-और-कलनअप">🚨 Signal Trapping (सिग्नल्स और क्लीनअप)</h3>
+<p>जब user execution के बीच में <span class="kbd">Ctrl+C</span> (SIGINT) दबाए, या script abnormal exit हो, तो temporary files clean-up करने के लिए <code>trap</code> command का use किया जाता है:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Temporary file initialize करें</span>
+</span></span><span style="display:flex;"><span>temp_log<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/tmp/sys-status.tmp&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Cleanup function</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> cleanup<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;🧹 Cleaning up temporary files...&#34;</span>
+</span></span><span style="display:flex;"><span>    rm -f <span style="color:#e6db74">&#34;</span>$temp_log<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#e6db74">&#34;Done.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Trap signal hooks (Exit, Interrupt or Terminate होने पर cleanup call करें)</span>
+</span></span><span style="display:flex;"><span>trap cleanup EXIT SIGINT SIGTERM
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Logic execution simulating delay</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;Processing records...&#34;</span> &gt; <span style="color:#e6db74">&#34;</span>$temp_log<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>sleep <span style="color:#ae81ff">5</span> <span style="color:#75715e"># User can interrupt with Ctrl+C here to test cleanup</span>
+</span></span></code></pre></div>
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>

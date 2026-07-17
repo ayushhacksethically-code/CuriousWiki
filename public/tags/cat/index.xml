@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Cat on CuriousWiki</title>
+		<link>http://example.org/tags/cat.html</link>
+		<description>Recent content in Cat on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/cat/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🐱 cat (concatenate and display) Command</title>
+				<link>http://example.org/pages/linux/bash/files-directories/cat.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/bash/files-directories/cat.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;&lt;code&gt;cat&lt;/code&gt; (Concatenate)&lt;/strong&gt; command Linux utility का एक core tool है। इसका प्राथमिक काम files के contents को terminal screen (standard output) पर print करना है, लेकिन इसका उपयोग multiple files को merge करने और quick files creation के लिए भी किया जाता है।&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-syntax&#34;&gt;1. Syntax&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;options&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;file_name&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;s&lt;span style=&#34;color:#f92672&#34;&gt;)]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-key-formatting-flags&#34;&gt;2. Key Formatting Flags&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;-n&lt;/code&gt;, &lt;code&gt;--number&lt;/code&gt;: Output की सभी lines के आगे line numbers print करता है (खाली lines को भी count करता है)।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-b&lt;/code&gt;, &lt;code&gt;--number-nonblank&lt;/code&gt;: केवल occupied/non-empty lines के आगे ही numbers print करता है।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-s&lt;/code&gt;, &lt;code&gt;--squeeze-blank&lt;/code&gt;: लगातार आने वाली multiple blank lines को merge करके single empty line block compile कर देता है।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-T&lt;/code&gt;, &lt;code&gt;--show-tabs&lt;/code&gt;: File में tabs configurations (indentation spaces) को &lt;code&gt;^I&lt;/code&gt; format में print करता है.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-E&lt;/code&gt;, &lt;code&gt;--show-ends&lt;/code&gt;: lines के end boundary boundary limits validations details trace करने के लिए dollar parameters (&lt;code&gt;$&lt;/code&gt;) prints करता है.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;3-terminal-examples&#34;&gt;3. Terminal Examples&lt;/h2&gt;&#xA;&lt;h3 id=&#34;example-1-read-file-contents-in-terminal&#34;&gt;Example 1: Read file contents in terminal&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat package.json&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;example-2-display-occupied-lines-indexes-only&#34;&gt;Example 2: Display occupied lines indexes only&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat -b server.js&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;example-3-merging-files-together-concatenation&#34;&gt;Example 3: Merging files together (Concatenation)&lt;/h3&gt;&#xA;&lt;p&gt;multiple text segments को merge करके new file save mapping redirection:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

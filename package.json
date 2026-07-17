@@ -1,0 +1,21 @@
+{
+  "name": "curious-wiki",
+  "version": "1.0.0",
+  "description": "Shared Static Knowledge Wiki",
+  "main": "index.html",
+  "scripts": {
+    "dev": "pnpm dlx http-server -p 8585",
+    "serve:python": "python3 -m http.server 8585"
+  },
+  "keywords": [
+    "wiki",
+    "static",
+    "knowledge-base"
+  ],
+  "author": "Narayanas",
+  "license": "MIT",
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^18.0.5"
+  }
+}

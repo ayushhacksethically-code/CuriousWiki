@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Cp on CuriousWiki</title>
+		<link>http://example.org/tags/cp.html</link>
+		<description>Recent content in Cp on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/cp/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>📋 cp (copy files and directories) Command</title>
+				<link>http://example.org/pages/linux/bash/files-directories/cp.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/bash/files-directories/cp.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;&lt;code&gt;cp&lt;/code&gt; (Copy)&lt;/strong&gt; command का उपयोग files और folders (directories) का duplication/replications create करने के लिए किया जाता है।&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-syntax&#34;&gt;1. Syntax&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cp &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;options&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; SOURCE DEST&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cp &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;options&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; SOURCE... DIRECTORY&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-important-options--flags&#34;&gt;2. Important Options &amp;amp; Flags&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;-r&lt;/code&gt;, &lt;code&gt;-R&lt;/code&gt;, &lt;code&gt;--recursive&lt;/code&gt;: Folder को उसके sub-folders और files सहित copy करने के लिए (directories copy करने के लिए यह flag लगाना ज़रूरी है)।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-a&lt;/code&gt;, &lt;code&gt;--archive&lt;/code&gt;: &lt;strong&gt;Backups के लिए बेस्ट flag!&lt;/strong&gt; यह recursive copy करता है और file permissions, ownership permissions, timestamps, और symlinks को &lt;strong&gt;exact preserve&lt;/strong&gt; रखता है (कोई modifications नहीं)।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-i&lt;/code&gt;, &lt;code&gt;--interactive&lt;/code&gt;: यदि destination path पर same filename match करता है, तो overwriting confirmation prompt windows warning show.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-p&lt;/code&gt;: owner, group, permissions, timestamps, mode parameters checks exact preserve.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-s&lt;/code&gt;, &lt;code&gt;--symbolic-link&lt;/code&gt;: data write logic copy करने के बजाय shortcut paths symlinks link commands.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;3-copy-operations-examples&#34;&gt;3. Copy Operations Examples&lt;/h2&gt;&#xA;&lt;h3 id=&#34;example-1-copy-file-and-rename&#34;&gt;Example 1: Copy file and rename&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cp config.json config.json.bak&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;example-2-safe-folder-backup-preserving-permissions&#34;&gt;Example 2: Safe Folder backup (Preserving permissions)&lt;/h3&gt;&#xA;&lt;p&gt;जब आप sysadmin या site backups code copy कर रहे हों, तो always use &lt;code&gt;-a&lt;/code&gt;:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

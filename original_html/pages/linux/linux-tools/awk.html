@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="linux, awk, gawk, programming, parsing, columns, script">
+    <title>AWK Command Cheat Sheet | CuriousWiki</title>
+    <!-- Lucide Icons CDN -->
+    
+    <link rel="stylesheet" href="../../../css/style.css?v=1.0.1">
+    
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="../../../index.html">Home</a>
+                    <span class="separator">></span>
+                    <a href="index.html">Linux Tools</a>
+                    <span class="separator">></span>
+                    <span>AWK Text Processor</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">📊 AWK: Pattern Scanning & Text Processing</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> July 05, 2026</span>
+                            <span><i data-lucide="clock"></i> 6 min read</span>
+                            <span><i data-lucide="tag"></i> awk, scripting, text-parsing</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p>Linux environments में logs analysis और tabular files formatting के लिए <strong>AWK</strong> language सबसे powerful scripting engine है। यह lines को <strong>Records</strong> और space-separated parameters को <strong>Fields</strong> की form में dynamically parse करता है। यह reference guide <code>awk.txt</code> manual पर based है।</p>
+
+                        <div class="callout callout-info">
+                            <i data-lucide="info"></i>
+                            <div class="callout-content">
+                                <div class="callout-title">Basic Syntax Structure</div>
+                                <p><code>awk [options] 'pattern { action }' input-file</code><br>
+                                Default behaviour: हर source line को read करके check करता है कि क्या वह <code>pattern</code> criteria satisfy करता है, अगर हाँ तो bracket <code>{ action }</code> blocks execute होते हैं।</p>
+                            </div>
+                        </div>
+
+                        <h2>1. Core Variables (बिल्ट-इन वैरिएबल्स)</h2>
+                        <p>AWK programming flow logic run करने के लिए pre-defined parameters default active रहते हैं:</p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Standard Representation</th>
+                                    <th>Description (Hinglish Detail)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>$0</code></td>
+                                    <td>Entire Line Record</td>
+                                    <td>पूरी string line को single time access/print करने के लिए।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>$1, $2, $N</code></td>
+                                    <td>Fields index columns</td>
+                                    <td>Particular lines segment words. <code>$1</code> (first column word), <code>$2</code> (second) आदि।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>NF</code></td>
+                                    <td>Number of Fields</td>
+                                    <td>Current read line में total spaces columns/words कितने हैं।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>NR</code></td>
+                                    <td>Number of Records</td>
+                                    <td>System runtime execution में processing count line list number track करने के लिए।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>FS</code></td>
+                                    <td>Field Separator</td>
+                                    <td>Words split indicator character. Default <code>[space/tabs]</code> होता है।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>OFS</code></td>
+                                    <td>Output Field Separator</td>
+                                    <td>Print columns display output के समय use होने वाला separator (Default: space)।</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>2. Execution Blocks (BEGIN & END blocks)</h2>
+                        <p>Files scanning start होने से पहले और process finish होने के बाद alerts/actions handle करने के controls:</p>
+                        <pre><code class="language-bash"># BEGIN -> file processing के बिल्कुल शुरू होने से पहले run होता है
+# END -> सारी text file parse होने के बाद compute execution करता है
+awk 'BEGIN { print "--- REPORT STARTED ---" } { print $1 } END { print "--- DONE ---" }' users.txt</code></pre>
+
+                        <h2>3. Practical Command Examples (प्रैक्टिकल उदाहरण)</h2>
+                        <p>Common logs और configurations processing recipes:</p>
+
+                        <h3>Field Separator set करना (e.g. CSV or Passwd files)</h3>
+                        <p>अगर files fields columns colon <code>:</code> or comma <code>,</code> value partition parameters use करते हैं:</p>
+                        <pre><code class="language-bash"># Custom Separator set करने के लिए parameter flag -F का use करें
+awk -F ":" '{ print $1 " uses home " $6 }' /etc/passwd
+
+# Dynamic variables assignments
+awk -v FS="," -v OFS=" | " '{ print $1, $3 }' data.csv</code></pre>
+
+                        <h3>Row Filters & Conditions (शर्तें लागू करना)</h3>
+                        <pre><code class="language-bash"># केवल वही lines read करें जिनकी values column 3 में 100 से बड़ी हैं
+awk '$3 > 100 { print $1 " alert " $3 }' stats.txt
+
+# Substring matches verification (logs pattern check)
+awk '/ERROR/ { print "Log error on line " NR ": " $0 }' /var/log/syslog</code></pre>
+
+                        <h3>Data Aggregation & Calculation (डेटा की गणना)</h3>
+                        <pre><code class="language-bash"># Column 2 की सारी numbers value aggregate (total calculation sum) करें
+awk '{ sum += $2 } END { print "Total sum: " sum }' accounting.log
+
+# Dynamic lines average calculation filter
+awk '{ sum += $2 } END { print "Average: " sum/NR }' telemetry.log</code></pre>
+
+                        <h2>4. AWK Built-in Functions (बिल्ट-इन फंक्शन्स)</h2>
+                        <p>String handling and parsing tasks के main utilities:</p>
+                        <pre><code class="language-bash"># String Length calculation
+awk '{ print $1 " length=" length($1) }' inputs.txt
+
+# Text cases capitalization conversion
+awk '{ print toupper($0) }' lowercase_logs.txt
+
+# Find and replace substrings (gsub - global substitution)
+awk '{ gsub("localhost", "127.0.0.1", $0); print }' config.yaml</code></pre>
+
+                        <div class="backlinks-container">
+                            <div class="backlinks-title">Linked References (Backlinks)</div>
+                            <div class="backlinks-list">
+                                <a href="../../../index.html" class="backlink-item">
+                                    <i data-lucide="layout-dashboard"></i>
+                                    <span>Home Dashboard</span>
+                                </a>
+                                <a href="index.html" class="backlink-item">
+                                    <i data-lucide="pocket"></i>
+                                    <span>Linux Tools</span>
+                                </a>
+                                <a href="grep.html" class="backlink-item">
+                                    <i data-lucide="search"></i>
+                                    <span>Grep Guide</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="../../../js/main.js"></script>
+</body>
+</html>

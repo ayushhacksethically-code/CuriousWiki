@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Guide on CuriousWiki</title>
+		<link>http://example.org/tags/guide.html</link>
+		<description>Recent content in Guide on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🐚 BASH Scripting &amp; CLI Master Class</title>
+				<link>http://example.org/pages/linux/bash/index.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/bash/index.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;BASH (Bourne Again Shell)&lt;/strong&gt; Linux environments का standard command processing shell है। यह guide CLI fundamentals से लेकर complex automation scripts, process management, packages, और networking commands का एक complete Reference Manual है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Interactive Guide Layout&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;BASH के विशाल framework को सरल बनाने के लिए इसे 5 dedicated modules में share किया गया है। आप नीचे दिए गए chapters की grid से सीधा अध्ययन शुरू कर सकते हैं।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>🚀 CuriousWiki के साथ Getting Started</title>
+				<link>http://example.org/pages/getting-started.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/getting-started.html</guid>
+				<description>&lt;p&gt;CuriousWiki को एक modular, beautiful, और highly portable knowledge base के रूप में design किया गया है। चूंकि यह पूरी तरह से static HTML files पर चलता है, आप इसे किसी भी web browser में आसानी से पढ़ सकते हैं और sync कर सकते हैं।&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-project-structure&#34;&gt;1. Project Structure&lt;/h2&gt;&#xA;&lt;p&gt;यहाँ बताया गया है कि आपके wiki folder में files को कैसे organize किया गया है:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;index.html&lt;/code&gt;&lt;/strong&gt;: Home dashboard जो entry point के रूप में काम करता है।&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;css/style.css&lt;/code&gt;&lt;/strong&gt;: Master stylesheet जिसमें variables, dark/light themes, layouts, और markdown rendering elements शामिल हैं।&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;js/main.js&lt;/code&gt;&lt;/strong&gt;: Dynamic functionality को handle करता है, जिसमें code-copy buttons, mobile menu overlays, path adjustments, और search engine शामिल हैं।&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;&lt;code&gt;pages/&lt;/code&gt;&lt;/strong&gt;: सभी individual article/page files के लिए एक directory.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2-new-page-जडन&#34;&gt;2. New Page जोड़ना&lt;/h2&gt;&#xA;&lt;p&gt;CuriousWiki में एक naya page जोड़ने के लिए, इन तीन steps को follow करें:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

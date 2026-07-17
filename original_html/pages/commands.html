@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="template, draft, placeholder">
+    <title>Commands Index | CuriousWiki</title>
+    <!-- Lucide Icons CDN -->
+    
+    <link rel="stylesheet" href="../css/style.css?v=1.0.1">
+
+    <style>
+        .cmd-search-container {
+            margin: 12px 0;
+            max-width: 400px;
+        }
+        .cmd-search-input {
+            width: 100%;
+            padding: 4px 8px;
+            font-size: 12px;
+            background: var(--bg-primary);
+            border: 2px solid;
+            border-color: var(--border-color) var(--border-light) var(--border-light) var(--border-color);
+            color: var(--text-primary);
+            outline: none;
+            font-family: inherit;
+        }
+        .cmd-filter-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 12px;
+            margin-top: 8px;
+        }
+        .cmd-filter-tab {
+            background: var(--bg-secondary);
+            border: 1.5px solid;
+            border-color: var(--border-light) var(--border-color) var(--border-color) var(--border-light);
+            color: var(--text-primary);
+            padding: 3px 8px;
+            font-size: 11px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .cmd-filter-tab:hover {
+            color: var(--accent-primary);
+        }
+        .cmd-filter-tab.active {
+            background: var(--bg-primary);
+            border-color: var(--border-color) var(--border-light) var(--border-light) var(--border-color);
+        }
+    </style>
+
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">></span>
+                    <span>Commands Index</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">📟 Commands Index</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> July 13, 2026</span>
+                            <span><i data-lucide="tag"></i> commands, terminal, cheatsheet</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p>CuriousWiki में उपलब्ध सभी commands के individual guides का index। आप नीचे दिए गए search bar या tabs का उपयोग करके commands को filter कर सकते हैं।</p>
+
+                        <div class="cmd-search-container">
+                            <input type="text" id="cmd-search" class="cmd-search-input" placeholder="Command search करें... (e.g. ls, grep)">
+                        </div>
+
+                        <div class="cmd-filter-tabs">
+                            <button class="cmd-filter-tab active" data-category="all">All</button>
+                            <button class="cmd-filter-tab" data-category="file">File Operation (फ़ाइल संचालन)</button>
+                            <button class="cmd-filter-tab" data-category="search">Search & Filter (खोज और फ़िल्टर)</button>
+                            <button class="cmd-filter-tab" data-category="system">System & Auto (सिस्टम और स्वचालन)</button>
+                        </div>
+
+                        <div class="dashboard-grid">
+
+                            <div class="dashboard-card" data-name="pwd" data-category="file" data-desc="Linux directory tree में current active path/folder का location print करता है।">
+                                <div class="card-icon"><i data-lucide="folder"></i></div>
+                                <div class="card-title">pwd</div>
+                                <p class="card-desc">Linux directory tree में current active path/folder का location print करता है।</p>
+                                <div class="card-footer">
+                                    <a href="linux/bash/files-directories/pwd.html">Guide खोलें →</a>
+                                    <span>File Operation</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="ls" data-category="file" data-desc="Current या specified directory के अंदर की files और folders की list दिखाता है।">
+                                <div class="card-icon"><i data-lucide="folder"></i></div>
+                                <div class="card-title">ls</div>
+                                <p class="card-desc">Current या specified directory के अंदर की files और folders की list दिखाता है।</p>
+                                <div class="card-footer">
+                                    <a href="linux/bash/files-directories/ls.html">Guide खोलें →</a>
+                                    <span>File Operation</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="cd" data-category="file" data-desc="Directory navigation को संभालता है, यानी एक folder से दूसरे folder में जाने के काम आता है।">
+                                <div class="card-icon"><i data-lucide="folder"></i></div>
+                                <div class="card-title">cd</div>
+                                <p class="card-desc">Directory navigation को संभालता है, यानी एक folder से दूसरे folder में जाने के काम आता है।</p>
+                                <div class="card-footer">
+                                    <a href="linux/bash/files-directories/cd.html">Guide खोलें →</a>
+                                    <span>File Operation</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="echo" data-category="file" data-desc="Terminal screen (standard output) पर text या variable values को print करने के लिए use होता है।">
+                                <div class="card-icon"><i data-lucide="folder"></i></div>
+                                <div class="card-title">echo</div>
+                                <p class="card-desc">Terminal screen (standard output) पर text या variable values को print करने के लिए use होता है।</p>
+                                <div class="card-footer">
+                                    <a href="linux/bash/files-directories/echo.html">Guide खोलें →</a>
+                                    <span>File Operation</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="mkdir" data-category="file" data-desc="Filesystem में नए empty folders (directories) create करने के काम आता है।">
+                                <div class="card-icon"><i data-lucide="folder"></i></div>
+                                <div class="card-title">mkdir</div>
+                                <p class="card-desc">Filesystem में नए empty folders (directories) create करने के काम आता है।</p>
+                                <div class="card-footer">
+                                    <a href="linux/bash/files-directories/mkdir.html">Guide खोलें →</a>
+                                    <span>File Operation</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="touch" data-category="file" data-desc="खाली फ़ाइलें (empty files) बनाने और timestamps (modify/access times) को update करने के लिए।">
+                                <div class="card-icon"><i data-lucide="folder"></i></div>
+                                <div class="card-title">touch</div>
+                                <p class="card-desc">खाली फ़ाइलें (empty files) बनाने और timestamps (modify/access times) को update करने के लिए।</p>
+                                <div class="card-footer">
+                                    <a href="linux/bash/files-directories/touch.html">Guide खोलें →</a>
+                                    <span>File Operation</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="rm" data-category="file" data-desc="Operating system से files और folders को permanently delete करने के लिए use होता है।">
+                                <div class="card-icon"><i data-lucide="folder"></i></div>
+                                <div class="card-title">rm</div>
+                                <p class="card-desc">Operating system से files और folders को permanently delete करने के लिए use होता है।</p>
+                                <div class="card-footer">
+                                    <a href="linux/bash/files-directories/rm.html">Guide खोलें →</a>
+                                    <span>File Operation</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="rmdir" data-category="file" data-desc="केवल खाली folders (empty directories) को filesystem से सुरक्षित हटाने के काम आता है।">
+                                <div class="card-icon"><i data-lucide="folder"></i></div>
+                                <div class="card-title">rmdir</div>
+                                <p class="card-desc">केवल खाली folders (empty directories) को filesystem से सुरक्षित हटाने के काम आता है।</p>
+                                <div class="card-footer">
+                                    <a href="linux/bash/files-directories/rmdir.html">Guide खोलें →</a>
+                                    <span>File Operation</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="mv" data-category="file" data-desc="Files/folders का नाम बदलने (Rename) या उन्हें एक जगह से दूसरी जगह transfer करने के लिए।">
+                                <div class="card-icon"><i data-lucide="folder"></i></div>
+                                <div class="card-title">mv</div>
+                                <p class="card-desc">Files/folders का नाम बदलने (Rename) या उन्हें एक जगह से दूसरी जगह transfer करने के लिए।</p>
+                                <div class="card-footer">
+                                    <a href="linux/bash/files-directories/mv.html">Guide खोलें →</a>
+                                    <span>File Operation</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="cp" data-category="file" data-desc="Files और folders का duplication/replica create करने के लिए उपयोग किया जाता है।">
+                                <div class="card-icon"><i data-lucide="folder"></i></div>
+                                <div class="card-title">cp</div>
+                                <p class="card-desc">Files और folders का duplication/replica create करने के लिए उपयोग किया जाता है।</p>
+                                <div class="card-footer">
+                                    <a href="linux/bash/files-directories/cp.html">Guide खोलें →</a>
+                                    <span>File Operation</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="cat" data-category="file" data-desc="Files के content को screen पर print करने, files merge करने और file create करने में use होता है।">
+                                <div class="card-icon"><i data-lucide="folder"></i></div>
+                                <div class="card-title">cat</div>
+                                <p class="card-desc">Files के content को screen पर print करने, files merge करने और file create करने में use होता है।</p>
+                                <div class="card-footer">
+                                    <a href="linux/bash/files-directories/cat.html">Guide खोलें →</a>
+                                    <span>File Operation</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="tail" data-category="file" data-desc="Files के आखिरी हिस्से (अंतिम 10 lines) या real-time dynamic logs को read करने के काम आता है।">
+                                <div class="card-icon"><i data-lucide="folder"></i></div>
+                                <div class="card-title">tail</div>
+                                <p class="card-desc">Files के आखिरी हिस्से (अंतिम 10 lines) या real-time dynamic logs को read करने के काम आता है।</p>
+                                <div class="card-footer">
+                                    <a href="linux/bash/files-directories/tail.html">Guide खोलें →</a>
+                                    <span>File Operation</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="find" data-category="search" data-desc="Expression rules (size, time, name pattern) के base पर file search करने का शक्तिशाली tool.">
+                                <div class="card-icon"><i data-lucide="search"></i></div>
+                                <div class="card-title">find</div>
+                                <p class="card-desc">Expression rules (size, time, name pattern) के base पर file search करने का शक्तिशाली tool.</p>
+                                <div class="card-footer">
+                                    <a href="linux/bash/files-directories/find.html">Guide खोलें →</a>
+                                    <span>Search & Filter</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="grep" data-category="search" data-desc="Files के content के अंदर specific words या regular expressions (patterns) find करता है।">
+                                <div class="card-icon"><i data-lucide="search"></i></div>
+                                <div class="card-title">grep</div>
+                                <p class="card-desc">Files के content के अंदर specific words या regular expressions (patterns) find करता है।</p>
+                                <div class="card-footer">
+                                    <a href="linux/linux-tools/grep.html">Guide खोलें →</a>
+                                    <span>Search & Filter</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="awk" data-category="search" data-desc="Logs analysis और tabular data formatting के लिए records/fields parse करने वाला scripting engine।">
+                                <div class="card-icon"><i data-lucide="search"></i></div>
+                                <div class="card-title">awk</div>
+                                <p class="card-desc">Logs analysis और tabular data formatting के लिए records/fields parse करने वाला scripting engine।</p>
+                                <div class="card-footer">
+                                    <a href="linux/linux-tools/awk.html">Guide खोलें →</a>
+                                    <span>Search & Filter</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="cron" data-category="system" data-desc="Predefined intervals पर scripts को background execution (cron jobs) के लिए configure करता है।">
+                                <div class="card-icon"><i data-lucide="terminal"></i></div>
+                                <div class="card-title">cron</div>
+                                <p class="card-desc">Predefined intervals पर scripts को background execution (cron jobs) के लिए configure करता है।</p>
+                                <div class="card-footer">
+                                    <a href="linux/linux-tools/cron.html">Guide खोलें →</a>
+                                    <span>System & Auto</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="alias" data-category="system" data-desc="BASH shell के अंदर long commands के लिए shortcuts (aliases) और builtins configure करने की विधि।">
+                                <div class="card-icon"><i data-lucide="terminal"></i></div>
+                                <div class="card-title">alias</div>
+                                <p class="card-desc">BASH shell के अंदर long commands के लिए shortcuts (aliases) और builtins configure करने की विधि।</p>
+                                <div class="card-footer">
+                                    <a href="linux/linux-tools/alias.html">Guide खोलें →</a>
+                                    <span>System & Auto</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="yay / paru" data-category="system" data-desc="Arch User Repository (AUR) packages को easily search, build, install और update करने के helpers.">
+                                <div class="card-icon"><i data-lucide="terminal"></i></div>
+                                <div class="card-title">yay / paru</div>
+                                <p class="card-desc">Arch User Repository (AUR) packages को easily search, build, install और update करने के helpers.</p>
+                                <div class="card-footer">
+                                    <a href="linux/linux-tools/aur-helpers.html">Guide खोलें →</a>
+                                    <span>System & Auto</span>
+                                </div>
+                            </div>
+
+                            <div class="dashboard-card" data-name="acme.sh" data-category="system" data-desc="Pure Unix shell script-based Let's Encrypt client जो domain SSL certificates automate करता है।">
+                                <div class="card-icon"><i data-lucide="terminal"></i></div>
+                                <div class="card-title">acme.sh</div>
+                                <p class="card-desc">Pure Unix shell script-based Let's Encrypt client जो domain SSL certificates automate करता है।</p>
+                                <div class="card-footer">
+                                    <a href="linux/linux-tools/acme-sh.html">Guide खोलें →</a>
+                                    <span>System & Auto</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const searchInput = document.getElementById('cmd-search');
+                                const filterTabs = document.querySelectorAll('.cmd-filter-tab');
+                                const cmdCards = document.querySelectorAll('.dashboard-card');
+
+                                function filterCommands() {
+                                    const query = searchInput.value.toLowerCase().trim();
+                                    const activeTab = document.querySelector('.cmd-filter-tab.active').dataset.category;
+
+                                    cmdCards.forEach(card => {
+                                        const name = card.querySelector('.card-title').textContent.toLowerCase();
+                                        const desc = card.querySelector('.card-desc').textContent.toLowerCase();
+                                        const category = card.dataset.category;
+
+                                        const matchesSearch = name.includes(query) || desc.includes(query);
+                                        const matchesTab = activeTab === 'all' || category === activeTab;
+
+                                        if (matchesSearch && matchesTab) {
+                                            card.style.display = 'flex';
+                                        } else {
+                                            card.style.display = 'none';
+                                        }
+                                    });
+                                }
+
+                                if (searchInput) {
+                                    searchInput.addEventListener('input', filterCommands);
+                                }
+
+                                filterTabs.forEach(tab => {
+                                    tab.addEventListener('click', () => {
+                                        filterTabs.forEach(t => t.classList.remove('active'));
+                                        tab.classList.add('active');
+                                        filterCommands();
+                                    });
+                                });
+                            });
+                        </script>
+</section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="../js/main.js"></script>
+</body>
+</html>

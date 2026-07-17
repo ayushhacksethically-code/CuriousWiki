@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Dsc on CuriousWiki</title>
+		<link>http://example.org/tags/dsc.html</link>
+		<description>Recent content in Dsc on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/dsc/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🐚 Microsoft PowerShell (pwsh)</title>
+				<link>http://example.org/pages/linux/linux-tools/shell/powershell.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/shell/powershell.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;PowerShell&lt;/strong&gt; Microsoft द्वारा विकसित एक cross-platform task automation framework, command shell, और scripting language है। यह Windows, Linux और macOS पर चलता है और traditional shells की तरह plain text streams के बजाय &lt;strong&gt;.NET Objects&lt;/strong&gt; flow पर काम करता है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;The Monad Manifesto&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;PowerShell के आविष्कारक &lt;strong&gt;Jeffrey Snover&lt;/strong&gt; ने 2002 में &amp;ldquo;Monad Manifesto&amp;rdquo; लिखा था। इसमें उन्होंने UNIX pipelines की utility को .NET platform के object flow concept के साथ मिलाकर modern scripting engine की blueprint पेश की थी।&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

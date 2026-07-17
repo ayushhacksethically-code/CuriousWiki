@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Eda on CuriousWiki</title>
+		<link>http://example.org/tags/eda.html</link>
+		<description>Recent content in Eda on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 03 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/eda/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🔌 gEDA Project (Electronic Design Automation)</title>
+				<link>http://example.org/pages/geda.html</link>
+				<pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/geda.html</guid>
+				<description>&lt;p&gt;gEDA project ne ek complete GPL-licensed suite aur toolkit banayi hai (aur ispe kaam chal raha hai) jo &lt;strong&gt;Electronic Design Automation (EDA)&lt;/strong&gt; tools ke liye hai. In tools ka use electrical circuit design, schematic capture, simulation, prototyping, aur production ke liye kiya jata hai. Filhal, gEDA project electronics design ke liye free software applications ka ek mature suite offer karta hai, jisme schematic capture, attribute management, bill of materials (BOM) generation, 20 se zyada netlist formats me netlisting, analog aur digital simulation, aur printed circuit board (PCB) layout shamil hain.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

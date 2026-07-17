@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="linux, bash, ls, commands, files, directories">
+    <title>ls Command Guide | CuriousWiki</title>
+    <!-- Lucide Icons CDN -->
+    
+    <link rel="stylesheet" href="../../../../css/style.css?v=1.0.1">
+    
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="../../../../index.html">Home</a>
+                    <span class="separator">></span>
+                    <a href="../index.html">BASH Guide</a>
+                    <span class="separator">></span>
+                    <a href="index.html">Files & Directories</a>
+                    <span class="separator">></span>
+                    <span>ls Command</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">📂 ls (list directory contents) Command</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> July 01, 2026</span>
+                            <span><i data-lucide="clock"></i> 6 min read</span>
+                            <span><i data-lucide="tag"></i> ls, file-listing, sorting, directories</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p><strong><code>ls</code></strong> command Linux में सबसे ज़्यादा इस्तेमाल होने वाली commands में से एक है। इसका काम current या specified directory के अंदर की files और folders की list दिखाना है।</p>
+
+                        <h2>1. Syntax</h2>
+                        <pre><code class="language-bash">ls [OPTION]... [FILE]...</code></pre>
+
+                        <h2>2. Useful Options & Flags (उपयोगी विकल्प)</h2>
+                        <p>बिना किसी flags के <code>ls</code> सिर्फ filenames को simple columns में दिखाता है। इसके behavior को customize करने के लिए ये flags बहुत काम आते हैं:</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Option Flag</th>
+                                    <th>Description / Behavior</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>-a</code>, <code>--all</code></td>
+                                    <td><strong>Hidden files:</strong> उन सभी files को भी दिखाता है जो <code>.</code> से शुरू होती हैं (जैसे <code>.bashrc</code>)।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>-A</code>, <code>--almost-all</code></td>
+                                    <td>Hidden files दिखाता है, पर <code>.</code> (current directory) और <code>..</code> (parent directory) को skip कर देता है।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>-l</code></td>
+                                    <td><strong>Long Listing:</strong> detailed view दिखाता है (permissions, links count, owner, group, file size, modification date, and filename)।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>-h</code>, <code>--human-readable</code></td>
+                                    <td>File sizes को bytes के बजाय readable format (जैसे 4K, 250M, 1.2G) में दिखाता है (इसे <code>-l</code> के साथ combine किया जाता है)।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>-t</code></td>
+                                    <td>Files को <strong>Modification Time</strong> के हिसाब से sort करता है (हाल ही में modified files सबसे ऊपर)।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>-S</code></td>
+                                    <td>Files को <strong>Size</strong> के हिसाब से sort करता है (सबसे बड़ी file सबसे ऊपर)।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>-F</code>, <code>--classify</code></td>
+                                    <td>फ़ाइलों के प्रकार को पहचानने के लिए अंत में symbols जोड़ता है (जैसे directories के लिए <code>/</code>, executable files के लिए <code>*</code>, symlinks के लिए <code>@</code>)।</td>
+                                </tr>
+                                <tr>
+                                    <td><code>-R</code>, <code>--recursive</code></td>
+                                    <td>Subdirectories के अंदर की फ़ाइलों को भी recursively list करता है।</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>3. Hand-on Command Examples</h2>
+                        
+                        <h3>Example 1: Detailed Hidden File List (The Developer Special)</h3>
+                        <p>ज़्यादातर developers terminal खोलते ही यह command चलाते हैं ताकि hidden configurations और sizes को human-readable format में detailed देख सकें:</p>
+                        <pre><code class="language-bash">ls -lah</code></pre>
+
+                        <h3>Example 2: Sort Files by Size to Find Big Files</h3>
+                        <p>अगर आपकी disk space full हो रही है और आप देखना चाहते हैं कि current folder में कौन सी files सबसे भारी हैं:</p>
+                        <pre><code class="language-bash">ls -lhS</code></pre>
+
+                        <h3>Example 3: Inspect Folder Permissions (Not Contents)</h3>
+                        <p>अगर आप किसी folder के अंदर की फ़ाइलों को नहीं, बल्कि खुद उस folder की metadata/permissions देखना चाहते हैं, तो <code>-d</code> flag का उपयोग करें:</p>
+                        <pre><code class="language-bash">ls -ld /var/www/html</code></pre>
+
+                        <div class="backlinks-container">
+                            <div class="backlinks-title">Linked References (Backlinks)</div>
+                            <div class="backlinks-list">
+                                <a href="index.html" class="backlink-item">
+                                    <i data-lucide="folder-open"></i>
+                                    <span>Files & Directories Index</span>
+                                </a>
+                                <a href="../index.html" class="backlink-item">
+                                    <i data-lucide="terminal-square"></i>
+                                    <span>BASH Guide Index</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
+                            <span>CuriousWiki Open Source Project</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="../../../../js/main.js"></script>
+</body>
+</html>

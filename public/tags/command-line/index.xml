@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Command Line on CuriousWiki</title>
+		<link>http://example.org/tags/command-line.html</link>
+		<description>Recent content in Command Line on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🐚 BASH Scripting &amp; CLI Master Class</title>
+				<link>http://example.org/pages/linux/bash/index.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/bash/index.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;BASH (Bourne Again Shell)&lt;/strong&gt; Linux environments का standard command processing shell है। यह guide CLI fundamentals से लेकर complex automation scripts, process management, packages, और networking commands का एक complete Reference Manual है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Interactive Guide Layout&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;BASH के विशाल framework को सरल बनाने के लिए इसे 5 dedicated modules में share किया गया है। आप नीचे दिए गए chapters की grid से सीधा अध्ययन शुरू कर सकते हैं।&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

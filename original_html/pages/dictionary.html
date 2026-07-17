@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="dictionary, jargon, glossary, terms, programming, vocabulary">
+    <title>Dictionary | CuriousWiki Reference</title>
+    <!-- Lucide Icons CDN -->
+    
+    <link rel="stylesheet" href="../css/style.css?v=1.0.1">
+    <style>
+        .dict-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1.5rem 0 2rem 0;
+            padding: 1rem;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+        .dict-letter-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: var(--text-muted);
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+        .dict-letter-link:hover {
+            color: var(--accent-color);
+            background-color: rgba(99, 102, 241, 0.1);
+            border-color: rgba(99, 102, 241, 0.2);
+        }
+        .dict-letter-link.active-letter {
+            color: var(--bg-primary);
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        .dict-section {
+            margin-bottom: 2.5rem;
+            scroll-margin-top: 80px; /* offset for top bar when jumping */
+        }
+        .dict-section-title {
+            font-size: 1.75rem;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .dict-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .dict-item {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.2s ease;
+            scroll-margin-top: 100px;
+        }
+        .dict-item:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+        .dict-term {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .dict-definition {
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        .dict-term-link-anchor {
+            text-decoration: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">></span>
+                    <a href="dictionary.html">Reference</a>
+                    <span class="separator">></span>
+                    <span>Dictionary</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">📖 Jargon Dictionary</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> June 30, 2026</span>
+                            <span><i data-lucide="book-open"></i> Glossary</span>
+                            <span><i data-lucide="tag"></i> vocabulary, references</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p>इस wiki में उपयोग किए जाने वाले technical jargon, programming concepts, और command-line terms का एक central glossary (शब्दकोश)। नए शब्दों को सीखने और cross-reference करने के लिए इसका उपयोग करें।</p>
+
+                        <!-- Alphabetical Navigation -->
+                        <div class="dict-nav">
+                            <a href="#letter-A" class="dict-letter-link">A</a>
+                            <a href="#letter-C" class="dict-letter-link">C</a>
+                            <a href="#letter-D" class="dict-letter-link">D</a>
+                            <a href="#letter-F" class="dict-letter-link">F</a>
+                            <a href="#letter-G" class="dict-letter-link">G</a>
+                            <a href="#letter-L" class="dict-letter-link">L</a>
+                            <a href="#letter-M" class="dict-letter-link">M</a>
+                            <a href="#letter-N" class="dict-letter-link">N</a>
+                            <a href="#letter-P" class="dict-letter-link">P</a>
+                            <a href="#letter-R" class="dict-letter-link">R</a>
+                            <a href="#letter-S" class="dict-letter-link">S</a>
+                            <a href="#letter-V" class="dict-letter-link">V</a>
+                        </div>
+
+                        <!-- SECTION A -->
+                        <div id="letter-A" class="dict-section">
+                            <div class="dict-section-title">A</div>
+                            <ul class="dict-list">
+                                <li id="acme-sh" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Acme.sh</div>
+                                    <div class="dict-definition">Let's Encrypt या ZeroSSL के ज़रिए SSL/TLS certificates automatically issue और renew करने के लिए एक zero-dependency Shell Script-based ACME client.</div>
+                                </li>
+                                <li id="alacritty" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Alacritty</div>
+                                    <div class="dict-definition">Rust language में लिखा गया एक ultra-fast, lightweight, और GPU-accelerated (hardware-accelerated) terminal emulator.</div>
+                                </li>
+                                <li id="api" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> API (Application Programming Interface)</div>
+                                    <div class="dict-definition">अलग-अलग software applications/components के बीच data exchange और communication स्थापित करने का standard माध्यम।</div>
+                                </li>
+                                <li id="async" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Async (Asynchronous)</div>
+                                    <div class="dict-definition">वह execution flow जिसमें task background में run होता है और main thread (UI loop) को block नहीं करता, जिससे user interface lag-free रहता है।</div>
+                                </li>
+                                <li id="aur" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> AUR (Arch User Repository)</div>
+                                    <div class="dict-definition">Arch Linux users के लिए एक community-driven package repository, जहाँ user-built Custom packages की recipes (PKGBUILD) store होती हैं।</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SECTION C -->
+                        <div id="letter-C" class="dict-section">
+                            <div class="dict-section-title">C</div>
+                            <ul class="dict-list">
+                                <li id="callout" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Callout</div>
+                                    <div class="dict-definition">Document layout में एक distinct styled container block, जो specific colors और dynamic icons के साथ important warnings, notes, or success logs को highlight करता है।</div>
+                                </li>
+                                <li id="cli" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> CLI (Command Line Interface)</div>
+                                    <div class="dict-definition">Terminal console पर typing commands के द्वारा user interactions और computer file system operations को perform करने का interface.</div>
+                                </li>
+                                <li id="commit" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Commit</div>
+                                    <div class="dict-definition">Version control systems (जैसे Git) में codebase changes का snapshot local history में snapshot-id के साथ save करना।</div>
+                                </li>
+                                <li id="cron" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Cron</div>
+                                    <div class="dict-definition">Linux/Unix background service daemon (crond) जो user-defined scheduled intervals (crontab) पर script tasks या backup commands को automatically execute करता है।</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SECTION D -->
+                        <div id="letter-D" class="dict-section">
+                            <div class="dict-section-title">D</div>
+                            <ul class="dict-list">
+                                <li id="dom" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> DOM (Document Object Model)</div>
+                                    <div class="dict-definition">HTML nodes का tree structure structure, जिसे JavaScript scripts runtime पर dynamically query, alter, style, या delete कर सकते हैं।</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SECTION F -->
+                        <div id="letter-F" class="dict-section">
+                            <div class="dict-section-title">F</div>
+                            <ul class="dict-list">
+                                <li id="fstab" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Fstab (/etc/fstab)</div>
+                                    <div class="dict-definition">Linux system filesystems table configuration, जो system boot sequence के समय partitions (जैसे Root, Home, EFI) को specific directories/paths पर dynamically mount करती है।</div>
+                                </li>
+                                <li id="fuzzy-search" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Fuzzy Search</div>
+                                    <div class="dict-definition">Exact key matching के बजाय logical approximations, spelling mistakes tolerance, और prefix query inputs के आधार पर accurate matching results ढूँढने की method.</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SECTION G -->
+                        <div id="letter-G" class="dict-section">
+                            <div class="dict-section-title">G</div>
+                            <ul class="dict-list">
+                                <li id="git" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Git</div>
+                                    <div class="dict-definition">एक open-source, distributed version control application जो source repositories में file changes, revisions, और branches merging timeline को track करती है।</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SECTION L -->
+                        <div id="letter-L" class="dict-section">
+                            <div class="dict-section-title">L</div>
+                            <ul class="dict-list">
+                                <li id="localstorage" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> LocalStorage</div>
+                                    <div class="dict-definition">Web browsers का key-value pair database engine, जो dynamic site properties (जैसे UI theme state) को session/tabs resets के बाद भी permanent save रखता है।</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SECTION M -->
+                        <div id="letter-M" class="dict-section">
+                            <div class="dict-section-title">M</div>
+                            <ul class="dict-list">
+                                <li id="minisearch" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> MiniSearch</div>
+                                    <div class="dict-definition">Client-side execution structures के लिए optimized, pure JavaScript full-text indexing engine library, जो tag query processing और fuzzy searches support करता है।</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SECTION N -->
+                        <div id="letter-N" class="dict-section">
+                            <div class="dict-section-title">N</div>
+                            <ul class="dict-list">
+                                <li id="nim" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Nim</div>
+                                    <div class="dict-definition">एक statically typed programming language, जो directly zero-overhead compiled C/C++ native code output produce करती है और super-lightweight servers execute करती है।</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SECTION P -->
+                        <div id="letter-P" class="dict-section">
+                            <div class="dict-section-title">P</div>
+                            <ul class="dict-list">
+                                <li id="pacman" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Pacman</div>
+                                    <div class="dict-definition">Arch Linux OS का package management CLI tool, जो database dependencies sync करने और system applications upgrades compile करने में use होता है।</div>
+                                </li>
+                                <li id="promise" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Promise</div>
+                                    <div class="dict-definition">JavaScript engine का object जो network fetch operations या execution wait timers के completion value (success or failure state) को represent करता है।</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SECTION R -->
+                        <div id="letter-R" class="dict-section">
+                            <div class="dict-section-title">R</div>
+                            <ul class="dict-list">
+                                <li id="rebase" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Rebase</div>
+                                    <div class="dict-definition">Git repository workflow model, जहाँ commits history timeline clean alignment structure maintain करने के लिए feature commits base sequence reset की जाती है।</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SECTION S -->
+                        <div id="letter-S" class="dict-section">
+                            <div class="dict-section-title">S</div>
+                            <ul class="dict-list">
+                                <li id="static-site" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Static Site</div>
+                                    <div class="dict-definition">HTML, CSS, और JS components से बनी website, जो servers par bina databases runtime computation run किए pre-built state assets direct render करती है।</div>
+                                </li>
+                                <li id="systemd" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Systemd</div>
+                                    <div class="dict-definition">Linux distributions init processes system component daemon, जो boot sequence bootstrap initialization processes control करता है और applications daemons state start/stop करता है।</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- SECTION V -->
+                        <div id="letter-V" class="dict-section">
+                            <div class="dict-section-title">V</div>
+                            <ul class="dict-list">
+                                <li id="variables" class="dict-item">
+                                    <div class="dict-term"><i data-lucide="hash"></i> Variables</div>
+                                    <div class="dict-definition">Software programs memory containers, जो variable names के pointers structure के dynamically changing values, flags, array records list preserve रखते हैं।</div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="backlinks-container">
+                            <div class="backlinks-title">Linked References (Backlinks)</div>
+                            <div class="backlinks-list">
+                                <a href="../index.html" class="backlink-item">
+                                    <i data-lucide="layout-dashboard"></i>
+                                    <span>Home Dashboard</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
+                            <span>CuriousWiki Open Source Project</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        // Highlighting target term when hash change triggers
+        function highlightTarget() {
+            const hash = window.location.hash;
+            if (hash) {
+                const element = document.querySelector(hash);
+                if (element && element.classList.contains('dict-item')) {
+                    // Remove highlight from all items first
+                    document.querySelectorAll('.dict-item').forEach(item => {
+                        item.style.backgroundColor = '';
+                        item.style.borderLeft = '';
+                    });
+                    
+                    // Highlight current target
+                    element.style.backgroundColor = 'rgba(99, 102, 241, 0.08)';
+                    element.style.borderLeft = '4px solid var(--accent-color)';
+                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        }
+        window.addEventListener('hashchange', highlightTarget);
+        window.addEventListener('load', () => {
+            setTimeout(highlightTarget, 100);
+        });
+    </script>
+</body>
+</html>

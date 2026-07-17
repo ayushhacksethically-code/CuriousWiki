@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Dictionary on CuriousWiki</title>
+		<link>http://example.org/tags/dictionary.html</link>
+		<description>Recent content in Dictionary on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 30 Jun 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/dictionary/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>📖 Jargon Dictionary</title>
+				<link>http://example.org/pages/dictionary.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/dictionary.html</guid>
+				<description>&lt;p&gt;इस wiki में उपयोग किए जाने वाले technical jargon, programming concepts, और command-line terms का एक central glossary (शब्दकोश)। नए शब्दों को सीखने और cross-reference करने के लिए इसका उपयोग करें।&lt;/p&gt;&#xA;&lt;div class=&#34;dict-nav&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;#letter-A&#34; class=&#34;dict-letter-link&#34;&gt;A&lt;/a&gt; &lt;a href=&#34;#letter-C&#34; class=&#34;dict-letter-link&#34;&gt;C&lt;/a&gt; &lt;a href=&#34;#letter-D&#34; class=&#34;dict-letter-link&#34;&gt;D&lt;/a&gt; &lt;a href=&#34;#letter-F&#34; class=&#34;dict-letter-link&#34;&gt;F&lt;/a&gt; &lt;a href=&#34;#letter-G&#34; class=&#34;dict-letter-link&#34;&gt;G&lt;/a&gt; &lt;a href=&#34;#letter-L&#34; class=&#34;dict-letter-link&#34;&gt;L&lt;/a&gt; &lt;a href=&#34;#letter-M&#34; class=&#34;dict-letter-link&#34;&gt;M&lt;/a&gt; &lt;a href=&#34;#letter-N&#34; class=&#34;dict-letter-link&#34;&gt;N&lt;/a&gt; &lt;a href=&#34;#letter-P&#34; class=&#34;dict-letter-link&#34;&gt;P&lt;/a&gt; &lt;a href=&#34;#letter-R&#34; class=&#34;dict-letter-link&#34;&gt;R&lt;/a&gt; &lt;a href=&#34;#letter-S&#34; class=&#34;dict-letter-link&#34;&gt;S&lt;/a&gt; &lt;a href=&#34;#letter-V&#34; class=&#34;dict-letter-link&#34;&gt;V&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;letter-A&#34;&gt;A&lt;/h2&gt;&#xA;&lt;h3 id=&#34;acme-sh&#34;&gt;Acme.sh&lt;/h3&gt;&#xA;&lt;p&gt;Let&amp;rsquo;s Encrypt या ZeroSSL के ज़रिए SSL/TLS certificates automatically issue और renew करने के लिए एक zero-dependency Shell Script-based ACME client.&lt;/p&gt;&#xA;&lt;h3 id=&#34;alacritty&#34;&gt;Alacritty&lt;/h3&gt;&#xA;&lt;p&gt;Rust language में लिखा गया एक ultra-fast, lightweight, और GPU-accelerated (hardware-accelerated) terminal emulator.&lt;/p&gt;&#xA;&lt;h3 id=&#34;api&#34;&gt;API (Application Programming Interface)&lt;/h3&gt;&#xA;&lt;p&gt;अलग-अलग software applications/components के बीच data exchange और communication स्थापित करने का standard माध्यम।&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

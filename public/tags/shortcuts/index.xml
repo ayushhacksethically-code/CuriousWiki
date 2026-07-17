@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Shortcuts on CuriousWiki</title>
+		<link>http://example.org/tags/shortcuts.html</link>
+		<description>Recent content in Shortcuts on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 11 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/shortcuts/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>⌨️ BASH Keyboard Shortcuts Cheat Sheet</title>
+				<link>http://example.org/pages/linux/bash/shortcuts.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/bash/shortcuts.html</guid>
+				<description>&lt;p&gt;Linux Terminal पर BASH shell का उपयोग करते समय keyboard shortcuts का उपयोग करके आप अपनी command-line execution speeds और productivity को 10x बढ़ा सकते हैं। यहाँ navigation (cursor movement), line editing, history control, और job management के सभी important shortcuts की list दी गई है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Readline Library Configuration&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;BASH shell keyboard bindings को control करने के लिए internally &lt;strong&gt;Readline Library&lt;/strong&gt; का use करता है। Defaults modes &lt;code&gt;emacs&lt;/code&gt; style key-bindings पर config होते हैं। अगर आप Vim keyboard mode prefer करते हैं, तो terminal पर &lt;code&gt;set -o vi&lt;/code&gt; toggle कर सकते हैं।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>⌨️ Vim Text Editor Cheatsheet</title>
+				<link>http://example.org/pages/vim-cheatsheet.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/vim-cheatsheet.html</guid>
+				<description>&lt;p&gt;Vim modes के अंदर files को efficiently edit करने के लिए essential keyboard shortcuts, cursor movements, deletion macros, text search commands, और registers.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-cursor-movement-normal-mode&#34;&gt;1. Cursor Movement (Normal Mode)&lt;/h2&gt;&#xA;&lt;p&gt;Arrow keys या mouse का उपयोग किए बिना text को जल्दी navigate करना:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;h&lt;/span&gt;: cursor को एक character left ले जाएं&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;j&lt;/span&gt;: cursor को एक line down ले जाएं&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;k&lt;/span&gt;: cursor को एक line up ले जाएं&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;l&lt;/span&gt;: cursor को एक character right ले जाएं&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;w&lt;/span&gt;: अगले word के start पर jump करें&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;b&lt;/span&gt;: पिछले word के start पर jump करें&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;0&lt;/span&gt;: current line के start पर जाएं&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;$&lt;/span&gt;: current line के end पर जाएं&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;G&lt;/span&gt;: document की last line पर jump करें&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;kbd&#34;&gt;gg&lt;/span&gt;: document की first line पर jump करें&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;2-mode-switching&#34;&gt;2. Mode Switching&lt;/h2&gt;&#xA;&lt;p&gt;Insert, Visual, और Command-Line modes के बीच transition करना:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

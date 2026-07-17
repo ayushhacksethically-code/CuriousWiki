@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="bash, scripting, variables, arrays, associative, shebang, exit codes, strings, operators">
+    <title>BASH Script Anatomy & Data Types | CuriousWiki</title>
+    <!-- Lucide Icons CDN -->
+    
+    <link rel="stylesheet" href="../../../css/style.css?v=1.0.1">
+    
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="../../../index.html">Home</a>
+                    <span class="separator">></span>
+                    <a href="index.html">BASH Guide</a>
+                    <span class="separator">></span>
+                    <span>Anatomy & Data Types</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">🐚 BASH Script Anatomy & Data Types</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> July 01, 2026</span>
+                            <span><i data-lucide="clock"></i> 8 min read</span>
+                            <span><i data-lucide="tag"></i> variables, arrays, syntax</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p>यह chapter BASH scripts के build structure, variable assignment protocols, basic/advanced data types, operators, input-output, positional arguments, and exit codes को cover करता है।</p>
+
+                        <h2>1. BASH Script Anatomy (स्क्रिप्ट की शारीरिक रचना)</h2>
+                        <p>एक standard BASH script की structure इस तरह दिखती है:</p>
+                        <pre><code class="language-bash">#!/bin/bash
+# (Shebang) -> OS को बताता है कि script चलाने के लिए Bash interpreter का use करें।
+
+# --- GLOBAL CONFIGURATIONS & VARIABLES ---
+readonly APP_NAME="CuriousWiki Backup Tool"
+VERSION="1.0"
+
+# --- MAIN FUNCTIONS ---
+function print_header() {
+    echo "=== $APP_NAME ($VERSION) ==="
+}
+
+# --- SCRIPT EXECUTION ---
+print_header
+echo "Starting process..."</code></pre>
+
+                        <h3>🚀 Script चलाना (Running Shell Scripts)</h3>
+                        <p>BASH script file (जैसे <code>backup.sh</code>) को run करने के 2 main तरीके हैं:</p>
+                        <ol>
+                            <li><strong>Execution Permission देकर (Recommended):</strong>
+                                <pre><code class="language-bash">chmod +x backup.sh # Execute permission grant करें
+./backup.sh        # Run the script directly</code></pre>
+                            </li>
+                            <li><strong>Interpreter call करके (बिना execution permission के):</strong>
+                                <pre><code class="language-bash">bash backup.sh</code></pre>
+                            </li>
+                        </ol>
+
+                        <h2>2. Variables (वेरिएबल्स)</h2>
+                        <p>BASH dynamically-typed shell है। Variable name और value assignment के बीच <strong>कोई space नहीं होना चाहिए</strong> (<code>var=value</code> सही है, <code>var = value</code> गलत है)।</p>
+                        <pre><code class="language-bash"># Regular Variable
+username="narayanas"
+
+# Read-only Variable (Const)
+readonly DB_PORT=3306
+
+# Local Variable (सिर्फ custom functions के अंदर scoped)
+function demo() {
+    local index=5
+    echo "Index: $index"
+}
+
+# Environment Variable (Exported for child processes)
+export BUILD_DIR="/var/www/dist"
+
+# Unset / Clear Variable
+unset username</code></pre>
+
+                        <h2>3. BASH Data Types (डेटा प्रकार)</h2>
+                        <p>Bash variables internally standard strings की तरह handle होते हैं, लेकिन declaration style से dynamic behavior customize किया जा सकता है:</p>
+
+                        <h3>⚫ 1. Strings</h3>
+                        <p>डेटा स्टोर करने का सबसे आम तरीका. double-quotes variables evaluation support करते हैं, single-quotes standard plaintext structure maintain करते हैं:</p>
+                        <pre><code class="language-bash">name="Alice"
+echo "Hello $name"  # Evaluates: Hello Alice
+echo 'Hello $name'  # Prints literal: Hello $name</code></pre>
+
+                        <h3>⚫ 2. Numeric Variables</h3>
+                        <p>BASH variables default strings होते हैं। Arithmetic features clear रखने के लिए <code>declare -i</code> से variables initialize करें:</p>
+                        <pre><code class="language-bash">declare -i score=10
+score=score+5  # Evaluates: 15 (No need to use let/expr)</code></pre>
+
+                        <h3>⚫ 3. Indexed / Numeric Arrays</h3>
+                        <p>डेटा values की numerical-ordered key list:</p>
+                        <pre><code class="language-bash"># Array initialize करना
+declare -a fruits=("Apple" "Banana" "Mango")
+
+# Element Access (0-indexed)
+echo ${fruits[0]}  # Apple
+
+# Array के सभी elements access करना
+echo ${fruits[@]}  # Apple Banana Mango
+
+# Array length (कुल elements)
+echo ${#fruits[@]} # 3
+
+# Array में element append (जोड़ना)
+fruits+=("Orange")</code></pre>
+
+                        <h3>⚫ 4. Associative Arrays (Key-Value Dictionary)</h3>
+                        <p>यह dictionary की तरह काम करता है जहाँ index number के बजाय custom text keys (strings) होते हैं:
+                        <em>(Note: इसके लिए <code>declare -A</code> mandatory है)</em></p>
+                        <pre><code class="language-bash"># Declare Associative Array
+declare -A db_config
+
+# Set values
+db_config[host]="localhost"
+db_config[user]="admin"
+db_config[pass]="secret"
+
+# Access value
+echo "Database Host: ${db_config[host]}" # localhost
+echo "All keys: ${!db_config[@]}"       # host user pass</code></pre>
+
+                        <h2>4. Positional Arguments (स्क्रिप्ट आर्गुमेंट्स)</h2>
+                        <p>Script launch करते समय pass किए गए parameters access करने के standard variable flags:</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Argument Flag</th>
+                                    <th>Description</th>
+                                    <th>Example Usage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>$0</code></td>
+                                    <td>Script का filename path</td>
+                                    <td><code>./backup.sh</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>$1</code> - <code>$9</code></td>
+                                    <td>पहला argument से लेकर नौवें positional parameter तक</td>
+                                    <td><code>$1</code> (First argument)</td>
+                                </tr>
+                                <tr>
+                                    <td><code>$#</code></td>
+                                    <td>Total number of arguments passed (आर्गुमेंट्स की संख्या)</td>
+                                    <td><code>if [ $# -lt 1 ]; then ...</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>$@</code></td>
+                                    <td>All arguments as separate quotes values (Recommended)</td>
+                                    <td><code>for arg in "$@"; do ...</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>$*</code></td>
+                                    <td>All arguments formatted as a single combined string</td>
+                                    <td><code>echo "$*"</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>5. Exit Codes (एग्जिट कोड्स)</h2>
+                        <p>हर command या script execute होने पर OS को exit status code return करती है।</p>
+                        <ul>
+                            <li><code>$?</code>: यह last executed command का status return करता है।
+                                <pre><code class="language-bash">ping -c 1 google.com
+echo $?  # Outputs: 0 (Success)
+
+ping -c 1 invalidurl.xyz
+echo $?  # Outputs: 2 (Non-zero indicates Failure)</code></pre>
+                            </li>
+                            <li>Custom scripts में code flow control के लिए direct exit code explicitly define करें:
+                                <pre><code class="language-bash">if [ ! -f "config.json" ]; then
+    echo "Configuration file missing!"
+    exit 1  # Standard error exit status
+fi
+exit 0      # Clean completion</code></pre>
+                            </li>
+                        </ul>
+
+                        <h2>6. String Manipulation (स्ट्रिंग हेरफेर)</h2>
+                        <p>String slice, replace, और size calculation directly shell parser variable expansion level पर किया जा सकता है:</p>
+                        <pre><code class="language-bash">msg="hello world"
+
+# 1. String length (लंबाई)
+echo ${#msg}       # 11
+
+# 2. Substring / Slice (${var:start:length})
+echo ${msg:6:5}    # world
+
+# 3. Search and Replace (${var/search/replace})
+echo ${msg/world/bash} # hello bash
+
+# 4. Remove prefix / suffix patterns
+filepath="/var/log/syslog"
+echo ${filepath##*/} # syslog (Only filename extracted)</code></pre>
+
+                        <div class="backlinks-container">
+                            <div class="backlinks-title">Linked References (Backlinks)</div>
+                            <div class="backlinks-list">
+                                <a href="index.html" class="backlink-item">
+                                    <i data-lucide="terminal-square"></i>
+                                    <span>BASH Guide Index</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
+                            <span>CuriousWiki Open Source Project</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="../../../js/main.js"></script>
+</body>
+</html>

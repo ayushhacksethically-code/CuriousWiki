@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ with .Params.tags }}
+    <meta name="keywords" content="{{ delimit . ", " }}">
+    {{ end }}
+    <title>{{ block "title" . }}{{ .Title }} | CuriousWiki{{ end }}</title>
+    <!-- Lucide Icons CDN -->
+    
+    <link rel="stylesheet" href="{{ "css/style.css?v=1.0.1" | relURL }}">
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        {{ partial "sidebar.html" . }}
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="{{ "index.html" | relURL }}">Home</a>
+                    {{ if not .IsHome }}
+                        {{ range .Ancestors.Reverse }}
+                            {{ if not .IsHome }}
+                            <span class="separator">></span>
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            {{ end }}
+                        {{ end }}
+                        <span class="separator">></span>
+                        <span>{{ .Title }}</span>
+                    {{ end }}
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                {{ block "main" . }}{{ end }}
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="{{ "js/main.js" | relURL }}"></script>
+</body>
+</html>

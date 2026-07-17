@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>🐚 Command-Line Shells Guide on CuriousWiki</title>
+		<link>http://example.org/pages/linux/linux-tools/shell/index.html</link>
+		<description>Recent content in 🐚 Command-Line Shells Guide on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/pages/linux/linux-tools/shell/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🐚 Almquist Shell (ash) &amp; Debian Almquist Shell (DASH)</title>
+				<link>http://example.org/pages/linux/linux-tools/shell/dash.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/shell/dash.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Almquist Shell (ash)&lt;/strong&gt; Unix-like operating systems के लिए एक lightweight और highly performant shell है। यह Bourne Shell का clone है और इसके derived forks (जैसे &lt;strong&gt;DASH&lt;/strong&gt;) Linux ecosystem में startup sequences को speed-up करने और embedded environments (जैसे BusyBox) में व्यापक रूप से उपयोग किए जाते हैं।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Fast Fact&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;मूल &lt;code&gt;ash&lt;/code&gt; shell को Kenneth Almquist ने 1989 में release किया था। यह केवल 92KB size का super-lightweight shell है जो low-memory profiles के लिए सर्वश्रेष्ठ है।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>🐚 GNU Bash (Bourne Again Shell)</title>
+				<link>http://example.org/pages/linux/linux-tools/shell/bash.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/shell/bash.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;GNU Bash (Bourne Again Shell)&lt;/strong&gt; Unix-like operating systems के लिए एक command interpreter और command language shell है। इसे 1989 में &lt;strong&gt;Brian Fox&lt;/strong&gt; ने GNU Project के लिए Bourne shell (&lt;code&gt;sh&lt;/code&gt;) के open-source replacement के रूप में develop किया था। वर्तमान में इसके development maintainer &lt;strong&gt;Chet Ramey&lt;/strong&gt; हैं।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Timeline Trivia&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;1991 में, Linux kernel development के शुरुआती दिनों में &lt;strong&gt;Linus Torvalds&lt;/strong&gt; ने GCC compiler के साथ जिन चुनिंदा programs को सबसे पहले Linux पर port किया था, उनमें BASH प्रमुख था।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>🐚 Microsoft PowerShell (pwsh)</title>
+				<link>http://example.org/pages/linux/linux-tools/shell/powershell.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/shell/powershell.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;PowerShell&lt;/strong&gt; Microsoft द्वारा विकसित एक cross-platform task automation framework, command shell, और scripting language है। यह Windows, Linux और macOS पर चलता है और traditional shells की तरह plain text streams के बजाय &lt;strong&gt;.NET Objects&lt;/strong&gt; flow पर काम करता है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;The Monad Manifesto&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;PowerShell के आविष्कारक &lt;strong&gt;Jeffrey Snover&lt;/strong&gt; ने 2002 में &amp;ldquo;Monad Manifesto&amp;rdquo; लिखा था। इसमें उन्होंने UNIX pipelines की utility को .NET platform के object flow concept के साथ मिलाकर modern scripting engine की blueprint पेश की थी।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>🐚 Z Shell (Zsh) &amp; Oh My Zsh Ecosystem</title>
+				<link>http://example.org/pages/linux/linux-tools/shell/zsh.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/shell/zsh.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Z Shell (Zsh)&lt;/strong&gt; Unix-like operating systems के लिए एक highly customizable command interpreter और command language interface है। यह Bourne shell (&lt;code&gt;sh&lt;/code&gt;) के syntax को maintain करते हुए &lt;code&gt;ksh&lt;/code&gt;, &lt;code&gt;tcsh&lt;/code&gt;, और &lt;code&gt;rc&lt;/code&gt; के key features को जोड़ता है और interactive usage के लिए robust options प्रदान करता है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Naming Origin&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Zsh को &lt;strong&gt;Paul Falstad&lt;/strong&gt; ने 1990 में Princeton University में पढ़ाई के दौरान बनाया था। इसका नाम Princeton के एक Teaching Assistant (TA) &lt;strong&gt;Zhong Shao&lt;/strong&gt; के login ID &lt;code&gt;zsh&lt;/code&gt; से लिया गया था, जिसे Falstad ने एक shell के लिए बढ़िया नाम समझा।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>🖥️ Windows Command Prompt (cmd.exe)</title>
+				<link>http://example.org/pages/linux/linux-tools/shell/cmd.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/shell/cmd.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;cmd.exe (Command Prompt)&lt;/strong&gt; Windows Operating Systems (Windows Server 2016-2025, Windows 10/11) का default command-line interpreter है। यह traditional legacy systems compatibility प्रदान करता है और &lt;code&gt;.bat&lt;/code&gt; / &lt;code&gt;.cmd&lt;/code&gt; batch scripts handle करने के काम आता है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-warning&#34;&gt;&#xA;&lt;i data-lucide=&#34;alert-triangle&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Advancement Note&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Modern environments में Microsoft scripting automation tasks के लिए PowerShell या Windows Subsystem for Linux (WSL) utilize करने की सलाह देता है क्योंकि cmd.exe capabilities काफी limited हैं।&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;1-syntax-and-execution-parameters-परमटरस&#34;&gt;1. Syntax and Execution Parameters (पैरामीटर्स)&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{b}{f}] [/e:{on|off}] [/f:{on|off}] [/v:{on|off}] [string]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;key-launch-options&#34;&gt;Key Launch Options:&lt;/h3&gt;&#xA;&lt;table&gt;&#xA;&#x9;&lt;thead&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Parameter Option&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;th&gt;Behavior Description&lt;/th&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/thead&gt;&#xA;&#x9;&lt;tbody&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;/c&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;दी गई string command run करने के बाद cmd process को automatically terminate (exit) कर देता है।&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;/k&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;दी गई string command run करता है लेकिन console runtime window को &lt;strong&gt;खुला (active)&lt;/strong&gt; रखता है।&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;/q&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Echo display mode off कर देता है (command outputs quiet mode में चलते हैं)।&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;/d&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Registry configuration AutoRun commands logic block/disable कर देता है।&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;/a&lt;/code&gt; | &lt;code&gt;/u&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;Outputs formatting settings: ANSI (&lt;code&gt;/a&lt;/code&gt;) या Unicode (&lt;code&gt;/u&lt;/code&gt;) control.&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;/v:on&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;strong&gt;Delayed Variable Expansion&lt;/strong&gt; इनेबल करना (runtime पर runtime parameters evaluate करने के लिए &lt;code&gt;!var!&lt;/code&gt; syntax का support मिलता है)।&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&#x9;&#x9;&lt;tr&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;&lt;code&gt;/f:on&lt;/code&gt;&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;td&gt;File and directory name tab completion support configuration इनेबल करना।&lt;/td&gt;&#xA;&#x9;&#x9;&#x9;&lt;/tr&gt;&#xA;&#x9;&lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;2-color-configurations-रग-सटगस&#34;&gt;2. Color Configurations (रंग सेटिंग्स)&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;/t:bf&lt;/code&gt; parameter के ज़रिये background (b) और foreground/text (f) colors hex codes के base पर set किए जा सकते हैं:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

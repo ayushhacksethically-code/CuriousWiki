@@ -1,0 +1,1704 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Tags on CuriousWiki</title>
+		<link>http://example.org/tags/index.html</link>
+		<description>Recent content in Tags on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Bash</title>
+				<link>http://example.org/tags/bash.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/bash.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Commands</title>
+				<link>http://example.org/tags/commands.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/commands.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Directories</title>
+				<link>http://example.org/tags/directories.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/directories.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Draft</title>
+				<link>http://example.org/tags/draft.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/draft.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Files</title>
+				<link>http://example.org/tags/files.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/files.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Focus</title>
+				<link>http://example.org/tags/focus.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/focus.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Linux</title>
+				<link>http://example.org/tags/linux.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/linux.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Logs</title>
+				<link>http://example.org/tags/logs.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/logs.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Placeholder</title>
+				<link>http://example.org/tags/placeholder.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/placeholder.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Pomodoro</title>
+				<link>http://example.org/tags/pomodoro.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/pomodoro.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Productivity</title>
+				<link>http://example.org/tags/productivity.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/productivity.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Tail</title>
+				<link>http://example.org/tags/tail.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/tail.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Template</title>
+				<link>http://example.org/tags/template.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/template.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Time-Blocking</title>
+				<link>http://example.org/tags/time-blocking.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/time-blocking.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Workflow</title>
+				<link>http://example.org/tags/workflow.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/workflow.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Arch</title>
+				<link>http://example.org/tags/arch.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/arch.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Debian</title>
+				<link>http://example.org/tags/debian.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/debian.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Default Editor</title>
+				<link>http://example.org/tags/default-editor.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/default-editor.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Editors</title>
+				<link>http://example.org/tags/editors.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/editors.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Emacs</title>
+				<link>http://example.org/tags/emacs.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/emacs.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Fedora</title>
+				<link>http://example.org/tags/fedora.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/fedora.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Helix</title>
+				<link>http://example.org/tags/helix.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/helix.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>History</title>
+				<link>http://example.org/tags/history.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/history.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Keyboard</title>
+				<link>http://example.org/tags/keyboard.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/keyboard.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Micro</title>
+				<link>http://example.org/tags/micro.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/micro.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Nano</title>
+				<link>http://example.org/tags/nano.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/nano.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Neovim</title>
+				<link>http://example.org/tags/neovim.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/neovim.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Shortcuts</title>
+				<link>http://example.org/tags/shortcuts.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/shortcuts.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Vi</title>
+				<link>http://example.org/tags/vi.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/vi.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Vim</title>
+				<link>http://example.org/tags/vim.html</link>
+				<pubDate>Sat, 11 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/vim.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Acme</title>
+				<link>http://example.org/tags/acme.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/acme.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Acme.sh</title>
+				<link>http://example.org/tags/acme.sh.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/acme.sh.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Alacritty</title>
+				<link>http://example.org/tags/alacritty.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/alacritty.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Aur</title>
+				<link>http://example.org/tags/aur.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/aur.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Aur-Helpers</title>
+				<link>http://example.org/tags/aur-helpers.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/aur-helpers.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Automation</title>
+				<link>http://example.org/tags/automation.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/automation.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Background</title>
+				<link>http://example.org/tags/background.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/background.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Blkid</title>
+				<link>http://example.org/tags/blkid.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/blkid.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Boot</title>
+				<link>http://example.org/tags/boot.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/boot.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Certificate</title>
+				<link>http://example.org/tags/certificate.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/certificate.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cloudflare</title>
+				<link>http://example.org/tags/cloudflare.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/cloudflare.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Compilation</title>
+				<link>http://example.org/tags/compilation.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/compilation.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Config</title>
+				<link>http://example.org/tags/config.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/config.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cron</title>
+				<link>http://example.org/tags/cron.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/cron.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Crontab</title>
+				<link>http://example.org/tags/crontab.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/crontab.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Daemon</title>
+				<link>http://example.org/tags/daemon.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/daemon.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Dependencies</title>
+				<link>http://example.org/tags/dependencies.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/dependencies.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Emulator</title>
+				<link>http://example.org/tags/emulator.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/emulator.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Filesystem</title>
+				<link>http://example.org/tags/filesystem.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/filesystem.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Fscrypt</title>
+				<link>http://example.org/tags/fscrypt.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/fscrypt.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Fstab</title>
+				<link>http://example.org/tags/fstab.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/fstab.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Gpu</title>
+				<link>http://example.org/tags/gpu.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/gpu.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Letsencrypt</title>
+				<link>http://example.org/tags/letsencrypt.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/letsencrypt.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Mount</title>
+				<link>http://example.org/tags/mount.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/mount.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Nginx</title>
+				<link>http://example.org/tags/nginx.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/nginx.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Pacman</title>
+				<link>http://example.org/tags/pacman.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/pacman.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Partitioning</title>
+				<link>http://example.org/tags/partitioning.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/partitioning.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Paru</title>
+				<link>http://example.org/tags/paru.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/paru.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Rust</title>
+				<link>http://example.org/tags/rust.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/rust.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Scheduling</title>
+				<link>http://example.org/tags/scheduling.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/scheduling.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ssl</title>
+				<link>http://example.org/tags/ssl.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/ssl.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Tasks</title>
+				<link>http://example.org/tags/tasks.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/tasks.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Terminal</title>
+				<link>http://example.org/tags/terminal.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/terminal.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Tls</title>
+				<link>http://example.org/tags/tls.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/tls.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Toml</title>
+				<link>http://example.org/tags/toml.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/toml.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Uuid</title>
+				<link>http://example.org/tags/uuid.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/uuid.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Yaml</title>
+				<link>http://example.org/tags/yaml.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/yaml.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Yay</title>
+				<link>http://example.org/tags/yay.html</link>
+				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/yay.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Alias</title>
+				<link>http://example.org/tags/alias.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/alias.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Awk</title>
+				<link>http://example.org/tags/awk.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/awk.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Builtins</title>
+				<link>http://example.org/tags/builtins.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/builtins.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Columns</title>
+				<link>http://example.org/tags/columns.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/columns.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Gawk</title>
+				<link>http://example.org/tags/gawk.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/gawk.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Grep</title>
+				<link>http://example.org/tags/grep.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/grep.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Parsing</title>
+				<link>http://example.org/tags/parsing.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/parsing.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Pattern</title>
+				<link>http://example.org/tags/pattern.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/pattern.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Programming</title>
+				<link>http://example.org/tags/programming.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/programming.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Regex</title>
+				<link>http://example.org/tags/regex.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/regex.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Script</title>
+				<link>http://example.org/tags/script.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/script.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Search</title>
+				<link>http://example.org/tags/search.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/search.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Shell</title>
+				<link>http://example.org/tags/shell.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/shell.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Source</title>
+				<link>http://example.org/tags/source.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/source.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Tools</title>
+				<link>http://example.org/tags/tools.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/tools.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Unalias</title>
+				<link>http://example.org/tags/unalias.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/unalias.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Circuit</title>
+				<link>http://example.org/tags/circuit.html</link>
+				<pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/circuit.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Eda</title>
+				<link>http://example.org/tags/eda.html</link>
+				<pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/eda.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Electronica</title>
+				<link>http://example.org/tags/electronica.html</link>
+				<pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/electronica.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Geda</title>
+				<link>http://example.org/tags/geda.html</link>
+				<pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/geda.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Layout</title>
+				<link>http://example.org/tags/layout.html</link>
+				<pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/layout.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Pcb</title>
+				<link>http://example.org/tags/pcb.html</link>
+				<pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/pcb.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Schematic</title>
+				<link>http://example.org/tags/schematic.html</link>
+				<pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/schematic.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Simulation</title>
+				<link>http://example.org/tags/simulation.html</link>
+				<pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/simulation.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>.Net Objects</title>
+				<link>http://example.org/tags/.net-objects.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/.net-objects.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Almquist</title>
+				<link>http://example.org/tags/almquist.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/almquist.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Anaconda</title>
+				<link>http://example.org/tags/anaconda.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/anaconda.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Apt</title>
+				<link>http://example.org/tags/apt.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/apt.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Archinstall</title>
+				<link>http://example.org/tags/archinstall.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/archinstall.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Arrays</title>
+				<link>http://example.org/tags/arrays.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/arrays.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ash</title>
+				<link>http://example.org/tags/ash.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/ash.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Associative</title>
+				<link>http://example.org/tags/associative.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/associative.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Brian Fox</title>
+				<link>http://example.org/tags/brian-fox.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/brian-fox.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Busybox</title>
+				<link>http://example.org/tags/busybox.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/busybox.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Calamares</title>
+				<link>http://example.org/tags/calamares.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/calamares.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cat</title>
+				<link>http://example.org/tags/cat.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/cat.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cd</title>
+				<link>http://example.org/tags/cd.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/cd.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Chet Ramey</title>
+				<link>http://example.org/tags/chet-ramey.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/chet-ramey.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Chmod</title>
+				<link>http://example.org/tags/chmod.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/chmod.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Chown</title>
+				<link>http://example.org/tags/chown.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/chown.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cmd</title>
+				<link>http://example.org/tags/cmd.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/cmd.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cmd.exe</title>
+				<link>http://example.org/tags/cmd.exe.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/cmd.exe.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cockpit</title>
+				<link>http://example.org/tags/cockpit.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/cockpit.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Command Line</title>
+				<link>http://example.org/tags/command-line.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/command-line.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Command Prompt</title>
+				<link>http://example.org/tags/command-prompt.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/command-prompt.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Compression</title>
+				<link>http://example.org/tags/compression.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/compression.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Conditionals</title>
+				<link>http://example.org/tags/conditionals.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/conditionals.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cp</title>
+				<link>http://example.org/tags/cp.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/cp.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Curl</title>
+				<link>http://example.org/tags/curl.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/curl.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Dash</title>
+				<link>http://example.org/tags/dash.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/dash.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Dnf</title>
+				<link>http://example.org/tags/dnf.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/dnf.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Dos</title>
+				<link>http://example.org/tags/dos.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/dos.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Dsc</title>
+				<link>http://example.org/tags/dsc.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/dsc.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Echo</title>
+				<link>http://example.org/tags/echo.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/echo.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Emacs Mode</title>
+				<link>http://example.org/tags/emacs-mode.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/emacs-mode.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Embedded Linux</title>
+				<link>http://example.org/tags/embedded-linux.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/embedded-linux.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Environment Variables</title>
+				<link>http://example.org/tags/environment-variables.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/environment-variables.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Error Handling</title>
+				<link>http://example.org/tags/error-handling.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/error-handling.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Exit Codes</title>
+				<link>http://example.org/tags/exit-codes.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/exit-codes.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Fhs</title>
+				<link>http://example.org/tags/fhs.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/fhs.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Find</title>
+				<link>http://example.org/tags/find.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/find.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Fish</title>
+				<link>http://example.org/tags/fish.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/fish.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Functions</title>
+				<link>http://example.org/tags/functions.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/functions.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Fundamentals</title>
+				<link>http://example.org/tags/fundamentals.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/fundamentals.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Gnu</title>
+				<link>http://example.org/tags/gnu.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/gnu.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Guide</title>
+				<link>http://example.org/tags/guide.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/guide.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Install Powershell</title>
+				<link>http://example.org/tags/install-powershell.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/install-powershell.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Installation</title>
+				<link>http://example.org/tags/installation.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/installation.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Kali Linux</title>
+				<link>http://example.org/tags/kali-linux.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/kali-linux.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Keybindings</title>
+				<link>http://example.org/tags/keybindings.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/keybindings.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Kickstart</title>
+				<link>http://example.org/tags/kickstart.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/kickstart.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ksh</title>
+				<link>http://example.org/tags/ksh.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/ksh.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Loops</title>
+				<link>http://example.org/tags/loops.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/loops.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ls</title>
+				<link>http://example.org/tags/ls.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/ls.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>MacOS Default Shell</title>
+				<link>http://example.org/tags/macos-default-shell.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/macos-default-shell.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Mirror</title>
+				<link>http://example.org/tags/mirror.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/mirror.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Mkdir</title>
+				<link>http://example.org/tags/mkdir.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/mkdir.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Mono Manifesto</title>
+				<link>http://example.org/tags/mono-manifesto.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/mono-manifesto.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Mv</title>
+				<link>http://example.org/tags/mv.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/mv.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Networking</title>
+				<link>http://example.org/tags/networking.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/networking.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Oh My Zsh</title>
+				<link>http://example.org/tags/oh-my-zsh.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/oh-my-zsh.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Operators</title>
+				<link>http://example.org/tags/operators.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/operators.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Packages</title>
+				<link>http://example.org/tags/packages.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/packages.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Paul Falstad</title>
+				<link>http://example.org/tags/paul-falstad.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/paul-falstad.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Permissions</title>
+				<link>http://example.org/tags/permissions.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/permissions.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Pipe</title>
+				<link>http://example.org/tags/pipe.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/pipe.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Plugins</title>
+				<link>http://example.org/tags/plugins.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/plugins.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Powershell</title>
+				<link>http://example.org/tags/powershell.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/powershell.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Preseed</title>
+				<link>http://example.org/tags/preseed.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/preseed.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Process Management</title>
+				<link>http://example.org/tags/process-management.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/process-management.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Pwd</title>
+				<link>http://example.org/tags/pwd.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/pwd.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Pwsh</title>
+				<link>http://example.org/tags/pwsh.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/pwsh.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Recursion</title>
+				<link>http://example.org/tags/recursion.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/recursion.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Redirection</title>
+				<link>http://example.org/tags/redirection.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/redirection.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Registry Autorun</title>
+				<link>http://example.org/tags/registry-autorun.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/registry-autorun.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Rm</title>
+				<link>http://example.org/tags/rm.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/rm.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Rmdir</title>
+				<link>http://example.org/tags/rmdir.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/rmdir.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Scripting</title>
+				<link>http://example.org/tags/scripting.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/scripting.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Set Strict Mode</title>
+				<link>http://example.org/tags/set-strict-mode.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/set-strict-mode.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Shebang</title>
+				<link>http://example.org/tags/shebang.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/shebang.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Shellshock</title>
+				<link>http://example.org/tags/shellshock.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/shellshock.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Stderr</title>
+				<link>http://example.org/tags/stderr.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/stderr.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Stdin</title>
+				<link>http://example.org/tags/stdin.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/stdin.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Stdout</title>
+				<link>http://example.org/tags/stdout.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/stdout.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Streams</title>
+				<link>http://example.org/tags/streams.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/streams.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Strings</title>
+				<link>http://example.org/tags/strings.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/strings.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Symlinks</title>
+				<link>http://example.org/tags/symlinks.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/symlinks.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Sysadmin</title>
+				<link>http://example.org/tags/sysadmin.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/sysadmin.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Tab-Completion</title>
+				<link>http://example.org/tags/tab-completion.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/tab-completion.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Tar</title>
+				<link>http://example.org/tags/tar.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/tar.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Tcsh</title>
+				<link>http://example.org/tags/tcsh.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/tcsh.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Touch</title>
+				<link>http://example.org/tags/touch.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/touch.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Trap</title>
+				<link>http://example.org/tags/trap.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/trap.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Tutorial</title>
+				<link>http://example.org/tags/tutorial.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/tutorial.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ubuntu</title>
+				<link>http://example.org/tags/ubuntu.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/ubuntu.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Variables</title>
+				<link>http://example.org/tags/variables.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/variables.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Webui</title>
+				<link>http://example.org/tags/webui.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/webui.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Windows</title>
+				<link>http://example.org/tags/windows.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/windows.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Xorriso</title>
+				<link>http://example.org/tags/xorriso.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/xorriso.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Zip</title>
+				<link>http://example.org/tags/zip.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/zip.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Zsh</title>
+				<link>http://example.org/tags/zsh.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/zsh.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ami</title>
+				<link>http://example.org/tags/ami.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/ami.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Animations</title>
+				<link>http://example.org/tags/animations.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/animations.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Async</title>
+				<link>http://example.org/tags/async.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/async.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Aws</title>
+				<link>http://example.org/tags/aws.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/aws.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Branch</title>
+				<link>http://example.org/tags/branch.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/branch.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Category</title>
+				<link>http://example.org/tags/category.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/category.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cheatsheet</title>
+				<link>http://example.org/tags/cheatsheet.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/cheatsheet.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cloud</title>
+				<link>http://example.org/tags/cloud.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/cloud.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cloud-Init</title>
+				<link>http://example.org/tags/cloud-init.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/cloud-init.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Commit</title>
+				<link>http://example.org/tags/commit.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/commit.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Copr</title>
+				<link>http://example.org/tags/copr.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/copr.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Css</title>
+				<link>http://example.org/tags/css.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/css.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Dictionary</title>
+				<link>http://example.org/tags/dictionary.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/dictionary.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Digitalocean</title>
+				<link>http://example.org/tags/digitalocean.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/digitalocean.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ec2</title>
+				<link>http://example.org/tags/ec2.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/ec2.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Editor</title>
+				<link>http://example.org/tags/editor.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/editor.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Flexbox</title>
+				<link>http://example.org/tags/flexbox.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/flexbox.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Gentoo</title>
+				<link>http://example.org/tags/gentoo.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/gentoo.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Git</title>
+				<link>http://example.org/tags/git.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/git.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Glossary</title>
+				<link>http://example.org/tags/glossary.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/glossary.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Grid</title>
+				<link>http://example.org/tags/grid.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/grid.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Hetzner</title>
+				<link>http://example.org/tags/hetzner.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/hetzner.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Htop</title>
+				<link>http://example.org/tags/htop.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/htop.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Hypervisor</title>
+				<link>http://example.org/tags/hypervisor.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/hypervisor.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Index</title>
+				<link>http://example.org/tags/index.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/index.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Intro</title>
+				<link>http://example.org/tags/intro.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/intro.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Jargon</title>
+				<link>http://example.org/tags/jargon.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/jargon.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Javascript</title>
+				<link>http://example.org/tags/javascript.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/javascript.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Js</title>
+				<link>http://example.org/tags/js.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/js.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Linode</title>
+				<link>http://example.org/tags/linode.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/linode.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Maintenance</title>
+				<link>http://example.org/tags/maintenance.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/maintenance.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Merge</title>
+				<link>http://example.org/tags/merge.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/merge.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Network</title>
+				<link>http://example.org/tags/network.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/network.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Nim</title>
+				<link>http://example.org/tags/nim.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/nim.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ovh</title>
+				<link>http://example.org/tags/ovh.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/ovh.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ppa</title>
+				<link>http://example.org/tags/ppa.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/ppa.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Procedures</title>
+				<link>http://example.org/tags/procedures.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/procedures.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Proxmox</title>
+				<link>http://example.org/tags/proxmox.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/proxmox.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Qcow2</title>
+				<link>http://example.org/tags/qcow2.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/qcow2.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Repository</title>
+				<link>http://example.org/tags/repository.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/repository.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Responsive</title>
+				<link>http://example.org/tags/responsive.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/responsive.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Setup</title>
+				<link>http://example.org/tags/setup.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/setup.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Shells</title>
+				<link>http://example.org/tags/shells.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/shells.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Systemd</title>
+				<link>http://example.org/tags/systemd.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/systemd.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Terms</title>
+				<link>http://example.org/tags/terms.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/terms.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Types</title>
+				<link>http://example.org/tags/types.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/types.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Virtualization</title>
+				<link>http://example.org/tags/virtualization.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/virtualization.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Vocabulary</title>
+				<link>http://example.org/tags/vocabulary.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/vocabulary.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Vps</title>
+				<link>http://example.org/tags/vps.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/vps.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Wiki</title>
+				<link>http://example.org/tags/wiki.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/wiki.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Dashboard</title>
+				<link>http://example.org/tags/dashboard.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/dashboard.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Home</title>
+				<link>http://example.org/tags/home.html</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>http://example.org/tags/home.html</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>

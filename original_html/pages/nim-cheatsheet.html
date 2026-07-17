@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="nim, programming, types, variables, loops, procedures, async">
+    <title>Nim Cheatsheet | CuriousWiki Reference</title>
+    <!-- Lucide Icons CDN -->
+    
+    <link rel="stylesheet" href="../css/style.css?v=1.0.1">
+    
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">></span>
+                    <a href="nim-cheatsheet.html">Reference</a>
+                    <span class="separator">></span>
+                    <span>Nim Cheatsheet</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">👑 Nim Programming Cheatsheet</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> June 30, 2026</span>
+                            <span><i data-lucide="clock"></i> 4 min read</span>
+                            <span><i data-lucide="tag"></i> nim, programming</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p>Compiled performance programs बनाने के लिए Nim language में essential code formulas, type declarations, loops, procedures, और async blocks.</p>
+
+                        <h2>1. Variables & Declarations</h2>
+                        <p>Mutable variables, read-only values, और compile-time constants:</p>
+                        <pre><code class="language-nim"># Mutable variables (value change kar sakte hain)
+var ginti = 10
+ginti = 20
+
+# Read-only variables (runtime par evaluate hoti hain)
+let sandesh = "Hello from Nim"
+
+# Compile-time constants (compile time par evaluate hoti hain)
+const PortNumber = 8080</code></pre>
+
+                        <h2>2. Procedures (Functions)</h2>
+                        <p>Typing, parameters, return declarations, और implicit results के साथ procedures create करना:</p>
+                        <pre><code class="language-nim"># Standard procedure declaration
+proc addNumbers(pehliSankhya: int, doosriSankhya: int): int =
+  return pehliSankhya + doosriSankhya
+
+# Implicit 'result' variable ke sath procedure (no return keyword required)
+proc squareVal(sankhya: int): int =
+  result = sankhya * sankhya
+
+# calling procedures
+let jod = addNumbers(5, 10)
+let varg = squareVal(4)</code></pre>
+
+                        <h2>3. Control Flow & Loops</h2>
+                        <p>Conditionals evaluate करना और sequences या number intervals पर loop करना:</p>
+                        <pre><code class="language-nim"># Conditionals
+let umar = 18
+if umar < 18:
+  echo "Underage"
+elif umar == 18:
+  echo "Just adult"
+else:
+  echo "Adult"
+
+# For loops (intervals)
+for i in 0 .. 4:
+  echo i # 0, 1, 2, 3, 4 (inclusive)
+
+for i in 0 ..< 5:
+  echo i # 0, 1, 2, 3, 4 (exclusive)
+
+# sequences iterate karna
+let falonKiList = @["apple", "banana", "cherry"] # sequences
+for kram, fal in falonKiList:
+  echo kram, ": ", fal</code></pre>
+
+                        <h2>4. Custom Object Types</h2>
+                        <p>Basic data structs declare करना और object parameters initialize करना:</p>
+                        <pre><code class="language-nim">type
+  User = object
+    sadasyaNaam: string
+    pehchanId: int
+    kyaAdminHai: bool
+
+# Object initialize karein
+let prashashakUpabhokta = User(sadasyaNaam: "narayanas", pehchanId: 1, kyaAdminHai: true)
+echo prashashakUpabhokta.sadasyaNaam</code></pre>
+                    </section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
+                            <span>CuriousWiki Open Source Project</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

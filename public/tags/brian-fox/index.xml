@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Brian Fox on CuriousWiki</title>
+		<link>http://example.org/tags/brian-fox.html</link>
+		<description>Recent content in Brian Fox on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/brian-fox/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🐚 GNU Bash (Bourne Again Shell)</title>
+				<link>http://example.org/pages/linux/linux-tools/shell/bash.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/shell/bash.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;GNU Bash (Bourne Again Shell)&lt;/strong&gt; Unix-like operating systems के लिए एक command interpreter और command language shell है। इसे 1989 में &lt;strong&gt;Brian Fox&lt;/strong&gt; ने GNU Project के लिए Bourne shell (&lt;code&gt;sh&lt;/code&gt;) के open-source replacement के रूप में develop किया था। वर्तमान में इसके development maintainer &lt;strong&gt;Chet Ramey&lt;/strong&gt; हैं।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Timeline Trivia&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;1991 में, Linux kernel development के शुरुआती दिनों में &lt;strong&gt;Linus Torvalds&lt;/strong&gt; ने GCC compiler के साथ जिन चुनिंदा programs को सबसे पहले Linux पर port किया था, उनमें BASH प्रमुख था।&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Zsh on CuriousWiki</title>
+		<link>http://example.org/tags/zsh.html</link>
+		<description>Recent content in Zsh on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🐚 Command-Line Shells Guide</title>
+				<link>http://example.org/pages/linux/linux-tools/shell/index.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/shell/index.html</guid>
+				<description>&lt;p&gt;Linux, macOS, और Windows operating systems में commands execute करने और scripting workflows configure करने के लिए उपयोग होने वाले प्रमुख &lt;strong&gt;Shells&lt;/strong&gt; की विस्तृत जानकारी।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Shell क्या है?&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Shell एक interface/program है जो user से inputs (commands) लेता है, उन्हें OS Kernel को भेजता है, और outcome/output display करता. Terminal Window सिर्फ एक host/container wrapper है, जिसके अंदर actual shell (जैसे Bash, Zsh) चलता है।&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;1-core-unixlinux-shells&#34;&gt;1. Core Unix/Linux Shells&lt;/h2&gt;&#xA;&lt;h3 id=&#34;-sh-bourne-shell&#34;&gt;⚫ sh (Bourne Shell)&lt;/h3&gt;&#xA;&lt;p&gt;यह Unix system का मूल (original) shell है, जिसे Steve Bourne ने Bell Labs में विकसित किया था। यह बहुत basic है और आज की तारीख में mostly interactive use के बजाय compatibility scripts चलाने के काम आता है।&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>🐚 Z Shell (Zsh) &amp; Oh My Zsh Ecosystem</title>
+				<link>http://example.org/pages/linux/linux-tools/shell/zsh.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/shell/zsh.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Z Shell (Zsh)&lt;/strong&gt; Unix-like operating systems के लिए एक highly customizable command interpreter और command language interface है। यह Bourne shell (&lt;code&gt;sh&lt;/code&gt;) के syntax को maintain करते हुए &lt;code&gt;ksh&lt;/code&gt;, &lt;code&gt;tcsh&lt;/code&gt;, और &lt;code&gt;rc&lt;/code&gt; के key features को जोड़ता है और interactive usage के लिए robust options प्रदान करता है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Naming Origin&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Zsh को &lt;strong&gt;Paul Falstad&lt;/strong&gt; ने 1990 में Princeton University में पढ़ाई के दौरान बनाया था। इसका नाम Princeton के एक Teaching Assistant (TA) &lt;strong&gt;Zhong Shao&lt;/strong&gt; के login ID &lt;code&gt;zsh&lt;/code&gt; से लिया गया था, जिसे Falstad ने एक shell के लिए बढ़िया नाम समझा।&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

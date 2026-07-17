@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Aws on CuriousWiki</title>
+		<link>http://example.org/tags/aws.html</link>
+		<description>Recent content in Aws on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 30 Jun 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>☁️ AWS के लिए Linux AMIs (Amazon Machine Images)</title>
+				<link>http://example.org/pages/linux/linux-bible/aws-amis.html</link>
+				<pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-bible/aws-amis.html</guid>
+				<description>&lt;p&gt;AWS EC2 instances को spin-up करने के लिए Amazon Machine Images (AMIs) की आवश्यकता होती है। यह guide दुनिया के सबसे लोकप्रिय Linux distributions (Arch, Fedora, Ubuntu, Debian, Gentoo) के AWS AMIs, उनके default settings, login usernames और initialization steps को cover करती है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-warning&#34;&gt;&#xA;&lt;i data-lucide=&#34;alert-triangle&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;SSH Login Constraints&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;सुरक्षा के लिए, AWS official AMIs पर default रूप से password login और direct &lt;code&gt;root&lt;/code&gt; login disabled होते हैं। आपको हमेशा key-pair authentication (.pem/.ppk file) का उपयोग करना होगा।&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

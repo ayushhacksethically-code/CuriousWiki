@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="linux, maintenance, pacman, dnf, apt, systemd, aur, copr, ppa, terminal">
+    <title>Maintenance Guide | Linux Bible | CuriousWiki Linux</title>
+    <!-- Lucide Icons CDN -->
+    
+    <link rel="stylesheet" href="../../../css/style.css?v=1.0.1">
+    
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="../../../index.html">Home</a>
+                    <span class="separator">></span>
+                    <a href="../linux-tools/index.html">Linux</a>
+                    <span class="separator">></span>
+                    <a href="index.html">Linux Bible</a>
+                    <span class="separator">></span>
+                    <span>Maintenance Guide</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">🔧 Linux Maintenance Guide</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> June 30, 2026</span>
+                            <span><i data-lucide="clock"></i> 6 min read</span>
+                            <span><i data-lucide="tag"></i> linux, setup, maintenance, distros</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p>यह guide विभिन्न Linux distributions (Fedora, Arch, Debian/Ubuntu) के रखरखाव (maintenance), package updates, service management और system logging के लिए एक comprehensive reference guide है।</p>
+
+                        <h2>1. Package Managers (पैकेज प्रबंधक)</h2>
+                        <p>अलग-अलग distributions में packages को manage और update करने के लिए commands:</p>
+
+                        <div class="tabs-container" style="margin-top: 1rem;">
+                            <!-- Tab Content for Pacman (Arch) -->
+                            <div style="margin-bottom: 1.5rem; border-left: 3px solid var(--accent-primary); padding-left: 1rem;">
+                                <h3 style="font-size: 1rem; color: var(--accent-primary);"><i data-lucide="chevron-right"></i> Arch Linux (Pacman)</h3>
+                                <pre><code class="language-bash"># System upgrade (db sync & update)
+sudo pacman -Syu
+
+# Install a package
+sudo pacman -S package_name
+
+# Remove package & unused dependencies
+sudo pacman -Rns package_name
+
+# Complete clean package cache
+sudo pacman -Scc</code></pre>
+                            </div>
+
+                            <!-- Tab Content for DNF (Fedora) -->
+                            <div style="margin-bottom: 1.5rem; border-left: 3px solid var(--accent-secondary); padding-left: 1rem;">
+                                <h3 style="font-size: 1rem; color: var(--accent-secondary);"><i data-lucide="chevron-right"></i> Fedora (DNF)</h3>
+                                <pre><code class="language-bash"># System upgrade & sync
+sudo dnf upgrade --refresh
+
+# Install a package
+sudo dnf install package_name
+
+# Remove package & orphan dependencies
+sudo dnf autoremove package_name
+
+# Clean download package cache
+sudo dnf clean all</code></pre>
+                            </div>
+
+                            <!-- Tab Content for APT (Debian/Ubuntu) -->
+                            <div style="margin-bottom: 1rem; border-left: 3px solid var(--accent-success); padding-left: 1rem;">
+                                <h3 style="font-size: 1rem; color: var(--accent-success);"><i data-lucide="chevron-right"></i> Debian/Ubuntu (APT)</h3>
+                                <pre><code class="language-bash"># System upgrade
+sudo apt update && sudo apt upgrade
+
+# Install a package
+sudo apt install package_name
+
+# Purge package & remove dependency
+sudo apt purge --autoremove package_name
+
+# Clean cache lists
+sudo apt clean</code></pre>
+                            </div>
+                        </div>
+
+                        <h2>2. Systemd Services Management (सर्विस प्रबंधन)</h2>
+                        <p>लगभग सभी आधुनिक Linux distros (Fedora, Arch, Debian, Ubuntu) systemd का उपयोग करते हैं। Services को control करने के लिए standard systemctl commands:</p>
+                        <pre><code class="language-bash"># service status check
+systemctl status service_name
+
+# service start (current session only)
+sudo systemctl start service_name
+
+# service check default active status
+systemctl is-active service_name
+
+# service boot startup par enable karein
+sudo systemctl enable service_name
+
+# service restart
+sudo systemctl restart service_name</code></pre>
+
+                        <h2>3. User / Custom Repositories</h2>
+                        <p>Community driven custom programs compile करना और install करना:</p>
+
+                        <div style="margin-bottom: 1.5rem; padding-left: 1rem; border-left: 2px dashed var(--border-color);">
+                            <h4>Arch User Repository (AUR)</h4>
+                            <pre><code class="language-bash">git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si</code></pre>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem; padding-left: 1rem; border-left: 2px dashed var(--border-color);">
+                            <h4>Fedora COPR (Community Repositories)</h4>
+                            <pre><code class="language-bash"># COPR repository enable karein
+sudo dnf copr enable copr_username/repo_name
+sudo dnf install package_name</code></pre>
+                        </div>
+
+                        <div style="margin-bottom: 1rem; padding-left: 1rem; border-left: 2px dashed var(--border-color);">
+                            <h4>Ubuntu PPA (Personal Package Archive)</h4>
+                            <pre><code class="language-bash"># PPA add & install karein
+sudo add-apt-repository ppa:ppa_name
+sudo apt update && sudo apt install package_name</code></pre>
+                        </div>
+
+                        <h2>4. System Logs (Journald Debugging)</h2>
+                        <p>Kernel logs और runtime status check करने के systemd logger commands:</p>
+                        <pre><code class="language-bash"># real-time live logs tail show karein
+journalctl -f
+
+# current boot process debug logs extract karein
+journalctl -b
+
+# specific service runtime error codes list
+journalctl -u service_name --since "1 hour ago"
+
+# kernel-only errors aur warnings print
+journalctl -k -p 3 -b</code></pre>
+
+                        <div class="backlinks-container">
+                            <div class="backlinks-title">Linked References (Backlinks)</div>
+                            <div class="backlinks-list">
+                                <a href="index.html" class="backlink-item">
+                                    <i data-lucide="book"></i>
+                                    <span>Linux Bible TOC</span>
+                                </a>
+                                <a href="../linux-tools/index.html" class="backlink-item">
+                                    <i data-lucide="pocket"></i>
+                                    <span>Linux Tools</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
+                            <span>CuriousWiki Open Source Project</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="../../../js/main.js"></script>
+</body>
+</html>

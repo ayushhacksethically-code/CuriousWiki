@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Pattern on CuriousWiki</title>
+		<link>http://example.org/tags/pattern.html</link>
+		<description>Recent content in Pattern on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 05 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/pattern/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>🔍 Grep: Pattern Searching &amp; Text Filtering</title>
+				<link>http://example.org/pages/linux/linux-tools/grep.html</link>
+				<pubDate>Sun, 05 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/linux-tools/grep.html</guid>
+				<description>&lt;p&gt;Linux systems में files के contents के अंदर specific words या regular expressions (patterns) find करने के लिए &lt;strong&gt;grep (Global Regular Expression Print)&lt;/strong&gt; command का use किया जाता है। यह guide &lt;code&gt;grep.txt&lt;/code&gt; manual पर based है।&lt;/p&gt;&#xA;&lt;div class=&#34;callout callout-info&#34;&gt;&#xA;&lt;i data-lucide=&#34;info&#34;&gt;&lt;/i&gt;&#xA;&lt;div class=&#34;callout-content&#34;&gt;&#xA;&lt;div class=&#34;callout-title&#34;&gt;&#xA;&lt;p&gt;Grep Synopsis&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;&lt;code&gt;grep [OPTIONS] PATTERNS [FILE...]&lt;/code&gt;&lt;br&gt;&#xA;अगर कोई FILE parameter skip किया जाए या &lt;code&gt;-&lt;/code&gt; provide किया जाए, तो grep automatically standard input (stdin) से read करता है।&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;1-core-operations-बसक-कमडस&#34;&gt;1. Core Operations (बेसिक कमांड्स)&lt;/h2&gt;&#xA;&lt;p&gt;Normal pattern matching के लिए standard syntax:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

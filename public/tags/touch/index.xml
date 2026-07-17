@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Touch on CuriousWiki</title>
+		<link>http://example.org/tags/touch.html</link>
+		<description>Recent content in Touch on CuriousWiki</description>
+		<generator>Hugo</generator>
+		<language>hi</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://example.org/tags/touch/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>✏️ touch (create file &amp; change timestamps) Command</title>
+				<link>http://example.org/pages/linux/bash/files-directories/touch.html</link>
+				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://example.org/pages/linux/bash/files-directories/touch.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;&lt;code&gt;touch&lt;/code&gt;&lt;/strong&gt; command का मुख्य रूप से दो कामों के लिए उपयोग किया जाता है: 1) खाली फ़ाइलें (empty files) बनाना, और 2) पहले से मौजूद फ़ाइलों के timestamps (Access Time और Modification Time) को बदलना।&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-syntax&#34;&gt;1. Syntax&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;touch &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;OPTION&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;... FILE...&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-key-options--flags&#34;&gt;2. Key Options &amp;amp; Flags&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Normal Usage (no options):&lt;/strong&gt; अगर फ़ाइल मौजूद नहीं है, तो उसे 0 bytes size के साथ create करता है। अगर फ़ाइल पहले से है, तो उसके timestamps को current system time पर update कर देता है।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-a&lt;/code&gt;: केवल &lt;strong&gt;Access Time (atime)&lt;/strong&gt; (जब फ़ाइल को आखिरी बार पढ़ा गया) को update करता है।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-m&lt;/code&gt;: केवल &lt;strong&gt;Modification Time (mtime)&lt;/strong&gt; (जब फ़ाइल में आखिरी बार कुछ बदलाव किया गया) को update करता है।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-c&lt;/code&gt;, &lt;code&gt;--no-create&lt;/code&gt;: फ़ाइल के timestamps तो update करेगा, लेकिन अगर फ़ाइल मौजूद नहीं है, तो उसे &lt;strong&gt;क्रिएट नहीं करेगा&lt;/strong&gt;।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-d&lt;/code&gt;, &lt;code&gt;--date&lt;/code&gt;: Current time के बजाय कोई custom time string (जैसे &amp;ldquo;2 hours ago&amp;rdquo;, &amp;ldquo;yesterday&amp;rdquo;) फ़ाइल पर apply करने के लिए।&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;-r&lt;/code&gt;, &lt;code&gt;--reference&lt;/code&gt;: किसी existing reference file के timestamps copy करके target file पर apply करने के लिए।&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;3-timestamps--creation-examples&#34;&gt;3. Timestamps &amp;amp; Creation Examples&lt;/h2&gt;&#xA;&lt;h3 id=&#34;example-1-create-multiple-files-at-once&#34;&gt;Example 1: Create multiple files at once&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;touch app.js styles.css index.html&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;example-2-update-timestamps-without-modifying-file-content&#34;&gt;Example 2: Update timestamps without modifying file content&lt;/h3&gt;&#xA;&lt;p&gt;यह backup systems और build automation scripts के लिए बहुत उपयोगी है:&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

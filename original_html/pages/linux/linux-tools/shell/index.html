@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="linux, shell, bash, zsh, fish, dash, tcsh, ksh, cmd, powershell, terminal">
+    <title>Command-Line Shells | CuriousWiki Linux</title>
+    <!-- Lucide Icons CDN -->
+    
+    <link rel="stylesheet" href="../../../../css/style.css?v=1.0.1">
+    
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="../../../../index.html">Home</a>
+                    <span class="separator">></span>
+                    <a href="../index.html">Linux Tools</a>
+                    <span class="separator">></span>
+                    <span>Shells Guide</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">🐚 Command-Line Shells Guide</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> July 01, 2026</span>
+                            <span><i data-lucide="clock"></i> 5 min read</span>
+                            <span><i data-lucide="tag"></i> shells, terminal, scripting</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p>Linux, macOS, और Windows operating systems में commands execute करने और scripting workflows configure करने के लिए उपयोग होने वाले प्रमुख <strong>Shells</strong> की विस्तृत जानकारी।</p>
+
+                        <div class="callout callout-info">
+                            <i data-lucide="info"></i>
+                            <div class="callout-content">
+                                <div class="callout-title">Shell क्या है?</div>
+                                <p>Shell एक interface/program है जो user से inputs (commands) लेता है, उन्हें OS Kernel को भेजता है, और outcome/output display करता. Terminal Window सिर्फ एक host/container wrapper है, जिसके अंदर actual shell (जैसे Bash, Zsh) चलता है।</p>
+                            </div>
+                        </div>
+
+                        <h2>1. Core Unix/Linux Shells</h2>
+                        
+                        <h3>⚫ sh (Bourne Shell)</h3>
+                        <p>यह Unix system का मूल (original) shell है, जिसे Steve Bourne ने Bell Labs में विकसित किया था। यह बहुत basic है और आज की तारीख में mostly interactive use के बजाय compatibility scripts चलाने के काम आता है।</p>
+
+                        <h3>⚫ <a href="dash.html" class="wiki-link">dash (Debian Almquist Shell)</a></h3>
+                        <p>यह POSIX standard का पालन करने वाला एक अत्यंत fast और lightweight shell है। इसके background इतिहास और development details के बारे में जानने के लिए <a href="dash.html" class="wiki-link">Almquist / Debian Almquist Shell (DASH) Guide</a> देखें। Debian/Ubuntu में non-interactive system scripts चलाने के लिए default shell <code>/bin/sh</code> असल में <code>dash</code> को ही point करता है।</p>
+
+                        <h3>⚫ <a href="bash.html" class="wiki-link">bash (Bourne Again Shell)</a></h3>
+                        <p>GNU project का हिस्सा और दुनिया का सबसे लोकप्रिय shell. इसके development history, license policy, editor shortcuts, और execution security modes की detail information के लिए <a href="bash.html" class="wiki-link">GNU Bash Shell Guide</a> देखें। अधिकांश Linux distros (जैसे Ubuntu, Debian, Fedora) में default interactive shell <code>bash</code> ही होता है। यह command completion, history search, और syntax scaling support करता है।</p>
+                        <pre><code class="language-bash"># Check your current shell
+echo $0
+
+# Switch to bash
+exec bash</code></pre>
+
+                        <h3>⚫ <a href="zsh.html" class="wiki-link">zsh (Z Shell)</a></h3>
+                        <p>Bash का एक advanced version जो interactive use के लिए बहुत feature-rich है। इसके creation history, advanced parameters, right-side prompts, और plugin ecosystems के बारे में जानने के लिए <a href="zsh.html" class="wiki-link">Z Shell (Zsh) Guide</a> देखें। macOS Catalina के बाद से यह Apple devices पर default shell बन गया है। <strong>Oh My Zsh</strong> plugins/themes ecosystem के कारण यह developers का पसंदीदा shell है।</p>
+
+                        <h3>⚫ fish (Friendly Interactive Shell)</h3>
+                        <p>यह "out of the box" user-friendly shell है। इसमें custom configurations के बिना ही automatic syntax highlighting, path auto-suggestions, और tab selection lists मिल जाती हैं। 
+                        <em>(Note: यह POSIX standard को direct follow नहीं करता, इसलिए standard bash code directly fish में नहीं चलता।)</em></p>
+
+                        <h3>⚫ ksh (Korn Shell)</h3>
+                        <p>David Korn द्वारा developed, यह C Shell (csh) के features और Bourne Shell (sh) की compatibility को मिलाता है। Enterprise systems और traditional scripts में यह काफ़ी लोकप्रिय है।</p>
+
+                        <h3>⚫ tcsh (TENEX C Shell)</h3>
+                        <p>यह <code>csh</code> (C Shell) का compatible extension है। इसका syntax 'C programming language' से बहुत मिलता-जुलता है। FreeBSD जैसे BSD systems में यह बहुत आम है।</p>
+
+                        <h2>2. Windows Shells</h2>
+
+                        <h3>⚫ <a href="cmd.html" class="wiki-link">cmd (Command Prompt)</a></h3>
+                        <p>Windows का traditional standard shell जो MS-DOS commands पर आधारित है। इसके launch parameters, file completions, registry AutoRun options, और dynamic environment variables के details के लिए <a href="cmd.html" class="wiki-link">Command Prompt (cmd) Guide</a> देखें। यह <code>.bat</code> / <code>.cmd</code> scripts support करता है।</p>
+
+                        <h3>⚫ <a href="powershell.html" class="wiki-link">PowerShell</a></h3>
+                        <p>Microsoft का modern shell और task automation framework. इसके architecture features, Monad Manifesto history, profile/module configurations, और multi-distro Linux installation guidelines के लिए <a href="powershell.html" class="wiki-link">PowerShell (pwsh) Guide</a> देखें। यह <strong>.NET Core</strong> engine पर काम करता है और objects flow pipeline utilize करता है।</p>
+                        <pre><code class="language-powershell"># Get process list as object and filter by CPU usage in PowerShell
+Get-Process | Where-Object {$_.CPU -gt 10}</code></pre>
+
+                        <h2>3. Shells Comparison (तुलना)</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Shell Name</th>
+                                    <th>Target OS</th>
+                                    <th>POSIX Compliant?</th>
+                                    <th>Output Type</th>
+                                    <th>Main Use-Case</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>sh / dash</strong></td>
+                                    <td>Unix / Linux</td>
+                                    <td>🟢 Yes</td>
+                                    <td>Text Stream</td>
+                                    <td>Fast system bootstrap / low memory scripts</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>bash</strong></td>
+                                    <td>Linux / macOS / Windows WSL</td>
+                                    <td>🟢 Yes</td>
+                                    <td>Text Stream</td>
+                                    <td>Default terminal usage & deployment scripting</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>zsh</strong></td>
+                                    <td>macOS / Linux</td>
+                                    <td>🟢 Yes</td>
+                                    <td>Text Stream</td>
+                                    <td>Developer theme customization & fast plugins</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>fish</strong></td>
+                                    <td>Linux / macOS</td>
+                                    <td>🔴 No</td>
+                                    <td>Text Stream</td>
+                                    <td>Friendly interactive shell autocompletions</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ksh / tcsh</strong></td>
+                                    <td>Unix / BSD / Enterprise Linux</td>
+                                    <td>🟢 / 🔴 (Variable)</td>
+                                    <td>Text Stream</td>
+                                    <td>Legacy scripts and specific shell workflows</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>cmd</strong></td>
+                                    <td>Windows</td>
+                                    <td>🔴 No</td>
+                                    <td>Text Stream</td>
+                                    <td>Legacy Windows configuration batch commands</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PowerShell</strong></td>
+                                    <td>Windows / Linux / macOS</td>
+                                    <td>🔴 No</td>
+                                    <td><strong>Objects (.NET)</strong></td>
+                                    <td>Enterprise system administration & automation</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>4. Installing Shells on Famous OSes (शेल इंस्टॉलेशन गाइड)</h2>
+                        <p>सभी प्रमुख shells को अलग-अलग operating systems पर install करने की instructions:</p>
+
+                        <h3>⚫ Debian / Ubuntu (Linux)</h3>
+                        <pre><code class="language-bash"># Update package list
+sudo apt update
+
+# Install Bash, Zsh, and Fish
+sudo apt install bash zsh fish -y
+
+# Install Dash (usually pre-installed)
+sudo apt install dash -y
+
+# Install PowerShell Core (pwsh)
+# (Needs Microsoft repository keys registered first - see PowerShell Guide)
+sudo apt install powershell -y</code></pre>
+
+                        <h3>⚫ Fedora / RHEL (Linux)</h3>
+                        <pre><code class="language-bash"># Update package list
+sudo dnf check-update
+
+# Install Bash, Zsh, and Fish
+sudo dnf install bash zsh fish -y
+
+# Install Dash
+sudo dnf install dash -y
+
+# Install PowerShell Core
+sudo dnf install powershell -y</code></pre>
+
+                        <h3>⚫ Arch Linux</h3>
+                        <pre><code class="language-bash"># Install Bash, Zsh, and Fish
+sudo pacman -S/Syu bash zsh fish
+
+# Install Dash
+sudo pacman -S dash
+
+# Install PowerShell Core (from AUR)
+yay -S powershell-bin</code></pre>
+
+                        <h3>⚫ macOS (using Homebrew)</h3>
+                        <p>macOS पर default रूप से Zsh pre-installed रहता है। Brew package manager के ज़रिये अन्य shells install करने की commands:</p>
+                        <pre><code class="language-bash"># Install Homebrew (if not already installed)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install latest Bash 5 and Fish
+brew install bash fish
+
+# Install PowerShell Core
+brew install --cask powershell</code></pre>
+
+                        <h3>⚫ Windows (using winget / WSL)</h3>
+                        <p>Windows 10/11 में default रूप से cmd.exe और Windows PowerShell 5.1 रहता है। Modern version shells install करने की CLI commands:</p>
+                        <pre><code class="language-powershell"># Install Git Bash (contains modern Bash)
+winget install Git.Git
+
+# Install latest PowerShell 7 (Core)
+winget install Microsoft.PowerShell
+
+# Install Windows Subsystem for Linux (WSL) to run Zsh/Bash/Fish natively
+wsl --install</code></pre>
+
+                        <div class="backlinks-container">
+                            <div class="backlinks-title">Linked References (Backlinks)</div>
+                            <div class="backlinks-list">
+                                <a href="../../../../index.html" class="backlink-item">
+                                    <i data-lucide="layout-dashboard"></i>
+                                    <span>Home Dashboard</span>
+                                </a>
+                                <a href="../index.html" class="backlink-item">
+                                    <i data-lucide="pocket"></i>
+                                    <span>Linux Tools Index</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
+                            <span>CuriousWiki Open Source Project</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="../../../../js/main.js"></script>
+</body>
+</html>

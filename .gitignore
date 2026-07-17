@@ -1,0 +1,10 @@
+server
+build
+.DS_Store
+*.log
+node_modules/
+.gemini/
+wiki.db
+search-index.json
+
+

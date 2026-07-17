@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="linux, shell, zsh, oh my zsh, paul falstad, macOS default shell, plugins, kali linux">
+    <title>Z Shell (Zsh) | CuriousWiki</title>
+    <!-- Lucide Icons CDN -->
+    
+    <link rel="stylesheet" href="../../../../css/style.css?v=1.0.1">
+    
+</head>
+<body>
+    <div id="app">
+        <!-- --- SIDEBAR --- -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        <!-- --- MAIN CONTENT AREA --- -->
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="../../../../index.html">Home</a>
+                    <span class="separator">></span>
+                    <a href="../index.html">Linux Tools</a>
+                    <span class="separator">></span>
+                    <a href="index.html">Shells Guide</a>
+                    <span class="separator">></span>
+                    <span>Z Shell (Zsh)</span>
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                <article>
+                    <header class="article-header">
+                        <h1 class="article-title">🐚 Z Shell (Zsh) & Oh My Zsh Ecosystem</h1>
+                        <div class="article-meta">
+                            <span><i data-lucide="calendar"></i> July 01, 2026</span>
+                            <span><i data-lucide="clock"></i> 5 min read</span>
+                            <span><i data-lucide="tag"></i> zsh, shells, oh-my-zsh, terminal</span>
+                        </div>
+                    </header>
+
+                    <section class="article-body">
+                        <p><strong>Z Shell (Zsh)</strong> Unix-like operating systems के लिए एक highly customizable command interpreter और command language interface है। यह Bourne shell (<code>sh</code>) के syntax को maintain करते हुए <code>ksh</code>, <code>tcsh</code>, और <code>rc</code> के key features को जोड़ता है और interactive usage के लिए robust options प्रदान करता है।</p>
+
+                        <div class="callout callout-info">
+                            <i data-lucide="info"></i>
+                            <div class="callout-content">
+                                <div class="callout-title">Naming Origin</div>
+                                <p>Zsh को <strong>Paul Falstad</strong> ने 1990 में Princeton University में पढ़ाई के दौरान बनाया था। इसका नाम Princeton के एक Teaching Assistant (TA) <strong>Zhong Shao</strong> के login ID <code>zsh</code> से लिया गया था, जिसे Falstad ने एक shell के लिए बढ़िया नाम समझा।</p>
+                            </div>
+                        </div>
+
+                        <h2>1. Core Features (प्रमुख विशेषताएँ)</h2>
+                        <p>Zsh default configuration में POSIX standard से थोड़ा भिन्न व्यवहार करता है (जैसे unquoted variables पर implicit IFS-splitting और globbing नहीं करना) और unique interactive features support करता है:</p>
+                        
+                        <ul>
+                            <li><strong>Advanced Autocompletion:</strong> Options, arguments, और flags के लिए intelligent tab completion. इसमें built-in support configuration पहले से configure रहती है।</li>
+                            <li><strong>Shared History:</strong> एक साथ खुले हुए सभी terminal windows/tabs में real-time history database update और share होता है।</li>
+                            <li><strong>Extended Globbing:</strong> <code>find</code> command का use किए बिना advanced regular patterns से file selection (जैसे nested search files recursive parameters mapping).</li>
+                            <li><strong>Spell Check & Auto-correct:</strong> गलत typed command names, directory paths, और filenames की syntax correction.</li>
+                            <li><strong>Right-side Prompt (RPROMPT):</strong> Prompt metadata को screen की right side में print करने की capability, जो लंबे command commands type करने पर automatic hide हो जाती है।</li>
+                            <li><strong>Socket controls & Modules:</strong> Loadable modules support, जिसके ज़रिये dynamic TCP socket connections और mathematical variables handle किए जा सकते हैं।</li>
+                            <li><strong>Non-Zero-Based Numbering:</strong> Zsh में arrays default रूप से <strong>1-indexed (1 से शुरू)</strong> होते हैं, जबकि Bash और general languages में index 0 से शुरू होता है।</li>
+                        </ul>
+
+                        <h2>2. Distros Adoption & Default Shell Shift</h2>
+                        <p>Zsh modern operating systems में default terminal interface के रूप में तेज़ी से adopt हुआ है:</p>
+                        <ul>
+                            <li><strong>macOS Catalina (2019):</strong> Apple ने Bash (3.2 GPLv2) को full-scale migrate करके <strong>Zsh</strong> को macOS का default login shell बना दिया।</li>
+                            <li><strong>Kali Linux (2020.4):</strong> Offensive security distribution Kali ने standard terminal interface look upgrade करने के लिए interactive execution shell Zsh पर switch किया।</li>
+                            <li><strong>TrueNAS Core (2018):</strong> Default system interactive interface system <code>csh</code> से shift करके Zsh कर दिया गया।</li>
+                        </ul>
+
+                        <h2>3. Oh My Zsh & Plugin Ecosystem</h2>
+                        <p>Zsh की अपार लोकप्रियता का एक बड़ा कारण इसका open-source community ecosystem है:</p>
+
+                        <h3>⚫ Oh My Zsh Framework</h3>
+                        <p><strong>Robby Russell</strong> द्वारा created <strong>Oh My Zsh</strong> plugin framework, Zsh customization का सबसे बड़ा platform है। इसमें 300+ plugins और 140+ themes (जैसे Agnoster theme with Powerline fonts) configure करने की built-in settings मिलती हैं।</p>
+
+                        <h3>⚫ Indepedent Plugins (Most Popular)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Plugin Name</th>
+                                    <th>Description / Utility</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>zsh-syntax-highlighting</strong></td>
+                                    <td>Terminal पर type करते समय commands की real-time syntax styling (हरा = valid, लाल = invalid).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>zsh-autosuggestions</strong></td>
+                                    <td>History के basis पर prompt typing के दौरान automatic light-gray suggestions दिखाना।</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>zsh-completions</strong></td>
+                                    <td>Additional backend database commands के लिए advanced tab-completion options.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p>इन plugins को use करने के लिए active plugin loaders (जैसे <strong>Antigen</strong>, high-performance framework <strong>Zim (zimfw)</strong>, या zero-plugin dependency structure <strong>Veil (veil.zsh)</strong>) का use किया जाता है।</p>
+
+                        <div class="backlinks-container">
+                            <div class="backlinks-title">Linked References (Backlinks)</div>
+                            <div class="backlinks-list">
+                                <a href="index.html" class="backlink-item">
+                                    <i data-lucide="terminal"></i>
+                                    <span>Shells Guide Index</span>
+                                </a>
+                                <a href="../../../../index.html" class="backlink-item">
+                                    <i data-lucide="layout-dashboard"></i>
+                                    <span>Home Dashboard</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <div class="footer-content">
+                            <span>© 2026 CuriousWiki. शुद्ध HTML, CSS, और JS के साथ बनाया गया है।</span>
+                            <span>CuriousWiki Open Source Project</span>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- --- GLOBAL SEARCH MODAL --- -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                <!-- Dynamic Search Results -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Shared JS -->
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="../../../../js/main.js"></script>
+</body>
+</html>
