@@ -30,16 +30,6 @@ guides, cheat sheets, और development workflows को explore करने �
   </div>
 
   <div class="dashboard-card">
-    <div class="card-icon"><i data-lucide="clock"></i></div>
-    <div class="card-title">Productivity Hacks</div>
-    <div class="card-desc">Pomodoro, time blocking sheets, reviews, और focus mode targets के लिए workflows.</div>
-    <div class="card-footer">
-      <a href="pages/productivity.html">Hacks देखें →</a>
-      <span>3m</span>
-    </div>
-  </div>
-
-  <div class="dashboard-card">
     <div class="card-icon"><i data-lucide="git-branch"></i></div>
     <div class="card-title">Git Cheatsheet</div>
     <div class="card-desc">Commits, branch mergers, stashes, rebases, और pushes के लिए command-line guidelines.</div>
