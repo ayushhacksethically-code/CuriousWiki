@@ -213,7 +213,7 @@
         <h1 class="article-title">📁 Linux Files &amp; Directories Guide</h1>
         <div class="article-meta">
             <span><i data-lucide="calendar"></i> July 1, 2026</span>
-            <span><i data-lucide="clock"></i> 4 min read</span>
+            <span><i data-lucide="clock"></i> 3 min read</span>
             
             <span><i data-lucide="tag"></i> linux, bash, files, directories, permissions, chmod, chown, fhs, find, symlinks</span>
             
@@ -223,49 +223,7 @@
     <section class="article-body">
         <p>Linux and BASH environments में files and directory structures management, permissions settings, standards layouts, और advanced links/searching operations की specifications।</p>
 <h2 id="1-filesystem-hierarchy-standard-fhs">1. Filesystem Hierarchy Standard (FHS)</h2>
-<p>Linux directory tree root (<code>/</code>) से start होता है। FHS standards के base पर directories का purpose structured होता है:</p>
-<table>
-	<thead>
-			<tr>
-					<th>Directory Path</th>
-					<th>Primary Purpose</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td><code>/</code></td>
-					<td><strong>Root Directory:</strong> System filesystem का base entry point.</td>
-			</tr>
-			<tr>
-					<td><code>/bin</code> | <code>/sbin</code></td>
-					<td>Standard binary executables (commands) और system admin commands (superuser binaries).</td>
-			</tr>
-			<tr>
-					<td><code>/boot</code></td>
-					<td>Boot-loader files, kernel images, और configuration systems details.</td>
-			</tr>
-			<tr>
-					<td><code>/dev</code></td>
-					<td><strong>Device files:</strong> physical and virtual hardware references (e.g. <code>/dev/null</code>, <code>/dev/sda</code>).</td>
-			</tr>
-			<tr>
-					<td><code>/etc</code></td>
-					<td><strong>Configurations:</strong> System level custom config settings (e.g., <code>/etc/passwd</code>, <code>/etc/fstab</code>).</td>
-			</tr>
-			<tr>
-					<td><code>/home</code> | <code>/root</code></td>
-					<td>Users&rsquo; home folders directories (regular users home path vs root superuser home path).</td>
-			</tr>
-			<tr>
-					<td><code>/var</code></td>
-					<td>Variable files changing sizes: log folders (<code>/var/log</code>), databases, emails.</td>
-			</tr>
-			<tr>
-					<td><code>/tmp</code></td>
-					<td>Temporary storage location (typically cleared automatically on system reboot).</td>
-			</tr>
-	</tbody>
-</table>
+<p>Linux filesystem layout ke detailed directory hierarchy aur unke standard functions ke liye humara dedicated <a href="../../fhs.html" class="wiki-link">Filesystem Hierarchy Standard (FHS) Guide</a> padhein.</p>
 <h2 id="2-core-directory-operations-मल-नरदशक-सचलन">2. Core Directory Operations (मूल निर्देशिका संचालन)</h2>
 <p>Terminal navigation और folder management commands:</p>
 <ul>

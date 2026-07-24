@@ -156,3 +156,31 @@ tags: ["linux","fhs","directories","structure","filesystem"]
 - Yeh scaling growth files ko default system files se isolated path space backup control deta hai.
 - Active logins tracking metrics status updates aur server health monitoring parameters.
 - Administrators regular checkups se yahan storage limit log levels optimize rakhte hain taaki disk control full na ho.
+
+---
+
+## 📝 Important Notes: Universal vs Optional Directories
+
+Linux and Unix systems ke design mein sabhi directories har system par compulsory nahi hotin. Yahan unka classification diya gaya hai:
+
+### 1. Universally Present Directories (जो हर System पर ज़रूर होंगी)
+Yeh directories basic operation ke liye core components hain aur har standard Linux/Unix distro mein by default milti hain:
+- `/` (Root): System filesystem ka main entry point.
+- `/bin` & `/sbin`: System utilities aur binaries.
+- `/etc`: Configuration files (e.g., configurations settings, accounts database).
+- `/dev`: Hardware device nodes.
+- `/lib` & `/lib64`: Executables run karne ke liye libraries.
+- `/tmp`: Temporary runtime caching files.
+- `/usr`: Installed software packages aur user utilities.
+- `/var`: Changing system state files aur error log directories.
+- `/root`: Master superuser home settings.
+- `/mnt`: Manual drive mount paths standard directory.
+
+### 2. Optional or Distro-Specific Directories (जो System-Specific या Option-based होती हैं)
+Yeh directories custom systems, specific packages ya networking setups ke according create hoti hain aur minimal setups mein missing ho sakti hain:
+- `/afs` (Optional): Sirf tabhi present hogi jab aapke system mein **Andrew File System** (distributed network storage) client installed aur configured ho.
+- `/nix` (Optional): Nix package manager ya NixOS use karne par hi yahan package directories aur isolated dependency state files save hongi.
+- `/opt` (Optional): Third-party software packages install karne ke liye hoti hai. Agar system mein custom external apps (like Google Chrome, Zoom) install nahi hain, toh yeh blank ya absent ho sakti hai.
+- `/srv` (Optional): FTP servers ya Web servers (Apache/Nginx) serve files settings ke liye service storage. Minimal Linux distros ise bypass kar dete hain.
+- `/run` (System-Specific): Modern systems mein run-time sockets and locks storage ke liye tmpfs standard location hai. Bahut purane Linux or legacy Unix servers iski jagah `/var/run` use karte hain.
+

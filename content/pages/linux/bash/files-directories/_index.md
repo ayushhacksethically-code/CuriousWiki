@@ -8,18 +8,7 @@ Linux and BASH environments में files and directory structures management,
 
 ## 1. Filesystem Hierarchy Standard (FHS)
 
-Linux directory tree root (`/`) से start होता है। FHS standards के base पर directories का purpose structured होता है:
-
-| Directory Path | Primary Purpose |
-|----|----|
-| `/` | **Root Directory:** System filesystem का base entry point. |
-| `/bin` \| `/sbin` | Standard binary executables (commands) और system admin commands (superuser binaries). |
-| `/boot` | Boot-loader files, kernel images, और configuration systems details. |
-| `/dev` | **Device files:** physical and virtual hardware references (e.g. `/dev/null`, `/dev/sda`). |
-| `/etc` | **Configurations:** System level custom config settings (e.g., `/etc/passwd`, `/etc/fstab`). |
-| `/home` \| `/root` | Users' home folders directories (regular users home path vs root superuser home path). |
-| `/var` | Variable files changing sizes: log folders (`/var/log`), databases, emails. |
-| `/tmp` | Temporary storage location (typically cleared automatically on system reboot). |
+Linux filesystem layout ke detailed directory hierarchy aur unke standard functions ke liye humara dedicated <a href="../../fhs.html" class="wiki-link">Filesystem Hierarchy Standard (FHS) Guide</a> padhein.
 
 ## 2. Core Directory Operations (मूल निर्देशिका संचालन)
 

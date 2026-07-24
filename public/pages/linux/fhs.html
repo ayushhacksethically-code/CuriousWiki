@@ -208,7 +208,7 @@
         <h1 class="article-title">📂 Filesystem Hierarchy Standard (FHS)</h1>
         <div class="article-meta">
             <span><i data-lucide="calendar"></i> July 24, 2026</span>
-            <span><i data-lucide="clock"></i> 8 min read</span>
+            <span><i data-lucide="clock"></i> 9 min read</span>
             
             <span><i data-lucide="tag"></i> linux, fhs, directories, structure, filesystem</span>
             
@@ -386,6 +386,32 @@
 <li>Yeh scaling growth files ko default system files se isolated path space backup control deta hai.</li>
 <li>Active logins tracking metrics status updates aur server health monitoring parameters.</li>
 <li>Administrators regular checkups se yahan storage limit log levels optimize rakhte hain taaki disk control full na ho.</li>
+</ul>
+<hr>
+<h2 id="-important-notes-universal-vs-optional-directories">📝 Important Notes: Universal vs Optional Directories</h2>
+<p>Linux and Unix systems ke design mein sabhi directories har system par compulsory nahi hotin. Yahan unka classification diya gaya hai:</p>
+<h3 id="1-universally-present-directories-ज-हर-system-पर-जरर-हग">1. Universally Present Directories (जो हर System पर ज़रूर होंगी)</h3>
+<p>Yeh directories basic operation ke liye core components hain aur har standard Linux/Unix distro mein by default milti hain:</p>
+<ul>
+<li><code>/</code> (Root): System filesystem ka main entry point.</li>
+<li><code>/bin</code> &amp; <code>/sbin</code>: System utilities aur binaries.</li>
+<li><code>/etc</code>: Configuration files (e.g., configurations settings, accounts database).</li>
+<li><code>/dev</code>: Hardware device nodes.</li>
+<li><code>/lib</code> &amp; <code>/lib64</code>: Executables run karne ke liye libraries.</li>
+<li><code>/tmp</code>: Temporary runtime caching files.</li>
+<li><code>/usr</code>: Installed software packages aur user utilities.</li>
+<li><code>/var</code>: Changing system state files aur error log directories.</li>
+<li><code>/root</code>: Master superuser home settings.</li>
+<li><code>/mnt</code>: Manual drive mount paths standard directory.</li>
+</ul>
+<h3 id="2-optional-or-distro-specific-directories-ज-system-specific-य-option-based-हत-ह">2. Optional or Distro-Specific Directories (जो System-Specific या Option-based होती हैं)</h3>
+<p>Yeh directories custom systems, specific packages ya networking setups ke according create hoti hain aur minimal setups mein missing ho sakti hain:</p>
+<ul>
+<li><code>/afs</code> (Optional): Sirf tabhi present hogi jab aapke system mein <strong>Andrew File System</strong> (distributed network storage) client installed aur configured ho.</li>
+<li><code>/nix</code> (Optional): Nix package manager ya NixOS use karne par hi yahan package directories aur isolated dependency state files save hongi.</li>
+<li><code>/opt</code> (Optional): Third-party software packages install karne ke liye hoti hai. Agar system mein custom external apps (like Google Chrome, Zoom) install nahi hain, toh yeh blank ya absent ho sakti hai.</li>
+<li><code>/srv</code> (Optional): FTP servers ya Web servers (Apache/Nginx) serve files settings ke liye service storage. Minimal Linux distros ise bypass kar dete hain.</li>
+<li><code>/run</code> (System-Specific): Modern systems mein run-time sockets and locks storage ke liye tmpfs standard location hai. Bahut purane Linux or legacy Unix servers iski jagah <code>/var/run</code> use karte hain.</li>
 </ul>
 
     </section>
