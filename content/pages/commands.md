@@ -266,6 +266,29 @@ Files के content को screen पर print करने, files merge कर
 
 </div>
 
+<div class="dashboard-card" data-name="less" category="file" desc="Files के contents को screen by screen/page by page interactively view करने के काम आता है।">
+
+<div class="card-icon">
+
+</div>
+
+<div class="card-title">
+
+less
+
+</div>
+
+Files के contents को screen by screen/page by page interactively view करने के काम आता है।
+
+<div class="card-footer">
+
+[Guide खोलें →](linux/bash/files-directories/less.html) File Operation
+
+</div>
+
+</div>
+
+
 <div class="dashboard-card" data-name="tail" category="file" desc="Files के आखिरी हिस्से (अंतिम 10 lines) या real-time dynamic logs को read करने के काम आता है।">
 
 <div class="card-icon">

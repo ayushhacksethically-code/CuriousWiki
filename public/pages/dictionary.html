@@ -63,6 +63,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="pages/linux/history.html" class="nav-link">
+                                <i data-lucide="calendar"></i>
+                                <span>UNIX & Linux History</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="pages/linux/linux-bible/index.html" class="nav-link">
                                 <i data-lucide="book"></i>
                                 <span>Linux Bible</span>
@@ -202,7 +208,7 @@
         <h1 class="article-title">📖 Jargon Dictionary</h1>
         <div class="article-meta">
             <span><i data-lucide="calendar"></i> June 30, 2026</span>
-            <span><i data-lucide="clock"></i> 3 min read</span>
+            <span><i data-lucide="clock"></i> 4 min read</span>
             
             <span><i data-lucide="tag"></i> dictionary, jargon, glossary, terms, programming, vocabulary</span>
             
@@ -212,15 +218,17 @@
     <section class="article-body">
         <p>इस wiki में उपयोग किए जाने वाले technical jargon, programming concepts, और command-line terms का एक central glossary (शब्दकोश)। नए शब्दों को सीखने और cross-reference करने के लिए इसका उपयोग करें।</p>
 <div class="dict-nav">
-<p><a href="#letter-A" class="dict-letter-link">A</a> <a href="#letter-C" class="dict-letter-link">C</a> <a href="#letter-D" class="dict-letter-link">D</a> <a href="#letter-F" class="dict-letter-link">F</a> <a href="#letter-G" class="dict-letter-link">G</a> <a href="#letter-L" class="dict-letter-link">L</a> <a href="#letter-M" class="dict-letter-link">M</a> <a href="#letter-N" class="dict-letter-link">N</a> <a href="#letter-P" class="dict-letter-link">P</a> <a href="#letter-R" class="dict-letter-link">R</a> <a href="#letter-S" class="dict-letter-link">S</a> <a href="#letter-V" class="dict-letter-link">V</a></p>
+<p><a href="#letter-A" class="dict-letter-link">A</a> <a href="#letter-C" class="dict-letter-link">C</a> <a href="#letter-D" class="dict-letter-link">D</a> <a href="#letter-F" class="dict-letter-link">F</a> <a href="#letter-G" class="dict-letter-link">G</a> <a href="#letter-K" class="dict-letter-link">K</a> <a href="#letter-L" class="dict-letter-link">L</a> <a href="#letter-M" class="dict-letter-link">M</a> <a href="#letter-N" class="dict-letter-link">N</a> <a href="#letter-P" class="dict-letter-link">P</a> <a href="#letter-R" class="dict-letter-link">R</a> <a href="#letter-S" class="dict-letter-link">S</a> <a href="#letter-T" class="dict-letter-link">T</a> <a href="#letter-V" class="dict-letter-link">V</a></p>
 </div>
 <h2 id="letter-A">A</h2>
 <h3 id="acme-sh">Acme.sh</h3>
-<p>Let&rsquo;s Encrypt या ZeroSSL के ज़रिए SSL/TLS certificates automatically issue और renew करने के लिए एक zero-dependency Shell Script-based ACME client.</p>
+<p>Let&rsquo;s Encrypt या ZeroSSL के ज़रie SSL/TLS certificates automatically issue और renew करने के लिए एक zero-dependency Shell Script-based ACME client.</p>
 <h3 id="alacritty">Alacritty</h3>
 <p>Rust language में लिखा गया एक ultra-fast, lightweight, और GPU-accelerated (hardware-accelerated) terminal emulator.</p>
 <h3 id="api">API (Application Programming Interface)</h3>
 <p>अलग-अलग software applications/components के बीच data exchange और communication स्थापित करने का standard माध्यम।</p>
+<h3 id="assembly-language">Assembly Language</h3>
+<p>एक low-level programming language जो computer architecture के machine instructions से closely map करती है, जिसे assembler के द्वारा easily assemble किया जा सकता है।</p>
 <h3 id="async">Async (Asynchronous)</h3>
 <p>वह execution flow जिसमें task background में run होता है और main thread (UI loop) को block नहीं करता, जिससे user interface lag-free रहता है।</p>
 <h3 id="aur">AUR (Arch User Repository)</h3>
@@ -232,9 +240,15 @@
 <p>Terminal console पर typing commands के द्वारा user interactions और computer file system operations को perform करने का interface.</p>
 <h3 id="commit">Commit</h3>
 <p>Version control systems (जैसे Git) में codebase changes का snapshot local history में snapshot-id के साथ save करना।</p>
+<h3 id="consortium">Consortium</h3>
+<p>विभिन्न organizations, companies या vendors का एक group जो common standards, goals या technology definitions (जैसे UNIX standards) को define करने के लिए collaborate करता है।</p>
+<h3 id="copyright">Copyright</h3>
+<p>एक software codebase, design या literary creation पर owner का legal exclusive ownership right, जो unauthorized copy, reuse या modifications को restrict करता है।</p>
 <h3 id="cron">Cron</h3>
 <p>Linux/Unix background service daemon (crond) जो user-defined scheduled intervals (crontab) पर script tasks या backup commands को automatically execute करता है।</p>
 <h2 id="letter-D">D</h2>
+<h3 id="distribution-distro">Distribution (Distro)</h3>
+<p>Linux kernel के साथ default command utilities, libraries, user environments, और package managers को wrap करके distribute किया जाने वाला complete operating system component (जैसे Debian, Slackware, Red Hat)।</p>
 <h3 id="dom">DOM (Document Object Model)</h3>
 <p>HTML nodes का tree structure structure, जिसे JavaScript scripts runtime पर dynamically query, alter, style, या delete कर सकते हैं।</p>
 <h2 id="letter-F">F</h2>
@@ -245,18 +259,29 @@
 <h2 id="letter-G">G</h2>
 <h3 id="git">Git</h3>
 <p>एक open-source, distributed version control application जो source repositories में file changes, revisions, और branches merging timeline को track करती है।</p>
+<h3 id="gpl">GPL (General Public License)</h3>
+<p>GNU project द्वारा create किया गया एक standard copyleft open-source software license, जो users को software run, study, modify, और distribute करने की legal permission प्रदान करता है।</p>
+<h2 id="letter-K">K</h2>
+<h3 id="kernel">Kernel</h3>
+<p>Operating system का core component जो computer hardware resources (CPU, RAM, devices) और processes runtime execution के बीच central mediator/management का काम करता है।</p>
 <h2 id="letter-L">L</h2>
+<h3 id="lawsuit">Lawsuit</h3>
+<p>दो groups (जैसे USL vs. BSDI) के बीच copyright infringement, patents या trademark conflicts के solution के लिए court of law में दायर की जाने वाली legal case proceeding।</p>
 <h3 id="localstorage">LocalStorage</h3>
 <p>Web browsers का key-value pair database engine, जो dynamic site properties (जैसे UI theme state) को session/tabs resets के बाद भी permanent save रखता है।</p>
 <h2 id="letter-M">M</h2>
 <h3 id="minisearch">MiniSearch</h3>
-<p>Client-side execution structures के लिए optimized, pure JavaScript full-text indexing engine library, जो tag query processing और fuzzy searches support करता है।</p>
+<p>Client-side execution structures के लिए optimized, pure JavaScript full-text indexing engine library, जो tag query processing aur fuzzy searches support करता है।</p>
 <h2 id="letter-N">N</h2>
 <h3 id="nim">Nim</h3>
 <p>एक statically typed programming language, जो directly zero-overhead compiled C/C++ native code output produce करती है और super-lightweight servers execute करती है।</p>
 <h2 id="letter-P">P</h2>
 <h3 id="pacman">Pacman</h3>
 <p>Arch Linux OS का package management CLI tool, जो database dependencies sync करने और system applications upgrades compile करने में use होता है।</p>
+<h3 id="pipes">Pipes</h3>
+<p>Unix/Linux Shell का command-line pipe mechanism, जो एक output process (stdout) stream को सीधे दूसरी process के input (stdin) channel में redirect करता है।</p>
+<h3 id="portability">Portability</h3>
+<p>किसी computer software या application की capability जिससे उसे without major code modifications के, different hardware architectures और systems पर execute किया जा सके।</p>
 <h3 id="promise">Promise</h3>
 <p>JavaScript engine का object जो network fetch operations या execution wait timers के completion value (success or failure state) को represent करता है।</p>
 <h2 id="letter-R">R</h2>
@@ -267,6 +292,9 @@
 <p>HTML, CSS, और JS components से बनी website, जो servers par bina databases runtime computation run किए pre-built state assets direct render करती है।</p>
 <h3 id="systemd">Systemd</h3>
 <p>Linux distributions init processes system component daemon, जो boot sequence bootstrap initialization processes control करता है और applications daemons state start/stop करता है।</p>
+<h2 id="letter-T">T</h2>
+<h3 id="trademark">Trademark</h3>
+<p>किसी product, term (जैसे UNIX) या logo पर specific company/organization का registered intellectual property right, जो competitors को same term use करने से legal barriers में रोकता है।</p>
 <h2 id="letter-V">V</h2>
 <h3 id="variables">Variables</h3>
 <p>Software programs memory containers, जो variable names के pointers structure के dynamically changing values, flags, array records list preserve रखते हैं।</p>

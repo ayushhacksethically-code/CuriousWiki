@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Tue, 21 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/directories/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>📖 less (interactive file pager) Command</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/files-directories/less.html</link>
+				<pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/files-directories/less.html</guid>
+				<description>&lt;p&gt;&lt;strong&gt;&lt;code&gt;less&lt;/code&gt;&lt;/strong&gt; command Linux environment में text files के contents को page-by-page या screen-by-screen interactively view करने के लिए उपयोग किया जाता है। यह &lt;code&gt;more&lt;/code&gt; command का एक advanced version है। &lt;code&gt;less&lt;/code&gt; की सबसे बड़ी खासियत यह है कि यह file open करने से पहले पूरी file को memory में load नहीं करता, जिससे बहुत बड़ी files (जैसे log files) भी instant open हो जाती हैं।&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-syntax&#34;&gt;1. Syntax&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;less &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;options&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;file_name&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;यदि आप pipelined output को read करना चाहते हैं:&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>🐕 tail (output the last part of files) Command</title>
 				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/files-directories/tail.html</link>

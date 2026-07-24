@@ -8,7 +8,7 @@ tags: ["dictionary","jargon","glossary","terms","programming","vocabulary"]
 
 <div class="dict-nav">
 
-<a href="#letter-A" class="dict-letter-link">A</a> <a href="#letter-C" class="dict-letter-link">C</a> <a href="#letter-D" class="dict-letter-link">D</a> <a href="#letter-F" class="dict-letter-link">F</a> <a href="#letter-G" class="dict-letter-link">G</a> <a href="#letter-L" class="dict-letter-link">L</a> <a href="#letter-M" class="dict-letter-link">M</a> <a href="#letter-N" class="dict-letter-link">N</a> <a href="#letter-P" class="dict-letter-link">P</a> <a href="#letter-R" class="dict-letter-link">R</a> <a href="#letter-S" class="dict-letter-link">S</a> <a href="#letter-V" class="dict-letter-link">V</a>
+<a href="#letter-A" class="dict-letter-link">A</a> <a href="#letter-C" class="dict-letter-link">C</a> <a href="#letter-D" class="dict-letter-link">D</a> <a href="#letter-F" class="dict-letter-link">F</a> <a href="#letter-G" class="dict-letter-link">G</a> <a href="#letter-K" class="dict-letter-link">K</a> <a href="#letter-L" class="dict-letter-link">L</a> <a href="#letter-M" class="dict-letter-link">M</a> <a href="#letter-N" class="dict-letter-link">N</a> <a href="#letter-P" class="dict-letter-link">P</a> <a href="#letter-R" class="dict-letter-link">R</a> <a href="#letter-S" class="dict-letter-link">S</a> <a href="#letter-T" class="dict-letter-link">T</a> <a href="#letter-V" class="dict-letter-link">V</a>
 
 </div>
 
@@ -16,7 +16,7 @@ tags: ["dictionary","jargon","glossary","terms","programming","vocabulary"]
 
 ### Acme.sh {#acme-sh}
 
-Let's Encrypt या ZeroSSL के ज़रिए SSL/TLS certificates automatically issue और renew करने के लिए एक zero-dependency Shell Script-based ACME client.
+Let's Encrypt या ZeroSSL के ज़रie SSL/TLS certificates automatically issue और renew करने के लिए एक zero-dependency Shell Script-based ACME client.
 
 
 ### Alacritty {#alacritty}
@@ -27,6 +27,11 @@ Rust language में लिखा गया एक ultra-fast, lightweight, �
 ### API (Application Programming Interface) {#api}
 
 अलग-अलग software applications/components के बीच data exchange और communication स्थापित करने का standard माध्यम।
+
+
+### Assembly Language {#assembly-language}
+
+एक low-level programming language जो computer architecture के machine instructions से closely map करती है, जिसे assembler के द्वारा easily assemble किया जा सकता है।
 
 
 ### Async (Asynchronous) {#async}
@@ -58,6 +63,16 @@ Terminal console पर typing commands के द्वारा user interacti
 Version control systems (जैसे Git) में codebase changes का snapshot local history में snapshot-id के साथ save करना।
 
 
+### Consortium {#consortium}
+
+विभिन्न organizations, companies या vendors का एक group जो common standards, goals या technology definitions (जैसे UNIX standards) को define करने के लिए collaborate करता है।
+
+
+### Copyright {#copyright}
+
+एक software codebase, design या literary creation पर owner का legal exclusive ownership right, जो unauthorized copy, reuse या modifications को restrict करता है।
+
+
 ### Cron {#cron}
 
 Linux/Unix background service daemon (crond) जो user-defined scheduled intervals (crontab) पर script tasks या backup commands को automatically execute करता है।
@@ -66,6 +81,11 @@ Linux/Unix background service daemon (crond) जो user-defined scheduled inter
 
 
 ## D {#letter-D}
+
+### Distribution (Distro) {#distribution-distro}
+
+Linux kernel के साथ default command utilities, libraries, user environments, और package managers को wrap करके distribute किया जाने वाला complete operating system component (जैसे Debian, Slackware, Red Hat)।
+
 
 ### DOM (Document Object Model) {#dom}
 
@@ -95,9 +115,28 @@ Exact key matching के बजाय logical approximations, spelling mistakes
 एक open-source, distributed version control application जो source repositories में file changes, revisions, और branches merging timeline को track करती है।
 
 
+### GPL (General Public License) {#gpl}
+
+GNU project द्वारा create किया गया एक standard copyleft open-source software license, जो users को software run, study, modify, और distribute करने की legal permission प्रदान करता है।
+
+
+
+
+## K {#letter-K}
+
+### Kernel {#kernel}
+
+Operating system का core component जो computer hardware resources (CPU, RAM, devices) और processes runtime execution के बीच central mediator/management का काम करता है।
+
+
 
 
 ## L {#letter-L}
+
+### Lawsuit {#lawsuit}
+
+दो groups (जैसे USL vs. BSDI) के बीच copyright infringement, patents या trademark conflicts के solution के लिए court of law में दायर की जाने वाली legal case proceeding।
+
 
 ### LocalStorage {#localstorage}
 
@@ -110,7 +149,7 @@ Web browsers का key-value pair database engine, जो dynamic site properti
 
 ### MiniSearch {#minisearch}
 
-Client-side execution structures के लिए optimized, pure JavaScript full-text indexing engine library, जो tag query processing और fuzzy searches support करता है।
+Client-side execution structures के लिए optimized, pure JavaScript full-text indexing engine library, जो tag query processing aur fuzzy searches support करता है।
 
 
 
@@ -129,6 +168,16 @@ Client-side execution structures के लिए optimized, pure JavaScript ful
 ### Pacman {#pacman}
 
 Arch Linux OS का package management CLI tool, जो database dependencies sync करने और system applications upgrades compile करने में use होता है।
+
+
+### Pipes {#pipes}
+
+Unix/Linux Shell का command-line pipe mechanism, जो एक output process (stdout) stream को सीधे दूसरी process के input (stdin) channel में redirect करता है।
+
+
+### Portability {#portability}
+
+किसी computer software या application की capability जिससे उसे without major code modifications के, different hardware architectures और systems पर execute किया जा सके।
 
 
 ### Promise {#promise}
@@ -157,6 +206,15 @@ HTML, CSS, और JS components से बनी website, जो servers par bin
 ### Systemd {#systemd}
 
 Linux distributions init processes system component daemon, जो boot sequence bootstrap initialization processes control करता है और applications daemons state start/stop करता है।
+
+
+
+
+## T {#letter-T}
+
+### Trademark {#trademark}
+
+किसी product, term (जैसे UNIX) या logo पर specific company/organization का registered intellectual property right, जो competitors को same term use करने से legal barriers में रोकता है।
 
 
 

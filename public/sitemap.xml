@@ -3,6 +3,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/history.html</loc>
+    <lastmod>2026-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/history.html</loc>
+    <lastmod>2026-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/linux.html</loc>
+    <lastmod>2026-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/operating-system.html</loc>
+    <lastmod>2026-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/pages/index.html</loc>
+    <lastmod>2026-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/index.html</loc>
+    <lastmod>2026-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/timeline.html</loc>
+    <lastmod>2026-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/unix.html</loc>
+    <lastmod>2026-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/bash/files-directories/less.html</loc>
+    <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/bash.html</loc>
+    <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/commands.html</loc>
+    <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/directories.html</loc>
+    <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/files.html</loc>
+    <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/less.html</loc>
+    <lastmod>2026-07-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/pages/productivity.html</loc>
     <lastmod>2026-07-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -12,31 +54,13 @@
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/pages/commands.html</loc>
     <lastmod>2026-07-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/bash.html</loc>
-    <lastmod>2026-07-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/commands.html</loc>
-    <lastmod>2026-07-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/directories.html</loc>
-    <lastmod>2026-07-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/draft.html</loc>
-    <lastmod>2026-07-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/files.html</loc>
     <lastmod>2026-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/focus.html</loc>
     <lastmod>2026-07-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/linux.html</loc>
-    <lastmod>2026-07-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/logs.html</loc>
-    <lastmod>2026-07-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/pages/index.html</loc>
     <lastmod>2026-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/placeholder.html</loc>
@@ -46,9 +70,6 @@
     <lastmod>2026-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/productivity.html</loc>
-    <lastmod>2026-07-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/index.html</loc>
     <lastmod>2026-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/tail.html</loc>
@@ -88,9 +109,6 @@
     <lastmod>2026-07-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/helix.html</loc>
-    <lastmod>2026-07-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/history.html</loc>
     <lastmod>2026-07-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/keyboard.html</loc>

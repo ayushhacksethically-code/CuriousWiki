@@ -158,4 +158,14 @@ guides, cheat sheets, और development workflows को explore करने �
       <span>2m</span>
     </div>
   </div>
+
+  <div class="dashboard-card">
+    <div class="card-icon"><i data-lucide="calendar"></i></div>
+    <div class="card-title">UNIX & Linux History</div>
+    <div class="card-desc">UNIX aur Linux operating systems ke 1965 se lekar 1994 tak ke evolution aur key milestones ki chronological timeline.</div>
+    <div class="card-footer">
+      <a href="pages/linux/history.html">Timeline देखें →</a>
+      <span>5m</span>
+    </div>
+  </div>
 </div>

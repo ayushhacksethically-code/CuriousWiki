@@ -55,7 +55,7 @@ Terminal navigation और folder management commands:
 - **<a href="rm.html" class="wiki-link">rm</a>:** Files/Directories deletion (force delete `-rf` और safeguards options के लिए <a href="rm.html" class="wiki-link">rm Guide</a> देखें)।
 - **<a href="cp.html" class="wiki-link">cp</a>:** Files replication (recursive copying और archive modes configurations के लिए <a href="cp.html" class="wiki-link">cp Guide</a> देखें)।
 - **<a href="mv.html" class="wiki-link">mv</a>:** Transfer or renaming operations (safe update validation flags के लिए <a href="mv.html" class="wiki-link">mv Guide</a> देखें)।
-- **<a href="cat.html" class="wiki-link">cat</a> / <a href="tail.html" class="wiki-link">tail</a> / <a href="echo.html" class="wiki-link">echo</a>:** Content displays/printing, output redirection, real-time logging, और merging (<a href="cat.html" class="wiki-link">cat Guide</a>, <a href="tail.html" class="wiki-link">tail Guide</a> और <a href="echo.html" class="wiki-link">echo Guide</a> देखें)।
+- **<a href="cat.html" class="wiki-link">cat</a> / <a href="less.html" class="wiki-link">less</a> / <a href="tail.html" class="wiki-link">tail</a> / <a href="echo.html" class="wiki-link">echo</a>:** Content displays/printing, interactive paging, output redirection, real-time logging, और merging (<a href="cat.html" class="wiki-link">cat Guide</a>, <a href="less.html" class="wiki-link">less Guide</a>, <a href="tail.html" class="wiki-link">tail Guide</a> और <a href="echo.html" class="wiki-link">echo Guide</a> देखें)।
 
 ## 4. Soft Links vs Hard Links (लिंक्स के प्रकार)
 

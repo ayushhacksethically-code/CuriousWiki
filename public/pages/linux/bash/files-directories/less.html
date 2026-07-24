@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="linux, bash, less, commands, files, directories">
+    
+    <title>📖 less (interactive file pager) Command</title>
+    
+    
+    <link rel="stylesheet" href="/CuriousWiki/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/getting-started.html" class="nav-link">
+                                <i data-lucide="book-open"></i>
+                                <span>Getting Started</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/history.html" class="nav-link">
+                                <i data-lucide="calendar"></i>
+                                <span>UNIX & Linux History</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/CuriousWiki/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/index.html">Pages</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/bash/index.html">🐚 BASH Scripting &amp; CLI Master Class</a>
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/linux/bash/files-directories/index.html">📁 Linux Files &amp; Directories Guide</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>📖 less (interactive file pager) Command</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">📖 less (interactive file pager) Command</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> July 21, 2026</span>
+            <span><i data-lucide="clock"></i> 2 min read</span>
+            
+            <span><i data-lucide="tag"></i> linux, bash, less, commands, files, directories</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <p><strong><code>less</code></strong> command Linux environment में text files के contents को page-by-page या screen-by-screen interactively view करने के लिए उपयोग किया जाता है। यह <code>more</code> command का एक advanced version है। <code>less</code> की सबसे बड़ी खासियत यह है कि यह file open करने से पहले पूरी file को memory में load नहीं करता, जिससे बहुत बड़ी files (जैसे log files) भी instant open हो जाती हैं।</p>
+<h2 id="1-syntax">1. Syntax</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>less <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>file_name<span style="color:#f92672">]</span>
+</span></span></code></pre></div><p>यदि आप pipelined output को read करना चाहते हैं:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>command | less
+</span></span></code></pre></div><h2 id="2-interactive-navigation-shortcuts-इन-टल-शरटकटस">2. Interactive Navigation Shortcuts (इन-टूल शॉर्टकट्स)</h2>
+<p>जब आप <code>less</code> के ज़रिए कोई file open करते हैं, तो navigation के लिए नीचे दिए गए keyboard shortcuts का उपयोग कर सकते हैं:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Shortcut</th>
+					<th>Description / Behavior</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>Space</strong> / <strong>Page Down</strong></td>
+					<td>एक page आगे (नीचे) scroll करें।</td>
+			</tr>
+			<tr>
+					<td><strong>b</strong> / <strong>Page Up</strong></td>
+					<td>एक page पीछे (ऊपर) scroll करें।</td>
+			</tr>
+			<tr>
+					<td><strong>Enter</strong> / <strong>Down Arrow</strong> / <strong>j</strong></td>
+					<td>एक line नीचे scroll करें।</td>
+			</tr>
+			<tr>
+					<td><strong>Up Arrow</strong> / <strong>k</strong></td>
+					<td>एक line ऊपर scroll करें।</td>
+			</tr>
+			<tr>
+					<td><strong>g</strong></td>
+					<td>File की पहली line (beginning) पर जाएँ।</td>
+			</tr>
+			<tr>
+					<td><strong>G</strong></td>
+					<td>File की आखिरी line (end) पर जाएँ।</td>
+			</tr>
+			<tr>
+					<td><strong>/pattern</strong></td>
+					<td>Forward search: नीचे की तरफ <code>pattern</code> को खोजें।</td>
+			</tr>
+			<tr>
+					<td><strong>?pattern</strong></td>
+					<td>Backward search: ऊपर की तरफ <code>pattern</code> को खोजें।</td>
+			</tr>
+			<tr>
+					<td><strong>n</strong></td>
+					<td>Search direction में next search query match पर जाएँ।</td>
+			</tr>
+			<tr>
+					<td><strong>N</strong></td>
+					<td>Search direction के विपरीत (previous) match पर जाएँ।</td>
+			</tr>
+			<tr>
+					<td><strong>h</strong> / <strong>H</strong></td>
+					<td>Help screen open करें (सारे shortcuts देखने के लिए)।</td>
+			</tr>
+			<tr>
+					<td><strong>q</strong></td>
+					<td><code>less</code> viewer से बाहर निकलें (Quit)।</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="3-key-command-flags">3. Key Command Flags</h2>
+<p><code>less</code> command run करते समय useful options/flags:</p>
+<ul>
+<li><code>-N</code>, <code>--LINE-NUMBERS</code>: Output की सभी lines के आगे line numbers display करता है।</li>
+<li><code>-S</code>, <code>--chop-long-lines</code>: Long lines को screen wraps करने के बजाय side-scrollable बनाता है (horizontal scrolling के लिए left/right arrows का use करें)।</li>
+<li><code>-i</code>, <code>--ignore-case</code>: Search करते समय case-sensitivity को ignore करता है (अगर keyword small letters में है)।</li>
+<li><code>-m</code>, <code>--long-prompt</code>: Screen के bottom prompt पर file coordinates, line percentage, और info दिखाता है।</li>
+<li><code>-X</code>, <code>--no-init</code>: Exit करने पर text screen clear नहीं करता, जिससे screen पर last view content visible रहता है।</li>
+<li><code>+F</code>: File को realtime follow mode में open करता है (जैसे <code>tail -f</code>)। normal view पर return करने के लिए <code>Ctrl+C</code> दबाएँ।</li>
+</ul>
+<h2 id="4-terminal-examples">4. Terminal Examples</h2>
+<h3 id="example-1-basic-interactive-reading">Example 1: Basic interactive reading</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>less system.log
+</span></span></code></pre></div><h3 id="example-2-line-numbers-क-सथ-file-open-करन">Example 2: Line numbers के साथ file open करना</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>less -N config.toml
+</span></span></code></pre></div><h3 id="example-3-side-scrolling-mode-म-long-lines-file-open-करन">Example 3: Side-scrolling mode में long lines file open करना</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>less -S long-lines.txt
+</span></span></code></pre></div><h3 id="example-4-output-pipeline-reading-जस-dmesg-य-complex-outputs">Example 4: Output pipeline reading (जैसे <code>dmesg</code> या complex outputs)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dmesg | less -N
+</span></span></code></pre></div><h3 id="example-5-real-time-file-follow-log-monitoring">Example 5: Real-time file follow (Log monitoring)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>less +F /var/log/nginx/error.log
+</span></span></code></pre></div>
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/CuriousWiki/js/main.js"></script>
+</body>
+</html>
