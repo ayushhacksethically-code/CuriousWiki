@@ -817,3 +817,46 @@ details.toc-node > .toc-content {
     border-color: var(--border-color) var(--border-light) var(--border-light) var(--border-color);
 }
 
+/* --- COMMANDS SEARCH & TABS FILTERING --- */
+.cmd-search-container {
+    margin: 15px 0;
+    max-width: 450px;
+}
+.cmd-search-input {
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 12px;
+    background: var(--bg-primary);
+    border: 2px solid;
+    border-color: var(--border-color) var(--border-light) var(--border-light) var(--border-color); /* Inset */
+    color: var(--text-primary);
+    outline: none;
+    font-family: inherit;
+}
+.cmd-filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.cmd-filter-tab {
+    background: var(--bg-secondary);
+    border: 1.5px solid;
+    border-color: var(--border-light) var(--border-color) var(--border-color) var(--border-light); /* Outset */
+    color: var(--text-primary);
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+}
+.cmd-filter-tab:hover {
+    color: var(--accent-primary);
+}
+.cmd-filter-tab.active {
+    background: var(--bg-primary);
+    border-color: var(--border-color) var(--border-light) var(--border-light) var(--border-color); /* Inset */
+}
+
+

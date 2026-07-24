@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Wed, 01 Jul 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/index/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>📟 Commands Index</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/pages/commands.html</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/pages/commands.html</guid>
+				<description>&lt;p&gt;CuriousWiki में उपलब्ध सभी commands के individual guides का index। आप नीचे दिए गए search bar या tabs का उपयोग करके commands को filter कर सकते हैं।&lt;/p&gt;&#xA;&lt;div class=&#34;cmd-search-container&#34;&gt;&#xA;    &lt;input type=&#34;text&#34; id=&#34;cmd-search&#34; class=&#34;cmd-search-input&#34; placeholder=&#34;Commands filter करें...&#34;&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;cmd-filter-tabs&#34;&gt;&#xA;    &lt;button class=&#34;cmd-filter-tab active&#34; data-category=&#34;all&#34;&gt;All&lt;/button&gt;&#xA;    &lt;button class=&#34;cmd-filter-tab&#34; data-category=&#34;file&#34;&gt;File Operation (फ़ाइल संचालन)&lt;/button&gt;&#xA;    &lt;button class=&#34;cmd-filter-tab&#34; data-category=&#34;search&#34;&gt;Search &amp; Filter (खोज और फ़िल्टर)&lt;/button&gt;&#xA;    &lt;button class=&#34;cmd-filter-tab&#34; data-category=&#34;system&#34;&gt;System &amp; Auto (सिस्टम और स्वचालन)&lt;/button&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;dashboard-grid&#34;&gt;&#xA;  &lt;div class=&#34;dashboard-card&#34; data-name=&#34;pwd&#34; data-category=&#34;file&#34; data-desc=&#34;Linux directory tree में current active path/folder का location print करता है।&#34;&gt;&#xA;    &lt;div class=&#34;card-icon&#34;&gt;&lt;i data-lucide=&#34;folder&#34;&gt;&lt;/i&gt;&lt;/div&gt;&#xA;    &lt;div class=&#34;card-title&#34;&gt;pwd&lt;/div&gt;&#xA;    &lt;p class=&#34;card-desc&#34;&gt;Linux directory tree में current active path/folder का location print करता है।&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>🧠 CuriousWiki Dashboard</title>
 				<link>https://ayushhacksethically-code.github.io/CuriousWiki/index.html</link>
