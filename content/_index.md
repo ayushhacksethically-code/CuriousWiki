@@ -72,7 +72,7 @@ guides, cheat sheets, और development workflows को explore करने �
   <div class="dashboard-card">
     <div class="card-icon"><i data-lucide="cpu"></i></div>
     <div class="card-title">gEDA Project</div>
-    <div class="card-desc">Schematic capture, PCB design, netlisting, aur local symbols library automation.</div>
+    <div class="card-desc">Schematic capture, PCB design, netlisting, और local symbols library automation.</div>
     <div class="card-footer">
       <a href="pages/geda.html">Guide देखें →</a>
       <span>4m</span>
@@ -142,7 +142,7 @@ guides, cheat sheets, और development workflows को explore करने �
   <div class="dashboard-card">
     <div class="card-icon"><i data-lucide="calendar"></i></div>
     <div class="card-title">UNIX & Linux History</div>
-    <div class="card-desc">UNIX aur Linux operating systems ke 1965 se lekar 1994 tak ke evolution aur key milestones ki chronological timeline.</div>
+    <div class="card-desc">UNIX और Linux operating systems के 1965 से लेकर 1994 तक के evolution और key milestones की chronological timeline.</div>
     <div class="card-footer">
       <a href="pages/linux/history.html">Timeline देखें →</a>
       <span>5m</span>
@@ -155,6 +155,16 @@ guides, cheat sheets, और development workflows को explore करने �
     <div class="card-desc">Comprehensive breakdown of Unix/Linux standard directories, their content, and purpose.</div>
     <div class="card-footer">
       <a href="pages/linux/fhs.html">Guide open →</a>
+      <span>5m</span>
+    </div>
+  </div>
+
+  <div class="dashboard-card">
+    <div class="card-icon"><i data-lucide="file-text"></i></div>
+    <div class="card-title">Essential Files</div>
+    <div class="card-desc">Chronological checklist of core Linux configuration files, devices, directories and log utilities.</div>
+    <div class="card-footer">
+      <a href="pages/linux/important-files.html">Guide open →</a>
       <span>5m</span>
     </div>
   </div>

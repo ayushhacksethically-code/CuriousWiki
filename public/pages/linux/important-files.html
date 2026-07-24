@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="linux, configurations, files, utilities, reference">
+    
+    <title>📄 Essential Linux Files &amp; Utilities Guide</title>
+    
+    
+    <link rel="stylesheet" href="/CuriousWiki/css/style.css?v=1.0.1">
+</head>
+<body>
+    <div id="app">
+        
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="brain"></i>
+                    <span>CuriousWiki</span>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-btn" title="Theme बदलें">
+                    <i data-lucide="sun"></i>
+                </button>
+            </div>
+            
+            <div class="search-container">
+                <button id="search-trigger" class="search-box">
+                    <i data-lucide="search"></i>
+                    <span>Notes search करें...</span>
+                    <span class="search-shortcut">Ctrl+K</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">स्वागत</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <i data-lucide="layout-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Linux & Shells</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/commands.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Commands Index</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/history.html" class="nav-link">
+                                <i data-lucide="calendar"></i>
+                                <span>UNIX & Linux History</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/fhs.html" class="nav-link">
+                                <i data-lucide="folder-open"></i>
+                                <span>Filesystem Hierarchy (FHS)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/important-files.html" class="nav-link">
+                                <i data-lucide="file-text"></i>
+                                <span>Essential Files Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-bible/index.html" class="nav-link">
+                                <i data-lucide="book"></i>
+                                <span>Linux Bible</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/index.html" class="nav-link">
+                                <i data-lucide="pocket"></i>
+                                <span>Linux Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/linux-tools/shell/index.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>Shells Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/index.html" class="nav-link">
+                                <i data-lucide="terminal-square"></i>
+                                <span>BASH Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/files-directories/index.html" class="nav-link">
+                                <i data-lucide="folder"></i>
+                                <span>Files & Directories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/linux/bash/shortcuts.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Bash Shortcuts</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Case Studies & Tutorials</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/preseed-mirror-debugging.html" class="nav-link">
+                                <i data-lucide="scroll"></i>
+                                <span>Preseed & Zip Debugging</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Reference</div>
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="pages/javascript-cheatsheet.html" class="nav-link">
+                                <i data-lucide="terminal"></i>
+                                <span>JS Cheat Sheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/git-cheatsheet.html" class="nav-link">
+                                <i data-lucide="git-branch"></i>
+                                <span>Git Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/web-tips.html" class="nav-link">
+                                <i data-lucide="globe"></i>
+                                <span>Web/CSS Tips</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/vim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="keyboard"></i>
+                                <span>Vim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/nim-cheatsheet.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>Nim Cheatsheet</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/geda.html" class="nav-link">
+                                <i data-lucide="cpu"></i>
+                                <span>gEDA Project</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/dictionary.html" class="nav-link">
+                                <i data-lucide="book-marked"></i>
+                                <span>Dictionary</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>v1.1.0</span>
+                <span>CuriousWiki</span>
+            </div>
+        </aside>
+
+        
+        <main class="main-wrapper">
+            <header class="top-bar">
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="breadcrumbs">
+                    <a href="/CuriousWiki/index.html">Home</a>
+                    
+                        
+                            
+                        
+                            
+                            <span class="separator">></span>
+                            <a href="/CuriousWiki/pages/index.html">Pages</a>
+                            
+                        
+                        <span class="separator">></span>
+                        <span>📄 Essential Linux Files &amp; Utilities Guide</span>
+                    
+                </div>
+                <a id="edit-btn" href="#" target="_blank" class="edit-btn">
+                    <i data-lucide="github"></i>
+                    <span>GitHub पर Edit करें</span>
+                </a>
+            </header>
+
+            <div class="content-container">
+                
+<article>
+    <header class="article-header">
+        <h1 class="article-title">📄 Essential Linux Files &amp; Utilities Guide</h1>
+        <div class="article-meta">
+            <span><i data-lucide="calendar"></i> July 24, 2026</span>
+            <span><i data-lucide="clock"></i> 5 min read</span>
+            
+            <span><i data-lucide="tag"></i> linux, configurations, files, utilities, reference</span>
+            
+        </div>
+    </header>
+
+    <section class="article-body">
+        <h1 id="essential-linux-files--utilities-guide">Essential Linux Files &amp; Utilities Guide</h1>
+<p>Daily development और system operations के लिए essential Unix/Linux configuration files, device files, directories और logs की list और उनके absolute paths.</p>
+<hr>
+<h3 id="1-vmlinuz">1. <code>vmlinuz</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/boot/vmlinuz-*</code></li>
+<li><strong>Purpose</strong>: Linux kernel का compressed, bootable executable binary snapshot file है।</li>
+<li><strong>Usage</strong>: Startup (booting) system load के समय इसे memory RAM में extract और execute किया जाता है।</li>
+</ul>
+<h3 id="2-hda">2. <code>hda</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/dev/hda</code></li>
+<li><strong>Purpose</strong>: पुराने system configurations में standard IDE controller base की <strong>First Primary Master Hard Disk</strong> device mapping path है।</li>
+<li><strong>Usage</strong>: Modern SATA/NVMe architectures में इसकी जगह default target <code>/dev/sda</code> use किया जाता है।</li>
+</ul>
+<h3 id="3-hdc">3. <code>hdc</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/dev/hdc</code></li>
+<li><strong>Purpose</strong>: IDE bus layout configuration system पर mapping <strong>Third Hard Drive</strong> या mostly <strong>CD-ROM/DVD drive</strong> handle path है।</li>
+<li><strong>Usage</strong>: Modern kernels इस device block mapping controller को standard format <code>/dev/sr0</code> में identify करते हैं।</li>
+</ul>
+<h3 id="4-bashrc">4. <code>bashrc</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/bashrc</code> (System-wide) या <code>~/.bashrc</code> (User-specific)</li>
+<li><strong>Purpose</strong>: Interactive user-specific BASH shell settings control configurations file है।</li>
+<li><strong>Usage</strong>: Users इस dynamic custom terminal properties में अपने short shortcuts (aliases), prompt settings, और active execution path variables change config set कर सकते हैं।</li>
+</ul>
+<h3 id="5-exports">5. <code>exports</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/exports</code></li>
+<li><strong>Purpose</strong>: Network File System (NFS) service server storage share configurations mapping registry है।</li>
+<li><strong>Usage</strong>: इस system settings file में network directories paths और उन्हें access permissions rules IP parameters map targets details define होते हैं।</li>
+</ul>
+<h3 id="6-fstab">6. <code>fstab</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/fstab</code></li>
+<li><strong>Purpose</strong>: System File System Table configuration standard configuration details mapping file है।</li>
+<li><strong>Usage</strong>: Boot time disk mount coordinates mapping system details, drives connections folders paths list maintain करता है।</li>
+</ul>
+<h3 id="7-group">7. <code>group</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/group</code></li>
+<li><strong>Purpose</strong>: Operating systems user groups और dynamic mapping database record file है।</li>
+<li><strong>Usage</strong>: Group boundaries, mappings, और access level privileges configurations manage करने के लिए use होती है।</li>
+</ul>
+<h3 id="8-grubconf">8. <code>grub.conf</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/boot/grub/grub.conf</code> या <code>/etc/grub.conf</code></li>
+<li><strong>Purpose</strong>: GRUB bootloader parameters startup sequences selection control configurations file है।</li>
+<li><strong>Usage</strong>: System startup configurations, kernels parameter flags settings, और system menu list maintain करने के लिए use होता है।</li>
+</ul>
+<h3 id="9-initd">9. <code>init.d</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/init.d/</code></li>
+<li><strong>Purpose</strong>: System services controllers startup system SysVinit system configuration scripts index folder है।</li>
+<li><strong>Usage</strong>: Active server services (जैसे networking, databases) को start/stop करने की control scripts store करता है।</li>
+</ul>
+<h3 id="10-liloconf">10. <code>lilo.conf</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/lilo.conf</code></li>
+<li><strong>Purpose</strong>: Historical legacy system bootloader &ldquo;LILO&rdquo; (Linux Loader) config settings file है।</li>
+<li><strong>Usage</strong>: पुराने setups में custom boot sequences define करने के लिए use होती थी।</li>
+</ul>
+<h3 id="11-hosts">11. <code>hosts</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/hosts</code></li>
+<li><strong>Purpose</strong>: Local system network IP mappings host names resolution config file है।</li>
+<li><strong>Usage</strong>: Local testing setups और local server domain redirections create करने के लिए developers use करते हैं।</li>
+</ul>
+<h3 id="12-hostsallow">12. <code>hosts.allow</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/hosts.allow</code></li>
+<li><strong>Purpose</strong>: TCP Wrapper connection filters networking access rules allowed hosts control file है।</li>
+<li><strong>Usage</strong>: Safe IP ranges और whitelisted hosts parameters configurations check करने के लिए use होती है।</li>
+</ul>
+<h3 id="13-hostsdeny">13. <code>hosts.deny</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/hosts.deny</code></li>
+<li><strong>Purpose</strong>: TCP Wrapper server services restricted blacklist access logs mapping files configurations है।</li>
+<li><strong>Usage</strong>: Unauthorized networks और blacklisted connections block करने के firewall rules sets specify करता है।</li>
+</ul>
+<h3 id="14-inittab">14. <code>inittab</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/inittab</code></li>
+<li><strong>Purpose</strong>: SysVinit controllers configuration file जिसमें startup runlevel execution status targets details rules set थे।</li>
+<li><strong>Usage</strong>: Graphical levels GUI default configurations console updates systems, modern Linux is run systemd target configuration control tools.</li>
+</ul>
+<h3 id="15-modulesconf">15. <code>modules.conf</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/modules.conf</code></li>
+<li><strong>Purpose</strong>: पुराने Linux platforms versions kernel dynamic module load rules driver variables parameters text configurations है।</li>
+<li><strong>Usage</strong>: Kernel load automatic modules driver files verification checks controls sets handle करता है।</li>
+</ul>
+<h3 id="16-passwd">16. <code>passwd</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/passwd</code></li>
+<li><strong>Purpose</strong>: Local user accounts master registry systems access definitions file है।</li>
+<li><strong>Usage</strong>: Users database lists verify parameters checks, user properties system status checks parameters handle करता है।</li>
+</ul>
+<h3 id="17-printcap">17. <code>printcap</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/printcap</code></li>
+<li><strong>Purpose</strong>: Printer capabilities configurations description database paths file है।</li>
+<li><strong>Usage</strong>: Spooling directories layouts, network printers queue rules config options settings maintain करता है।</li>
+</ul>
+<h3 id="18-profile">18. <code>profile</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/profile</code> (System-wide) या <code>~/.profile</code> (User-specific)</li>
+<li><strong>Purpose</strong>: System-wide global shell environment parameter config initialization values file है।</li>
+<li><strong>Usage</strong>: System login time environment variables setup paths aur path directories configuration load details set करता है।</li>
+</ul>
+<h3 id="19-resolvconf">19. <code>resolv.conf</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/resolv.conf</code></li>
+<li><strong>Purpose</strong>: System domain network address mappings DNS name servers lookup resolver file है।</li>
+<li><strong>Usage</strong>: Active internet resolver lookup servers parameters settings track variables mapping config verify details.</li>
+</ul>
+<h3 id="20-securetty">20. <code>securetty</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/securetty</code></li>
+<li><strong>Purpose</strong>: Operating system superuser (root) log-in capabilities limits security configuration file है।</li>
+<li><strong>Usage</strong>: Root user login limits settings locks control check, insecure terminals direct access restrictions criteria define.</li>
+</ul>
+<h3 id="21-bin">21. <code>bin</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/bin</code> या <code>/usr/bin</code></li>
+<li><strong>Purpose</strong>: General applications users binary commands directory structure executables location folder index.</li>
+<li><strong>Usage</strong>: User runs shell commands, utility binary systems access operations compile path directories.</li>
+</ul>
+<h3 id="22-include">22. <code>include</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/usr/include</code></li>
+<li><strong>Purpose</strong>: System program compilation interfaces C/C++ developers library software development header files location.</li>
+<li><strong>Usage</strong>: Compiler search compilation header definitions code paths library references (जैसे <code>stdio.h</code>).</li>
+</ul>
+<h3 id="23-sbin">23. <code>sbin</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/sbin</code> या <code>/usr/sbin</code></li>
+<li><strong>Purpose</strong>: Administrative superuser core utility commands files compile directory index folder.</li>
+<li><strong>Usage</strong>: Administrative task execution limits rules command logs properties access.</li>
+</ul>
+<h3 id="24-cpuinfo">24. <code>cpuinfo</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/proc/cpuinfo</code></li>
+<li><strong>Purpose</strong>: Hardware processors core specifications data tracking virtual pseudo-file metrics.</li>
+<li><strong>Usage</strong>: CPU load, processor cache speed details, cores flag capabilities status read checks.</li>
+</ul>
+<h3 id="25-lib">25. <code>lib</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/lib</code> या <code>/usr/lib</code></li>
+<li><strong>Purpose</strong>: Executables dynamic binaries dependencies code library files modules shared structures index (DLL objects).</li>
+<li><strong>Usage</strong>: Applications binaries standard dependency components system links runtime properties packages files.</li>
+</ul>
+<h3 id="26-share">26. <code>share</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/usr/share</code></li>
+<li><strong>Purpose</strong>: Architecture-independent system documentation, configurations details guides maps folders.</li>
+<li><strong>Usage</strong>: Manual guides guidelines docs templates icons configurations share path access maps.</li>
+</ul>
+<h3 id="27-filesystem">27. <code>filesystem</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/etc/filesystems</code> (System supported systems list) or generic concept</li>
+<li><strong>Purpose</strong>: Partition layouts, file system types definitions (Ext4, Btrfs, XFS) parameters concepts.</li>
+<li><strong>Usage</strong>: Partition formatting schemas check maps, storage structures data organizations formats registers parameters.</li>
+</ul>
+<h3 id="28-mount">28. <code>mount</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/bin/mount</code> (Command utility) or <code>/mnt</code> / <code>/media</code> (Mount target directories)</li>
+<li><strong>Purpose</strong>: Local directory node to disk block allocation mount operations parameters process.</li>
+<li><strong>Usage</strong>: Attach hard disks partitions to local files directories tree mappings paths.</li>
+</ul>
+<h3 id="29-wtmp">29. <code>wtmp</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/var/log/wtmp</code></li>
+<li><strong>Purpose</strong>: History system log record login sessions, boot history values binary logger database.</li>
+<li><strong>Usage</strong>: system logins, system restart cycles, security session changes historical audit check logs.</li>
+</ul>
+<h3 id="30-lastlog">30. <code>lastlog</code></h3>
+<ul>
+<li><strong>Location</strong>: <code>/var/log/lastlog</code></li>
+<li><strong>Purpose</strong>: Users last online status interaction time timestamps index configuration database binary logs file.</li>
+<li><strong>Usage</strong>: User logins safety checks track timestamps parameters verification monitors.</li>
+</ul>
+
+    </section>
+</article>
+
+            </div>
+        </main>
+    </div>
+
+    
+    <div id="search-modal" class="search-modal">
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <i data-lucide="search"></i>
+                <input type="text" id="search-input" class="search-modal-input" placeholder="Pages, tags, snippets search करें...">
+                <button id="search-modal-close" class="search-modal-close">ESC</button>
+            </div>
+            <ul id="search-results" class="search-results-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/CuriousWiki/js/main.js"></script>
+</body>
+</html>

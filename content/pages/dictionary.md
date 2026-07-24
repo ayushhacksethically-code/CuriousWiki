@@ -50,7 +50,7 @@ Arch Linux users के लिए एक community-driven package repository, �
 
 ### Bootloader {#bootloader}
 
-System hardware startup initialization ke baad operating system kernel (jaise vmlinuz) ko memory RAM mein load karne wala startup software tool (jaise GRUB)।
+System hardware startup initialization के बाद operating system kernel (जैसे vmlinuz) को memory RAM में load करने वाला startup software tool (जैसे GRUB)।
 
 
 
@@ -93,12 +93,12 @@ Linux/Unix background service daemon (crond) जो user-defined scheduled inter
 
 ### Daemon {#daemon}
 
-Linux/Unix background service ya process, jo user interaction ke bina automatically system tasks aur events monitoring handle karti hai.
+Linux/Unix background service या process, जो user interaction के बिना automatically system tasks और events monitoring handle करती है।
 
 
 ### Dependency {#dependency}
 
-Kisi application program ya tool execution ke liye mandatory components, software libraries, packages ya scripts.
+किसी application program या tool execution के लिए mandatory components, software libraries, packages या scripts.
 
 
 ### Distribution (Distro) {#distribution-distro}
@@ -117,7 +117,7 @@ HTML nodes का tree structure structure, जिसे JavaScript scripts runt
 
 ### FHS (Filesystem Hierarchy Standard) {#fhs}
 
-Linux/Unix systems ke root directory layout aur folder structure roles ko standardise karne wala rules protocol guidelines.
+Linux/Unix systems के root directory layout और folder structure roles को standardize करने वाला rules protocol guidelines.
 
 
 ### Fstab (/etc/fstab) {#fstab}
@@ -173,17 +173,22 @@ Web browsers का key-value pair database engine, जो dynamic site properti
 
 ### MiniSearch {#minisearch}
 
-Client-side execution structures के लिए optimized, pure JavaScript full-text indexing engine library, जो tag query processing aur fuzzy searches support करता है।
+Client-side execution structures के लिए optimized, pure JavaScript full-text indexing engine library, जो tag query processing और fuzzy searches support करता है।
 
 
 ### Mount {#mount}
 
-Kisi storage device (जैसे USB, SSD) या partition को system operating system ke directory structure branch ke path se securely connect karne ki procedure.
+किसी storage device (जैसे USB, SSD) या partition को system operating system के directory structure branch के path से securely connect करने की procedure.
 
 
 
 
-## N {#letter-N}
+## N {#letter-n}
+
+### NFS (Network File System) {#nfs}
+
+एक distributed file system protocol जो users को network पर remote folders/files access और mount करने की capability प्रदान करता है।
+
 
 ### Nim {#nim}
 
@@ -234,7 +239,7 @@ HTML, CSS, और JS components से बनी website, जो servers par bin
 
 ### Symlink (Symbolic Link) {#symlink}
 
-File system level par dynamic file path redirects aur links create karne wali system directory shortcut file references specification.
+File system level पर dynamic file path redirects और links create करने वाली system directory shortcut file references specification.
 
 
 ### Systemd {#systemd}

@@ -69,6 +69,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="pages/linux/important-files.html" class="nav-link">
+                                <i data-lucide="file-text"></i>
+                                <span>Essential Files Guide</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="pages/linux/linux-bible/index.html" class="nav-link">
                                 <i data-lucide="book"></i>
                                 <span>Linux Bible</span>
@@ -216,8 +222,8 @@
     </header>
 
     <section class="article-body">
-        <p>gEDA project ne ek complete GPL-licensed suite aur toolkit banayi hai (aur ispe kaam chal raha hai) jo <strong>Electronic Design Automation (EDA)</strong> tools ke liye hai. In tools ka use electrical circuit design, schematic capture, simulation, prototyping, aur production ke liye kiya jata hai. Filhal, gEDA project electronics design ke liye free software applications ka ek mature suite offer karta hai, jisme schematic capture, attribute management, bill of materials (BOM) generation, 20 se zyada netlist formats me netlisting, analog aur digital simulation, aur printed circuit board (PCB) layout shamil hain.</p>
-<p>gEDA project ki shuruat POSIX systems ke liye free EDA tools ki kami ki wajah se hui thi, jiska primary purpose free hardware ya open-source hardware ko promote karna tha. Yeh suite mainly GNU/Linux platform par develop kiya jata hai, lekin is baat ka bhi dhyan rakha jata hai ki ye tools baki platforms par bhi sahi se chal sakein.</p>
+        <p>gEDA project ने एक complete GPL-licensed suite और toolkit बनायी है (और इसपे काम चल रहा है) जो <strong>Electronic Design Automation (EDA)</strong> tools के लिए है। इन tools का use electrical circuit design, schematic capture, simulation, prototyping, और production के लिए किया जाता है। फ़िलहाल, gEDA project electronics design के लिए free software applications का एक mature suite offer करता है, जिसमें schematic capture, attribute management, bill of materials (BOM) generation, 20 से ज़्यादा netlist formats में netlisting, analog और digital simulation, और printed circuit board (PCB) layout शामिल हैं।</p>
+<p>gEDA project की शुरुआत POSIX systems के लिए free EDA tools की कमी की वजह से हुई थी, जिसका primary purpose free hardware या open-source hardware को promote करना था। यह suite mainly GNU/Linux platform पर develop किया जाता है, लेकिन इस बात का भी ध्यान रखा जाता है कि ये tools बाकी platforms पर भी सही से चल सकें।</p>
 <p>Source: <a href="http://www.gpleda.org/" target="_blank" rel="noopener noreferrer">gEDA Homepage</a></p>
 <div class="callout callout-info">
 <i data-lucide="info"></i>
@@ -225,59 +231,59 @@
 <div class="callout-title">
 <p>gEDA Scope</p>
 </div>
-<p>Yeh toolkit full electronic workflow ko handle karti hai: Schematic sketch karne se lekar PCB production aur gerber generation tak.</p>
+<p>यह toolkit full electronic workflow को handle करती है: Schematic sketch करने से लेकर PCB production और gerber generation तक।</p>
 </div>
 </div>
 <h2 id="-installation-इनसटलशन">⚙️ Installation (इन्स्टॉलेशन)</h2>
-<p>gEDA Tools ko setup karne ke liye standard packages ko install karna hoga:</p>
+<p>gEDA Tools को setup करने के लिए standard packages को install करना होगा:</p>
 <ul>
-<li>AUR se <code>geda-gaf</code> install karne se aapko schematic editor aur attribute editor mil jayenge.</li>
+<li>AUR से <code>geda-gaf</code> install करने से आपको schematic editor और attribute editor मिल जायेंगे।</li>
 <li>Font scaling ko sahi rakhne ke liye <code>ttf-dejavu</code> aur <code>ttf-liberation</code> install karna zaroori ho sakta hai.</li>
-<li>AUR se <code>pcb</code> install karne se aapko PCB layout editor mil jayega.</li>
+<li>AUR से <code>pcb</code> install करने से आपको PCB layout editor मिल जायेगा।</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># geda-gaf aur pcb ko AUR helper (jaise yay) se install karein:</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># geda-gaf और pcb को AUR helper (जैसे yay) से install करें:</span>
 </span></span><span style="display:flex;"><span>yay -S geda-gaf pcb ttf-dejavu ttf-liberation
 </span></span></code></pre></div><h2 id="-first-pcb-पहल-पसब">🛠️ First PCB (पहला पीसीबी)</h2>
-<h3 id="1-schematic-symbol-create-karein-सबल-बनन">1. Schematic Symbol Create Karein (सिंबल बनाना)</h3>
-<p>Aap naye symbol bilkul waise hi bana sakte hain jaise aap schematics banate hain. Sabse pehle ek empty file open karein:</p>
+<h3 id="1-schematic-symbol-create-कर-सबल-बनन">1. Schematic Symbol Create करें (सिंबल बनाना)</h3>
+<p>आप नये symbol बिल्कुल वैसे ही बना सकते हैं जैसे आप schematics बनाते हैं। सबसे पहले एक empty file open करें:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gschem mysymbol.sym
-</span></span></code></pre></div><p>Aur pins add karne ke liye <span class="kbd">ap</span> aur attributes edit karne ke liye <span class="kbd">aa</span> shortcut ka use karein. Attributes ki details ke liye <a href="http://wiki.geda-project.org/geda:master_attributes_list" target="_blank" rel="noopener noreferrer">gEDA Master Attributes List</a> check karein.</p>
+</span></span></code></pre></div><p>और pins add करने के लिए <span class="kbd">ap</span> और attributes edit करने के लिए <span class="kbd">aa</span> shortcut का use करें। Attributes की details के लिए <a href="http://wiki.geda-project.org/geda:master_attributes_list" target="_blank" rel="noopener noreferrer">gEDA Master Attributes List</a> check करें।</p>
 <div class="callout callout-warning">
 <i data-lucide="alert-triangle"></i>
 <div class="callout-content">
 <div class="callout-title">
 <p>Absolute Zero Alignments</p>
 </div>
-<p>Kaam khatam hone ke baad, apne symbol ko absolute zero coordinates par translate karna na bhoolein (shortcut: <span class="kbd">et</span>). Agar aap aisa nahi karte, toh jab aap ise schematic me place karenge toh symbol viewport se bahar gayab ho jayega.</p>
+<p>काम खत्म होने के बाद, अपने symbol को absolute zero coordinates पर translate करना ना भूलें (shortcut: <span class="kbd">et</span>)। अगर आप ऐसा नहीं करते, तो जब आप इसे schematic में place करेंगे तो symbol viewport से बाहर गायब हो जायेगा।</p>
 </div>
 </div>
-<p>Symbol ko save karne ke liye <span class="kbd">fs</span> dabayein aur is command se validation check karein:</p>
+<p>Symbol को save करने के लिए <span class="kbd">fs</span> दबाएं और इस command से validation check करें:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gsymcheck -vv mysymbol.sym
 </span></span></code></pre></div><h4 id="schematic-search-path-config">Schematic Search Path Config</h4>
-<p>Apne local symbol ko <code>gschem</code> ke search path me add karna zaroori hai. Iske liye project folder me ek file banayein jiska naam <code>gafrc</code> ho, aur usme ye line likhein:</p>
+<p>अपने local symbol को <code>gschem</code> के search path में add करना ज़रूरी है। इसके लिए project folder में एक file बनाएं जिसका नाम <code>gafrc</code> हो, और उसमें ये line लिखें:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-scheme" data-lang="scheme"><span style="display:flex;"><span>(<span style="color:#a6e22e">component-library</span> <span style="color:#e6db74">&#34;./symbols&#34;</span>)
-</span></span></code></pre></div><p>Iske baad apne saare custom components/symbols ko <code>symbols</code> subfolder ke andar copy kar dein.</p>
-<h3 id="2-schematic-create-karein-सकमटक-बनन">2. Schematic Create Karein (स्केमैटिक बनाना)</h3>
-<p>Schematic editor ko open karne ke liye command run karein:</p>
+</span></span></code></pre></div><p>इसके बाद अपने सारे custom components/symbols को <code>symbols</code> subfolder के अंदर copy कर दें।</p>
+<h3 id="2-schematic-create-कर-सकमटक-बनन">2. Schematic Create करें (स्केमैटिक बनाना)</h3>
+<p>Schematic editor को open करने के लिए command run करें:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gschem
-</span></span></code></pre></div><p>Naye circuits ko design aur connect karne ke liye workspace use karein. Zyada details ke liye <a href="http://wiki.geda-project.org/geda:faq-gschem" target="_blank" rel="noopener noreferrer">gschem FAQ page</a> check karein.</p>
-<h3 id="3-pcb-create-aur-route-karein-पसब-रटग">3. PCB Create aur Route Karein (पीसीबी रूटिंग)</h3>
-<p>Jab aap schematic complete kar lein aur PCB routing shuru karni ho, toh ek <code>gsch2pcb</code> project set up karein. Ek nayi file banayein jiska naam <strong><code>firstpcb.prj</code></strong> ho aur usme ye configure karein:</p>
+</span></span></code></pre></div><p>नये circuits को design और connect करने के लिए workspace use करें। ज़्यादा details के लिए <a href="http://wiki.geda-project.org/geda:faq-gschem" target="_blank" rel="noopener noreferrer">gschem FAQ page</a> check करें।</p>
+<h3 id="3-pcb-create-और-route-कर-पसब-रटग">3. PCB Create और Route करें (पीसीबी रूटिंग)</h3>
+<p>जब आप schematic complete कर लें और PCB routing शुरू करनी हो, तो एक <code>gsch2pcb</code> project set up करें। एक नयी file बनाएं जिसका नाम <strong><code>firstpcb.prj</code></strong> हो और उसमें ये configure करें:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>schematics firstpcb.sch
 </span></span><span style="display:flex;"><span>empty-footprint nofootprint
 </span></span><span style="display:flex;"><span>output-name firstpcb
-</span></span></code></pre></div><p>Yeh project setup <code>firstpcb.sch</code> file ko parse karega, &rsquo;nofootprint&rsquo; wale elements ko ignore karega, aur ye output files generate karega:</p>
+</span></span></code></pre></div><p>यह project setup <code>firstpcb.sch</code> file को parse करेगा, &rsquo;nofootprint&rsquo; वाले elements को ignore करेगा, और ये output files generate करेगा:</p>
 <ul>
-<li><strong><code>firstpcb.pcb</code></strong>: Layout aur routing file</li>
+<li><strong><code>firstpcb.pcb</code></strong>: Layout और routing file</li>
 <li><strong><code>firstpcb.net</code></strong>: Connections netlist</li>
 <li><strong><code>firstpcb.cmd</code></strong>: Pin name commands</li>
 </ul>
-<p>Agar local directories load karni hain toh <code>.prj</code> file me ye lines zaroor add karein:</p>
+<p>अगर local directories load करनी हैं तो <code>.prj</code> file में ये lines ज़रूर add करें:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>elements-dir footprints
 </span></span><span style="display:flex;"><span>elements-dir symbols
-</span></span></code></pre></div><p>Ab design synchronise karne ke liye command run karein:</p>
+</span></span></code></pre></div><p>अब design synchronise करने के लिए command run करें:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gsch2pcb -f firstpcb.prj
-</span></span></code></pre></div><p>Iske baad <code>gsch2pcb</code> aapko feedback dega ya required netlist update kar dega.</p>
+</span></span></code></pre></div><p>इसके बाद <code>gsch2pcb</code> आपको feedback देगा या required netlist update कर देगा।</p>
 
     </section>
 </article>

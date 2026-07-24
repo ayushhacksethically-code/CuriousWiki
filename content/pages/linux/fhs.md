@@ -6,181 +6,180 @@ tags: ["linux","fhs","directories","structure","filesystem"]
 
 # Filesystem Hierarchy Standard (FHS) Guide
 
-यहाँ Unix aur Linux systems ke standard directory tree layout ke content aur purpose ki simple explanation di gayi hai. Har directory ka detail exact 5 points mein detailed hai.
+Standard Unix/Linux directory tree structure, directories का purpose, और details. हर directory का behaviour 5 point checklist के रूप में।
 
 ---
 
 ### `/afs` (Andrew File System)
-- Andrew File System ek **distributed network file system** hai jo global file sharing ke liye use hota hai.
-- Yeh remote server ke files ko local directory paths par automatically **mount** aur sync karta hai.
-- Isme access permissions ko manage karne ke liye **secure, token-based authentication** ka use kiya jata hai.
-- Yeh mostly academic, research institutes, aur bade corporate networks mein use hota hai.
-- Yeh local storage space ko save karta hai kyunki files remote storage servers par store hoti hain.
+- Andrew File System एक **distributed network file system** है जो global file sharing के लिए use होता है।
+- यह remote server के files को local directory paths पर automatically **mount** और sync करता है।
+- इसमें access permissions को manage करने के लिए **secure, token-based authentication** का use किया जाता है।
+- यह mostly academic, research institutes, और बड़े corporate networks में use होता है।
+- यह local storage space को save करता है क्योंकि files remote storage servers पर store होती हैं।
 
 ### `/bin` (Essential User Binaries)
-- Isme standard binary executables (executable commands) hote hain jinhe sabhi users use kar sakte hain.
-- Yahan core terminal commands jaise `ls`, `cp`, `mv`, `rm`, aur `cat` ki files store hoti hain.
-- System ko repair aur single-user mode mein boot karne ke liye yeh programs zaroori hain.
-- Isme subdirectories nahi hotin, sirf core executable files aur command scripts hote hain.
-- Modern Linux distributions mein yeh `/usr/bin` ka ek **symbolic link** (symlink) hota hai.
+- इसमें standard binary executables (executable commands) होते हैं जिन्हें सभी users use कर सकते हैं।
+- यहाँ core terminal commands जैसे `ls`, `cp`, `mv`, `rm`, और `cat` की files store होती हैं।
+- System को repair और single-user mode में boot करने के लिए ये programs ज़रूरी हैं।
+- इसमें subdirectories नहीं होतीं, सिर्फ core executable files और command scripts होते हैं।
+- Modern Linux distributions में यह `/usr/bin` का एक **symbolic link** (symlink) होता है।
 
 ### `/boot` (Boot Loader Files)
-- Isme system startup aur booting process ke liye sabhi zaroori files store hoti hain.
-- Yahan Linux kernel image (`vmlinuz`) aur core booting RAM scripts (`initramfs`) hotey hain.
-- Isme bootloader (jaise GRUB) ke settings parameters aur system configurations hotey hain.
-- Startup sequence ke dauran BIOS/UEFI firmware sabse pehle yahan ki files ko read karta hai.
-- Protection ke liye, isko hard disk partition par ek alag dedicated disk partition mein rakha jata hai.
+- इसमें system startup और booting process के लिए सभी ज़रूरी files store होती हैं।
+- यहाँ Linux kernel image (`vmlinuz`) और core booting RAM scripts (`initramfs`) होते हैं।
+- इसमें bootloader (जैसे GRUB) के settings parameters और system configurations होते हैं।
+- Startup sequence के दौरान BIOS/UEFI firmware सबसे पहले यहाँ की files को read करता है।
+- Protection के लिए, इसको hard disk partition पर एक अलग dedicated disk partition में रखा जाता है।
 
 ### `/dev` (Device Files)
-- Isme hardware devices ko represent karne wali special **device files** hoti hain.
-- Physical components jaise disks (`/dev/sda`), terminal consoles (`/dev/tty`), aur ports yahan files ke roop mein hote hain.
-- Isme virtual devices bhi hote hain jaise `/dev/null` (jo saare data ko clean/discard kar deta hai).
-- Yeh directory application softwares ko direct physical hardware se communication karne ka interface deti hai.
-- Operating system aur kernel daemon `udev` in files ko dynamically detect aur manage karte hain.
+- इसमें hardware devices को represent करने वाली विशेष **device files** होती हैं।
+- Physical components जैसे disks (`/dev/sda`), terminal consoles (`/dev/tty`), और ports यहाँ files के रूप में होते हैं।
+- इसमें virtual devices भी होते हैं जैसे `/dev/null` (जो सारे data को discard कर देता है)।
+- यह directory application softwares को direct physical hardware से communication करने का interface देती है।
+- Operating system और kernel daemon `udev` इन files को dynamically detect और manage करते हैं।
 
 ### `/etc` (Host-Specific System Configurations)
-- Isme system-wide configurations settings aur applications startup scripts hoti hain.
-- Yahan text-only settings files jaise `/etc/passwd` aur `/etc/fstab` save rehti hain.
-- Isme binary executable programs nahi hote, isliye iska backup aur tracking bahut aasan hai.
-- In files ko edit karke system administrator server configurations aur global settings ko change kar sakte hain.
-- Iska full form historically "Editable Text Configuration" ya basic etcetera settings folder hai.
+- इसमें system-wide configurations settings और applications startup scripts होती हैं।
+- यहाँ text-only settings files जैसे `/etc/passwd` और `/etc/fstab` save रहती हैं।
+- इसमें binary executable programs नहीं होते, इसलिए इसका backup और tracking बहुत आसान है।
+- इन files को edit करके system administrator server configurations और global settings को change कर सकते हैं।
+- इसका full form historically "Editable Text Configuration" या basic etcetera settings folder है।
 
 ### `/home` (User Home Directories)
-- Yeh system ke sabhi standard users ke personal files aur setups ka storage path hai.
-- Isme users ke personal documents, downloads, desktop files, aur private configurations save rehti hain.
-- Har user ki apni specific subdirectory hoti hai, jaise `/home/username`.
-- Users ke paas apne home directories ke andar files par full read, write, aur execute permissions hoti hain.
-- Yeh security ke liye personal data ko core operating system files se completely separate rakhta hai.
+- यह system के सभी standard users के personal files और setups का storage path है।
+- इसमें users के personal documents, downloads, desktop files, और private configurations save रहती हैं।
+- हर user की अपनी विशिष्ट subdirectory होती है, जैसे `/home/username`।
+- Users के पास अपने home directories के अंदर files पर full read, write, और execute permissions होती हैं।
+- यह security के लिए personal data को core operating system files से completely separate रखता है।
 
 ### `/lib` (Essential Shared Libraries)
-- Isme binaries (jo `/bin` aur `/sbin` mein hain) ke liye zaroori **shared library files** hoti hain.
-- Library files ka format standard `.so` format (Windows ke DLL files jaise) hota hai.
-- Yeh kernel modules aur systems startup ke liye core dependency libraries provide karta hai.
-- Yahan device driver files aur kernel modules `/lib/modules` path par store hote hain.
-- Modern Linux distributions builds mein yeh folder `/usr/lib` se symbolic link hota hai.
+- इसमें binaries (जो `/bin` और `/sbin` में हैं) के लिए ज़रूरी **shared library files** होती हैं।
+- Library files का format standard `.so` format (Windows के DLL files जैसे) होता है।
+- यह kernel modules और systems startup के लिए core dependency libraries provide करता है।
+- यहाँ device driver files और kernel modules `/lib/modules` path पर store होते हैं।
+- Modern Linux distributions builds में यह folder `/usr/lib` से symbolic link होता है।
 
 ### `/lib64` (64-bit Shared Libraries)
-- Isme 64-bit binaries ko run karne ke liye zaroori 64-bit **shared library files** store hoti hain.
-- Yeh folder multi-architecture execution (32-bit aur 64-bit dono) ko support karne ke liye hota hai.
-- Isme 64-bit processors par executable tools aur programs ko build karne ki libraries hoti hain.
-- Yeh compatibility bugs aur architecture-related program crashes ko prevent karta.
-- Modern Linux distributions configurations mein yeh `/usr/lib64` ka symlink hota hai.
+- इसमें 64-bit binaries को run करने के लिए ज़रूरी 64-bit **shared library files** store होती हैं।
+- यह folder multi-architecture execution (32-bit और 64-bit दोनों) को support करने के लिए होता है।
+- इसमें 64-bit processors पर executable tools और programs को build करने की libraries होती हैं।
+- यह compatibility bugs और architecture-related program crashes को prevent करता है।
+- Modern Linux distributions configurations में यह `/usr/lib64` का symlink होता है।
 
 ### `/media` (Mount Point for Removable Media)
-- Yeh removable storage devices ke liye ek temporary **mount directory** hai.
-- USB flash keys, CDs, DVDs aur external backup drives yahan automatically mount hote hain.
-- Jab bhi koi device system mein connect hota hai, OS yahan uske liye auto folder create karta hai.
-- Standard users ke liye external storage readable/writable access ko simple aur secure banata hai.
-- Desktop environments (jaise GNOME/KDE) is folder path ke metadata ko directly read karte hain.
+- यह removable storage devices के लिए एक temporary **mount directory** है।
+- USB flash keys, CDs, DVDs और external backup drives यहाँ automatically mount होते हैं।
+- जब भी कोई device system में connect होता है, OS यहाँ उसके लिए auto folder create करता है।
+- Standard users के लिए external storage readable/writable access को simple और secure बनाता है।
+- Desktop environments (जैसे GNOME/KDE) इस folder path के metadata को directly read करते हैं।
 
 ### `/mnt` (Temporarily Mounted Filesystems)
-- Yeh system administrators ko filesystems manually mount karne ke liye target path deta hai.
-- Ise backup restore karne ya troubleshooting ke samay temporary filesystems connect karne ke liye use karte hain.
-- Removable media ki tarah yahan automatic plug-and-play mounting nahi hoti.
-- Sysadmins manual command run karke external storage ya network drives ko is folder se link karte hain.
-- Yeh ek empty folder template hai jo clean state system operations ke liye reserve rehta hai.
+- यह system administrators को filesystems manually mount करने के लिए target path देता है।
+- इसे backup restore करने या troubleshooting के समय temporary filesystems connect करने के लिए use करते हैं।
+- Removable media की तरह यहाँ automatic plug-and-play mounting नहीं होती।
+- Sysadmins manual command run करके external storage या network drives को इस folder से link करते हैं।
+- यह एक empty folder template है जो clean state system operations के लिए reserve रहता है।
 
 ### `/nix` (Nix Package Store)
-- Yeh Nix package management system ka core package storage store space hai.
-- Sabhi software tools aur applications dependencies yahan secure aur isolated state mein rehte hain.
-- Har package ke liye unique cryptographic hashes ke sath directory paths generate hote hain.
-- Yeh dynamic isolated dependencies mapping dependency conflicts ("dependency hell") ko zero karti hai.
-- Ek hi computer par bina system config crash kiye ek application ke multiple versions run ho sakte hain.
+- यह Nix package management system का core package storage store space है।
+- सभी software tools और applications dependencies यहाँ secure और isolated state में रहते हैं।
+- हर package के लिए unique cryptographic hashes के साथ directory paths generate होते हैं।
+- यह dynamic isolated dependencies mapping dependency conflicts ("dependency hell") को zero करती है।
+- एक ही computer पर बिना system config crash किए एक application के multiple versions run हो सकते हैं।
 
 ### `/opt` (Optional Add-on Packages)
-- Yeh optional, third-party software packages ko install karne ke liye use kiya jata hai.
-- proprietary softwares jaise Google Chrome, Zoom, ya custom databases yahan install hote hain.
-- Har application resources aur binaries ko apne dedicated subdirectory ke andar isolated rakhti hai.
-- Yeh manual/external programs ko system-wide library folders se clean aur separate rakhta hai.
-- Iska name stands for "Optional" application code storage locations.
+- यह optional, third-party software packages को install करने के लिए use किया जाता है।
+- Proprietary softwares जैसे Google Chrome, Zoom, या custom databases यहाँ install होते हैं।
+- हर application resources और binaries को अपने dedicated subdirectory के अंदर isolated रखती है।
+- यह manual/external programs को system-wide library folders से clean और separate रखता है।
+- इसका name stands for "Optional" application code storage locations है।
 
 ### `/proc` (Process Virtual Filesystem)
-- Yeh running processes aur system resources status check karne ka **virtual pseudo-filesystem** hai.
-- Yeh RAM mein dynamically load hota hai aur physical disk space par 0 byte consumption karta hai.
-- Isme active runtime processes directory (jaise pid folders `/proc/123`) hoti hain.
-- System metrics jaise memory status, CPU usage details aur specs read karne ke parameters deta hai.
-- Administrators yahan ki dynamic settings ko edit karke kernel parameters runtime modify kar sakte hain.
+- यह running processes aur system resources status check करने का **virtual pseudo-filesystem** है।
+- यह RAM में dynamically load होता है और physical disk space पर 0 byte consumption करता है।
+- इसमें active runtime processes directory (जैसे pid folders `/proc/123`) होती हैं।
+- System metrics जैसे memory status, CPU usage details और specs read करने के parameters देता है।
+- Administrators यहाँ की dynamic settings को edit करके kernel parameters runtime modify कर सकते हैं।
 
 ### `/root` (Root User Home Directory)
-- Yeh system ke master user (System Administrator Root) ki personal home directory space hai.
-- Security aur safety reasons ke liye ise main user `/home` path partition se separate rakha jata hai.
-- Ordinary system users ko is directory records ko read ya write karne ka access nahi hota.
-- Root user ke customization profiles settings files aur backups yahan store hote hain.
-- Core system partitions crash hone par recovery commands execute karne ke liye zaroori hai.
+- यह system के master user (System Administrator Root) की personal home directory space है।
+- Security और safety reasons के लिए इसे main user `/home` path partition से separate रखा जाता है।
+- Ordinary system users को इस directory records को read या write करने का access नहीं होता है।
+- Root user के customization profiles settings files और backups यहाँ store होते हैं।
+- Core system partitions crash होने पर recovery commands execute करने के लिए ज़रूरी है।
 
 ### `/run` (Runtime Transient Data)
-- Yeh system startup se lekar abhi tak chal rahe active processes ka temporary data folder hai.
-- Yeh RAM (tmpfs) mein dynamically mount hota hai jo system reboot par completely clean ho jata hai.
-- Isme dynamic process IDs (`.pid` files), software sockets, aur system locks save hote hain.
-- Iski madad se daemons aur background services run status coordinate aur share karte hain.
-- Yeh ek modern standardized path layout hai jisne older `/var/run` directories ko replace kiya hai.
+- यह system startup से लेकर अभी तक चल रहे active processes का temporary data folder है।
+- यह RAM (tmpfs) में dynamically mount होता है जो system reboot पर completely clean हो जाता है।
+- इसमें dynamic process IDs (`.pid` files), software sockets, और system locks save होते हैं।
+- इसकी मदद से daemons और background services run status coordinate और share करते हैं।
+- यह एक modern standardized path layout है जिसने older `/var/run` directories को replace किया है।
 
 ### `/sbin` (System binaries)
-- Isme root user/system administrator ke use ke liye essential system binary programs hote hain.
-- Administrative commands jaise `fdisk` (partitioning), `iptables` (firewall), `reboot`, aur `fsck` yahan store hote hain.
-- Normal system users ko yahan se direct execution configurations permissions run karne ka access nahi hota.
-- System maintenance, repair operations, bootstrap, aur systems recovery tasks ke liye critical hai.
-- Modern Linux directories updates mein ise `/usr/sbin` ke sath symlink mapping di jati hai.
+- इसमें root user/system administrator के use के लिए essential system binary programs होते हैं।
+- Administrative commands जैसे `fdisk` (partitioning), `iptables` (firewall), `reboot`, और `fsck` यहाँ store होते हैं।
+- Normal system users को यहाँ से direct execution configurations permissions run करने का access नहीं होता।
+- System maintenance, repair operations, bootstrap, और systems recovery tasks के लिए critical है।
+- Modern Linux directories updates में इसे `/usr/sbin` के साथ symlink mapping दी जाती है।
 
 ### `/srv` (Service Data)
-- Yeh system ke dwara external clients ko serve kiye jane wale dynamic website templates aur files ki space hai.
-- Web server HTTP documents ya FTP file packages yahan configure ho sakte hain.
-- Web platforms files ka path jaise `/srv/www` default setup parameters space define karta hai.
-- Service data records ko users files aur logging folders se properly separate rakhta hai.
-- Servers updates setups ko cleaner layouts aur single path database control deta hai.
+- यह system के द्वारा external clients को serve किये जाने वाले dynamic website templates और files की space है।
+- Web server HTTP documents या FTP file packages यहाँ configure हो सकते हैं।
+- Web platforms files का path जैसे `/srv/www` default setup parameters space define करता है।
+- Service data records को users files और logging folders से properly separate रखता है।
+- Servers updates setups को cleaner layouts और single path database control देता है।
 
 ### `/sys` (System Virtual Filesystem)
-- Yeh device interfaces aur driver config configurations properties ka **virtual pseudo-filesystem** hai.
-- Kernel objects aur hardware device tree structures properties ko RAM memory mein dynamic map karta hai.
-- User-space applications software tools ko hardware settings aur configurations read aur adjust karne ki API deta hai.
-- Hardware specifications metrics, ports properties aur configurations yahan dynamic update hoti hain.
-- `/proc` ki tarah hi system parameters structure detail expose karta hai par specialized devices details ke liye hai.
+- यह device interfaces और driver config configurations properties का **virtual pseudo-filesystem** है।
+- Kernel objects और hardware device tree structures properties को RAM memory में dynamic map करता है।
+- User-space applications software tools को hardware settings और configurations read और adjust करने की API देता है।
+- Hardware specifications metrics, ports properties और configurations यहाँ dynamic update होती हैं।
+- `/proc` की तरह ही system parameters structure detail expose करता है पर specialized devices details के लिए है।
 
 ### `/tmp` (Temporary Files)
-- Applications programs aur standard users ke dynamic temporary files storage folder location hai.
-- Auto-save text drafts, compiling files packages aur installation caches yahan save hote hain.
-- System update configurations automatic periodic schedules par is target path storage files delete karta hai.
-- Super-fast execution speeds read-write latency optimization ke liye RAM (tmpfs) storage standard use.
-- Operating system ke sabhi active users bina security restrictions ke yahan write kar sakte hain.
+- Applications programs और standard users के dynamic temporary files storage folder location है।
+- Auto-save text drafts, compiling files packages और installation caches यहाँ save होते हैं।
+- System update configurations automatic periodic schedules पर इस target path storage files delete करता है।
+- Super-fast execution speeds read-write latency optimization के लिए RAM (tmpfs) storage standard use किया जाता है।
+- Operating system के सभी active users बिना security restrictions के यहाँ write कर सकते हैं।
 
 ### `/usr` (User System Resources)
-- Yeh user utility programs, graphics, dynamic packages aur manual docs ka core resources directory index hai.
-- Isme major executable application paths `/usr/bin` aur libraries directories `/usr/share` files store hain.
-- Stands for "User System Resources" ya historical system binary packages locations index folder.
-- Sabhi system users ke beech yahan ka data read-only state share options format.
-- Operating system update installations package dependencies files ka primary base installation target path.
+- यह user utility programs, graphics, dynamic packages और manual docs का core resources directory index है।
+- इसमें major executable application paths `/usr/bin` और libraries directories `/usr/share` files store हैं।
+- Stands for "User System Resources" या historical system binary packages locations index folder है।
+- सभी system users के बीच यहाँ का data read-only state share options format में होता है।
+- Operating system update installations package dependencies files का primary base installation target path है।
 
 ### `/var` (Variable Files)
-- System run execution ke during size badalne wale files (logs, databases) ki variable data folder location hai.
-- System log directories (`/var/log`), mail boxes system, aur dynamic database cache parameters yahan store hote hain.
-- Yeh scaling growth files ko default system files se isolated path space backup control deta hai.
-- Active logins tracking metrics status updates aur server health monitoring parameters.
-- Administrators regular checkups se yahan storage limit log levels optimize rakhte hain taaki disk control full na ho.
+- System run execution के दौरान size बदलने वाले files (logs, databases) की variable data folder location है।
+- System log directories (`/var/log`), mail boxes system, और dynamic database cache parameters यहाँ store होते हैं।
+- यह scaling growth files को default system files से isolated path space backup control देता है।
+- Active logins tracking metrics status updates और server health monitoring parameters हैं।
+- Administrators regular checkups से यहाँ storage limit log levels optimize रखते हैं ताकि disk control full ना हो।
 
 ---
 
 ## 📝 Important Notes: Universal vs Optional Directories
 
-Linux and Unix systems ke design mein sabhi directories har system par compulsory nahi hotin. Yahan unka classification diya gaya hai:
+Linux और Unix systems के design में सभी directories हर system पर compulsory नहीं होतीं। यहाँ उनका classification दिया गया है:
 
 ### 1. Universally Present Directories (जो हर System पर ज़रूर होंगी)
-Yeh directories basic operation ke liye core components hain aur har standard Linux/Unix distro mein by default milti hain:
-- `/` (Root): System filesystem ka main entry point.
-- `/bin` & `/sbin`: System utilities aur binaries.
-- `/etc`: Configuration files (e.g., configurations settings, accounts database).
+ये directories basic operation के लिए core components हैं और हर standard Linux/Unix distro में by default मिलती हैं:
+- `/` (Root): System filesystem का main entry point.
+- `/bin` & `/sbin`: System utilities और binaries.
+- `/etc`: Configuration files (जैसे configurations settings, accounts database).
 - `/dev`: Hardware device nodes.
-- `/lib` & `/lib64`: Executables run karne ke liye libraries.
+- `/lib` & `/lib64`: Executables run करने के लिए libraries.
 - `/tmp`: Temporary runtime caching files.
-- `/usr`: Installed software packages aur user utilities.
-- `/var`: Changing system state files aur error log directories.
+- `/usr`: Installed software packages और user utilities.
+- `/var`: Changing system state files और error log directories.
 - `/root`: Master superuser home settings.
 - `/mnt`: Manual drive mount paths standard directory.
 
 ### 2. Optional or Distro-Specific Directories (जो System-Specific या Option-based होती हैं)
-Yeh directories custom systems, specific packages ya networking setups ke according create hoti hain aur minimal setups mein missing ho sakti hain:
-- `/afs` (Optional): Sirf tabhi present hogi jab aapke system mein **Andrew File System** (distributed network storage) client installed aur configured ho.
-- `/nix` (Optional): Nix package manager ya NixOS use karne par hi yahan package directories aur isolated dependency state files save hongi.
-- `/opt` (Optional): Third-party software packages install karne ke liye hoti hai. Agar system mein custom external apps (like Google Chrome, Zoom) install nahi hain, toh yeh blank ya absent ho sakti hai.
-- `/srv` (Optional): FTP servers ya Web servers (Apache/Nginx) serve files settings ke liye service storage. Minimal Linux distros ise bypass kar dete hain.
-- `/run` (System-Specific): Modern systems mein run-time sockets and locks storage ke liye tmpfs standard location hai. Bahut purane Linux or legacy Unix servers iski jagah `/var/run` use karte hain.
-
+ये directories custom systems, specific packages या networking setups के according create होती हैं और minimal setups में missing हो सकती हैं:
+- `/afs` (Optional): सिर्फ तभी present होगी जब आपके system में **Andrew File System** (distributed network storage) client installed और configured हो।
+- `/nix` (Optional): Nix package manager या NixOS use करने पर ही यहाँ package directories और isolated dependency state files save होंगी।
+- `/opt` (Optional): Third-party software packages install करने के लिए होती है। अगर system में custom external apps (जैसे Google Chrome, Zoom) install नहीं हैं, तो यह blank या absent हो सकती है।
+- `/srv` (Optional): FTP servers या Web servers (Apache/Nginx) serve files settings के लिए service storage. Minimal Linux distros इसे bypass कर देते हैं।
+- `/run` (System-Specific): Modern systems में run-time sockets और locks storage के लिए tmpfs standard location है। बहुत पुराने Linux या legacy Unix servers इसकी जगह `/var/run` use करते हैं।
