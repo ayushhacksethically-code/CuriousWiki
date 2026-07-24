@@ -20,16 +20,6 @@ guides, cheat sheets, और development workflows को explore करने �
 
 <div class="dashboard-grid">
   <div class="dashboard-card">
-    <div class="card-icon"><i data-lucide="book-open"></i></div>
-    <div class="card-title">Getting Started</div>
-    <div class="card-desc">Double brackets setup करने, pages और folders बनाने, और tags register करने की guide.</div>
-    <div class="card-footer">
-      <a href="pages/getting-started.html">Guide खोलें →</a>
-      <span>2m</span>
-    </div>
-  </div>
-
-  <div class="dashboard-card">
     <div class="card-icon"><i data-lucide="terminal"></i></div>
     <div class="card-title">JS Cheat Sheet</div>
     <div class="card-desc">Promises, async loops, DOM selectors, और storage के लिए आवश्यक developer formulas.</div>
