@@ -8,7 +8,7 @@ tags: ["dictionary","jargon","glossary","terms","programming","vocabulary"]
 
 <div class="dict-nav">
 
-<a href="#letter-A" class="dict-letter-link">A</a> <a href="#letter-C" class="dict-letter-link">C</a> <a href="#letter-D" class="dict-letter-link">D</a> <a href="#letter-F" class="dict-letter-link">F</a> <a href="#letter-G" class="dict-letter-link">G</a> <a href="#letter-K" class="dict-letter-link">K</a> <a href="#letter-L" class="dict-letter-link">L</a> <a href="#letter-M" class="dict-letter-link">M</a> <a href="#letter-N" class="dict-letter-link">N</a> <a href="#letter-P" class="dict-letter-link">P</a> <a href="#letter-R" class="dict-letter-link">R</a> <a href="#letter-S" class="dict-letter-link">S</a> <a href="#letter-T" class="dict-letter-link">T</a> <a href="#letter-V" class="dict-letter-link">V</a>
+<a href="#letter-A" class="dict-letter-link">A</a> <a href="#letter-B" class="dict-letter-link">B</a> <a href="#letter-C" class="dict-letter-link">C</a> <a href="#letter-D" class="dict-letter-link">D</a> <a href="#letter-F" class="dict-letter-link">F</a> <a href="#letter-G" class="dict-letter-link">G</a> <a href="#letter-K" class="dict-letter-link">K</a> <a href="#letter-L" class="dict-letter-link">L</a> <a href="#letter-M" class="dict-letter-link">M</a> <a href="#letter-N" class="dict-letter-link">N</a> <a href="#letter-P" class="dict-letter-link">P</a> <a href="#letter-R" class="dict-letter-link">R</a> <a href="#letter-S" class="dict-letter-link">S</a> <a href="#letter-T" class="dict-letter-link">T</a> <a href="#letter-V" class="dict-letter-link">V</a>
 
 </div>
 
@@ -42,6 +42,15 @@ Rust language में लिखा गया एक ultra-fast, lightweight, �
 ### AUR (Arch User Repository) {#aur}
 
 Arch Linux users के लिए एक community-driven package repository, जहाँ user-built Custom packages की recipes (PKGBUILD) store होती हैं।
+
+
+
+
+## B {#letter-B}
+
+### Bootloader {#bootloader}
+
+System hardware startup initialization ke baad operating system kernel (jaise vmlinuz) ko memory RAM mein load karne wala startup software tool (jaise GRUB)।
 
 
 
@@ -82,6 +91,16 @@ Linux/Unix background service daemon (crond) जो user-defined scheduled inter
 
 ## D {#letter-D}
 
+### Daemon {#daemon}
+
+Linux/Unix background service ya process, jo user interaction ke bina automatically system tasks aur events monitoring handle karti hai.
+
+
+### Dependency {#dependency}
+
+Kisi application program ya tool execution ke liye mandatory components, software libraries, packages ya scripts.
+
+
 ### Distribution (Distro) {#distribution-distro}
 
 Linux kernel के साथ default command utilities, libraries, user environments, और package managers को wrap करके distribute किया जाने वाला complete operating system component (जैसे Debian, Slackware, Red Hat)।
@@ -95,6 +114,11 @@ HTML nodes का tree structure structure, जिसे JavaScript scripts runt
 
 
 ## F {#letter-F}
+
+### FHS (Filesystem Hierarchy Standard) {#fhs}
+
+Linux/Unix systems ke root directory layout aur folder structure roles ko standardise karne wala rules protocol guidelines.
+
 
 ### Fstab (/etc/fstab) {#fstab}
 
@@ -152,6 +176,11 @@ Web browsers का key-value pair database engine, जो dynamic site properti
 Client-side execution structures के लिए optimized, pure JavaScript full-text indexing engine library, जो tag query processing aur fuzzy searches support करता है।
 
 
+### Mount {#mount}
+
+Kisi storage device (जैसे USB, SSD) या partition को system operating system ke directory structure branch ke path se securely connect karne ki procedure.
+
+
 
 
 ## N {#letter-N}
@@ -201,6 +230,11 @@ Git repository workflow model, जहाँ commits history timeline clean align
 ### Static Site {#static-site}
 
 HTML, CSS, और JS components से बनी website, जो servers par bina databases runtime computation run किए pre-built state assets direct render करती है।
+
+
+### Symlink (Symbolic Link) {#symlink}
+
+File system level par dynamic file path redirects aur links create karne wali system directory shortcut file references specification.
 
 
 ### Systemd {#systemd}

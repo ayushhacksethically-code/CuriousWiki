@@ -63,6 +63,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="pages/linux/fhs.html" class="nav-link">
+                                <i data-lucide="folder-open"></i>
+                                <span>Filesystem Hierarchy (FHS)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="pages/linux/linux-bible/index.html" class="nav-link">
                                 <i data-lucide="book"></i>
                                 <span>Linux Bible</span>
@@ -202,7 +208,7 @@
         <h1 class="article-title">📖 Jargon Dictionary</h1>
         <div class="article-meta">
             <span><i data-lucide="calendar"></i> June 30, 2026</span>
-            <span><i data-lucide="clock"></i> 4 min read</span>
+            <span><i data-lucide="clock"></i> 5 min read</span>
             
             <span><i data-lucide="tag"></i> dictionary, jargon, glossary, terms, programming, vocabulary</span>
             
@@ -212,7 +218,7 @@
     <section class="article-body">
         <p>इस wiki में उपयोग किए जाने वाले technical jargon, programming concepts, और command-line terms का एक central glossary (शब्दकोश)। नए शब्दों को सीखने और cross-reference करने के लिए इसका उपयोग करें।</p>
 <div class="dict-nav">
-<p><a href="#letter-A" class="dict-letter-link">A</a> <a href="#letter-C" class="dict-letter-link">C</a> <a href="#letter-D" class="dict-letter-link">D</a> <a href="#letter-F" class="dict-letter-link">F</a> <a href="#letter-G" class="dict-letter-link">G</a> <a href="#letter-K" class="dict-letter-link">K</a> <a href="#letter-L" class="dict-letter-link">L</a> <a href="#letter-M" class="dict-letter-link">M</a> <a href="#letter-N" class="dict-letter-link">N</a> <a href="#letter-P" class="dict-letter-link">P</a> <a href="#letter-R" class="dict-letter-link">R</a> <a href="#letter-S" class="dict-letter-link">S</a> <a href="#letter-T" class="dict-letter-link">T</a> <a href="#letter-V" class="dict-letter-link">V</a></p>
+<p><a href="#letter-A" class="dict-letter-link">A</a> <a href="#letter-B" class="dict-letter-link">B</a> <a href="#letter-C" class="dict-letter-link">C</a> <a href="#letter-D" class="dict-letter-link">D</a> <a href="#letter-F" class="dict-letter-link">F</a> <a href="#letter-G" class="dict-letter-link">G</a> <a href="#letter-K" class="dict-letter-link">K</a> <a href="#letter-L" class="dict-letter-link">L</a> <a href="#letter-M" class="dict-letter-link">M</a> <a href="#letter-N" class="dict-letter-link">N</a> <a href="#letter-P" class="dict-letter-link">P</a> <a href="#letter-R" class="dict-letter-link">R</a> <a href="#letter-S" class="dict-letter-link">S</a> <a href="#letter-T" class="dict-letter-link">T</a> <a href="#letter-V" class="dict-letter-link">V</a></p>
 </div>
 <h2 id="letter-A">A</h2>
 <h3 id="acme-sh">Acme.sh</h3>
@@ -227,6 +233,9 @@
 <p>वह execution flow जिसमें task background में run होता है और main thread (UI loop) को block नहीं करता, जिससे user interface lag-free रहता है।</p>
 <h3 id="aur">AUR (Arch User Repository)</h3>
 <p>Arch Linux users के लिए एक community-driven package repository, जहाँ user-built Custom packages की recipes (PKGBUILD) store होती हैं।</p>
+<h2 id="letter-B">B</h2>
+<h3 id="bootloader">Bootloader</h3>
+<p>System hardware startup initialization ke baad operating system kernel (jaise vmlinuz) ko memory RAM mein load karne wala startup software tool (jaise GRUB)।</p>
 <h2 id="letter-C">C</h2>
 <h3 id="callout">Callout</h3>
 <p>Document layout में एक distinct styled container block, जो specific colors और dynamic icons के साथ important warnings, notes, or success logs को highlight करता है।</p>
@@ -241,11 +250,17 @@
 <h3 id="cron">Cron</h3>
 <p>Linux/Unix background service daemon (crond) जो user-defined scheduled intervals (crontab) पर script tasks या backup commands को automatically execute करता है।</p>
 <h2 id="letter-D">D</h2>
+<h3 id="daemon">Daemon</h3>
+<p>Linux/Unix background service ya process, jo user interaction ke bina automatically system tasks aur events monitoring handle karti hai.</p>
+<h3 id="dependency">Dependency</h3>
+<p>Kisi application program ya tool execution ke liye mandatory components, software libraries, packages ya scripts.</p>
 <h3 id="distribution-distro">Distribution (Distro)</h3>
 <p>Linux kernel के साथ default command utilities, libraries, user environments, और package managers को wrap करके distribute किया जाने वाला complete operating system component (जैसे Debian, Slackware, Red Hat)।</p>
 <h3 id="dom">DOM (Document Object Model)</h3>
 <p>HTML nodes का tree structure structure, जिसे JavaScript scripts runtime पर dynamically query, alter, style, या delete कर सकते हैं।</p>
 <h2 id="letter-F">F</h2>
+<h3 id="fhs">FHS (Filesystem Hierarchy Standard)</h3>
+<p>Linux/Unix systems ke root directory layout aur folder structure roles ko standardise karne wala rules protocol guidelines.</p>
 <h3 id="fstab">Fstab (/etc/fstab)</h3>
 <p>Linux system filesystems table configuration, जो system boot sequence के समय partitions (जैसे Root, Home, EFI) को specific directories/paths पर dynamically mount करती है।</p>
 <h3 id="fuzzy-search">Fuzzy Search</h3>
@@ -266,6 +281,8 @@
 <h2 id="letter-M">M</h2>
 <h3 id="minisearch">MiniSearch</h3>
 <p>Client-side execution structures के लिए optimized, pure JavaScript full-text indexing engine library, जो tag query processing aur fuzzy searches support करता है।</p>
+<h3 id="mount">Mount</h3>
+<p>Kisi storage device (जैसे USB, SSD) या partition को system operating system ke directory structure branch ke path se securely connect karne ki procedure.</p>
 <h2 id="letter-N">N</h2>
 <h3 id="nim">Nim</h3>
 <p>एक statically typed programming language, जो directly zero-overhead compiled C/C++ native code output produce करती है और super-lightweight servers execute करती है।</p>
@@ -284,6 +301,8 @@
 <h2 id="letter-S">S</h2>
 <h3 id="static-site">Static Site</h3>
 <p>HTML, CSS, और JS components से बनी website, जो servers par bina databases runtime computation run किए pre-built state assets direct render करती है।</p>
+<h3 id="symlink">Symlink (Symbolic Link)</h3>
+<p>File system level par dynamic file path redirects aur links create karne wali system directory shortcut file references specification.</p>
 <h3 id="systemd">Systemd</h3>
 <p>Linux distributions init processes system component daemon, जो boot sequence bootstrap initialization processes control करता है और applications daemons state start/stop करता है।</p>
 <h2 id="letter-T">T</h2>

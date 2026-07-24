@@ -148,4 +148,14 @@ guides, cheat sheets, और development workflows को explore करने �
       <span>5m</span>
     </div>
   </div>
+
+  <div class="dashboard-card">
+    <div class="card-icon"><i data-lucide="folder-open"></i></div>
+    <div class="card-title">Filesystem Hierarchy</div>
+    <div class="card-desc">Comprehensive breakdown of Unix/Linux standard directories, their content, and purpose.</div>
+    <div class="card-footer">
+      <a href="pages/linux/fhs.html">Guide open →</a>
+      <span>5m</span>
+    </div>
+  </div>
 </div>

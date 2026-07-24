@@ -14,6 +14,27 @@
 		
 			<atom:link href="https://ayushhacksethically-code.github.io/CuriousWiki/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
+				<title>Directories</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/directories.html</link>
+				<pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/tags/directories.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Fhs</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/fhs.html</link>
+				<pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/tags/fhs.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Filesystem</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/filesystem.html</link>
+				<pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/tags/filesystem.html</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>History</title>
 				<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/history.html</link>
 				<pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
@@ -32,6 +53,13 @@
 				<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/operating-system.html</link>
 				<pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/tags/operating-system.html</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Structure</title>
+				<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/structure.html</link>
+				<pubDate>Fri, 24 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/tags/structure.html</guid>
 				<description></description>
 			</item>
 			<item>
@@ -60,13 +88,6 @@
 				<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/commands.html</link>
 				<pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/tags/commands.html</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Directories</title>
-				<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/directories.html</link>
-				<pubDate>Tue, 21 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/tags/directories.html</guid>
 				<description></description>
 			</item>
 			<item>
@@ -340,13 +361,6 @@
 				<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/emulator.html</link>
 				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/tags/emulator.html</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Filesystem</title>
-				<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/filesystem.html</link>
-				<pubDate>Fri, 10 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/tags/filesystem.html</guid>
 				<description></description>
 			</item>
 			<item>
@@ -893,13 +907,6 @@
 				<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/exit-codes.html</link>
 				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/tags/exit-codes.html</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Fhs</title>
-				<link>https://ayushhacksethically-code.github.io/CuriousWiki/tags/fhs.html</link>
-				<pubDate>Wed, 01 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>https://ayushhacksethically-code.github.io/CuriousWiki/tags/fhs.html</guid>
 				<description></description>
 			</item>
 			<item>

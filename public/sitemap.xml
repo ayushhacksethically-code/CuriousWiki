@@ -6,6 +6,18 @@
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/history.html</loc>
     <lastmod>2026-07-24T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/pages/linux/fhs.html</loc>
+    <lastmod>2026-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/directories.html</loc>
+    <lastmod>2026-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/fhs.html</loc>
+    <lastmod>2026-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/filesystem.html</loc>
+    <lastmod>2026-07-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/history.html</loc>
     <lastmod>2026-07-24T00:00:00+00:00</lastmod>
   </url><url>
@@ -16,6 +28,9 @@
     <lastmod>2026-07-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/pages/index.html</loc>
+    <lastmod>2026-07-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/structure.html</loc>
     <lastmod>2026-07-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/index.html</loc>
@@ -34,9 +49,6 @@
     <lastmod>2026-07-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/commands.html</loc>
-    <lastmod>2026-07-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/directories.html</loc>
     <lastmod>2026-07-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/files.html</loc>
@@ -175,9 +187,6 @@
     <lastmod>2026-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/emulator.html</loc>
-    <lastmod>2026-07-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/filesystem.html</loc>
     <lastmod>2026-07-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/fscrypt.html</loc>
@@ -493,9 +502,6 @@
     <lastmod>2026-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/exit-codes.html</loc>
-    <lastmod>2026-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/fhs.html</loc>
     <lastmod>2026-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://ayushhacksethically-code.github.io/CuriousWiki/tags/find.html</loc>
